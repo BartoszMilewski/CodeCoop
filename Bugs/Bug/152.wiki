@@ -1,0 +1,36 @@
+| Summary |ConfigurationProblems.txt not removed before setup|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority | 2 |
+| Resolution | Fixed |
+| DateReported |Wednesday, November 08, 2006|
+==Description 
+I was discussing details with Bartosz over the last week regarding side
+effects of shifting our hub to a new computer. I thought I'd sorted it all
+out, but installing Code Co-op 5.0 beta 4 again warned as follows:
+
+Warning: Advanced feature used.
+    Your Hub ID "david@abbey.co.nz" not equal to hub transport
+    (Email -> codecoop@abbey.co.nz)
+    Hub ID and transport are editable through Dispatcher Settings (to edit
+transport, press the Advanced button).
+
+(etc.)
+
+I'd already fixed this so I didn't know why I was getting another warning.
+
+Upon further investigation, it turns out that the ConfigurationProblems.txt
+file was still there from my previous installation of beta 3 (it was dated 3
+November).
+
+It appears that the installer is checking the dispatcher setup without
+deleting this file first, and if there aren't any problems then the old file
+remains. It is then being displayed as if there was a new problem.
+
+I was able to confirm this by deleting the file then running the installer
+again.

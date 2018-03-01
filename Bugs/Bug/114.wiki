@@ -1,0 +1,16 @@
+| Summary |Simplify license key updates|
+| ReportedBy |Deb|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 4 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+
+Bug #884 from the Web database.
+
+We frequently have customers adding additional seats to their existing licenses. When I issue a revised license, I issue it for their total seat holding. They are asked to have each user input this new license. Well, some of these customers are 20+ seat holders. Asking all these developers to update is a time issue especially since some add another seat every month or so. It would be nice to have the admin be able to update all users instead of having to ask 20 or more developers to do this.

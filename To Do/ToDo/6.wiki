@@ -1,0 +1,9 @@
+| Summary |Send new user announcements when changing hub forwarding path|
+| CreatedBy |Bartosz|
+| AssignedTo |Piotr|
+| Component |Dispatcher|
+| Priority |2|
+| Status |Done|
+| DateReported |Sunday, October 01, 2006|
+==Description
+We have a problem when a hub moves. The new hub doesn't know about satellite receivers. The solution is for the satellites to send a satellite-to-hub script with a list of new user announcements (the standard dispatcher addendum sent when a new project is created on the satellite). The list would be created from the list of local enlistments.

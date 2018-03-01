@@ -1,0 +1,17 @@
+=CommandIpc::Queue
+Active member of CoopCtrl and ServerCtrl. Contains a queue of pending conversations and a currently active conversation. Responsible for posting new conversations and activating them one after another.
+* Inhertis [[ActiveObject]] [[ConvStarter]]
+* Members
+** [[IpcContext|CmdIpc::Context]]
+** Win::Event
+** Win::CritSection
+** [[RequestQueue]]
+** auto_active [[ServerConversation]] _activeConv
+* constructor
+* Methods
+** [[InitiateConv]]
+** OnFinishConv: overwrite pure virtual method of [[ConvStarter]] 
+* Private Methods
+** [[IpcQueueRun|Run]]
+** [[NextConversation]]
+

@@ -1,0 +1,60 @@
+=Preview of Code Co-op 5.0
+==Peer-To-Peer Wiki
+Wiki site as a feature of a version control system? Only Reliable Software could come up with such a crazy idea! What were we thinking? 
+
+Well, it started with text files. Code Co-op users quickly find out that they have a great tool for sharing notes. You jot a few lines, check the file in, and it's immediately available on your laptop, where you have a second enlistment. Or you add a text file with feature requests right in your development project. Soon enough you start using Code Co-op for documentation, or even to store bug reports. 
+
+We've been doing these things for some time, but we were always dissatisfied with the lack of formatting and structure afforded by text files. We needed something that's almost as easy to edit as  text, but with the power and flexibility of an HTML document. Wiki was the obvious choice.
+
+Here's what we did: We created a wiki parser and built a web browser control directly to Code Co-op. When Code Co-op enters a directory with a file called index.wiki, the parser parses it, converts into HTML, and the browser control displays it as a web page. The wiki file can be as simple as a plain text file. But with a little bit of easy-to-learn wiki markup, you can add simple formatting, embed links to other wiki pages, or display pictures. 
+
+But that's not all. Since the browser control is a full-blown internet browser, you can follow links from your local wiki pages to any external web site. You can also mix HTML or even JavaScript into your wiki pages.
+
+===Bug Database
+Had we stopped at that, we would just have a great peer-to-peer wiki system--which we do! It can be used to create and share wiki sites without the need for servers. But we needed a "killer app" for our wiki. We wanted a wiki-based bug database.
+
+What's the biggest shortcoming of bug databases? That they impose rigid structure on all bug reports. We wanted to be able to embed a screenshot or two in a report, a piece of preformatted code, a table, and so on. In other words, we wanted each bug report to be a wiki file. But we also wanted to be able to have a few "tuples" in each record--a "priority" field, an "assigned to" field, and so on. And, we had to be able to list the records based on the values of these fields. For instance, to list all open bugs assigned to Bartosz.
+
+It sounds hard to believe, but we were actually able to accomplish it. We had to invent a mini-SQL language, which we call SQWiki, and do a few tricks, but the result is pretty specatacular considering the simplicity of the design.
+
+As a side effect, Code Co-op now has a very flexible text-based database built into it. You can use it to store and retrieve any kinds of notes. And because it's so simple, you can do it without any training in database management.
+
+==Ease of Use
+What's the use of all the features if they are hard to find and hard to use? That's why we put so much effort in Code Co-op's user interface. Version 5.0 breaks new grounds in this respect. 
+
+The most spectacular feature is a split-pane history display. You select a script in the history pane and the lower pane immediately shows the list of files modified by that script. Double-click on a file in the lower pane and a differ opens, showing exactly how that file was changed by the selected script. The same mechanism works for scripts that are still in the inbox.
+
+We made it very easy to view, save, compare and merge historical versions of files.
+
+This ease of reviewing changes prompted us to simplify the synchronization process. You can preview an incoming script in the inbox and then execute it with a single click. Or you can skip previewing, only to later review the script in the history.
+
+If the incoming script interferes with your local changes, the conflicting files are visible in the Local Merge area (used to be Synch Area). You can preview and correct the automatic merge, or you can use an ''external tool'' to perform the merge.
+
+==Project Manipulation
+We listen to our users. We not always have the resources to address all the wishes, but we try. 
+
+A surprising number of our clients use Code Co-op to manage large numbers of projects. To make their lives easier, we added a special pane listing the most "interesting" projects. This pane is displayed in the main file area and in the proect area. It shows the projects that require user action, e.g., have pending scripts or checked-out files; as well as a few recently visited projects. 
+
+We created a command-line tool that can perform certain commands for all projects. Some users needed to be able to synchronize all projects in one pass. Others wanted to change their status to Observer before going on vacation (and then back to Voting Member) in all projects. 
+
+Joining a project has always been a bit of a problem. You had to have the project name just right, and the correct e-mail address of an existing member. Why not "invite" a new member instead of making him or her join? We finally implemented invitations. And not only that--we made it possible to invite a new member to ALL your projects using a command-line tool. 
+
+==Dispatcher
+We've been under tremendous pressure from our users to improve the dispatching of scripts. In version 5.0 we made two major breakthroughs. We made the dispatcher non-blocking, and we added the SMTP/POP3 support.
+
+There are times when the dispatcher has no idea how to dispatch a script. This happens because of configuration problems or user mistakes. In such cases, the dispatcher used to pop up a dialog box and wait. When that happened on an unattended hub, all traffic was stopped. Not any more! 
+
+Instead of a dialog, a baloon alert is displayed. If there's nobody to click on the baloon, the problem script goes into quarantine, and waits until somebody can deal with it.
+
+The addition of SMTP/POP3 support to the dispatcher makes the use of e-mail for synchronization a breeze. In fact, if you can afford separate e-mail accounts, you should configure all your computers as e-mail peers and rely entirely on SMTP/POP3. This is one of these things that "just work". It's better than MAPI and sometimes even better than LAN. 
+
+==Branching
+The problem with branches is that they have to be merged. Even with the best of tools it's a tedious, error-prone, and menial task. Code Co-op was designed to avoid branching (except for the heavy-duty branching after a realease--when the project has to split into maintenance- and continuing-development version). 
+
+Neverthless, some merging is unavoidable, and we decided to make it as painless as possible. In version 5.0 an external merge tool can be used to perform merges. We also rationalized conflict resolution.
+
+Occasionally two or more scripts miss each other. When that happens, Code Co-op creates a branch point. One of the branches becomes a trunk, the other has to be merged into the trunk. 
+
+In version 5.0, the person who is actively working on a losing branch may be able to postpone the execution of the incoming winning script and continue making side-branch check-ins. At some point, of course, a merge should be performed. 
+
+A merge is as easy as selecting the branch script in the history pane, selecting a file in the lower pane, and clicking the merge button to start an (external) file merger.

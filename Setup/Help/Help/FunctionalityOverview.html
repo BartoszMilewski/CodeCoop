@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Functionality Overview</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Functionality Overview</h1>  <br />
+
+<p class="first"><span class="highlight">In a nutshell</span>, Code Co-op, like any decent version control system, lets you <a href="createProject.html"><b>create a project</b></a> to safe-keep your source files and track their history. Once the project is created, other developers, <em>wherever they are</em>, may <a href="joinProject.html"><b>join the project</b></a>, or the Administrator of the project can <a href="invitation.html"><strong>invite</strong></a> them. When you no longer want to be a member of a project, you <a href="defect.html"><b>defect</b></a> from it. (You can also <a href="branch.html"><b>branch</b></a> a project and <a href="ProjectMerge.html"><strong>merge</strong></a> changes between branched projects.)</p>
+		<p>In a project, you can <b><a href="AddFile.html">add</a></b> an existing file, or create a <a href="NewFile.html"><b>new</b></a> file.</p>
+		<p>The complete history of the project is available to you. You can view previous <a href="ProjectHistory.html"><b>versions</b></a> of individual files or the project as a whole; restore them, or save.</p>
+<br />
+	<div class="note">
+		<p class="first"><span class="highlight">Most of the time</span>, however, you'll work on <b>editing files</b> that are already in the project. You'll do that with your favorite editor or development environment.</p>
+<p>You'll notice that files in your project are made <b>read-only</b> by Co-op. If you want to edit a file, you first <a href="CheckOut.html"><b>check it out</b></a>--which makes it <b>read-write</b> and ready for changes. Several development environments <a href="Integrate.html">integrate</a> with Code Co-op and are able to automatically check files out as soon as you start editing them.</p>
+		<p>Once you're done making changes, you <a href="CheckIn.html"><b>check in</b></a> the changed files, and the system creates a <b><a href="Script.html">differential script</a></b> of changes. Scripts are then <a href="Dispatcher.html"><b>dispatched</b></a> to all other members of the project.</p>
+		<p>When you get a script from somebody else, you <a href="SyncScripts.html"><b>synchronize</b></a> your project by executing it. The changes  made by the script appear in your project immediately. You can <a href="ReviewScript.html"><b>review</b></a> the changes from the <strong>History tab</strong>. You cannot reject a sync, but you can <a href="RestoreProject.html"><b>revert</b></a> it.</p>
+	</div>
+ 
+		<p>Co-op also let's you <a href="RenameFile.html"><b>rename</b></a> files, <a href="MoveFile.html"><b>move</b></a> files between folders, as well as <a href="DeleteFile.html"><b>delete</b></a> them--all under strict version control. </p>
+		<p>Sometimes the changes you receive are in <b>conflict</b> with the changes you have made. Code Co-op helps you resolve such conflicts by <b><a href="LocalBranch.html"> branching</a> </b> or <a href="merge.html"><b>merging</b></a> the conflicting changes.</p>
+		<br />
+	
+	<div class="note">
+	<span class="highlight">It is important</span> not to <b>bypass Code Co-op</b> when you make changes to project files or folders:
+
+			<div style="padding:8px;">
+ 
+<strong>Do not edit files</strong> that are not checked out. (Yes, you <em>could</em> do this by clearing the read-only status of the files, but doing so will break the database information that Co-op keeps. Run <a href="RepairProject.html"><b>repair</b></a> from the <em>Project</em> menu to restore files after an accident like this.)
+<br />&nbsp;<br />
+<strong> Do not <i>rename</i> or <i>move</i> files</strong> using external applications (e.g., the Windows explorer), even if they are checked out.
+<br />&nbsp;<br />
+Always perform <strong>delete</strong>, <b>rename</b> and <b>move</b> using Code Co-op.
+</div>
+<p class="first"> In return you can expect that <b>fully transactional</b> Code Co-op will preserve the integrity of your project even if the power goes down in the middle of an operation (provided, of course, your file system is robust enough to recover from such a disaster).</p>
+</div>
+</body>
+</html>

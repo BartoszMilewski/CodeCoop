@@ -1,0 +1,22 @@
+=Checkout Notifications
+==Notification scripts
+* All scripts have an optional new section (ignored by older versions) called CheckedOut. CheckedOut section contains a list of gids currently checked out. The absence of this section is understood as "no files checked out by me".
+* In addition, if the check-out notify option is set in the project, an "empty" ack script is sent during every checkout/uncheckout to piggyback a modified CheckedOut section. 
+* An "empty" ack is also sent when the user changes the check-out notify option in a project.
+==Project Database
+* CheckOutNotification option setting is stored as one more bit in the project properties
+* A new section, CheckOutNotifications, is added to the model. This doesn't require version change.
+* CheckOutNotifications section conceptually is a multimap (file gid->list of user IDs). The meaning of each entry is: "The file is currently checked out by the following users".
+* Implementation: TransactionalArray of structs (file gid, SerVector of userIDs). Additionally, for speed, an in-memory GidSet of files that are checked out by anybody. Recreated after every transaction.
+* Updates to this object are transactioned. Entries are modified in the TransactableVector.
+==Usage
+* When listing files in Files/Check-In views, add special markings to files that are in the CheckOutNotification list. During the listing use the fast access GidSet in CheckOutNotifications object.
+* Selection>Properties should be available for every file in the Files and Check-In areas. It shows
+** File name
+** The list of users who have this file checked out
+** If file is locally re-typed, moved or renamed, previous and current type/name/path
+==Implementation Strategy
+* Before Lite and 5.0d, test the version compatibility of new features
+** Add the mockup of CheckOutNotification section to scripts and test the reception of such scripts by old versions
+** Reception of empty ack scripts with and without the new section
+** Add the mockup of CheckOutNotification section to model and test going back and forth between versions.

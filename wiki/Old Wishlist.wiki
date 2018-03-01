@@ -1,0 +1,125 @@
+=Old Wishlist
+* Fix dialogs/wizards "ask user" (MaibloxUi.cpp)by providing them more information from point of call.
+
+* WholeFileCmd and DelFileCmd:<br>Don't allocate buffer. Instead remember the path of the file to be copied. During serialization, open the file and copy the contents directly. Careful with links to temporary area during full synch.
+
+* std::bad_alloc exceptions : catch display them everywhere there is catch (...)
+
+* Differ:
+Add an option to Start On First Difference 
+Add an option not to Ignore Whitespace Changes
+
+When loading icons for listview, try specifying sizes and colors
+Use XML for command-line interface to co-op
+Make co-op generate templates for each menu item (including dialog values)
+
+Turn off check-out warning in Differ
+
+Invite with a link to download co-op
+
+Open up dispatcher architecture to support add-ins.
+
+stamp remote recipients from other hubs when sending script to a hub?
+
+default .dfm to binary (other defaults as well)
+
+* warn user when accepting synch with unreviewd merged files.
+* mark 
+* setup: add co-op to toolbar
+* add icons for rejected and missing scripts in the mailbox
+
+DisplayException in Output.cpp -- display something when out of memory
+
+Move base class for Ipc to WinLib
+
+Store labels in a separate log, together with insertion points into history.
+
+A label can be added post factum and can be edited.
+
+*Unless you somehow embed all of the the system's file view into Co-op, what about:
+** adding an 'Open Explorer' command in the co-op view, which would open a file viewer showing contents of the current directory.
+** allowing folder/paths to be dropped from the explorer into the path display bar of the file view ?
+
+CmdLine: export project (current version) to directory
+
+* Local locking of checked out files (to prevent accidental checkin)
+* Check-out comment
+** keep running log for check-in comment
+
+Add sort icon (arrow) to column headers
+
+Progress meter during check in
+
+Recreate project from scratch using history
+
+Make default editor switchable (only when started from file area)
+
+When adding new type, give the option "notify me when a new file of this type appears in the project area. This will require showing and editing list of registered types. Also, a possibility to add default contents to files of a particular type (like the #ifdefs in a .h file).
+
+Dialog: Compare Versions -> sort by path or add sorting by column
+
+* Rewrite File Path to use a vector of strings
+---
+Better discrimination of file types. C++, Java, Basic, Delphi, generated files, file types, binary files, gif, jpg,....
+
+==Rene Verschoor
+
+===VERY IMPORTANT TO US
+# When you have checked out files, and another member deletes one of
+those files from project, the file is handled as if it's a new file and
+checked in again if you don't pay enough attention.
+This is not really a bug, but it proves to be extremely annoying. This
+is _the_ major gripe about CC among my colleagues.
+A better solution would be e.g. that upon receiving a script that
+deletes a file from the project, you get a dialog with an option to
+accept or refuse this deletion.
+# Option to automatically accept all join requests and membership
+related scripts, without auto accept 'normal' scripts
+Now, if the admin of a project doesn't yet want to accept pending
+scripts, he blocks a join request.
+# Do not allow checkin when there are pending scripts
+# Prevent user joining more than once
+# When the hub dispatcher has a problem with a script (eg unknown
+member) it looks like it blocks all scripts of other projects.
+I think this is correct behaviour, as there could be dependencies
+between projects.
+However, send some notification (e-mail, IM) to a group of persons, as
+the hub typically runs on an unattended server.
+# Missing script notifications can be present in Mailbox of inactive
+project, but this is not shown (no red dot)
+
+===VERY NICE TO HAVE
+# Some projects tend to have a lot of (small) checkins. If a member is
+away for a few days and want to check what has changed he has to accept
+all scripts one by one and check all merge results.
+It would be extremely handy if you could accept a bunch of scripts and
+check the results of those as one merge.
+# Join request: optionally request History
+# You can have a checkin comment with CRLF in them, so they span
+multiple lines.
+In the History tab only the 1st line is shown, no indication that
+there's more.
+You must doubleclick to see the original multiline comment.
+# After syncing a merged file is represented by a red icon. Make a
+difference between safe merges and collisions
+#. When admin deletes member from project send a notification to that
+member
+# Option to keep only the latest version of a file, e.g. generated
+exe. Or also only at milestones
+# If CC is running on the hub it blocks the backup of the active
+project. CC apparently keeps something locked
+# Membernumbers are not very useful when diagnosing a possible
+problem. Also show the username.
+# Hub dispatcher, public inbox: show projectname + script#
+#. If a script is unconfirmed, I have to look at history at author's
+machine to see who's to blame. Would be nice if this info is available
+to the admin or on the hub
+# More diagnostics would be nice, e.g. collect memberlist of all
+projects from all members known to hub, Save Diagnostics for all
+projects in one go
+
+===Help update!
+Can you describe what the new 4.0h option "Pull scripts from hub" does?
+I suspect this would have solved my problems when I was working at home
+behind a 1-way VPN...
+

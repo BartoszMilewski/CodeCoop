@@ -1,0 +1,73 @@
+Return-path: <Rotem@hotbar-inc.com>
+Received: from smtpin02.netos.com (unverified [216.251.100.19]) by ARMADILLO.netos.com
+ (Vircom SMTPRS 3.2.315.0) with ESMTP id <B0021282185@ARMADILLO.netos.com> for <RSWL@relisoft.com>;
+ Mon, 19 Dec 2005 05:19:28 -0800
+Received: from xmail.hotbar.com (unverified [194.90.178.5]) by smtpin02.netos.com
+ (Vircom SMTPRS 4.1.361.21) with ESMTP id <B0068211533@smtpin02.netos.com> for <RSWL@relisoft.com>;
+ Mon, 19 Dec 2005 05:16:09 -0800
+Received-SPF: none (smtpin02.netos.com: domain of Rotem@hotbar-inc.com does
+ not designate any permitted senders)
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----_=_NextPart_001_01C6049F.462FC27C"
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Subject: Code Co-op Sync:znc.snc::RSWL:fff-68b7
+Date: Mon, 19 Dec 2005 15:22:35 +0200
+Message-ID: <ECB98E68E7B5D248B0CA814BD04650F801F4633E@msgil.hotbar-inc.com>
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator: 
+Thread-Topic: Code Co-op Sync:znc.snc::RSWL:fff-68b7
+Thread-Index: AcYEn0Yvi+KjaQVcRxaDm8tNCiKBoA==
+From: "Rotem Hermon" <Rotem@hotbar-inc.com>
+To: <RSWL@relisoft.com>
+
+This is a multi-part message in MIME format.
+
+------_=_NextPart_001_01C6049F.462FC27C
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_002_01C6049F.462FC27C"
+
+
+------_=_NextPart_002_01C6049F.462FC27C
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+User Rotem Hermon requests to join project RSWL
+
+------_=_NextPart_002_01C6049F.462FC27C
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>Code Co-op Sync:znc.snc::RSWL:fff-68b7</TITLE>
+</HEAD>
+<BODY>
+<!-- Converted from text/plain format -->
+
+<P><FONT SIZE=3D2>User Rotem Hermon requests to join project RSWL</FONT>
+</P>
+
+</BODY>
+</HTML>
+------_=_NextPart_002_01C6049F.462FC27C--
+
+------_=_NextPart_001_01C6049F.462FC27C
+Content-Type: application/octet-stream;
+	name="Scripts.znc"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="Scripts.znc"
+
+EtCDPakwwxRh45/nQiiovXumduwar1K9KmG3BQbm4lyVwbpWMu121vKyRyGfFntfAkHy18DzzmKg
+9OLA+khOTn376Q6kkk5ufp8ug7QOiKOC2tWaVgSNcSEx5ZzoijgcZOlD/hftGMbKK+8f5p7dwdmw
+Kc2hyRFHBXHVYNVM5jUuYJ3PYF5beKbxlzOJCbkGtL52rPXYn99FD4djU52QWJyY+KlitrVmlYEj
+SsCoWUPPxEWTSNLkHcblHLvYpZ0ERO/qInWr09VMaw7QPkCWc9CwyKS05R/+k5T3gG+2xWkcV/r5
+dJyJPXXdQ7PSO36enx06l394pZ/itR7cnYhzACjd0K7OruwYKMStb8c7eieL2HwNvWpgtQB1rVwj
+fYcKIb9y7hdheuOww3i+/2R56hyqK1YxjfrQQjUZ
+
+------_=_NextPart_001_01C6049F.462FC27C--

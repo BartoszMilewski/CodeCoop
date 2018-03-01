@@ -1,0 +1,17 @@
+| Summary |FtpApplet cannot delete file|
+| ReportedBy |Bartosz Milewski|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |Wednesday, July 30, 2008|
+==Description 
+In History, select a script and a file (in my case it was the last script). Do "Save version of file" to the FTP site. The file is transferred, but FtpApplet diesplays an error that it can't delete the source file from the temporary directory. 
+==Resolution
+Cleanup was done while file was still open by Ftp::UploadTraversal
+
+

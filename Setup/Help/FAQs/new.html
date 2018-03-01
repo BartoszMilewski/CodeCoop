@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+	<title>FAQ: Moving Code Co-op and projects to a new machine</title>
+	
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>What is the best way to move Code Co-op and my projects to a new machine?</h1>
+<h2>Code Co-op Pro</h2>
+<p class="first">If you are using Code Co-op Pro, move the database using the <a href="../Help/MoveProjects.html">Backup/Restore</a> procedure.</p>
+<h2>Code Co-op Lite</h2>
+<p>If you are using Code Co-op Lite, follow this procedure:
+
+<ul>
+	<li>Install Code Co-op on your new machine </li>
+	<li>Copy over all projects preserving their absolute paths </li>
+	<li>Copy over the database (usually the tree under c:\co-op) overwriting the new   database you had created during setup </li>
+	<li>Do not uninstall Code Co-op on the old machine at this point! You must first delete the database (stop the dispatcher first). Only after the database (c:\co-op) is deleted, can you uninstall Code Co-op.
+	</li>
+</ul>
+
+ 
+<p class="first"><em>If you are not using LAN,   you're done. </em></p>
+<p class="first"><em>If you are on a LAN, please continue with the following:</em> </p>
+<br />
+
+<p class="first"><strong>On a LAN</strong>, the simplest thing to do is to name the new   machine the same name as the old machine and you are done. If you can't do this,   you will have to reprogram the dispatchers to use the new network path to your   new machine: </p>
+<strong><br />
+</strong>
+<p class="first"><strong>If the new machine is a Hub:</strong></p>
+<ol>
+	<li>The Hub has to change its own Public Inbox share (accessible through the   Dispatcher's Collaboration Settings). </li>
+	<li>All dispatchers on satellites have to change their Hub forwarding path (also   accessible through the Collaboration Settings). </li>
+</ol>
+<p class="first"><strong>If the new machine is   a satellite:</strong></p>
+<ol>
+	<li>The satellite has to change its own Public Inbox share (accessible through   the Dispatcher's Collaboration Settings). </li>
+	<li>The Hub's dispatcher has to replace forwarding paths to this satellite:
+		<ul>
+				<li>open dispatcher's Diagnostic View on the Hub </li>
+			<li>go to Members tab </li>
+			<li>double-click on any project in which the satellite is enlisted </li>
+			<li>double-click on that satellite member </li>
+			<li>edit the forwarding path: change the machine name to the new machine </li>
+			<li>when asked if you want to replace all paths to that satellite, answer &quot;yes&quot; </li>
+		</ul>
+	</li>
+</ol>
+</p>
+
+</body>
+</html>

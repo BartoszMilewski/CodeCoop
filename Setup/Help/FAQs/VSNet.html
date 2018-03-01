@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Code Co-op and Visual Studio.NET</title>
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>Working with Visual Studio.NET</h1>
+<a name="Projects"></a>
+<br />
+
+<h2>Putting additional Visual Studio.NET projects under Code Co-op
+	control</h2>
+<br />
+After your Visual Studio.NET solution is under version control, you might add 
+		new Visual Studio.NET projects to it. To add these projects to your Code Co-op 
+		project, it's simplest to let Visual Studio.NET add it for you. And to make it 
+		easy to see which files are being added and changed, it's best not to have 
+		other files in the project checked out when you are adding a new project to 
+		version control.
+<ul>
+	<li> In Visual Studio.NET, open your solution and in the Solution Explorer click on 
+		the project you want to add to source control. Now click on the <b>File</b> menu, 
+		select <b>Source Control</b>, and further select <b>Add Selected Projects to Source 
+		Control</b>.</li>
+	<li> close the solution in Visual Studio.NET</li>
+	<li> In Code Co-op, click on the <b>Check In Area </b>tab and you'll see all the 
+		newly added files. Select the Click on the <b>All</b> menu menu item and select <b>Check 
+		In</b>. Enter a comment (e.g. <em>New subproject</em>), and click OK. The 
+		files are now checked in to the Code Co-op project.</li>
+</ul>
+<p>Your new Visual Studio.NET project is now fully integrated with your Code Co-op 
+	project. You can open the solution in Visual Studio.NET and get to work.</p>
+<br />
+<a name="OpenFromCC"></a>
+<h2>Opening a Code Co-op project in Visual Studio.NET</h2>
+<p class="first">If you joined a Code Co-op project that was already integrated with Visual Studio.NET you 
+	do not have to do anything in order to integrate. You can just open the solution in Visual Studio.NET 
+	(an easy way to do this within Code Co-op is to right click on the <em>.sln</em> file and 
+	select <b>Open with Shell</b>) and you can start working with it immediately.</p>
+<br />
+<a name="Renaming"></a>
+<h2>Renaming Solutions</h2>
+<p class="first"><b>Renaming a solution </b>in Visual Studio.NET can cause problems and is not 
+	recommended. If you must rename a solution, here's a sequence that will work. 
+	In this example, we're renaming a solution from <em>Original</em> to <em>KillerApp</em>:</p>
+<ol style="MARGIN-LEFT: 5pt">
+	<li> In Code Co-op, check out <em>Original.sln</em> and <em>Original.vssscc</em></li>
+	<li> Start Visual Studio.NET and open the solution.</li>
+	<li> Right click on the solution item (at the top of the Solution Explorer window), 
+		select <b>Rename</b> and enter the new name.</li>
+	<li> If a warning dialog appears, click <b>Continue with Change</b></li>
+	<li> Close the solution</li>
+	<li> In Code Co-op, go to the <strong>Check-in Area tab</strong> and <b>Un-CheckOut </b><em>Original.sln </em> and <em>Original.vsscc </em> (the files you checked out in step #1)</li>
+	<li> Go to the<strong> Files tab</strong> and <b>Delete </b><em>Original.sln</em> and <em>Original.vsscc</em></li>
+	<li> Select <em>KillerApp.sln </em>and <em>KillerApp.vsscc, </em>click on the <b>Selection </b> menu and select <b>Add To Project</b></li>
+	<li> Go to the <strong>Check-in Area tab</strong>, select <em>KillerApp.sln </em>and <em>KillerApp.vsscc </em> and check them in.</li>
+</ol>
+You have now successfully renamed your Visual Studio.NET solution. <br />
+&nbsp;<br />
+<a name="sub"></a>
+<h2>Upgrading from Visual Studio 6.0 to Visual Studio.NET with 
+	sub-projects</h2>
+<br />
+<p class="first">Upgrading from Visual Studio 6.0 to Visual Studio.NET may produce binding 
+	errors if you have sub-projects in VS 6.0. Before outlining the solution, keep 
+	in mind that VS.NET organizes development into two layers:</p>
+<ul>
+	<li> Top-level solution described by a file with the extension .sln in the root 
+		directory of the solution tree</li>
+	<li> One or more (sub-)projects that could be in the subtrees of the solution tree. 
+		If these are C/C++ projects, they are described by files with the extension 
+		.vcproj. Their format is XML, which can be edited (with care!).</li>
+</ul>
+To fix the integration with VS.Net, do the following:
+<ul>
+	<li> Open the dialog File&gt;Source Control&gt;Change Source Control. You can add 
+		one more column, Relative Path, to this display</li>
+	<li> You should see there the paths to your subprojects relative to the code co-op 
+		root</li>
+	<li> If not, go to the corresponding directory, check out the .vcproj file and 
+		correct the line that looks like this: SccLocalPath=&quot;..&quot;</li>
+	<li> Put &quot; <strong>..</strong> &quot; there if the project directory is one level below the 
+		co-op project root, etc</li>
+</ul>
+<br />
+
+<h2><a name="WebSolutions" id="WebSolutions"></a></h2>
+<h2>Visual Studio.NET Web Solutions and Code Co-op Control</h2>
+<br />
+<p class="first">VS.NET treats <strong>Visual Basic</strong> , <strong>Visual C#</strong> and <strong>Visual J#</strong> <em>Web Solutions</em> in a special way. Adding them to 
+	source control requires an additional change in VS.NET configuration.
+	Also the process of joining a Web Solution differs from a standard procedure and
+	has its own specific requirements. <br />
+	Note: You do not have to do any of these for <strong>Visual C++</strong> Web Solutions. </p>
+<p><b>Before you create a Web Solution</b> you must set the VS.NET default project directory
+	to point to your system's default web publishing folder (usually <strong>&quot;c:\inetpub\wwwroot&quot;</strong>).
+	To do this, open the Options dialog from the VS.NET Tools 
+	menu and change the default directory in the Environment.Projects and 
+	Solutions section. </p>
+<p><b>Joining an existing Web Solution on the same computer</b> more than once is
+	essentially impossible. </p>
+<p>When <b>joining an existing Web Solution from other computers</b> you must be aware of
+	the following requirements:</p>
+<ul>
+	<li>all users have to use <em>localhost</em> for the server name</li>
+	<li>a project location under the <em>localhost</em> have to 
+		be the same for these users (e.g. http://localhost/webproject1)</li>
+	<li>an absolute path to the project must be the same
+		on all computers (e.g. c:\inetpub\wwwroot\webproject1)</li>
+</ul>
+<p><b>After you joined an existing Web Solution</b> you will be initially 
+	unable to open the solution in VS. <br />
+	You will need to ask the sender of the Full Sync to
+	send you a copy the <b>&quot;.suo&quot;</b> file. <b>Do not add this file under Co-op's control!</b> The .suo file is a VS file and is placed
+	in the root folder of the solution. The sender might not see the .suo file 
+	in the explorer if s/he does not have &quot;show hidden files&quot; option set 
+	(it has the Hidden attribute). But the sender can always see the .suo
+	in Code Co-op's display and drag and drop it to an e-mail message. </p>
+<p>By the way, make sure you add <b>&quot;.webinfo&quot;</b> files under Co-op's control.
+	VS does not add them by default when Adding Solution to Source Control. </p>
+<p>&nbsp;</p>
+</body>
+</html>

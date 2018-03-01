@@ -1,0 +1,15 @@
+| Summary |Use FTP for exporting files|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Done|
+| DateReported |Friday, July 20, 2007|
+==Description
+When exporting files, give the option to select an FTP site. This could be used in:
+* Project>Export
+* In the history, SaveAfter and SaveBefore
+Very useful for web projects. Updates of the web site could be done incrementally by selecting recent scripts in the history and saving files "after". This way only changed files will be overwritten.
+
+Add this functionality to PRO only.
+

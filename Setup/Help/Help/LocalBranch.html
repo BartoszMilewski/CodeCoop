@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Dealing with conflicts that result in a Branch</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Conflicts and Branches </h1>
+<p>
+In a distributed version control system that uses email, it is possible that two scripts miss each other on the way between two developers. Code Co-op deals with such situations by making one script win and the other lose the conflict. The losing script becomes a side branch.
+</p>
+<p>
+When you receive a script that loses, you'll see it in your history marked as <b>Branch</b>&mdash;it will be greyed out and in italics. The script contents are still accessible and can be brought into the project trunk through a <em>merge</em>. This is typically done by the person whose script was <em>branched</em>. But, in principle, anyone can merge a branch into the trunk.
+</p>
+
+<h2>When Your Script Becomes a  Branch</h2>
+<p>
+When you try to execute an incoming script&mdash;whether manually or in auto-sync mode&mdash;and it  conflicts with a check-in you did before, Code Co-op will display the following dialog:
+</p>
+<p class="image">
+<img src="../Images/LocalConflict.gif" border="1"/>
+</p>
+
+<h3>Your  Options </h3>
+<ul>
+	<li>If you are sure that the scripts can be safely merged, select the first option. If there are serious conflicts, the automatic merge will fail anyway, and you'll have to perform a <a href="LocalMerge.html">manual merge</a>.</li>
+	<li>If you want to have more control over the merge (or let somebody else do the merging), select the second option. Your rejected script will be available in the History and you, or somebody else, will be able to <a href="LocalMerge.html">merge it manually</a>.</li>
+	<li>For advanced users there is an option to postpone the execution of the winning incoming script and keep working on the current (to be rejected) branch. This option is particularly useful if you are in the middle of working on this branch, with lots of files checked out and edited. You'll be able to perform your check-in, even though you know it will be rejected. But if it's a logical continuation of your branch, it will be easier to manually merge it later, after you've accepted the pending winning script(s).</li>
+</ul>
+<p class="note">In order to avoid conflicts, it's a good idea to always check your e-mail for incoming scripts before doing a check-in (or set the e-mail polling interval to just a few minutes). Conflicts may also occasionally happen in a LAN-based setup, especially when a computer has been off-line for some time and the user makes a check-in without waiting for the missed scripts to arrive (also, there is a "pull scripts from hub" item in the Dispatcher menu).</p>
+</body>
+</html>

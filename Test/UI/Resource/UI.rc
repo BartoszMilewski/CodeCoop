@@ -1,0 +1,26 @@
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ID_MAIN					ICON                    "main.ico"
+I_FOLDER				ICON					"Folder.ico"
+I_FOLDERG				ICON					"FolderGrey.ico"
+I_FOLDERO				ICON					"FolderOpen.ico"
+I_FOLDEROG				ICON					"FolderOpenGrey.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_MAIN                 "UITest"
+    ID_CAPTION              "UI Test"
+END
+

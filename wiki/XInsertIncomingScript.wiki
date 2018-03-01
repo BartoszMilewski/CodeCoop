@@ -1,0 +1,18 @@
+= History::Db::XInsertIncomingScript
+Arguments: ScriptHeader, CmdList (both const references), AckBox
+* scriptInserted = true;
+* node = tree.XFindNode (incomingScriptId)
+* if node = 0
+** ...
+* else if node IsMissing
+** newNode = [[XLogIncomingScript]]
+** copy isRejected and isBranchPoint from missing to new
+** if tree.[[XSubstituteNode]] (no missing predecessors)
+*** Gather acknowledgments
+** else
+*** don't acknowledge it
+** if unit::set, notify history view
+* else (script already in history)
+** scriptInserted = [[XIsDuplicateScript]]
+* [[XRemoveDisconnectedScript]]
+* return scriptInserted

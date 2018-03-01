@@ -1,0 +1,24 @@
+| Summary |Notify of new project member.|
+| ReportedBy |Piotr|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 4 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+
+Bug #1194 from the Web database.
+Original source Joe Calkins.
+
+How can you get a notification when someone joins a project? We have the 
+server as admin with auto accept ON so we can easily 
+join a project. But... it would be nice to know when someone does that.... 
+if I recall correctly, coop used to hit all other members 
+with a message when someone else joined. 
+
+|Date|Who|Comment|
+|4/12/2005|Bartek|Maybe we should implement "Notification Area" in Code Co-op, where we could put events of interest to the client--in particular error messages. The would have to be persistent, of course. That would solve the problem of logging asynchronous "alerts" (a la Dispatcher).|

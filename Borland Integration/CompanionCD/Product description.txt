@@ -1,0 +1,46 @@
+Title:	Code Co-op v.4.6
+Vendor Name: Reliable Software
+Product Name: Code Co-op
+URL http://www.relisoft.com/co_op/index.htm 
+Logo File Name ReliableSoftware.jpg 
+Install File Name co-op.exe 
+CD Section Trial 
+Copyright All rights reserved
+Borland Product Delphi
+Category Source Components 
+SKUs Personal, Standard, Pro, Enterprise, Open Edition
+Version  5 to 10
+Short Description:
+Keep your Windows development projects organized across multiple development languages with Code Co-op, the peer-to-peer version control system.  
+Long Description:
+Manage your code development with Code Co-op, the affordable, peer-to-peer version control system for distributed teams.. Code Co-op enables developers to work on- and off-site with complete access to their project history and files -- no server required. Collaborate using Email, LAN or VPN.
+
+Download the 31-day full-featured trial and start collaborating today.
+
+VERSION CONTROL BUILT FOR DISTRIBUTED TEAMS
+Designed with a distributed team in mind, Code Co-op provides version control and configuration management for teams worldwide using LAN to connect onsite teams and Email to connect offsite teams. Code Co-op provides increased flexibility in how teams collaborate, while eliminating the need for a central server. No server means no costly maintenance and synchronization is automatic. High bandwidth is not required.
+
+HAVE YOUR PROJECT AT YOUR FINGERTIPS
+Code Co-op maintains a copy of the project on each person’s workstation giving you immediate access to your project. You can check-out and modify files, review and make comparisons in your project history, and visually view or test your changes -- all from your workstation. This gives you the efficiency and ease not found in other version control or configuration management systems. And, whenever changes are checked in, a small synch script (containing the deltas) is created and distributed to other members.  That way you always know when a change is made and by whom. 
+
+ASSURANCE THAT YOUR PROJECT DATABASE IS SECURE
+Knowing that your project database is secure and protected from inadvertent shutdowns or changes made outside of version control is essential. Code Co-op uses a proprietary, fully transacted database so an incomplete check-in will not affect your database. If inadvertent changes are made outside of Code Co-op, you can repair the project.  Additional project security is at the very core of Code Co-op. Since Code Co-op is a completely distributed system, you have an automatic back-up of your project database on each member’s computer.  
+
+VERSION CONTROL SHOULD BE EASY TO USE AND UNOBTRUSIVE
+Making it easy to access your project is essential. Code Co-op achieves this by using a straight-forward, intuitive GUI. Additionally, if you have a preferred environment, Code Co-op integrates with many IDEs including VisualStudio.NET, Visual SlickEdit, Borland C++ Builder and Delphi. Additional command-line applets are also available so you can automate many tasks locally or remotely.
+
+ROBUST VERSION CONTROL DOES NOT HAVE TO COST A FORTUNE
+Robust functionality without compromise while maintaining affordability is a priority with Code Co-op. Since it is server-less, there is no hardware to purchase or maintenance to commit to. Code Co-op runs on the Windows platform and utilizes Simple Mapi/Mapi email clients for offsite development. Code Co-op is ideally suited for small to medium-sized Windows development teams and costs only $159 per workstation.
+
+EASY TO INSTALL AND IMPLEMENT
+The installation and implementation process for Code Co-op takes only a few minutes even for a team of developers. The wizards and Beginner’s Tips will guide you through the set-up and implementation process so you’re able to start developing quickly. With one command, you can add an existing project to Code Co-op. Or, simply drag and drop files into your new Code Co-op project.
+
+With Code Co-op you can: 
+  - Collaborate from anywhere using Email, LAN, and VPN
+  - Access your project files and history without a network connection
+  - Review file changes with the built-in Visual Differ or Beyond Compare Differ
+  - View, compare, or restore any iteration of your project or file regardless of a label
+  - Integrate with your favorite development tools (tool list)
+  - Forgo costly server maintenance
+  - Rely on a secure, fully transactional database with automatic back-ups
+  - Implement source control in minutes for only $159 per user

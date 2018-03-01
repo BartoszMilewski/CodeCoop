@@ -1,0 +1,320 @@
+
+  Code Co-op Release Notes
+
+	Code Co-op 5.2a, June 4, 2011
+
+New Features:
+- Support for Full Sync larger than 4GB
+- Context menu in file view with no selection displays Add File and Add Folder
+
+Bug Fixes:
+- History filter was broken
+- Adding file to a not-in-project directory didn't refresh file view
+- OnCheckin.bat was not run with project root as current directory
+- Couldn't switch to Distributor mode even when no other members enlisted
+- Inbox not refreshed after synch was called from command line
+- Use SSL was not set correctly in SMTP settings in Dispatcher Config Wizard
+- User local was not used to format data/time
+
+	Code Co-op 5.2, Nov 07, 2010
+	
+New Features:
+- Major speedup in script distribution on the LAN
+  - Distribution to different satellites is done in parallel
+  - Email processing is done in parallel with LAN distribution
+  - Small scripts are distributed before large scripts 
+- If a file PostCheckin.bat exists, it will be called after every check in (just as OnSync.bat is called after every auto-sync)
+- Auto execute label scripts
+
+Bug Fixes:
+- Display of script properties in History was turned off
+
+
+	Code Co-op 5.1d, March 22, 2010
+	
+Bug Fixes:
+- Script Properties in History View didn't work
+
+New Features:
+- In LAN configurations, Dispatcher gives priority to smaller scripts when copying over the network.
+
+	Code Co-op 5.1c, November 7, 2009
+
+Bug Fixes:
+- Some paths in Dispatcher>Configuration Wizard didn't network-share PublicInbox. (This sharing works on Windows 7; on Vista, you still have to manually share PublicInbox.)
+- Several small or rare bugs fixed.
+
+New Features
+- In Inbox view, added "Selection>Request Script Resend" of a script marked as missing.
+- In Check-in view, added "View History".
+- In Overdue Script dialog in History View, Add option to remove member.
+- Selection_MoveFiles available from the menu and from command line
+	coopCmd -p:8 -c:"Selection_Move \"c:\Project\foo.txt\" target:\"c:\Project\SubDir\""
+- Help: added information about using Hotmail account.
+
+       Code Co-op 5.1b, May 10, 2009
+
+Bug Fixes
+- Checkout notifications were sometimes lost
+- Manual resend of chunked scripts didn't work
+
+New Features
+- Co-op thoroughly tests the results of Backup and Restore (version Pro)
+- Several enhancements to Project>Repair
+- Search history by file ID, for instance, ">2-51" in the History filter box
+- Drag and drop files between file pane and treeview
+- The response to Request Verification contains more data (histories of dead members)
+- Added "Move to New Machine" menu item. It opens help with instructions.
+
+------------------------------------------------------------------------
+       Code Co-op 5.1a, September 15, 2008
+
+Bug Fixes
+- Co-op crashed repeatedly when trying to process some corrupt scripts in the bacground
+- Exporting project files using FTP couldn't delete local temporary files
+- Deleting a folder in tree view hang Code Co-op
+- Script post-processing settings were not preserved by setup and couldn't be changed afterwards
+- Changing Windows password made SMTP/POP3 password decryption impossible
+- Corrupted scripts adding new files were not deleted and marked as missing
+- In Dispatcher E-mail Properties, changes between MAPI and SMTP/POP3 was not reflected in the diagnostics
+
+New Features
+- Added the option to select a script by ID in History filter (use script ID in angle brackets)
+- When exporting project to an FTP site, added option to delete files that are no longer in project
+- Remember the setting of "use folder names" in Save Historical Files dialog across sessions
+
+------------------------------------------------------------------------
+       Code Co-op 5.1, Final, July 23, 2008
+
+Bug Fixes
+- History export used current file and folder names, instead of the historical ones
+- Minor cosmetic fixes to fresh install
+  - don't try to test MAPI
+  - make sure the link to start dispatcher config in the tutorial works
+
+        Code Co-op 5.1, Release Candidate 1, July 16, 2008
+New Features
+- When using full version of Beyond Compare, allow diffing binary files also in history
+Bug Fixes
+- Right-clicking on a file selection in history pane incorrectly displayed "Properties" item
+- Project>Invite displayed incorrect error when there was a problem on the "Advanced" page
+- The filter button in file view didn't always work correctly. It was supposed to hide non-project files
+- Executing a script that makes a file uncontrolled didn't change its status to read/write
+- Incorrect information popup when the admin changed check-out notification status of a user
+- Check in area displayed files whose type has been changed as unchanged
+- Adding a whole folder tree to the project would sometimes assert
+
+------------------------------------------------------------------------
+	Code Co-op 5.1 beta 3, June 19, 2008
+New Features
+- When using full version of Beyond Compare, allow diffing binary files
+- Re-adding a locally deleted file is treated as a modification to that file. This enables the following scenario:
+  - Make changes to an external copy of the project tree
+  - Delete the whole project tree in Code Co-op (without checking it in)
+  - Outside of Code Co-op, copy the external tree back to the project
+  - In Code Co-op, add all the copied files to project. The check-in area will show the diffs
+Bug Fixes
+- POP3: improved deleting corrupted messages from server
+- File treeview not refreshed correctly after uncheckout
+- Dragging from file pane sometimes picked up selection from treeview pane
+- Joining your first project hit assertions because UI was not correctly refreshed
+- Title bar was refreshed only after project verification, which may take a long time
+- Fixed assertions when using some command-line applets
+- StartCoopBackup applet didn't report some errors
+------------------------------------------------------------------------
+	Code Co-op 5.1 beta, May 15, 2008
+New Code Co-op Features
+- Backup and Restore Code Co-op database (Pro only)
+- Re-create project from archived history (Pro only)
+- Check-out notifications (in version Pro)
+- Simplified script conflict UI
+- Rationalized setup after installation (first use brings up Dispatcher Wizard)
+- Added FTP support for exporting project version and history export (Pro only)
+- Added search with shell (uses Windows desktop search engine)
+- Added Selection>Properties in file view (showing who has the file checked out)
+- Added Project>"Configure Dispatching" to Code Co-op menu
+- Project>Repair works even with pending sync/merge
+- Command line: added "inbox" to reports
+- More efficient handling of large files
+- Added program option to quietly ignore script conflicts when the current member's scripts are not rejected
+- Allow cration of co-op database on a USB drive
+- Added Project>Open Invitation for use with exported invitations (in version Pro, LAN and FTP download supported)
+- Display how many chunks are missing for a missing script
+- Scripts that cannot be executed because of corruption are removed and marked as missing
+Bug Fixes
+- Asynchronous merging when executing script didn't work correctly
+- Command line: checkin left unchanged files out
+- Diffing didn't work when file path contained special characters
+- Searching history by phrase now also displays labels
+- Receiving join request when waiting for full sync caused havoc
+- Prevent the creation of a full synch by a new administrator with incomplete membership information.
+------------------------------------------------------------------------
+	Code Co-op 5.0g, September 11, 2007
+New Code Co-op features:
+- Menu Project>Verify Paths: Verifies if all project root directories are present. In case a project root is on a removable or network drive that is absent, allows recreating the project at a different location.
+- When entering a project that doesn't exist on disk, offer recreating it at a different location.
+- Project>Repair deals with more cases of corrupt membership.
+- Add shell association to open .wiki files with built-in differ.
+Bug fixes:
+- Fixed BCMerge bug: auto merge didn't write the result to target file.
+- Defecting from a project before receiving full sync was impossible.
+- Fixed a deadlock in the background instance of Code Co-op.
+- MS Access database modifies files while they are being checked in, resulting in a corrupt script. Calculate the checksum before and after to avoid corruption.
+- Downloading an invitation twice from FTP site resulted in a strange state.
+- Killing Code Co-op when quietly accepting invitation made further progress impossible.
+Minor bug fixes:
+- After the change of e-mail address and purging the Dispatcher's address DB, scripts sent to the old e-mail address were not accepted.
+- Fixed unknown recipient Dispatcher dialog in Code Co-op Lite.
+- Corrupted full sync in chunks caused problems when a resend request was to be created.
+- Folders were not correctly displayed in the script details pane.
+
+------------------------------------------------------------------------
+	Code Co-op 5.0f, August 3, 2007
+New Code Co-op Pro features:
+- New option to save large project invitation to disk or to an FTP site for the new user to pick up.
+- Option to save the history during invitation (disk or FTP)
+New features in Pro and Lite:
+- When switching from Observer to Voting Member, a verification request is sent to another project member and the check-ins are temporarily blocked (prevents ex-observers from wreaking havoc with their out-of-sequence check-ins)
+- Option to send a verification request from the menu to force synchronization of states between users.
+- A more informative script conflict dialog with the option to auto-merge on the spot.
+- When visiting inaccessible project (source tree absent), an option to move the project to another location.
+- Command line method to update hub ID in all projects
+Bug fixes:
+- New version of BCMerge allows lines to be moved left-to-right
+- Merging new files between branch projects sometimes identified the wrong file as merge target (by ID rather than by name).
+Minor bug fixes:
+- Re-creating a folder with case-changed name didn't work
+- Single dot comment caused problems in SMTP
+
+------------------------------------------------------------------------
+	Code Co-op 5.0e, June 12, 2007
+Bug fixes:
+- Sort didn't work in the projects tab when no project was "interesting".
+- Resend request was sent to a defected project member, if he or she was the author of the missing script.
+- It was possible to execute join request from a project of a different name (only when the script was moved manually).
+- Removing and then creating a folder of the same name with different uppercasing ignored the change of case.
+- Membership history repair failed on some corrupt histories.
+
+New features:
+- Allow multi-script selection in merge view. This makes possible selective merges of multiple scripts at once.
+- Project Repair repairs membership history of defected members.
+- Allow uninstall without defecting (very useful when moving co-op installation to a different machine).
+- Implemented new SCC interface v. 1.3. It's possible now to delete checked-out files from Visual Studio.
+
+------------------------------------------------------------------------
+	Code Co-op 5.0d, April 2, 2007
+Bug fixes:
+- Code Co-op occasionally deadlocked in the background
+- New project dialog didn't deal correctly with the attempt to nest projects.
+- Incorrect command availability during unfinished join (waiting for chunks)
+
+    Code Co-op 5.0c, February 12, 2007
+
+Bug fixes:
+- Remove possible source of corruption from membership changes history
+- In Sync/Merge view, the "Check out all files" button didn't work
+- Email diagnostics failed with Microsoft Exchange
+- Fixed broken link in Help
+
+Enhancements:
+- Added All_Report to coopcmd. It generates a text file with the report from a specified view (tab).
+- "Folder delete" didn't remove folder from disk. Use heuristics to determine whether it's safe to delete the folder (don't delete if there are uncontrolled files inside)
+- "Automatically accept invitations" now available also from Program>Options
+- When somebody is invited as observer, the "auto sync" option is automatically set (useful for inviting a central backup server).
+
+    Code Co-op 5.0b, January 15, 2007
+	
+Bug fixes:
+- Merge target (project) was not remembered across session
+- Sorting by "change" in the check-in area put folders on top
+- After "Restore Version" followed by "Uncheckout", deleted files were unnecessarily resuscitated (as not in project)
+- Dispatcher blocked after Windows logon password was changed and SMTP/POP3 was used
+- Pasting a R/O file into a project did not remove the R/O attribute
+- Sync/Merge page not always displayed after merge conflict
+- When showing historical changes with BC Differ, it was possible to edit the right pane resulting in the corruption of the database copy of the file.
+- Duplicate chunks while unpacking full sync sometimes caused a lot of unnecessary resend requests
+- Corrupt full synch blocked the project (it was impossible to visit it)
+
+Merge rewrite:
+- New merge type, Selective, to merge only changes made by a single script
+- Merge type selection dropdown: Selective, Common Ancestor, and Cumulative
+- Detect and mark local merge conflicts. Don't let the user dismiss them without running a UI merger
+- Run auto-merge in a separate thread. If the merge succeeds, clear the "Conflict" state for the file.
+
+New features:
+- Auto accept invitations in Project>Options
+
+    Code Co-op 5.0a, December 6, 2006
+
+Bug fix in membership history. Bad membership histories caused Code Co-op to go into an infinite loop. Added detection of such problems and extended Project>Repair to fix them.
+
+    Code Co-op 5.0, November 15, 2006
+
+Peer-To-Peer Wiki 
+
+A Wiki site as a feature of a version control system? Only we could come up with such a crazy idea! What were we thinking? 
+
+Well, it started with text files. Code Co-op users quickly find out that they have a great tool for sharing notes. You jot a few lines, check the file in, and it's immediately available on your laptop, where you have a second enlistment. Or you add a text file with feature requests right in your development project. Soon enough you start using Code Co-op for documentation, or even to store bug reports. 
+
+We've been doing these things for some time, but we were always dissatisfied with the lack of formatting and structure afforded by text files. We needed something that's almost as easy to edit as text, but with the power and flexibility of an HTML document. Wiki was the obvious choice. 
+
+Here's what we did: We created a wiki parser and built a web browser control directly to Code Co-op. When Code Co-op enters a directory with a file called index.wiki, the parser parses it, converts into HTML, and the browser control displays it as a web page. The wiki file can be as simple as a plain text file. But with a little bit of easy-to-learn wiki markup, you can add simple formatting, embed links to other wiki pages, or display pictures. 
+
+But that's not all. Since the browser control is a full-blown internet browser, you can follow links from your local wiki pages to any external web site. You can also mix HTML or even JavaScript into your wiki pages. 
+
+Bug Database
+
+Had we stopped at that, we would just have a great peer-to-peer wiki system--which we do! It can be used to create and share wiki sites without the need for servers. But we needed a "killer app" for our wiki. We wanted a wiki-based bug database. 
+
+What's the biggest shortcoming of bug databases? That they impose rigid structure on all bug reports. We wanted to be able to embed a screenshot or two in a report, a piece of preformatted code, a table, and so on. In other words, we wanted each bug report to be a wiki file. But we also wanted to be able to have a few "tuples" in each record--a "priority" field, an "assigned to" field, and so on. And, we had to be able to list the records based on the values of these fields. For instance, to list all open bugs assigned to Bartosz. 
+
+It sounds hard to believe, but we were actually able to accomplish it. We had to invent a mini-SQL language, which we call SQWiki, and do a few tricks, but the result is pretty specatacular considering the simplicity of the design. 
+
+As a side effect, Code Co-op now has a very flexible text-based database built into it. You can use it to store and retrieve any kinds of notes. And because it's so simple, you can do it without any training in database management. 
+
+Ease of Use 
+
+What's the use of all the features if they are hard to find and hard to use? That's why we put so much effort in Code Co-op's user interface. Version 5.0 breaks new grounds in this respect. 
+
+The most spectacular feature is a split-pane history display. You select a script in the history pane and the lower pane immediately shows the list of files modified by that script. Double-click on a file in the lower pane and a differ opens, showing exactly how that file was changed by the selected script. The same mechanism works for scripts that are still in the inbox. 
+
+We made it very easy to view, save, compare and merge historical versions of files. 
+
+This ease of reviewing changes prompted us to simplify the synchronization process. You can preview an incoming script in the inbox and then execute it with a single click. Or you can skip previewing, only to later review the script in the history. 
+
+If the incoming script interferes with your local changes, the conflicting files are visible in the Local Merge area (used to be Synch Area). You can preview and correct the automatic merge, or you can use an external tool to perform the merge. 
+
+Project Manipulation 
+
+We listen to our users. We not always have the resources to address all the wishes, but we try. 
+
+A surprising number of our clients use Code Co-op to manage large numbers of projects. To make their lives easier, we added a special pane listing the most "interesting" projects. This pane is displayed in the main file area and in the proect area. It shows the projects that require user action, e.g., have pending scripts or checked-out files; as well as a few recently visited projects. 
+
+We created a command-line tool that can perform certain commands for all projects. Some users needed to be able to synchronize all projects in one pass. Others wanted to change their status to Observer before going on vacation (and then back to Voting Member) in all projects. 
+
+Joining a project has always been a bit of a problem. You had to have the project name just right, and the correct e-mail address of an existing member. Why not "invite" a new member instead of making him or her join? We finally implemented invitations. And not only that--we made it possible to invite a new member to ALL your projects using a command-line tool. 
+
+Dispatcher 
+
+We've been under tremendous pressure from our users to improve the dispatching of scripts. In version 5.0 we made two major breakthroughs. We made the dispatcher non-blocking, and we added the SMTP/POP3 support. 
+
+There are times when the dispatcher has no idea how to dispatch a script. This happens because of configuration problems or user mistakes. In such cases, the dispatcher used to pop up a dialog box and wait. When that happened on an unattended hub, all traffic was stopped. Not any more! 
+
+Instead of a dialog, a baloon alert is displayed. If there's nobody to click on the baloon, the problem script goes into quarantine, and waits until somebody can deal with it. 
+
+The addition of SMTP/POP3 support to the dispatcher makes the use of e-mail for synchronization a breeze. In fact, if you can afford separate e-mail accounts, you should configure all your computers as e-mail peers and rely entirely on SMTP/POP3. This is one of these things that "just work". It's better than MAPI and sometimes even better than LAN. 
+
+Branching 
+
+The problem with branches is that they have to be merged. Even with the best of tools it's a tedious, error-prone, and menial task. Code Co-op was designed to avoid branching (except for the heavy-duty branching after a realease--when the project has to split into maintenance- and continuing-development version). 
+
+Neverthless, some merging is unavoidable, and we decided to make it as painless as possible. In version 5.0 a built-in merge tool (Beyond Compare Merger) can be used to perform merges. We also rationalized conflict resolution. 
+
+Occasionally two or more scripts miss each other. When that happens, Code Co-op creates a branch point. One of the branches becomes a trunk, the other has to be merged into the trunk. 
+
+In version 5.0, the person who is actively working on a losing branch may be able to postpone the execution of the incoming winning script and continue making side-branch check-ins. At some point, of course, a merge should be performed. 
+
+A merge is as easy as selecting the branch script in the history pane, selecting a file in the lower pane, and clicking the merge button to start a file merger. 
+
+Merging is also easy when you have a project that was created by branching from some other project. You can open the Branch Merge view (either from History, or from the View menu), and select a branch project. You can then pick a script and individual files that have to be merged. 
+

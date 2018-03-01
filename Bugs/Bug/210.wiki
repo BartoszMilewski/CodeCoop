@@ -1,0 +1,17 @@
+| Summary |License dialog misleading|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |Sunday, September 06, 2009|
+==Description 
+The buttons in the License dialog are not very clear. In particular the user may click the "Continue" button after entering the license. We treat it as "cancel". 
+
+Proposed solution: Depending on context, change the wording on the Continue button to "Cancel" or "Continue without license" or some such.
+
+

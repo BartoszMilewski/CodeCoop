@@ -1,0 +1,17 @@
+= Win::SharedByTwo
+* Mebers: _isShared (mutable volatile long)
+==Constructor
+* _isShared (0)
+==Acquire
+* Assert _isShared == 0
+* InterlockedIncrement _isShared
+==Release
+Return: true if needs deletion
+ Atomically do the following:
+ val = _isShared;
+ if (_isShared == 1)
+     _isShared = 0;
+ return val == 0;
+* return ::InterlockedCompareExchange (&_isShared, 0, 1) == 0;
+
+

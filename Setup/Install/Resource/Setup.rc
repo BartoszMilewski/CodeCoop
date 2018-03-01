@@ -1,0 +1,200 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "resource.h"
+#include "winres.h"
+#include "afxres.h"
+#include "..\..\..\common\buildoptions.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ICON_SETUP              ICON                    "setup.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETUP DIALOGEX 0, 0, 251, 270
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Co-op Installation"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "Yes, Install",IDOK,7,250,68,14
+    PUSHBUTTON      "No, Exit Setup",IDCANCEL,176,250,68,14
+    ICON            ICON_SETUP,IDC_STATIC,7,7,21,20
+    CTEXT           "Welcome to Code Co-op Setup program.  This program will install Code Co-op on your computer.",IDC_STATIC_WELCOME,39,7,205,19
+    GROUPBOX        "Destination Folder:",IDC_INSTAL_FRAME,7,33,237,52
+    CTEXT           "Setup will install Code Co-op in the following directory.  To install to a different folder, click Browse and select another directory",IDC_INSTAL_INSTRUCTION,13,44,224,18
+    EDITTEXT        IDC_INSTALL_EDIT,13,68,177,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse ...",IDC_INSTALL_BROWSE,193,68,44,12
+    GROUPBOX        "Program Folder:",IDC_PGM_GROUP_FRAME,7,88,237,111
+    CTEXT           "Setup will add Code Co-op icons to the Program Folder listed below.  You may type a new folder name, or select one from the list",IDC_PGM_GROUP_INSTRUCTION,13,98,224,20
+    GROUPBOX        "Code Co-op Program Folder:",IDC_COOP_FRMAE,7,118,237,81
+    EDITTEXT        IDC_PGM_GROUP_EDIT,13,131,224,12,ES_AUTOHSCROLL
+    CONTROL         "List1",IDC_PGM_GROUP_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SORTASCENDING | WS_BORDER | WS_TABSTOP,13,147,224,46
+    GROUPBOX        "Setup Options",IDC_INSTALL_OPTION_FRAME,7,202,237,43
+    CONTROL         "Place shortcut to Code Co-op on the Desktop",IDC_INSTALL_DESKTOP_SHORTCUT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,216,224,10
+    CONTROL         "Automatically check for updates on the Internet",IDC_INSTALL_AUTO_UPDATE,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,231,224,10
+END
+
+IDD_LICENSE_AGREEMENT DIALOG  0, 0, 235, 273
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Software License Agreement"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_LICENSE_AGREEMENT_TEXT,7,34,221,153,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "Yes, I accept",IDOK,7,252,76,14
+    PUSHBUTTON      "No, I do not accept",IDCANCEL,152,252,76,14
+    ICON            ICON_SETUP,IDC_LICENSE_AGREEMENT_ICON,7,7,20,20
+    CTEXT           "Please, read the following license agreement.  Press the PAGE DOWN key to see the rest of the agreement.",IDC_LICENCE_AGREEMENT_TOP_TEXT,33,7,195,18
+    CTEXT           "Do you accept all of the terms of the preceding Reliable Software License Agreement ?",IDC_LICENSE_AGREEMENT_QUESTION,7,199,221,17
+    CTEXT           "If you choose No, Setup will close.  To install Reliable Software Code Co-op, you must accept this agreement.",IDC_LICENSE_AGREEMENT_BOTTOM_TEXT,7,220,221,19
+END
+
+IDD_CONFIRM DIALOGEX 0, 0, 200, 120
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Code Co-op Setup"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,75,99,50,14
+    CTEXT           "Setup result",IDC_CAPTION,5,5,190,33,0,WS_EX_STATICEDGE
+    CONTROL         "Go directly to the Tutorial",IDC_TUTORIAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,57,70,110,14
+    PUSHBUTTON      "Show Configuration Information",IDC_SHOW_INFO,45,46,110,14
+END
+
+IDD_CONVERT DIALOG  0, 0, 176, 118
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Conversion from v. 2.x"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK, Convert",IDOK,7,97,64,14
+    PUSHBUTTON      "Cancel Setup",IDCANCEL,110,97,59,14
+    LTEXT           "You have a previous version of Code Co-op installed on your machine.",IDC_STATIC,7,7,162,21
+    LTEXT           "Notice: this is a one-way process. The old version of Code Co-op will not be able to work with converted projects.",IDC_STATIC,7,63,161,30
+    LTEXT           "Setup will now convert your projects and settings to the new format. ",IDC_STATIC,40,33,129,22,SS_SUNKEN
+    ICON            ICON_SETUP,IDC_STATIC,7,34,21,20
+END
+
+IDD_DATABASE_PATH DIALOG  0, 0, 252, 122
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Co-op Database"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,101,58,14
+    PUSHBUTTON      "Cancel Setup",IDCANCEL,183,101,62,14
+    LTEXT           "Code Co-op database stores information about all projects on your machine. Setup needs to create a directory for this database.",IDC_STATIC,7,7,238,22
+    LTEXT           "This directory must be on your local drive. It cannot be inside any of the system directories (like your desktop or Program Files folder).",IDC_STATIC,7,70,238,23,SS_SUNKEN
+    EDITTEXT        IDC_EDIT,13,41,160,14,ES_AUTOHSCROLL
+    GROUPBOX        "Database directory:",IDC_STATIC,7,28,238,35
+    PUSHBUTTON      "Browse",IDB_BROWSE,181,42,56,14
+END
+
+IDD_CMDLINE_TOOLS_SETUP DIALOGEX 0, 0, 252, 122
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Co-op Command Line Tools Setup"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,101,58,14
+    PUSHBUTTON      "Cancel Setup",IDCANCEL,183,101,62,14
+    LTEXT           "Setup will install Command Line Tools in the following directory. To install to a different folder, click Browse and select another directory.",IDC_STATIC,7,7,238,22
+    LTEXT           "Make sure you have write access to the installation directory. If not, switch to more privileged user account.",IDC_STATIC,7,70,238,23,SS_SUNKEN
+    EDITTEXT        IDC_EDIT,13,41,160,14,ES_AUTOHSCROLL
+    GROUPBOX        "Installation directory:",IDC_STATIC,7,28,238,35
+    PUSHBUTTON      "Browse...",IDB_BROWSE,181,42,56,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXT
+//
+
+ID_LICENSE_TEXT         TEXT                    "..\\..\\..\\Common\\CoopLicense.txt"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""resource.h""\r\n"
+    "#include ""..\\..\\..\\winlib\\winres.h""\r\n"
+    "#include ""..\\..\\..\\winlib\\afxres.h""\r\n"
+    "#include ""..\\..\\..\\common\\buildoptions.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP              BITMAP                  "Whistler.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_MAIN                 "ReliSoftSetup"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

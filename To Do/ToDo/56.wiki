@@ -1,0 +1,9 @@
+| Summary |The "you have been promoted to admin" box blocks Code Co-op|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Thursday, September 11, 2008|
+==Description
+This might be a problem on a server if Code Co-op is open.

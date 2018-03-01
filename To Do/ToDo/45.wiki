@@ -1,0 +1,21 @@
+| Summary |Shorten path in dispatcher title bar|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Thursday, October 25, 2007|
+==Description
+Noam Rettig:
+
+I very often have a lot of wiki pages open in the CC editor, but the paths tend to be pretty long (e.g., C:\Users\Noam\Documents\Projects\ProjectName\Wiki\SomeFile.wiki). 
+
+When Alt+Tabbing between the different editor windows, it makes it difficult to figure out which is which.
+
+I though of a few possibilities that could work great for me:
+1. Show the file name and then the path ( SomeFile.wiki - C:\Users\Noam...)
+2. Add an option to toggle between full path and file name only on the editor title.
+3. Show a path that has the project name and then the file name instead of the path (<ProjectName>\Wiki\SomeFile.wiki). 
+
+I personally prefer the third option because it gives better context both when Alt-Tabbing and when editing the file itself and it keeps things brief.
+

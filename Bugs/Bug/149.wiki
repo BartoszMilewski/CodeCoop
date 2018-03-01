@@ -1,0 +1,27 @@
+| Summary |unable to merge branch from within History tab|
+| ReportedBy |Deb|
+| AssignedTo |Deb|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority | 1 |
+| Resolution | Fixed |
+| DateReported |Monday, November 06, 2006|
+==Description 
+
+I am running beta 3. When i select a branched script which resulted from a conflict in the History tab, I can see the grayed out Merge Branch and Auto Merge Branch buttons in the details pane below. However, once i select one of the files, the Merge buttons disappear.
+
+Here is the screen capture with just the branched script selected.
+
+[[image:branchhistory]]
+
+
+Here I have clicked on one of the files. You will notice that the merge options have disappeared.
+
+[[image:fileselected]]
+
+This is happening on both my beta 3 installations.
+==Bartosz
+This is a showstopper!

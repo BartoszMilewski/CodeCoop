@@ -1,0 +1,11 @@
+| Summary |Make merge recreate folders|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |1|
+| Status |Closed|
+| DateReported |Sunday, October 01, 2006|
+==Description 
+When a file is created, re-created, moved in the target, create all the folders for the new location. This might already work in the remote case, but it doesn't in the local case. 
+
+Note: In the local case, the folders will be present in the database with status "none", because even when a script is rejected, we add folders to the database. The only exception is if the script was rejected using v. 4.6. There is already code that will detect this and stop the merge (test it!). 

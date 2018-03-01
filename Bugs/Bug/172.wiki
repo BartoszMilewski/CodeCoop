@@ -1,0 +1,18 @@
+| Summary |Bad side lineage generated|
+| ReportedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Sometimes|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Cannot Reproduce |
+| DateReported |23 stycznia 2007|
+==Description 
+When membership tree contains branch starting from missing script then we generate side lineage in reverse order. In the attached diagnostic file see membership tree for the user 0x13 and side lineages of incoming scripts.
+
+[[Diags|Diagnostics file]]
+
+== Resolution
+The reverse lineage was produced because there was a missing unconfirmed script in the membership tree, which was followed by a confirmed defect script. This is normally impossible. A confirmed script cannot follow an unconfirmed script, because a confirmation of a script atomatically confirms its predecessors, including missing scripts (missing script will still be go into the sidetrack for resending). Here two weird things happened: the predecessor of a confirmed script was not confirmed, and the addition of a defect script didn't mark all missing scripts as "don't ask for resend". Current hypothesis is that it was related to a bogus FIS in the membership tree in the admin's history.

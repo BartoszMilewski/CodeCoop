@@ -1,0 +1,17 @@
+| Summary |Request verification dialog|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Tuesday, April 21, 2009|
+==Description 
+Select Request Verification from the Project menu. In the dialog, one user is selected. When you click on the "Don't block check-ins" checkbox, the user is unselected, and when you click OK there is no action or error message.
+* The user should not be unselected
+* If no user is selected, clicking OK should display a message box "Please select a project member".
+
+

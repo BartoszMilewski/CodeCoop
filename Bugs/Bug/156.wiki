@@ -1,0 +1,23 @@
+| Summary |tabbing through tabs opens hidden tabs and causes assertion|
+| ReportedBy |Deb|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |3|
+| Resolution | Fixed |
+| DateReported |Friday, November 10, 2006|
+==Description 
+
+This was originally reported by a user. I also get identicle behavior.
+
+With a project open, holding ctrl + tab scrolls through tabs. This type of navigation also scrolls to hidden tabs that should not be displayed. Eventually, the following assertion will be thrown when the Browser tab is called.
+
+[[image:tabbing]]
+
+==Resolution
+Added DisplayMan::SwitchPage (bool isForward).
+==New problem
+In Browser Page ctrl+tab and ctrl+shift+tab don't switch pages. It looks like browser eats those keyboard shortcuts. (Opening new  bug with this problem)

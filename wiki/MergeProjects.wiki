@@ -1,0 +1,126 @@
+=Merging
+We have two projects - source project and target project (in ''local merge'', target project is the same as source project). We want to merge source project into the target project.
+|''''Source version'''' | selected version at source project (can be the current version) |
+|''''Fork version'''' | version at project fork point - when the two projects split |
+|''''Target version'''' | current version at the target project |
+|''''Target slot'''' | the location (relative path) at target corresponding to location at source |
+
+==Merge cases
+
+===File existed before fork version
+# '''And still exists in the source project'''
+#* Present at target -- if files are different, check-out at target and open merger
+#* Deleted or to-be-deleted at target. In this case, we are more interested in what happens at the file location at target (status ''by path''). If the target slot is empty, tell the user that file is deleted in the target project and ask if he/she wants to recreate it.
+#** The file was deleted at target
+#***Local merge: Do the same as with ''new at source''
+#***Global merge: 
+#**** If target contains another controlled file at the same location, check that file out and merge contents.
+#**** Otherwise add file at target with the same GID. If another file exists at target, merge contents.
+#** If file was in the state ''to be deleted'' 
+#***Local merge: Do the same as with ''new at source''
+#***Global merge: 
+#**** If target contains another controlled file at the same location, check that file out and merge contents.
+#**** Otherwise add file at target with the same GID. If another file exists at target, merge contents.
+# '''Now is ''''not'''' present in the source project.'''--''deleted at source''
+#* Deleted at target - source and target are identical - do nothing
+#* Present at target - ask the user if he/she wants to delete file at target. If the user said YES then delete file at target.
+===File didn't exist before fork (new at source)
+We have to check if the file exists at the target-- by relative path (and by GID, in the local case). 
+# Target project status tells us file is ''not controlled'' - ask the user if he/she want to add the file to the project. If the user said YES then add file to the project at target and if file at target:
+#** doesn't exist on disk - copy source to target
+#** exists on disk and is identical - do nothing
+#** exists on disk and is different - invoke merge
+# Target project status tells us ''file exists and is controlled''. We assume that it is ''the same'' file.
+#* If file at target is identical, do nothing and report that files are identical.
+#* If file at target is different, then check-out file at target and start merger.
+| Note: In the local merge case, it's possible that a file added by branch already exists, under the same GID, in the trunk. We treat this case as ''merge contents'' with an empty reference file. |
+
+| Note: In global merge, it's still possible that a new file can be created both in the source and the target under the same GID! It's important ''not'' to check for the same gid in the target project when enquiring about a ''new at source'' file. (The user who created the branch has the same user id in both project and can create files with the same GID.)|
+
+===Merge Actions
+# Stage one: Gathering info and asking questions
+#* "The file is deleted at source. Would you like to delete it at target too?" Asked when source deleted, and target not.
+#* "The file is new at source and does not exist at target. Would you like to create it there?" Asked when file is new at source and not found by path at target. In the local case, we first check if the file has been found by GID. If so, treat as if the file existed before fork (note: also deal with the case when the target is deleted).
+#* "The file is deleted at target. Would you like to add it back?" Asked when file found by gid at target in the state ''deleted'' or ''to be deleted'' and not found by path at target.
+#* '''Merge Attributes''' dialog. Displayed when file is controlled at target (and at source, of course). Result: new path and type for target. 
+#* "The folder %1 doesn't exist in the target branch. You have to merge the folder first." Displayed when the user selected target (of either move, create, or recreate) that doesn't exist in the target branch.
+# Stage two: Performing a command at target. Because of the earlier check (see above) we should assume that  target folders are present in the target project (or throw if they don't).
+#* Delete. Called when source was deleted.
+#* Create (in local case, specify GID). Called when target absent or not controlled. If a (non-controlled) file already exist at target slot, it will automatically take up the new file's identity.
+#* Recreate--specify GID, path, type. Called when target was (to be-) deleted, '''but not''' when target slot occupied by another controlled file (different GID--see box below). If a (non-controlled) file already exist at target slot, it will automatically take up the new file's identity.
+#* Move. Called to change path, name, or type.
+#* Change Type. Called to change type.
+# Finishing
+#* Copy file from source to target. Done when the target file is to be created or recreated and the target slot is empty.
+#* Merge contents. Done when target exists and is different.
+| Note: If the target file, A, is (to be-) deleted but the target slot is occupied by another controlled file, B, we treat that file B as our merge target. We check it out, perform attribute merge and content merge, if necessary. We leave the target A unchanged (if it was to-be-deleted, it will remain to-be-deleted).|
+
+| Note: Create, recreate, and move may require the creation/restoration of folders |
+
+===Attribute Merge
+If the file is present both at source and at target, its external attributes (type, name, parent) might be different and may require merging. 
+
+The most complex case is the merge in the case of a move. First check if the move was identical in source and target--no work necessary then. Otherwise the user is given a choice to select the position from the source or from the target. Note: if the user selects the target position, we have nothing to do at this stage. ''''Question:'''' ''Currently we allow the user to specify the third file location (different from source and target locations). Is this still a valid option for the user?''
+
+When the user selected the source position instead, we have the following cases:
+# File was not moved at source
+#* It was moved at target. Check if the folder still exists in the target, restore it if necessary. The target file will have to be moved to this position (plus any other merges necessary)
+# File was moved at source and it was either not moved or moved to a different folder at target.
+#* The folder is controlled at target (it may b deleted)--perform the move (restore folder if it's been deleted)
+#* The folder is not controlled in the target. Tell the user that he/she has to first perform the merge of that folder (it must have been created in the source, so its history should be merged first).
+
+
+Once the target project is identified and the user selects the merge version at source project we should (in the background?) check which files really need merge (compare file contents). Selecting a version to merge from the history list will set file filter for file changed by the selected script. If the merge version is the current source version then the file filter is empty.
+
+==SccDll extension
+*'''GetTargetPath''' ([in] global id, [in] source project relative path, [in] source project file type [out] target project absolute path, [out] target project status, [out] target project file type) 
+**''target project status'' is divided into ''status by GID'' and ''status by path''. 
+***By GID: obtained by finding the file in the target project by GID--is it checked out, deleted, or to be deleted, modified (moved, renamed, or different type)
+***By path: obtained by finding the file by source relative path--is file present, is it controlled, checked out, and does it have the same GID. Also: does the parent of the file (folder) exist in the database.
+**''Global id'' can be equal to gidInvalid, which means that we are asking about new file created at source (see note above).
+**When global id == gidInvalid then target project has to return absolute path created from the passed relative path.
+** When file is (to-be) deleted at target, the path returned is the target absolute path created from source relative path (thath's where the file will be recreated!)
+*'''GetForkScriptIds''' ([in] global id vector myForkIds, [out] youngestFoundForkId, [out] global id vector targetForkIds)
+** source project passes myForkIds - a list of predecessors of branch creation markers (a label script with special comment). 
+** The target project returns the youngest fork id found in the target project history plus all younger predecessors of branch markers present in the target project history. 
+** The source project checks if it has any of the younger fork ids if it doesn't then the source project uses the one returned by the target project (youngestFoundForkId).
+
+==Implementation notes
+Once the target project is identified and verified we have source project trunk range (from current to fork). User can select any trunk version thus creating new range from the select to the fork. The file filter defined by the selected version (current version defines empty file filter) defines file set displayed in the script details pane. Change column should display identical-different. File that are different will have sync waves at the icon to the left.
+
+Inter-project merge is implemented in the new view tab with two panes. The upper display pane is identical to the upper display pane in the history view. The lower display pane is different from the history view. We need a new table - MergedFiles - which provides information about mereged files. The MergedFiles table will contain a list of file merges. Merger can separately undo base and diff paths.
+
+Split HistoricalFiles into a new class RangeFiles containig everything except the list of restores. The HistoricalFiles is derived from the RangeFiles and contains the list of restorers.
+
+The MergedFiles is derived from the RangeFiles and adds a list of mergers. The mergers are polymorphic and are created during RangeFiles::ReloadScripts. From _fileDiaryList we can get the information about the three main file merge cases (above #1, #2 and #3 cases). Each case is represented by a different kind of merger. The merger class is the active object. Getting file status from the target project and comparing file at source and target projects is carried asynchronously by each merger thread.
+
+Getting merger ready for the merge operation requires the following steps:
+#Query target project about the merged file - returns target project absolute path and file status - synchronous operation. Depending on the query result we may need to perform the following steps:
+##Recreate source project version - may require undo operation when at source project the selected version is not the current project version - synchronous operation.
+##Compare files at source and target projects - asynchronous operation
+
+When the user selects merged file and click on the merge button then we use the merger representing the selected file to perform the merge operation - each different merger kind perfroms different merge operation. Merge operation steps are described by the three above merge cases (#1, #2 and #3).
+
+==MergedFiles::ReloadScripts
+#Query target project for all reloaded files (one API call).
+#Creates a vector of Merges.
+##Merger constructor recreates source file version if necessary and starts new thread that will compare files at target and source. When thread ends comparing files we have to update display state of that file.
+
+==Merge UI
+A new view page with two panes - script pane and merged files pane. This page opens whe nthe user executes Project>Merge menu command. Main toolbar will have a close button allowing to close merge page. Should we remember wheather merge page was visible?
+Main toolbar will be identical as in the history view, plus the close button on the far right side.
+
+Lower pane toolbar will be identical to the lower pane toolbar in history page, plus a dropdown allowing target project selection, located at far left side. Lower pane will have the following columns:
+#File name at source
+#File name at target
+#Project path at source
+#Project path at target
+#Status:
+##Comparing - when we are working on the merged file in order to determine its status - italic font
+##Identical - dispaly this row in greyed font
+##Different - display this row in bold font
+##New - new file at source - normal font
+##Deleted - not present at source - normal font
+#GlobalId - always global id at source
+
+Every lower pane column is sortable.

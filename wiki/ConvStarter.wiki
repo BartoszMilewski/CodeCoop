@@ -1,0 +1,5 @@
+= ConvStarter
+Interface of [[IpcQueue]]
+* Methods
+** OnFinishConv
+*** implemented by CommandIpc::Queue -- kill active conversation, release event

@@ -1,0 +1,9 @@
+= Win::ActiveObject
+* Inhertits from [[SharedByTwo]]
+* friend [[auto_active]]
+
+Members:
+* _isDying ([[AtomicCounter]])
+* _thread ([[ThreadAutoHandle|Thread::AutoHandle]])
+==Constructor
+

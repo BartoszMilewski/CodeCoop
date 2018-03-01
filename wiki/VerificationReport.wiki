@@ -1,0 +1,14 @@
+Find project files missing from disk
+
+foreach missing file do {
+*if type is folder then remember missing folder
+*else if file state is checked in then remember file for repair
+*else if file state is new then remember missing new file
+*else {
+**if file exists on disk in the Area::Original then {
+***if file exists on disk in the Area::LocalEdits then remember to restore local edits
+***else remember missing checked out
+**} else remember file for repair
+*}
+}
+

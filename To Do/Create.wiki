@@ -1,0 +1,42 @@
+=Create a new To Do item
+<form name="NewToDoItem" method="get" action="[[[DoCreate]]]">
+| Your Name | 
+<select name="CreatedBy" size="1">
+<option value="Bartosz">Bartosz</option>
+<option value="Piotr">Piotr</option>
+<option value="Wieslaw">Wieslaw</option>
+<option value="Deb">Deb</option>
+<option value="NOT nobody">Anybody</option>
+</select> |
+| Assign To | 
+<select name="AssignedTo" size="1">
+<option value="Wieslaw">Wieslaw</option>
+<option value="Piotr">Piotr</option>
+<option value="Bartosz">Bartosz</option>
+</select> |
+| Component | 
+<select name="Component" size="1">
+<option value="Co-op">Code Co-op</option>
+<option value="Dispatcher">Dispatcher</option>
+<option value="Differ">Differ</option>
+</select> |
+| Short Summary: | 
+<textarea name="Summary" rows="1" cols="60"></textarea> |
+| Priority | 
+<select name="Priority" size="1">
+<option value="1">1-High</option>
+<option value="2">2-Medium</option>
+<option value="3">3-Low</option>
+<option value="4">4-Wish</option>
+</select> |
+| Date Submitted | 
+<input type="text" name="DateReported" size="30"></input> |
+
+|Submit and Enter Detailed Description: |  
+<input type="Submit" name="Accept" value="Accept"> | Or start over: <input type="Reset" name="Reset"> |
+</form>
+
+<script>
+var today=new Date();
+document.NewToDoItem.DateReported.value=today.toLocaleDateString ();
+</script>

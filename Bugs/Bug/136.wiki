@@ -1,0 +1,37 @@
+| Summary |SSL SMTP problem|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Unknown|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Thursday, October 26, 2006|
+==Description 
+I've been trying to setup SSL with the SMTP server but I can't get this working. With POP3 SSL is OK.
+
+My ISP requires that I use port '''587''' for SSL to the SMTP server (which I use on my normal email program and it works fine). When I try to run the diagnostics in Dispatcher, it errors with:
+ Failed to negotiate secure connection. The token supplied to the function is invalid
+The email I'm using is my main Code Co-op account, but I have created another test account for you to use. A quick test shows that this exhibits the same problems.
+
+|! email address:|  test_codecoop@jhc-software.co.uk |
+|! Login name:   |  m38033019-cc2 |
+|! Password:     |   77dgsb4g |
+ISP Info:
+|! Incoming server (POP) | pop.1and1.co.uk |
+|! Outgoing server (SMTP) | auth.smtp.1and1.co.uk |
+Please note: To send e-mail using the SMTP-Server, activate SMTP Authentication. Please do not use the Secure Password Authentication (SPA) option. Optionally, port 587 can also be used in addition to the default port RFC 2476.
+
+==Comments
+There were two problems:
+# Even though the port was not 25, the server required a Hello before switching to SSL.
+# After switching to SSL, it required another Hello, before allowing authentication. This seems to be consistent with the RFC.
+==Resolution
+It looks like port 465 that is used by gmail is special--you can start an SSL conversation on it immediately. On all other ports you have to say Hello first. 
+
+After testing my solution on the British server, I also tested both ports 25 and 465 on gmail. The Hello after switching to SSL is accepted by gmail on port 25, so I left it there.
+
+
+
+

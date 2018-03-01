@@ -1,0 +1,58 @@
+| Summary |Initial file inventory as missing|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Unknown|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Fixed |
+| Priority | 3 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+Bug #1272 from WEB database.
+
+I joined RSWL as voting member. My initial file inventory had script id 0-1af. It was followed by some tentative scripts. At some point script 0-1af was put on the missing disconnected list. It was probably a reference version in some lineage and it wasn't found in my history. 
+
+
+Disconnected missing scripts 
+    0-1af    Unit::Set
+
+ Missing scripts:
+ [0-1af]; unit id: Unit::Set; next re-send request goes on
+ Saturday, January 28, 2006, 5:17:34 PM; to user 85
+    Re-send request have been sent to the following  project members: 0 89 
+
+|Date|Who|Comment|
+|5/23/2006|Wiesiek|Add trap in debug build in history when adding missing disconnected script - the added script cannot be found anywhere in the history trees.|
+
+Do that, and lower the priority to low.
+
+== Update 10/31/20006
+Already implemented.
+
+ void Db::XRememberDisconnectedScript (GlobalId scriptId, Unit::Type unitType)
+ {
+     TransactableArray<Unit::ScriptId>::const_iterator it;
+     it = std::find_if (_disconnectedScripts.xbegin (), _disconnectedScripts.xend (), IsEqualUnitScriptId (scriptId, unitType));
+     if (it == _disconnectedScripts.xend ())
+     {
+          dbg << "Adding disconnected missing script to history: " << std::hex << scriptId << std::endl;
+          SortedTree & tree = XGetTree (unitType);
+          Node const * node = tree.XFindNode (scriptId);
+          if (node != 0)
+          {
+               std::string msg ("Disconnected script present in the history: ");
+               msg += GlobalIdPack (scriptId).ToString ();
+               msg += "; unit type: ";
+               if (unitType == Unit::Set)
+                   msg += "file change";
+               else
+                   msg += "membership change";
+               throw Win::InternalException ("Unable to process incoming script - please contact support@relisoft.com", msg.c_str ());
+          }
+          std::auto_ptr<Unit::ScriptId> id (new Unit::ScriptId (scriptId, unitType));
+          _disconnectedScripts.XAppend (id);
+     }
+ }
+	

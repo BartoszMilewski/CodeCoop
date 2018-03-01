@@ -1,0 +1,63 @@
+<CodeCoopUpdateInfo>
+<!-- Version Information file
+	 Contains update information for all Code Co-op product lines
+ -->
+<MajorVersion Number="5">
+	<LatestVersion Number="5.2a">
+		<Description href="http://www.relisoft.com/co_op/Help/ReleaseNotes.html">
+		    Code Co-op 5.2a
+		</Description>
+		<Setup 
+			 href="co-op52a.exe" 
+		/>
+	</LatestVersion>
+	<LatestBeta Number="5.2a">
+		<Description href="http://www.relisoft.com/co_op/Help/ReleaseNotes.html">
+			 Code Co-op 5.2a
+		</Description>
+		<Setup 
+			 href="co-op52a.exe" 
+		/>
+	</LatestBeta>
+	<LatestLite Number="5.2a">
+		<Description href="http://www.relisoft.com/co_op/Help/ReleaseNotes.html">
+			 Code Co-op Lite 5.2a
+		</Description>
+		<Setup 
+			 href="co-opLite52a.exe" 
+		/>
+	</LatestLite>
+	<LatestLiteBeta Number="5.2a">
+		<Description href="http://www.relisoft.com/co_op/Help/ReleaseNotes.html">
+			 Code Co-op Lite 5.1e
+		</Description>
+		<Setup 
+			 href="co-opLite52a.exe" 
+		/>
+	</LatestLiteBeta>
+	<Bulletin Number="53" Date="11/05/10" href="http://www.relisoft.com/co_op/Bulletin51.html">
+		New minor version 5.2a of Code Co-op Pro and Code Co-op Lite available for download.
+	</Bulletin>
+</MajorVersion>
+<MajorVersion Number="4">
+	<LatestVersion Number="4.6e">
+		<Description href="http://www.relisoft.com/co_op/Help/ReleaseNotes.html">
+		    Next incremental upgrade
+		</Description>
+		<Setup 
+			 href="co-op46e.exe" 
+		/>
+	</LatestVersion>
+	<LatestBeta Number="4.6e">
+		<Description href="http://www.relisoft.com/co_op/ReleaseNotes.html">
+			 Code Co-op 4.6e
+		</Description>
+		<Setup 
+			 href="co-op46e.exe" 
+		/>
+	</LatestBeta>
+	<Bulletin Number="54" Date="06/04/11" href="http://www.relisoft.com/co_op/Bulletin51.html">
+		Code Co-op 5.2a offers improved reliability, automation, and functionality. Built-in backup and check-out notifications. Full sync larger than 4GB.
+	</Bulletin>
+</MajorVersion>
+</CodeCoopUpdateInfo>

@@ -1,0 +1,24 @@
+| Summary |project name not displayed on collapsed Co-op dialog|
+| ReportedBy |Deb|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Sometimes|
+| Severity |Minor|
+| Status |Closed|
+| Resolution | Cannot reproduce |
+| Priority | 3 |
+| DateReported |Wednesday, October 11, 2006|
+==Description 
+
+I am not sure why the Project name and path are not showing up on one of my open dialogs. Here's a picture.
+
+[[image:taskbar]]
+
+I cannot duplicate this. When i switched projects, the name and path still didn't show up. When i closed this dialog and opened another, it was fine.
+==Comments:
+''''12-Oct-2006 Wiesiek:'''' which dialog did you minimize?
+
+''''12-OCt-2006 Deb:'''' I had two instances of Code Co-op open. One instance shows "()" instead of the project name and path. When i tried changing projects in the instance of Code Co-op that showed "()", it didn't make a difference. Still, the project name was not displayed. Once I closed the instance of Code Co-op showing "()" and reopened another instance, the project name was displayed as expected.
+
+''''17-Jan-2007 Wiesiek:'''' Still cannot reproduce.

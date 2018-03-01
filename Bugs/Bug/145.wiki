@@ -1,0 +1,26 @@
+| Summary |New project improvement suggestions|
+| ReportedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Priority | 3 |
+| Resolution | Fixed |
+| DateReported |2 listopada 2006|
+==Description 
+When creating a new project in a new (empty or non-existent) directory, the project history still automatically includes a "File(s) added during project creation" script.
+This is somewhat confusing, as no files are actually being added.
+Furthermore, "Created By" of this script is named "Administrator" instead of 'my user name'.
+
+e.g. from the exported history:
+
+ Version                                                Created By       Date                           Script Id    State
+ File(s) added during project creation                  Administrator    Thu, Thu 2006/11/02 12:10:11    0-1         Confirmed
+ Project 'kids' created Thu, Thu 2006/11/02 12:10:11    Ivan Vecerina    Thu, Thu 2006/11/02 12:10:11    0-0         Confirmed
+
+==Resolution
+In the history view we check the initial file inventory script id and if this is my script then we display my name other wise we display 'administrator'. Initial file inventory script has to be always present in the history even when no files were added during project creation.
+
+

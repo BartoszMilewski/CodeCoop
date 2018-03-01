@@ -1,0 +1,20 @@
+| Summary |Co-op hangs in merge view when a new script arrives|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Cannot Reproduce |
+| DateReported |Monday, July 09, 2007|
+==Description 
+I wonder if it happens when scripts show up after the merge view was open? In other words, I start the Merge View for an active project, and I just leave it open, and sometime later I get e-mail containing scripts for that project. Was that your question?
+
+When the incoming script changes any of merged files (files listed in the lower pane of the merge view) Code Co-op has to refresh the merge status. This causes a lot of background activity mixed with Dispatcher request to process incoming scripts.
+==Notes
+Cannot reproduce when merging with branch project. Active view is branch view. Branch target selected. File merge status checked. Incoming script showed up in the inbox folder (red dot on inbox tab). Code Co-op was resposived and I was able to sync script.
+Cannot reporduce when merging local branch with the current version.
+* Bartosz: Try this with auto-sync
+* Wiesiek: With auto-sync also cannot reproduce. Tested with version 5.0f.

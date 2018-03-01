@@ -1,0 +1,16 @@
+| Summary |Pass auto-sync flag with invitation|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |3|
+| Status |Done|
+| DateReported |Friday, February 02, 2007|
+==Description
+Scanario: Users send invitations to the unattended server. As it is now, somebody has to go to the server and turn on auto-sync. 
+
+It would be better to be able to pass this flag with the invitation. 
+
+One could add a checkbox to invite, and pass a bit, similar to the observer bit.
+==Resolution
+This would require script version change. For now, we changed the processing of an invitation to set auto sync for an observer.
+

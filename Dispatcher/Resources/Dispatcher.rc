@@ -1,0 +1,1862 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "..\..\Common\buildoptions.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""..\\..\\WinLib\\afxres.h""\r\n"
+    "#include ""..\\..\\Common\\buildoptions.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION DISPATCHER_FILE_VERSION_NUMBER
+ PRODUCTVERSION DISPATCHER_FILE_VERSION_NUMBER
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x2bL
+#else
+ FILEFLAGS 0x2aL
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Distributed Version Control System"
+            VALUE "CompanyName", "Reliable Software"
+            VALUE "FileDescription", DISPATCHER_PRODUCT_NAME
+            VALUE "FileVersion", DISPATCHER_FILE_VERSION
+            VALUE "InternalName", DISPATCHER_PRODUCT_NAME
+            VALUE "LegalCopyright", COPYRIGHT
+            VALUE "LegalTrademarks", "Reliable Software, Code Co-op"
+            VALUE "OriginalFilename", "Dispatcher.exe"
+            VALUE "PrivateBuild", "Reliable Software"
+            VALUE "ProductName", DISPATCHER_PRODUCT_NAME
+            VALUE "ProductVersion", DISPATCHER_FILE_VERSION
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EMAIL_PASSWORD DIALOGEX 0, 0, 303, 230
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "POP3/SMTP E-mail Account Password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD_POP3,78,79,210,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD_POP3_VERIFY,78,96,210,12,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "My SMTP account requires a password too:",IDC_PASSWORD_SMTP_USE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,136,247,10
+    CONTROL         "Same as POP3",IDC_PASSWORD_SAMEASPOP3,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,49,150,84,10
+    CONTROL         "Different: ",IDC_PASSWORD_DIFFERENT,"Button",BS_AUTORADIOBUTTON,178,150,58,10
+    EDITTEXT        IDC_PASSWORD_SMTP,78,168,210,12,ES_PASSWORD | ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_PASSWORD_SMTP_VERIFY,78,185,210,12,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,209,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,246,209,50,14
+    CTEXT           "Code Co-op failed to decrypt the stored e-mail account password (you probably changed your Windows login). Please provide your password for the account:",IDC_STATIC,7,7,289,22
+    LTEXT           "E-mail address: ",IDC_STATIC,7,34,64,10
+    LTEXT           "User name: ",IDC_STATIC,7,52,64,10
+    EDITTEXT        IDC_PASSWORD_EMAIL,78,32,218,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_PASSWORD_USER,78,50,218,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Password:",IDC_STATIC,15,81,58,10
+    GROUPBOX        "POP3 Login: ",IDC_STATIC,7,68,289,47
+    LTEXT           "Verify password:",IDC_STATIC,15,98,58,10
+    GROUPBOX        "SMTP Login:",IDC_STATIC,7,123,289,79
+    LTEXT           "Password:",IDC_STATIC,15,170,58,10
+    LTEXT           "Verify password:",IDC_STATIC,15,186,58,10
+END
+
+IDD_INVITE_OFFSITE_SAT_TRANSPORT DIALOGEX 0, 0, 205, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Satellite Transport"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Set dynamically",IDC_INFO,7,7,191,141
+    CONTROL         "Offsite Satellite",IDC_OFF_SAT,"Button",BS_AUTORADIOBUTTON,16,22,173,12
+    LISTBOX         IDC_OFFSITE_SAT_EMAILS,31,37,159,49,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Network Satellite",IDC_NET_SAT,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,16,94,174,12
+    EDITTEXT        IDC_PATH,31,109,159,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE,140,127,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,153,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,148,153,50,14
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 182, 89
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Co-op Script Dispatcher"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,65,60,50,14
+    CTEXT           "Copyright",IDC_COPYRIGHT,23,20,135,11
+    GROUPBOX        "",IDC_ABOUT,7,7,167,75,BS_CENTER
+    ICON            ID_MAIN,IDC_STATIC,80,34,21,20
+    PUSHBUTTON      "Cancel",IDCANCEL,130,60,37,14,NOT WS_VISIBLE
+END
+
+IDD_POP3 DIALOGEX 0, 0, 224, 265
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "POP3 Mail Account Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Server settings",IDC_STATIC,7,3,210,71
+    LTEXT           "Server address (e.g. pop.provider.net):",IDC_STATIC,15,15,195,12
+    EDITTEXT        IDC_SERVER,15,26,194,12,ES_AUTOHSCROLL
+    LTEXT           "Port Number:",IDC_STATIC,15,45,47,12
+    EDITTEXT        IDC_PORT_NUMBER,64,43,38,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Use SSL secured connection",IDC_USE_SSL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,60,194,10
+    GROUPBOX        "Login",IDC_STATIC,7,77,210,80
+    LTEXT           "User:",IDC_STATIC,15,92,57,12
+    EDITTEXT        IDC_USER,80,91,129,12,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,15,113,56,14
+    EDITTEXT        IDC_PASSW,80,113,129,12,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Verify Password:",IDC_STATIC,15,136,57,12
+    EDITTEXT        IDC_PASSW2,80,135,129,12,ES_PASSWORD | ES_AUTOHSCROLL
+    GROUPBOX        "Account maintenance",IDC_STATIC,7,160,210,78
+    CONTROL         "This account is used only by Code Co-op (all other messages coming to this account will be automatically deleted from server)",IDC_DELETE,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP,15,173,195,30
+    CONTROL         "This account is shared between Code Co-op and my email program (I configured my email program not to delete messages from the server)",IDC_DONT_DELETE,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,15,203,195,30
+    DEFPUSHBUTTON   "OK",IDOK,7,244,50,14
+    PUSHBUTTON      "&Help",IDC_HELP_BUTTON,86,244,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,167,244,50,14
+END
+
+IDD_SMTP DIALOGEX 0, 0, 193, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SMTP Mail Account Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Your e-mail adress",IDC_STATIC,7,3,179,30
+    EDITTEXT        IDC_EMAIL,15,16,164,12,ES_AUTOHSCROLL
+    GROUPBOX        "Server settings",IDC_STATIC,7,35,179,71
+    LTEXT           "Server address (e.g. smtp.provider.net):",IDC_STATIC,15,47,167,12
+    EDITTEXT        IDC_SERVER,15,58,164,12,ES_AUTOHSCROLL
+    LTEXT           "Port Number:",IDC_STATIC,15,77,47,12
+    EDITTEXT        IDC_PORT_NUMBER,64,75,37,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Use SSL secured connection",IDC_USE_SSL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,92,167,10
+    GROUPBOX        "Login",IDC_STATIC,7,109,179,88
+    CONTROL         "My server requires authentication",IDC_AUTH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,123,163,10
+    LTEXT           "User:",IDC_STATIC,15,139,57,12
+    EDITTEXT        IDC_USER,80,138,99,12,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,15,157,56,14
+    EDITTEXT        IDC_PASSW,80,157,99,12,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Verify Password:",IDC_STATIC,15,177,57,12
+    EDITTEXT        IDC_PASSW2,80,176,99,12,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,202,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,136,202,50,14
+END
+
+IDD_FWD_PATH_CHANGE DIALOGEX 0, 0, 281, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Edit Forwarding Path"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Forwarding &Path\n(Transport)",IDC_STATIC,13,80,65,21
+    EDITTEXT        IDC_PATH,81,76,193,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "B&rowse the Network...",IDB_BROWSE,192,94,82,14
+    CONTROL         "Replace the forwarding path for all satellite members using it.",IDC_REPLACE_ALL,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,81,92,103,33
+    DEFPUSHBUTTON   "OK",IDOK,7,126,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,126,50,14
+    GROUPBOX        "Satellite Recipient Information",IDC_STATIC,7,7,267,65
+    LTEXT           "Project Name:",IDC_STATIC,13,21,65,8
+    EDITTEXT        IDC_PROJECT,81,18,187,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "User ID:",IDC_STATIC,13,38,65,8
+    EDITTEXT        IDC_LOCATION,81,35,187,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Hub's email:",IDC_STATIC,13,55,65,8
+    EDITTEXT        IDC_EMAIL,81,52,187,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_WHAT_WITH_SCRIPT DIALOGEX 0, 0, 340, 251
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Co-op Dispatcher: Undeliverable script"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_NAME,15,20,313,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "For the project:",IDC_STATIC,15,39,55,8
+    EDITTEXT        IDC_PROJECT,74,38,92,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Script arrived from this hub:",IDC_STATIC,15,59,87,9
+    EDITTEXT        IDC_EMAIL,107,58,221,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "created by the project member with id:",IDC_STATIC,174,39,121,10
+    EDITTEXT        IDC_LOCATION,300,37,27,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    CONTROL         "With the following check-in comment:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,15,75,128,8
+    EDITTEXT        IDC_COMMENT,15,85,313,25,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+    CONTROL         "List1",IDC_RECIPIENTS,"SysListView32",LVS_REPORT | WS_BORDER,15,135,313,54
+    GROUPBOX        "Possible causes and remedies",IDC_STATIC,7,199,325,45
+    LTEXT           "1. This script is here by some mistake.",IDC_STATIC,15,212,187,8
+    DEFPUSHBUTTON   "&Delete Script",IDOK,258,208,70,13
+    LTEXT           "2. I'm not sure. Leave the script in the mailbox and I'll get to it later.",IDC_STATIC,15,228,206,8
+    PUSHBUTTON      "&Ignore Script",IDCANCEL,258,226,70,13
+    GROUPBOX        "Static",IDC_SCRIPT_INFO_FRAME,7,7,326,109
+    GROUPBOX        "Script delivery status for each intended recipient is as follows: ",IDC_STATIC,7,122,326,73
+END
+
+IDD_FWD_FOLDER_JOIN DIALOGEX 0, 0, 274, 230
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Code Co-op Dispatcher: New Satellite Sender"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FWD_PATH_EDIT,6,161,201,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse ...",IDC_FWD_BROWSE,217,161,50,14
+    DEFPUSHBUTTON   "OK",IDOK,6,209,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,217,209,50,14
+    GROUPBOX        "New satellite sender:",IDC_STATIC,6,5,261,69
+    EDITTEXT        IDC_FWD_EMAIL,94,54,165,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "is sending you this script for the first time:",IDC_STATIC,6,80,251,10
+    EDITTEXT        IDC_FWD_PROJECT,92,15,167,18,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_COMMENT,6,95,261,36,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "In response to this script, Code Co-op will have to send an acknowledgment back to the sender. Please specify where future scripts for this sender should be copied:",IDC_STATIC,6,135,261,24
+    LTEXT           "In most cases this will be a shared Public Inbox folder on the satellite machine from which the sender transmits scripts (for instance: \\\\MACHINE\\CODECOOP).",IDC_FWD_JOIN_HINT,6,183,261,22
+    EDITTEXT        IDC_USER_ID,93,34,165,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Project name:",IDC_STATIC,13,20,61,13
+    LTEXT           "Hub's email:",IDC_STATIC,13,55,78,13
+    LTEXT           "User ID:",IDC_STATIC,13,37,61,14
+    CTEXT           "If you don't have a satellite, click CANCEL",IDC_STATIC,63,209,147,14,SS_CENTERIMAGE | WS_BORDER
+END
+
+IDD_UNKNOWN_USE_EMAIL DIALOGEX 0, 0, 280, 180
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CTEXT           "Script recipient is remote and available by email only. ",IDC_STATIC,7,18,266,16
+    CTEXT           "The configuration will now be changed to use email for script distribution.",IDC_STATIC,7,47,266,22
+    CONTROL         204,IDC_STATIC,"Static",SS_BITMAP,127,89,24,15
+END
+
+IDD_HEADER DIALOGEX 0, 0, 275, 291
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Transport Information"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "General Info",IDC_STATIC,7,7,261,119
+    LTEXT           "File name:",IDC_STATIC,16,108,48,8
+    EDITTEXT        IDC_FILENAME,63,106,198,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Project name:",IDC_STATIC,15,19,49,8
+    EDITTEXT        IDC_PROJECT,69,15,192,16,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    LTEXT           "Sender's user ID:",IDC_STATIC,16,74,95,8
+    LTEXT           "Their hub's email:",IDC_STATIC,16,90,92,8
+    EDITTEXT        IDC_EMAIL,115,88,146,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_LOCATION,115,72,48,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Recipients:",IDC_STATIC,7,130,160,8
+    CONTROL         "List1",IDC_RECIPIENTS,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,7,141,261,76
+    GROUPBOX        "Additional Info:",IDC_STATIC,7,220,261,47
+    LTEXT           "Comment:",IDC_STATIC,15,33,39,8
+    EDITTEXT        IDC_COMMENT,70,33,192,33,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    LTEXT           "Status :",IDC_STATIC,13,237,35,11
+    EDITTEXT        IDC_STATUS,45,233,215,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "",IDC_FORWARD,"Button",BS_AUTOCHECKBOX | BS_ICON | WS_DISABLED,48,254,10,10
+    LTEXT           "Forwarded from satellite",IDC_STATIC,63,255,87,8
+    CONTROL         "",IDC_DEFECT,"Button",BS_AUTOCHECKBOX | WS_DISABLED,162,254,10,10
+    LTEXT           "Special defect script",IDC_STATIC,176,255,86,8
+    DEFPUSHBUTTON   "OK",IDOK,112,270,50,14
+    LTEXT           "Flags :",IDC_STATIC,13,255,33,8
+END
+
+IDD_BAD_SCRIPT DIALOGEX 0, 0, 247, 151
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,98,130,50,14
+    LTEXT           "The following script :",IDC_STATIC,13,15,220,10
+    EDITTEXT        IDC_NAME,13,27,221,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "found in the mailbox located in :",IDC_STATIC,13,44,215,10
+    EDITTEXT        IDC_PATH,13,56,221,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "The Dispatcher will leave the script in the mailbox. Ask the sender to re-send the script or try to propagate the script manually.",IDC_STATIC,7,101,233,24,SS_SUNKEN
+    GROUPBOX        "",IDC_STATIC,7,7,233,89
+    PUSHBUTTON      "Cancel",IDCANCEL,203,130,37,14,NOT WS_VISIBLE
+    LTEXT           "",IDC_NOTICE,13,74,221,17
+END
+
+IDD_COPY_FAILED DIALOGEX 0, 0, 267, 167
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Code Co-op Dispatcher: Script copying failed"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,108,145,50,14
+    GROUPBOX        "",IDC_WHAT,7,7,253,56
+    LTEXT           "Reason :",IDC_STATIC,14,17,37,10
+    LTEXT           "",IDC_WHY,52,17,201,41,SS_SUNKEN
+    LTEXT           "While copying script:",IDC_STATIC,7,66,253,10
+    EDITTEXT        IDC_SCRIPT,7,77,253,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "to:",IDC_STATIC,7,92,253,10
+    EDITTEXT        IDC_DEST,7,102,253,14,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "Try to correct the problem and click OK.\nThe Dispatcher will retry the operation.",IDC_STATIC,7,119,253,23,SS_SUNKEN
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_DIAGNOSTICS$(COOP_PRO) DIALOGEX 0, 0, 350, 214
+#else
+IDD_DIAGNOSTICS DIALOGEX 0, 0, 350, 214
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Dispatcher Diagnostics"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Test:",IDC_DIAG_TEST_KIND_FRAME,7,3,336,47
+    CONTROL         "&E-mail",IDC_TEST_EMAIL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,63,14,53,8
+    CONTROL         "&Forwarding",IDC_TEST_FORWARD,"Button",BS_AUTORADIOBUTTON,230,14,53,8
+    CONTROL         "Progress1",IDC_TEST_PROGRESS,"msctls_progress32",WS_BORDER,13,31,323,11
+    GROUPBOX        "Results:",IDC_TEST_STATUS_FRAME,7,51,336,141
+    EDITTEXT        IDC_TEST_STATUS,13,61,324,126,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL | WS_HSCROLL | NOT WS_TABSTOP
+    PUSHBUTTON      "&Start",IDC_TEST_START,6,196,50,14,WS_GROUP
+    PUSHBUTTON      "St&op",IDC_TEST_STOP,149,196,50,14
+    DEFPUSHBUTTON   "Done",IDOK,293,196,50,14
+END
+#endif
+
+IDD_FWD_FOLDER_RECEIVE DIALOGEX 0, 0, 279, 227
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Code Co-op Dispatcher: Is This a Satellite Recipient?"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FWD_PATH_EDIT,6,160,210,16,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse ...",IDC_FWD_BROWSE,222,161,50,14
+    DEFPUSHBUTTON   "OK",IDOK,6,206,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,222,206,50,14
+    GROUPBOX        "You are sending a script to this satellite recipient:",IDC_STATIC,6,7,266,72
+    EDITTEXT        IDC_FWD_EMAIL,75,59,192,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "User ID:",IDC_STATIC,13,41,56,8
+    EDITTEXT        IDC_USER_ID,75,40,192,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Project name:",IDC_STATIC,13,23,56,11
+    EDITTEXT        IDC_FWD_PROJECT,75,18,192,18,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    LTEXT           "The script's check-in comment is:",IDC_STATIC,6,84,266,13
+    EDITTEXT        IDC_COMMENT,6,99,266,30,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "The Dispatcher doesn't know where to copy scripts addressed to this recipient.  Please enter the destination folder:",IDC_STATIC,6,134,266,22
+    LTEXT           "In most cases this will be a shared Public Inbox folder on the recipient's machine\n(for instance: \\\\MACHINE\\CODECOOP).",IDC_FWD_JOIN_HINT,6,181,266,24
+    LTEXT           "Hub's email:",IDC_STATIC,13,60,56,11
+    CTEXT           "If you don't have a satellite, click CANCEL",IDC_STATIC,64,206,147,14,SS_CENTERIMAGE | WS_BORDER
+END
+
+IDD_WIZARD_AUTOMATIC DIALOGEX 0, 0, 294, 270
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Email outgoing scripts:",IDC_STATIC,7,30,280,88
+    LTEXT           "Split scripts larger than",IDC_STATIC,17,52,79,12
+    EDITTEXT        IDC_MAXEMAIL,96,49,58,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "KB and email them in chunks.",IDC_STATIC,162,52,115,9
+    GROUPBOX        "Receive scripts incoming by email:",IDC_STATIC,7,178,280,55
+    CONTROL         "A&utomatically. Check for email every:",IDC_AUTO_RECEIVE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,203,143,10
+    EDITTEXT        IDC_AUTO_RECEIVE_PERIOD,160,201,27,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_AUTO_RECEIVE_PERIOD_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,187,201,11,14
+    LTEXT           "minute(s).",IDC_STATIC,201,203,57,8
+    CONTROL         204,IDC_STATIC,"Static",SS_BITMAP,133,140,24,15
+    LTEXT           "After all the chunks arrive in the recipient's mailbox, their Dispatcher will glue them back together.",IDC_STATIC,19,78,258,23
+END
+
+IDD_WIZARD_DIAGNOSTICS DIALOGEX 0, 0, 294, 270
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    RTEXT           "My email address:",IDC_TEST_EMAIL_LABEL,13,11,81,11
+    EDITTEXT        IDC_TEST_MY_EMAIL,101,9,186,12,ES_AUTOHSCROLL
+    CTEXT           "Please run diagnostics in order to determine if your e-mail is correctly configured.",-1,7,30,280,12
+    PUSHBUTTON      "&Run Diagnostics",IDC_DIAG,7,54,69,14
+    CONTROL         "I know my e-mail configuration works with Code Co-op",IDC_CHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,94,56,193,10
+    EDITTEXT        IDC_FEEDBACK,7,75,280,188,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL | NOT WS_TABSTOP
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_UNKNOWN_INTRO$(COOP_PRO) DIALOGEX 0, 0, 280, 180
+#else
+IDD_UNKNOWN_INTRO DIALOGEX 0, 0, 280, 180
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "This user with this ID is not a member of this project (ignore this user)",IDC_NOT_IN_PROJECT,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,122,249,10
+    CONTROL         "This user is on your satellite (you are the above hub)",IDC_ON_SATELLITE,
+                    "Button",BS_AUTORADIOBUTTON,14,139,249,10
+    CONTROL         "This user is accessible by email (the hub above exists somewhere)",IDC_IS_REMOTE,
+                    "Button",BS_AUTORADIOBUTTON,14,156,249,10
+    LTEXT           "The Dispatcher has no knowledge of the recipient:",IDC_STATIC,7,5,266,10
+    EDITTEXT        IDC_EMAIL,78,17,153,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           " having this user ID:",IDC_STATIC,7,35,68,10
+    EDITTEXT        IDC_LOCATION,78,33,38,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "in the project named:",IDC_STATIC,7,52,68,8
+    EDITTEXT        IDC_NAME,78,49,153,18,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    LTEXT           "This recipient was found in the script with the following comment :",IDC_STATIC,7,67,266,8
+    EDITTEXT        IDC_COMMENT,7,77,266,23,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    GROUPBOX        "What do you know about the recipient? (If in doubt, choose to ignore this user.)",IDC_STATIC,7,106,266,67
+    RTEXT           "at this hub",IDC_STATIC,7,20,66,13
+END
+#endif
+
+IDD_UNKNOWN_HUB_PATH DIALOGEX 0, 0, 280, 180
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Please specify where to copy outgoing scripts :",IDC_STATIC,7,32,266,12
+    EDITTEXT        ID_PATH_EDIT,7,49,209,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "B&rowse ...",IDB_BROWSE,223,49,50,14
+    LTEXT           "In most cases this will be a shared Public Inbox folder on the hub\n(for instance: \\\\HUB\\CODECOOP).",IDC_STATIC,7,75,266,39
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_UNKNOWN_SAT_PATH$(COOP_PRO) DIALOGEX 0, 0, 280, 180
+#else
+IDD_UNKNOWN_SAT_PATH DIALOGEX 0, 0, 280, 180
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Please specify where to copy scripts for that satellite user :",IDC_STATIC,7,32,266,12
+    COMBOBOX        IDC_COMBO,8,47,181,69,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "B&rowse ...",IDB_BROWSE,206,46,50,14
+    LTEXT           "In most cases this will be a shared Public Inbox folder on the recipient's satellite\n(for instance: \\\\SATELLITE\\CODECOOP).",IDC_STATIC,7,75,266,39
+END
+#endif
+
+IDD_UNKNOWN_PROJECT_NAME DIALOGEX 0, 0, 280, 180
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Project name is misspelled",IDC_MISSPELLED,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,15,129,249,10
+    GROUPBOX        "Is the project name spelled correctly (all the whitespaces match)?",IDC_STATIC,7,116,266,45
+    CONTROL         "Project name is correct",IDC_CORRECT,"Button",BS_AUTORADIOBUTTON,15,144,249,10
+    LTEXT           "There is a Join Request for the project :",IDC_STATIC,7,7,128,10
+    EDITTEXT        IDC_NAME,8,17,130,17,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    LTEXT           "These are the names of local projects:",IDC_STATIC,8,50,128,12
+    LTEXT           "Script comment :",IDC_STATIC,7,68,266,10
+    EDITTEXT        IDC_COMMENT,7,81,266,31,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    LISTBOX         IDC_LIST,148,8,119,66,LBS_SORT | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | LBS_NOSEL | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_UNKNOWN_MISSPELLED DIALOGEX 0, 0, 280, 180
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CTEXT           "Since the Join Request script contained a misspelled project name, ask the sender to defect from this project and join again using the correct project name.",IDC_STATIC,7,26,266,31
+    CTEXT           "The script will be now removed.",IDC_STATIC,7,76,266,18
+END
+
+IDD_UNKNOWN_ADDRESSEE DIALOGEX 0, 0, 280, 180
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CTEXT           "You have received an incorrectly addressed Join Request script. Ask the sender to defect from the project and join again specifying the correct Hub friendly name (usually hub's email address) of one of the project members.",IDC_STATIC,7,26,266,37
+    CTEXT           "The script will now be removed.",IDC_STATIC,7,72,266,17
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_WIZARD_INTRO$(COOP_PRO) DIALOGEX 0, 0, 294, 270
+#else
+IDD_WIZARD_INTRO DIALOGEX 0, 0, 294, 270
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "You will now go step-by-step through the configuration process.",IDC_STATIC,7,23,280,13
+    GROUPBOX        "Are you planning on using Code Co-op:",IDC_STATIC,7,55,280,105
+    CONTROL         "&Standalone -- only on this machine (no collaboration)",IDC_STANDALONE,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,21,73,259,10
+    CONTROL         "Only using &email for collaboration",IDC_EMAIL,"Button",BS_AUTORADIOBUTTON,21,96,258,10
+    CONTROL         "Only using &Local Area Network (LAN) for collaboration",IDC_LAN,
+                    "Button",BS_AUTORADIOBUTTON,21,117,258,10
+    CONTROL         "Using &both, LAN and email",IDC_BOTH,"Button",BS_AUTORADIOBUTTON,21,138,252,10
+    CTEXT           "Remember, you can always reconfigure your system, or select advanced configurations, by changing the Dispatcher's Collaboration Settings.",IDC_STATIC,41,185,202,29
+    ICON            ID_MAIN,IDC_STATIC,136,234,21,20
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_WIZARD_ROLE_LAN$(COOP_PRO) DIALOGEX 0, 0, 294, 270
+#else
+IDD_WIZARD_ROLE_LAN DIALOGEX 0, 0, 294, 270
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "When you use LAN for collaboration, one (and only one) machine must be designated as a hub -- all others must be configured as satellites.",IDC_STATIC,7,7,280,20
+    GROUPBOX        "Do you want your machine to be:",IDC_STATIC,7,203,280,60
+    CONTROL         "The &Hub",IDC_HUB,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,18,221,259,10
+    CONTROL         "A &Satellite (there already is a hub)",IDC_SAT,"Button",BS_AUTORADIOBUTTON,18,240,258,10
+    CTEXT           "The hub is responsible for exchanging scripts between satellites. The hub is NOT a server, it can be any of the development machines.",IDC_STATIC,15,174,264,22
+    CONTROL         202,IDC_SAT_IMAGE,"Static",SS_BITMAP,30,116,55,50
+    CONTROL         208,IDC_SAT2_IMAGE,"Static",SS_BITMAP,183,124,65,31
+    CONTROL         202,IDC_HUB_IMAGE,"Static",SS_BITMAP,110,31,55,50
+    CONTROL         210,IDC_STATIC,"Static",SS_BITMAP,85,81,49,74
+    CONTROL         211,IDC_STATIC,"Static",SS_BITMAP,134,81,49,74
+    LTEXT           "Satellite",IDC_STATIC,202,108,48,10
+    LTEXT           "Hub",IDC_STATIC,172,36,48,15
+    LTEXT           "Satellite",IDC_STATIC,37,101,45,13
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_WIZARD_HUB_PATH$(COOP_PRO) DIALOGEX 0, 0, 294, 270
+#else
+IDD_WIZARD_HUB_PATH DIALOGEX 0, 0, 294, 270
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_HUB_ID,49,85,150,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PATH,49,132,150,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse the Network...",IDC_BROWSE,50,150,81,14
+    LTEXT           "My hub is identified by this e-mail address:",IDC_STATIC,16,72,183,10
+    GROUPBOX        "About my hub: (ask the hub operator for this info)",IDC_STATIC,7,56,279,120
+    CTEXT           "Outgoing scripts will be copied over the network from this satellite \nto the hub's Public Inbox share. \n\n(The hub will then forward them to their recipients.)",IDC_STATIC,19,14,259,32
+    CONTROL         207,IDC_HUB_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,219,125,55,50
+    CONTROL         210,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,169,176,49,74
+    CONTROL         202,IDC_SAT_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,114,204,55,50
+    CTEXT           "Hub:\n(script distribution center)",IDC_STATIC,209,88,74,32
+    CTEXT           "Satellite: \n(you are configuring this machine)",IDC_STATIC,22,215,69,39
+    CONTROL         216,IDC_SHARE_IMAGE,"Static",SS_BITMAP,15,137,27,23
+    CONTROL         204,IDC_STATIC,"Static",SS_BITMAP,15,86,24,15
+    LTEXT           "My hub's Public Inbox folder is shared as:\n(for instance, \\\\MACHINENAME\\CODECOOP)",IDC_STATIC,15,108,176,23
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_WIZARD_HUB_ID$(COOP_PRO) DIALOGEX 0, 0, 294, 270
+#else
+IDD_WIZARD_HUB_ID DIALOGEX 0, 0, 294, 270
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "My e-mail address: (to uniquely identify my hub):",IDC_STATIC,16,72,157,10
+    GROUPBOX        "My configuration:",IDC_STATIC,7,56,278,116
+    CTEXT           "This hub will distribute scripts between satellites.",IDC_STATIC,7,24,271,23
+    CONTROL         207,IDC_SAT_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,114,203,55,50
+    CONTROL         210,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,169,172,49,74
+    CONTROL         202,IDC_HUB_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,216,122,55,50
+    CTEXT           "Hub\n(you are configuring this machine)",IDC_STATIC,201,90,67,28
+    CTEXT           "Any satellite\n(should be configured using the above data)",IDC_STATIC,16,204,87,35
+    CONTROL         204,IDC_STATIC,"Static",SS_BITMAP,15,90,24,15
+    EDITTEXT        IDC_HUB_ID,49,89,141,14,ES_AUTOHSCROLL
+    CONTROL         216,IDC_SHARE_IMAGE,"Static",SS_BITMAP,15,137,27,23
+    LTEXT           "My Public Inbox folder is shared as:",IDC_STATIC,14,120,176,14
+    LTEXT           "Static",IDC_HUB_SHARE,49,142,141,14,SS_SUNKEN
+END
+#endif
+
+IDD_WIZARD_FINISH DIALOGEX 0, 0, 294, 270
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "The configuration procedure is completed. \n\nThe Dispatcher is ready to work.",IDC_STATIC,31,115,231,29
+    GROUPBOX        "Congratulations!",IDC_STATIC,7,75,280,102
+    ICON            ID_MAIN,IDC_STATIC,136,33,20,20
+    ICON            ID_MAIN,IDC_STATIC,136,211,21,20
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_WIZARD_ROLE_EMAIL_LAN$(COOP_PRO) DIALOGEX 0, 0, 294, 270
+#else
+IDD_WIZARD_ROLE_EMAIL_LAN DIALOGEX 0, 0, 294, 270
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "When you use both LAN and email for collaboration, one (and only one) machine on the local network has to be designated as a hub--the others have to be configured as satellites.",IDC_STATIC,14,9,265,24
+    GROUPBOX        "Do you want your machine to be:",IDC_STATIC,7,214,280,49
+    CONTROL         "The &Hub (a script distribution and email center for this network)",IDC_HUB,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,18,228,259,10
+    CONTROL         "A &Satellite (there must already be a hub on this local network)",IDC_SAT,
+                    "Button",BS_AUTORADIOBUTTON,18,244,258,10
+    CTEXT           "The hub will be sending and receiving email from other hubs and forwarding it to local satellites. The hub is NOT a server, it can be any of the development machines.",IDC_STATIC,15,186,265,27
+    CONTROL         202,IDC_SAT_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,37,125,55,50
+    CONTROL         202,IDC_SAT2_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,192,123,55,50
+    CONTROL         202,IDC_HUB_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,117,39,55,50
+    CONTROL         210,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,92,89,49,74
+    CONTROL         211,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,141,89,49,74
+    CONTROL         209,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,39,70,78,16
+    CONTROL         204,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,71,54,25,15
+    LTEXT           "Satellite",IDC_STATIC,202,111,48,10
+    LTEXT           "Hub:\nCommunicates with other hubs using email.",IDC_STATIC,179,44,89,40
+    LTEXT           "Satellite",IDC_STATIC,45,112,45,13
+END
+#endif
+
+IDD_ALERT DIALOGEX 0, 0, 201, 106
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Co-op Dispatcher Alert"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,85,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,144,85,50,14
+    CTEXT           "Static",IDC_ALERT_TEXT,7,7,187,77
+    CTEXT           "Static",IDC_ALERT_COUNTER,84,86,33,13
+END
+
+IDD_ALERT_1 DIALOGEX 0, 0, 223, 106
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Co-op Dispatcher Alert"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,87,85,50,14
+    CTEXT           "Static",IDC_ALERT_COUNTER,86,70,50,13,SS_CENTERIMAGE
+    CTEXT           "Static",IDC_ALERT_TEXT,7,7,209,57
+    PUSHBUTTON      "Cancel",IDCANCEL,159,87,50,12,NOT WS_VISIBLE
+END
+
+IDD_PURGE DIALOGEX 0, 0, 185, 89
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Purge addresses"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,68,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,128,68,50,14
+    GROUPBOX        "Purge old, unused addresses from database",IDC_STATIC,7,7,171,54
+    CONTROL         "&Local addresses",IDC_LOCAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,25,151,10
+    CONTROL         "&Satellite addresses",IDC_SAT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,41,153,10
+END
+
+IDD_UNKNOWN_CONFIG_ERROR DIALOGEX 0, 0, 280, 180
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "You told the Dispatcher that this email address (or hub friendly name):",IDC_STATIC,7,16,259,11
+    EDITTEXT        IDC_EMAIL,29,31,222,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "is used by a recipient in another cluster of computers (another hub). However, this address is also used by some members in your local cluster (this hub). This is not a valid configuration.",IDC_STATIC,7,54,266,32
+    LTEXT           "A given email address can only be used by recipients of a single cluster of computers. Recipients who use this address in the other clusters must change it.",IDC_STATIC,7,92,266,29
+    LTEXT           "The dispatcher will now attempt to deliver the script. However, it will continue asking you to confirm this action every time it sees the address used in more than one cluster of computers.",IDC_STATIC,7,129,266,44
+END
+
+IDD_UNKNOWN_EMAIL DIALOGEX 0, 0, 280, 180
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "The Dispatcher needs to know if:",IDC_STATIC,7,124,266,49
+    CONTROL         "That Hub is accessible by email",IDC_IS_REMOTE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,21,138,238,10
+    CONTROL         "The script was created by mistake",IDC_MISTAKE,"Button",BS_AUTORADIOBUTTON,21,154,242,10
+    LTEXT           "",IDC_DESCRIPTION,7,7,266,12
+    RTEXT           "To the Hub with the following email:",IDC_STATIC,7,24,138,10
+    EDITTEXT        IDC_EMAIL,151,21,122,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "For the project named:",IDC_STATIC,31,42,115,9
+    EDITTEXT        IDC_NAME,151,39,122,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "The script has the following comment :",IDC_STATIC,7,58,266,9
+    EDITTEXT        IDC_COMMENT,7,69,266,46,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_UNKNOWN_LAN_OR_IGNORE_JOIN$(COOP_PRO) DIALOGEX 0, 0, 280, 180
+#else
+IDD_UNKNOWN_LAN_OR_IGNORE_JOIN DIALOGEX 0, 0, 280, 180
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "There is no such project on this hub or any of its satellites \n(ignore the request)",IDC_NOT_IN_PROJECT,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP,15,124,238,22
+    CONTROL         "This recipient is on your satellite (you are the above hub)",IDC_ON_SATELLITE,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,15,150,238,10
+    GROUPBOX        "The Dispatcher needs to know if: (If in doubt, choose to ignore this request.)",IDC_STATIC,7,109,266,64
+    LTEXT           "You have just received a Join Request script addressed to",IDC_DESCRIPTION,7,7,266,12
+    RTEXT           "the hub:",IDC_STATIC,7,24,92,10
+    EDITTEXT        IDC_EMAIL,102,22,122,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "for the project named:",IDC_STATIC,7,42,92,9
+    EDITTEXT        IDC_NAME,102,39,122,17,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    LTEXT           "The script has the following comment :",IDC_STATIC,7,58,266,9
+    EDITTEXT        IDC_COMMENT,7,69,266,23,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_UNKNOWN_LAN_OR_IGNORE$(COOP_PRO) DIALOGEX 0, 0, 280, 180
+#else
+IDD_UNKNOWN_LAN_OR_IGNORE DIALOGEX 0, 0, 280, 180
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "User with this user ID is not a member of this project (ignore this user)",IDC_NOT_IN_PROJECT,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,17,138,249,10
+    CONTROL         "This recipient is on your satellite (you are the above hub)",IDC_ON_SATELLITE,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,17,155,249,10
+    GROUPBOX        "The Dispatcher needs to know if: (If in doubt, choose to ignore this user.)",IDC_STATIC,7,123,266,50
+    LTEXT           "You have just received a script",IDC_DESCRIPTION,7,7,266,12
+    RTEXT           "to a recipient :",IDC_STATIC,7,24,86,10
+    EDITTEXT        IDC_EMAIL,102,22,122,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "in the project :",IDC_STATIC,8,56,85,9
+    EDITTEXT        IDC_NAME,102,54,122,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "The script has the following comment :",IDC_STATIC,7,72,266,9
+    EDITTEXT        IDC_COMMENT,7,83,266,32,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    RTEXT           "having user ID:",IDC_STATIC,7,39,85,10
+    EDITTEXT        IDC_LOCATION,102,38,27,14,ES_AUTOHSCROLL | ES_READONLY
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_UNKNOWN_INTRO_JOIN$(COOP_PRO) DIALOGEX 0, 0, 280, 180
+#else
+IDD_UNKNOWN_INTRO_JOIN DIALOGEX 0, 0, 280, 180
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "I don't know--Ignore request, tell the joinee to defect.",IDC_NOT_IN_PROJECT,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,119,251,10
+    CONTROL         "The admin is on my satellite. I am this hub",IDC_ON_SATELLITE,
+                    "Button",BS_AUTORADIOBUTTON,14,136,142,10
+    CONTROL         "This user is accessible by email (the hub above exists somewhere).",IDC_IS_REMOTE,
+                    "Button",BS_AUTORADIOBUTTON,14,154,256,10
+    GROUPBOX        "What do you know about the administrator? (If in doubt, select ignore)",IDC_STATIC,7,106,266,67
+    EDITTEXT        IDC_EMAIL,167,135,99,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_NAME,134,5,139,16,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_COMMENT,14,39,254,31,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | NOT WS_BORDER | WS_VSCROLL
+    LTEXT           "There is a join request for the project:",IDC_STATIC,7,9,125,12
+    CTEXT           "The dispatcher has no knowledge of this project's administrator.",IDC_STATIC,7,85,263,13
+    GROUPBOX        "Script commnet: ",IDC_STATIC,7,27,266,47
+END
+#endif
+
+IDD_UNKNOWN_HUB_OR_SAT DIALOGEX 0, 0, 280, 180
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Do you want your machine to become:",IDC_STATIC,7,83,266,45
+    CONTROL         "The &Hub",IDC_HUB,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,96,249,10
+    CONTROL         "A &Satellite (there already is a hub)",IDC_SAT,"Button",BS_AUTORADIOBUTTON,14,111,249,10
+    CTEXT           "When you use local network for collaboration, one (and only one) machine must be designated as a hub -- all others must be configured as satellites.",IDC_STATIC,7,7,266,26
+    CTEXT           "The hub will be responsible for exchanging scripts between the satellites.",IDC_STATIC,7,35,266,17
+    CTEXT           "The hub is NOT a server, it can be any of the development machines.",IDC_STATIC,7,62,266,15
+    LTEXT           "In either case, the dispatcher must know the hub's email address.",IDC_STATIC,7,135,266,12
+    LTEXT           "Hub's email:",IDC_STATIC,14,150,55,16
+    EDITTEXT        IDC_HUB_ID,80,148,181,14,ES_AUTOHSCROLL
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_UNKNOWN_STANDALONE_TO_LAN_JOIN$(COOP_PRO) DIALOGEX 0, 0, 280, 180
+#else
+IDD_UNKNOWN_STANDALONE_TO_LAN_JOIN DIALOGEX 0, 0, 280, 180
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "You are joining a project located on another computer on a local network.",IDC_DESCRIPTION,7,7,266,14
+    RTEXT           "Project name:",IDC_STATIC,7,23,137,10
+    EDITTEXT        IDC_PROJECT,151,18,122,16,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    RTEXT           "Their hub's friendly name or email:",IDC_STATIC,7,41,138,9
+    EDITTEXT        IDC_EMAIL,151,38,122,14,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "When you use local network for collaboration, one (and only one) machine must be designated as a hub -- all others must be configured as satellites.",IDC_STATIC,7,60,266,22
+    CTEXT           "The hub will be responsible for exchanging scripts between the satellites.",IDC_STATIC,7,82,266,13
+    CTEXT           "The hub is NOT a server, it can be any of the development machines.",IDC_STATIC,7,95,266,13
+    GROUPBOX        "Do you want your machine to be:",IDC_STATIC,6,112,265,62
+    CONTROL         "The &Hub",IDC_HUB,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,127,249,10
+    CONTROL         "A &Satellite (there already is a hub)",IDC_SAT,"Button",BS_AUTORADIOBUTTON,14,143,249,10
+    CONTROL         "I made a mistake. &Delete this script and defect from project.",IDC_MISTAKE,
+                    "Button",BS_AUTORADIOBUTTON,14,159,249,10
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_UNKNOWN_STANDALONE_TO_LAN$(COOP_PRO) DIALOGEX 0, 0, 280, 180
+#else
+IDD_UNKNOWN_STANDALONE_TO_LAN DIALOGEX 0, 0, 280, 180
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Currently your Dispatcher is configured as ""Standalone.""\nYou are sending a script to a project member located on another computer on the local network.",IDC_DESCRIPTION,7,7,266,24
+    RTEXT           "Project name:",IDC_STATIC,7,37,138,10
+    EDITTEXT        IDC_PROJECT,151,34,122,16,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    RTEXT           "Their hub's friendly name (or email)",IDC_STATIC,7,54,137,10
+    EDITTEXT        IDC_EMAIL,151,53,122,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "User ID:",IDC_STATIC,56,71,85,9
+    EDITTEXT        IDC_LOCATION,151,69,27,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "The script has the following comment :",IDC_STATIC,7,84,266,9
+    EDITTEXT        IDC_COMMENT,7,98,266,31,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    GROUPBOX        "Do you want your machine to be:",IDC_STATIC,7,132,266,41
+    CONTROL         "The &Hub",IDC_HUB,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,13,144,249,10
+    CONTROL         "A &Satellite (there already is a hub)",IDC_SAT,"Button",BS_AUTORADIOBUTTON,13,156,249,10
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_UNKNOWN_STANDALONE_JOIN$(COOP_PRO) DIALOGEX 0, 0, 280, 180
+#else
+IDD_UNKNOWN_STANDALONE_JOIN DIALOGEX 0, 0, 280, 180
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Currently your Dispatcher is configured as ""Standalone.""\nYou are joining a project that is located on another machine.",IDC_DESCRIPTION,7,7,266,21
+    RTEXT           "Project name:",-1,7,34,135,10
+    EDITTEXT        IDC_EMAIL,151,51,122,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Email address (or hub's friendly name):",-1,7,52,135,9
+    EDITTEXT        IDC_PROJECT,151,32,122,14,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    GROUPBOX        "What kind of collaboration are you planning?",-1,6,101,265,73
+    CONTROL         "I am a part of a &LAN group",IDC_LAN,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,120,249,10
+    CONTROL         "There is no LAN group, I will be using &email only",IDC_HUB,
+                    "Button",BS_AUTORADIOBUTTON,14,139,249,10
+    CONTROL         "I made a mistake. &Delete this script and defect from project",IDC_MISTAKE,
+                    "Button",BS_AUTORADIOBUTTON,14,159,249,10
+END
+#endif
+
+IDD_UNKNOWN_STANDALONE DIALOGEX 0, 0, 280, 180
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Currently your Dispatcher is configured as ""Standalone.""\nYou are sending a script to a project member located on another computer.",IDC_DESCRIPTION,7,7,266,20
+    RTEXT           "Project name:",IDC_STATIC,7,34,127,10
+    EDITTEXT        IDC_PROJECT,136,31,137,16,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    RTEXT           "Email address (or hub's friendly name):",IDC_STATIC,7,53,126,9
+    EDITTEXT        IDC_EMAIL,137,50,136,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "User ID:",IDC_STATIC,8,71,125,9
+    EDITTEXT        IDC_LOCATION,136,69,27,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "What kind of collaboration are you planning?",IDC_STATIC,7,131,266,43
+    CONTROL         "I am a part of a &LAN group",IDC_LAN,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,143,249,10
+    CONTROL         "There is no LAN group, I will be using &e-mail only",IDC_HUB,
+                    "Button",BS_AUTORADIOBUTTON,14,156,249,10
+    LTEXT           "The script has the following comment:",IDC_STATIC,7,85,257,9
+    EDITTEXT        IDC_COMMENT,7,98,266,29,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_JOIN_PROJECT$(COOP_PRO) DIALOGEX 0, 0, 303, 230
+#else
+IDD_JOIN_PROJECT DIALOGEX 0, 0, 303, 230
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Join Existing Project"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "To me (I want to have more enlistments in this project)",IDC_JOIN_THIS_COMPUTER,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,13,18,274,10
+    CONTROL         "To somebody on my LAN (hub or a satellite)",IDC_JOIN_THIS_CLUSTER,
+                    "Button",BS_AUTORADIOBUTTON,13,36,156,10
+    CONTROL         "To an e-mail peer or somebody on a different LAN (hub or satellite)",IDC_JOIN_REMOTE_CLUSTER,
+                    "Button",BS_AUTORADIOBUTTON,13,54,274,11
+    COMBOBOX        IDC_JOIN_REMOTE_CLUSTER_HUB_ID,83,73,149,219,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "Advanced...",IDC_JOIN_REMOTE_CLUSTER_TRANSPORT,241,73,46,12
+    COMBOBOX        IDC_JOIN_LOCAL_PROJECTS,89,112,199,129,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_JOIN_PROJECT_SOURCE_EDIT,15,148,218,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse ...",IDC_JOIN_PROJECT_BROWSE_SOURCE,242,148,46,12,BS_CENTER | BS_MULTILINE
+    EDITTEXT        IDC_JOIN_PROJECT_USER_NAME,119,183,169,12,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_JOIN_PROJECT_USER_PHONE,119,204,169,12,ES_AUTOHSCROLL
+    GROUPBOX        "Send request to an existing project member: ",IDC_JOIN_PROJECT_ADMINISTRATOR_FRAME,5,6,290,85
+    GROUPBOX        "Who is joining?",IDC_JOIN_PROJ_USER_FRAME,5,170,290,52
+    GROUPBOX        "The name of the project you are joining:",IDC_JOIN_PROJECT_NAME_FRAME,5,98,290,33
+    LTEXT           "Type in (or select):",IDC_STATIC,12,114,69,9
+    LTEXT           "Their (hub's) e-mail\n(type in or select)",IDC_JOIN_PROJ_ADMIN_NAME_LABEL,13,70,62,16,NOT WS_GROUP
+    LTEXT           "Your name:",IDC_JOIN_PROJ_NAME_LABEL,12,187,95,10,NOT WS_GROUP
+    LTEXT           "Personal comment (phone #):",IDC_JOIN_PROJ_PHONE_LABEL,12,205,99,9,NOT WS_GROUP
+    GROUPBOX        "Where do you want to keep your local copy of the project tree?",IDC_JOIN_PROJECT_FRAME,5,134,290,33
+    EDITTEXT        IDC_THIS_CLUSTER_HUB_ID,187,36,101,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+END
+#endif
+
+IDD_HUB_ID_HUB DIALOGEX 0, 0, 229, 161
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hub Identifier"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Select or enter this hub's friendly name \n(usually your local email address).",IDC_STATIC,7,7,215,19
+    COMBOBOX        IDC_HUB_ID,19,31,189,60,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Code Co-op 4.x requires each hub to have a unique identifier, which in most cases should be its email address. Only if this hub doesn't use email, make a friendly name up. ",IDC_STATIC,7,46,215,24
+    LTEXT           "If there are any satellite machines, their users will also be asked to provide their hub's email. They should enter the same name (email) you have selected.",IDC_STATIC,7,82,215,30
+    DEFPUSHBUTTON   "OK",IDOK,7,140,50,14
+    PUSHBUTTON      "Exit",IDCANCEL,172,140,50,14
+    LTEXT           "If in doubt, contact support@ReliSoft.com.",IDC_STATIC,7,121,215,13
+END
+
+IDD_HUB_ID_SAT DIALOGEX 0, 0, 229, 147
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hub Identifier"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "This machine is a satellite of a particular hub. Select or type in that hub's email address.",IDC_STATIC,7,7,215,21
+    COMBOBOX        IDC_HUB_ID,19,29,189,60,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Code Co-op 4.x requires each hub to have a unique identifier, which in most cases is its email address. ",IDC_STATIC,7,48,215,23
+    LTEXT           "This must be the same friendly name or email address that the operator entered on the hub machine during conversion.",IDC_STATIC,7,74,215,25
+    LTEXT           "If in doubt, contact support@ReliSoft.com.",IDC_STATIC,7,109,215,14
+    DEFPUSHBUTTON   "OK",IDOK,7,126,50,14
+    PUSHBUTTON      "Exit",IDCANCEL,172,126,50,14
+END
+
+IDD_HUBTRANSPORT DIALOGEX 0, 0, 198, 126
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hub Transport"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT,7,84,184,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,105,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,141,105,50,14
+    LTEXT           "The Dispatcher couldn't figure out what transport to use for the remote hub with this friendly name:",IDC_STATIC,7,7,184,25
+    EDITTEXT        IDC_READEDIT,7,35,184,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Please enter the email address of that hub (or some other inter-hub transport):",IDC_STATIC,7,61,184,20
+END
+
+IDD_STANDALONE_JOIN DIALOGEX 0, 0, 317, 193
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Project located on some other computer -- I want to start &collaboration with other computers.",IDC_NOT_LOCAL,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP | WS_TABSTOP,13,34,292,24
+    CONTROL         "Project located on this computer -- I want to have &multiple enlistments on this computer",IDC_LOCAL,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,13,90,292,24
+    COMBOBOX        IDC_LOCAL_PROJECTS,25,128,204,119,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    GROUPBOX        "What project are you joining? ",IDC_STATIC,7,9,303,174
+    LTEXT           "Select the name of the project you want to join:",IDC_STATIC,25,113,204,12
+END
+
+IDD_STANDALONE_JOIN_SOURCE DIALOGEX 0, 0, 317, 193
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_SOURCE_PATH,14,49,289,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE,134,114,50,14
+    GROUPBOX        "Select target folder for the project files:",IDC_STATIC,7,7,304,177
+END
+
+IDD_STANDALONE_JOIN_USER DIALOGEX 0, 0, 317, 193
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_DISABLED | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_JOIN_PROJECT_USER_NAME,20,45,280,12,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_JOIN_PROJECT_USER_PHONE,20,92,280,12,ES_AUTOHSCROLL
+    CONTROL         "Join project as passive &observer\n(You won't be able to make any changes, but you won't need a license)",IDC_JOIN_PROJECT_OBSERVER,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,20,133,268,20
+    GROUPBOX        "Who is joining the project?",IDC_STATIC,7,7,303,174
+    LTEXT           "Your name:",IDC_JOIN_PROJ_NAME_LABEL,14,31,95,9,NOT WS_GROUP
+    LTEXT           "Personal comment (for instance, your phone number):",IDC_JOIN_PROJ_PHONE_LABEL,14,79,175,9,NOT WS_GROUP
+END
+
+IDD_REMOTE_HUB_TRANSPORT DIALOGEX 0, 0, 281, 153
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Remote Hub"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TRANSPORT,64,84,204,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TRANSPORT_TYPE,64,105,204,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,132,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,132,50,14
+    GROUPBOX        "Remote Hub Information",IDC_STATIC,7,7,267,57
+    LTEXT           "Hub's friendly name (usually its email address):",IDC_STATIC,13,23,253,8
+    EDITTEXT        IDC_HUB_ID,65,42,202,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Type:",IDC_STATIC,13,108,46,8
+    LTEXT           "Address:",IDC_STATIC,13,88,46,8
+    GROUPBOX        "Transport (if not the same as friendly name)",IDC_STATIC,7,70,267,56
+END
+
+IDD_COLLABORATION_SIMPLE DIALOGEX 0, 0, 378, 218
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Simple"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Standalone",IDC_STANDALONE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,14,28,57,10
+    CONTROL         "E-mail Peer",IDC_PEER,"Button",BS_AUTORADIOBUTTON,14,100,62,10
+    EDITTEXT        IDC_MY_EMAIL,104,177,102,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "E-mail Options...",IDC_EMAIL_PROPERTIES,219,177,67,14
+    CTEXT           "My email address:",IDC_STATIC,108,164,84,12
+    CONTROL         202,IDC_STANDALONE_IMAGE,"Static",SS_BITMAP,92,17,55,50
+    CONTROL         202,IDC_PEER_IMAGE,"Static",SS_BITMAP,35,135,55,50
+    CONTROL         204,IDC_STATIC,"Static",SS_BITMAP,136,135,25,15
+    CONTROL         206,IDC_STATIC,"Static",SS_BITMAP,92,151,121,12
+    LTEXT           "Collaborate with others using e-mail only.\nShare projects, make changes, and receive changes from your peers.",IDC_STATIC,224,103,133,33,SS_SUNKEN
+    LTEXT           "Use Code Co-op on this computer only.\nKeep track of changes in your projects.\nRetrieve old versions.",IDC_STATIC,224,20,133,33,SS_SUNKEN
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_COLLABORATION_HUB$(COOP_PRO) DIALOGEX 0, 0, 378, 218
+#else
+IDD_COLLABORATION_HUB DIALOGEX 0, 0, 378, 218
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Network Hub"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Hub",IDC_HUB,"Button",BS_AUTORADIOBUTTON,14,103,36,10
+    CONTROL         "Use e-mail to communicate with other hubs and peers",IDC_EMAIL_USAGE,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,232,8,113,23
+    EDITTEXT        IDC_HUB_EMAIL,231,51,113,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "E-mail Options...",IDC_EMAIL_PROPERTIES,231,70,67,14
+    PUSHBUTTON      "Advanced...",IDC_MY_NETWORK_PROPERTIES,231,131,67,14
+    LTEXT           "This hub's Public Inbox share",IDC_NETWORK_STATIC,231,99,113,9
+    LTEXT           "This hub's e-mail address",IDC_EMAIL_STATIC,231,39,112,12
+    CONTROL         210,IDC_STATIC,"Static",SS_BITMAP,76,115,49,74
+    CONTROL         202,IDC_HUB_IMAGE,"Static",SS_BITMAP,121,65,55,50
+    CONTROL         207,IDC_SAT_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,20,148,55,50
+    CTEXT           "This computer",IDC_STATIC,80,78,36,21
+    CTEXT           "Satellite",IDC_STATIC,22,202,50,9
+    CONTROL         204,IDC_STATIC,"Static",SS_BITMAP,193,49,24,15
+    CONTROL         216,IDC_SHARE_IMAGE,"Static",SS_BITMAP,193,110,21,19
+    CONTROL         "This machine distributes scripts to other\nsatellites on the local network.\nOptionally, it may send and receive scripts\nvia e-mail to and from other hubs.",IDC_STATIC,
+                    "Static",SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP,13,9,140,40
+    CONTROL         218,IDC_STATIC,"Static",SS_BITMAP,173,136,19,26
+    CTEXT           "From satellite",IDC_STATIC,143,162,49,13
+    CONTROL         219,IDC_STATIC,"Static",SS_BITMAP,207,19,19,26
+    LTEXT           "Static",IDC_HUB_SHARE,231,111,113,15,SS_SUNKEN
+    CONTROL         220,IDC_STATIC,"Static",SS_BITMAP,180,55,8,71
+    CTEXT           "From peers",IDC_STATIC,187,8,43,11
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_COLLABORATION_SAT$(COOP_PRO) DIALOGEX 0, 0, 378, 218
+#else
+IDD_COLLABORATION_SAT DIALOGEX 0, 0, 378, 218
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Network Satellite"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Satellite",IDC_SATELLITE,"Button",BS_AUTORADIOBUTTON,11,103,38,10
+    EDITTEXT        IDC_HUB_EMAIL,254,17,102,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HUB_SHARE,254,67,100,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Advanced...",IDC_NETWORK_PROPERTIES,254,86,53,14
+    PUSHBUTTON      "Advanced...",IDC_MY_NETWORK_PROPERTIES,147,193,53,14
+    LTEXT           "Hub's e-mail address",IDC_EMAIL_STATIC,254,6,101,9
+    CONTROL         210,IDC_STATIC,"Static",SS_BITMAP,106,65,49,74
+    CONTROL         207,IDC_HUB_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,126,14,55,50
+    CONTROL         202,IDC_SAT_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,51,97,55,50
+    CTEXT           "This computer",IDC_STATIC,52,154,50,9
+    LTEXT           "Hub's Public Inbox share",IDC_STATIC,254,55,100,12
+    CONTROL         204,IDC_STATIC,"Static",SS_BITMAP,211,18,24,15
+    CONTROL         216,IDC_SHARE_IMAGE,"Static",SS_BITMAP,211,62,27,23
+    LTEXT           "This satellite's Public Inbox share",IDC_STATIC,147,161,114,11
+    CONTROL         216,IDC_SHARE2_IMAGE,"Static",SS_BITMAP,112,166,27,23
+    LTEXT           "Ask the hub operator\nfor details about the hub.",IDC_STATIC,21,12,92,23,SS_SUNKEN
+    LTEXT           "Hub",IDC_STATIC,183,48,18,11
+    CONTROL         218,IDC_STATIC,"Static",SS_BITMAP,194,89,19,26
+    CONTROL         219,IDC_STATIC,"Static",SS_BITMAP,141,133,19,26
+    LTEXT           "From hub",IDC_STATIC,162,130,56,9
+    LTEXT           "To hub",IDC_STATIC,191,115,53,9
+    CONTROL         220,IDC_STATIC,"Static",SS_BITMAP,202,16,8,71
+    LTEXT           "Static",IDC_SAT_SHARE,147,173,100,15,SS_SUNKEN
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_COLLABORATION_REMOTE_SAT$(COOP_PRO) DIALOGEX 0, 0, 378, 218
+#else
+IDD_COLLABORATION_REMOTE_SAT DIALOGEX 0, 0, 378, 218
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Off-Site Satellite"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_MY_EMAIL,31,191,102,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "E-mail Options...",IDC_EMAIL_PROPERTIES,140,191,67,14
+    LTEXT           "Hub's email address",IDC_STATIC,67,19,99,12
+    CONTROL         "Off-Site Satellite",IDC_REMOTE_SATELLITE,"Button",BS_AUTORADIOBUTTON,14,103,63,10
+    LTEXT           "My email address\n(must be different from hub's) ",IDC_STATIC,31,169,117,20
+    CONTROL         208,IDC_SAT_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,34,131,65,31
+    CONTROL         207,IDC_HUB_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,177,8,55,50
+    CONTROL         204,IDC_STATIC,"Static",SS_BITMAP,132,96,24,15
+    LTEXT           "Business trip scenario:\n\nYou disconnect your satellite from the network and take it with you on a trip.\n\nYou use your private email account to communicate with the office hub. ",IDC_STATIC,235,82,125,67,SS_SUNKEN
+    CTEXT           "Office hub",IDC_STATIC,178,66,53,12
+    CONTROL         219,IDC_STATIC,"Static",SS_BITMAP,113,116,19,26
+    CONTROL         218,IDC_STATIC,"Static",SS_BITMAP,155,63,19,26
+    LTEXT           "Static",IDC_HUB_EMAIL,68,34,90,13,SS_SUNKEN
+END
+#endif
+
+IDD_EMAIL_DIAGNOSTICS DIALOGEX 0, 0, 315, 259
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Diagnostics"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_DIAG_TEST_KIND_FRAME,7,7,301,245
+    EDITTEXT        IDC_TEST_STATUS,15,34,286,173,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL | WS_HSCROLL | NOT WS_TABSTOP
+    CONTROL         "Progress1",IDC_TEST_PROGRESS,"msctls_progress32",WS_BORDER,14,215,286,11
+    PUSHBUTTON      "&Start",IDC_TEST_START,14,232,50,14,WS_GROUP
+    PUSHBUTTON      "St&op",IDC_TEST_STOP,251,232,50,14
+    CTEXT           "Test e-mail sending and receiving",IDC_STATIC,17,16,282,12,SS_CENTERIMAGE
+END
+
+IDD_EMAIL_PROCESSING DIALOGEX 0, 0, 315, 259
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Script Processing"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PREPRO_PROGRAM,13,71,171,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PREPRO_RESULT,13,99,111,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POSTPRO_EXT,13,189,80,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POSTPRO_PROGRAM,13,217,167,12,ES_AUTOHSCROLL
+    CTEXT           "The Dispatcher may optionally run user defined programs, before sending scripts or after receiving an email message with an attachment. You may use this option to encrypt scripts.",IDC_STATIC,7,7,301,23,SS_SUNKEN
+    GROUPBOX        "Before sending scripts...",IDC_STATIC,7,47,301,116
+    LTEXT           "2. The name of the input file, provided by the dispatcher and located in the ""current directory."" The Dispatcher will then email the output file as an attachment and delete it.",IDC_STATIC,13,115,289,18
+    LTEXT           "(For instance: c:\\bin\\encrypt.bat)",IDC_STATIC,189,73,113,8
+    GROUPBOX        "After receiving a ""Code Co-op Sync:"" email message...",IDC_STATIC,7,166,301,89
+    LTEXT           "with an attachment whose file extension is:",IDC_STATIC,13,178,283,9
+    LTEXT           "(For intance: enc)",IDC_STATIC,98,190,200,9
+    LTEXT           "the Dispatcher will call the following program:",IDC_STATIC,13,205,281,9
+    LTEXT           "(For instance: c:\\bin\\decrypt.bat)",IDC_STATIC,184,218,118,10
+    LTEXT           "with the full path of the attachment appended to the command line above.",IDC_STATIC,13,233,285,10
+    LTEXT           "The resulting file with extensions .znc will be then processed by the Dispatcher.",IDC_STATIC,13,244,289,9
+    LTEXT           "with two arguments added to the above command line: 1. The name of the output file:",IDC_STATIC,13,86,281,8
+    LTEXT           "(For instance: scripts.enc)",IDC_STATIC,128,100,171,8
+    LTEXT           "The dispatcher will call the following program or batch file",IDC_STATIC,13,59,284,8
+    CTEXT           "Do not use this option to compress (zip) scripts. The Dispatcher has a built-in compressor.",IDC_STATIC,7,34,301,11,WS_BORDER
+    CONTROL         "Append project name to the command line (in quotation marks)",IDC_CHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,135,288,9
+    CONTROL         "Send the input file, if the user defined program did not produce the output file",IDC_SEND_UNPROCESSED,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,149,288,9
+END
+
+IDD_HUB_ID_TRANSPORT DIALOGEX 0, 0, 296, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Hub ID and Transport"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Your Hub name is different from your Hub transport.\n\nThis configuration is no longer supported.\n\nPlease select an e-mail address for your Hub.",IDC_STATIC,13,8,273,49
+    LTEXT           "Current Hub name:",IDC_STATIC,23,62,82,15,0,WS_EX_RIGHT
+    LTEXT           "Current Hub transport:",IDC_STATIC,24,81,86,12,0,WS_EX_RIGHT
+    LTEXT           "New Hub name / e-mail:",IDC_STATIC,24,111,82,15,0,WS_EX_RIGHT
+    EDITTEXT        IDC_HUB_ID_NEW,116,107,173,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,6,128,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,241,129,50,14
+    EDITTEXT        IDC_HUB_ID,116,59,173,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_HUB_REMOTE_TRANS,116,79,173,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_COLLABORATION_TEMP_HUB$(COOP_PRO) DIALOGEX 0, 0, 378, 218
+#else
+IDD_COLLABORATION_TEMP_HUB DIALOGEX 0, 0, 378, 218
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Off-Site Hub"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Off-Site Hub",IDC_TEMP_HUB,"Button",BS_AUTORADIOBUTTON,13,104,83,10
+    PUSHBUTTON      "E-mail Options...",IDC_EMAIL_PROPERTIES,144,191,67,14
+    LTEXT           "Hub's e-mail address (inactive)",IDC_STATIC,254,15,97,12
+    CTEXT           "E-mail between off-site hub and other hubs and peers",IDC_STATIC,207,156,97,21
+    LTEXT           "My email address",IDC_STATIC,31,178,98,10
+    LTEXT           "Hub's Public Inbox share (inactive)",IDC_STATIC,254,55,101,19
+    CONTROL         207,IDC_HUB_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,185,19,55,50
+    CONTROL         208,IDC_SAT_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,133,133,65,31
+    LTEXT           "Home Office scenario:\n\nYou take your laptop on a trip, leave your home office hub computer turned off (or at least it's e-mail client shut down).\n\nYou are using the same e-mail account on your laptop as you used on your hub at home.",IDC_STATIC,17,15,151,72,SS_SUNKEN
+    CONTROL         204,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,77,125,24,15
+    CONTROL         204,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,97,161,24,15
+    CONTROL         209,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,49,142,77,15
+    CTEXT           "Inactive hub",IDC_STATIC,185,75,54,13
+    LTEXT           "Static",IDC_HUB_EMAIL,253,31,100,15,SS_SUNKEN
+    LTEXT           "Static",IDC_HUB_SHARE,253,76,100,15,SS_SUNKEN
+    LTEXT           "Static",IDC_MY_EMAIL,31,191,100,15,SS_SUNKEN
+END
+#endif
+
+IDD_MY_NETWORK_PROPERTIES DIALOGEX 0, 0, 315, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Public Inbox Share"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Public Inbox folder",IDC_STATIC,13,27,64,8
+    EDITTEXT        IDC_PREFS_PI_PATH,79,25,218,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "&Shared As:",IDC_PREFS_SHARE_LABEL,13,43,60,10
+    EDITTEXT        IDC_PREFS_SHARE_EDIT,79,40,218,14,ES_AUTOHSCROLL
+    GROUPBOX        "How do I share my Public Inbox folder?",IDC_STATIC,7,7,301,72
+    DEFPUSHBUTTON   "OK",IDOK,7,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,258,109,50,14
+    LTEXT           "In most cases the default \\\\MYMACHINE\\CODECOOP should be left alone.",IDC_STATIC,17,60,281,12
+    LTEXT           "Note: In some very advanced configurations you will be able to enter a different transport here, as long as Code Co-op supports it.",IDC_STATIC,18,84,279,20
+END
+
+IDD_NETWORK_PROPERTIES DIALOGEX 0, 0, 315, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Hub Network Share"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,258,109,50,14
+    GROUPBOX        "How does the hub share its Public Inbox folder?",IDC_STATIC,7,7,301,54
+    EDITTEXT        IDC_PREFS_FWD_EDIT,21,22,184,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse the network ...",IDC_PREFS_FWD_BROWSE,216,22,81,14
+    LTEXT           "Usually \\\\HUBNAME\\CODECOOP",IDC_STATIC,23,41,276,12
+    LTEXT           "Note: In some very advanced configurations you will be able to enter a different transport here, as long as Code Co-op supports it.",IDC_STATIC,19,78,279,21
+END
+
+IDD_EMAIL_GENERAL DIALOGEX 0, 0, 315, 259
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Send Options",IDC_STATIC,7,22,301,122
+    LTEXT           "default e-mail program (dynamic)",IDC_STATIC_SEND_USING_MAPI,14,40,275,10
+    LTEXT           "Define an SMTP account to use e-mail server directly.",IDC_STATIC_NO_SMTP,14,57,257,10
+    CONTROL         "Send scripts through my default e-mail program (using MAPI).",IDC_RADIO_SEND_USING_MAPI,
+                    "Button",BS_AUTORADIOBUTTON,23,40,275,10
+    CONTROL         "Send scripts directly through my SMTP server.",IDC_RADIO_USING_SMTP,
+                    "Button",BS_AUTORADIOBUTTON,23,56,276,10
+    LTEXT           "Split scripts larger than",IDC_MAXEMAILSTATIC1,17,107,80,12
+    EDITTEXT        IDC_MAXEMAIL,99,106,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "KB and email them in chunks",IDC_MAXEMAILSTATIC2,139,107,138,9
+    PUSHBUTTON      "SMTP Account (dynamic)",IDC_SMTP,36,70,88,14
+    GROUPBOX        "Receive Options",IDC_STATIC,7,150,301,103
+    LTEXT           "Currently using the default e-mail program.",IDC_STATIC_RECV_USING_MAPI,14,163,271,10
+    LTEXT           "Define a POP3 account to use e-mail server directly.",IDC_STATIC_NO_POP3,14,180,266,10
+    CONTROL         "Receive scripts from my default e-mail program (using MAPI).",IDC_RADIO_RECV_USING_MAPI,
+                    "Button",BS_AUTORADIOBUTTON,23,163,275,10
+    CONTROL         "Receive scripts directly from my POP3 server.",IDC_RADIO_USING_POP3,
+                    "Button",BS_AUTORADIOBUTTON,23,179,276,10
+    CONTROL         "A&utomatic receive. Check for e-mail every",IDC_AUTO_RECEIVE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,220,152,10
+    EDITTEXT        IDC_AUTO_RECEIVE_PERIOD,171,220,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_AUTO_RECEIVE_PERIOD_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,195,220,11,12
+    LTEXT           "minute(s).",IDC_AUTO_RECEIVE_LAST_PART,211,221,66,8
+    PUSHBUTTON      "POP3 Account (dynamic)",IDC_POP3,35,192,88,14
+    CTEXT           "For easy configuration (e.g. Gmail) use Collaboration Wizard",IDC_STATIC,7,6,301,12,WS_BORDER
+END
+
+IDD_REMOTE_HUB_TRANS DIALOGEX 0, 0, 252, 105
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Advanced Remote Hub Transport"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,84,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,195,84,50,14
+    EDITTEXT        IDC_HUB_ID,77,41,168,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HUB_REMOTE_TRANS,77,64,168,14,ES_AUTOHSCROLL
+    LTEXT           "In some advanced configurations, hub naming might be separated from its transport. If you are sure that this is the case with the target hub, enter the appropriate information here.",IDC_STATIC,7,7,238,30,SS_SUNKEN
+    LTEXT           "Hub name:",IDC_STATIC,7,46,59,11
+    LTEXT           "Hub transport:",IDC_STATIC,7,66,62,14
+END
+
+IDD_UP_TO_DATE DIALOGEX 0, 0, 271, 97
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Co-op Update"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,110,78,50,14
+    GROUPBOX        "Status",IDC_STATIC,7,3,257,28
+    CTEXT           "",IDC_STATUS,16,14,240,12
+    GROUPBOX        "Online Bulletin",IDC_STATIC,7,33,257,40
+    LTEXT           "",IDC_BULLETIN_HEADLINE,15,44,171,24
+    PUSHBUTTON      "See details...",IDC_BULLETIN_LINK,191,48,66,14
+END
+
+IDD_UPDATE DIALOGEX 0, 0, 271, 171
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Co-op Update"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Install",IDOK,7,154,71,14
+    PUSHBUTTON      "Remind Me Later",IDC_REMIND_LATER,100,154,71,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,154,71,14
+    GROUPBOX        "Status",IDC_STATIC,7,7,257,28
+    CTEXT           "A new version of Code Co-op is available!",IDC_STATUS,14,18,243,12
+    GROUPBOX        "Version information",IDC_STATIC,7,37,257,56
+    EDITTEXT        IDC_DESCRIPTION,14,48,243,24,ES_MULTILINE | ES_READONLY
+    PUSHBUTTON      "More Information...",IDC_RELEASE_NOTES,163,75,94,14
+    GROUPBOX        "Online Bulletin",IDC_STATIC,7,94,257,41
+    LTEXT           "Client settable text.",IDC_BULLETIN_HEADLINE,15,106,171,24
+    PUSHBUTTON      "See details...",IDC_BULLETIN_LINK,191,109,66,14
+    CONTROL         "Download newer version automatically next time.",IDC_TURN_ON_AUTO_DOWNLOAD,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,138,238,12
+END
+
+IDD_UPDATE_OPTIONS DIALOGEX 0, 0, 271, 97
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Co-op Update Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Preferences",IDC_STATIC,7,4,257,67
+    CONTROL         "Automatically check for Code Co-op updates on the Internet.",IDC_AUTO_CHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,18,240,12
+    LTEXT           "Check again in",IDC_STATIC,25,36,54,10
+    EDITTEXT        IDC_PERIOD_EDIT,79,34,30,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_PERIOD_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,107,34,10,14
+    LTEXT           "day(s).",IDC_STATIC,119,36,75,10
+    CONTROL         "Automatically download the latest version in the background.",IDC_IN_BACKGROUND,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,50,234,12
+    DEFPUSHBUTTON   "OK",IDOK,6,76,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,215,76,50,14
+END
+
+IDD_JOIN_PROJECT_OPTIONS DIALOGEX 0, 0, 302, 208
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "&Automatically execute all subsequent synchronization scripts",IDC_PROJ_OPTIONS_AUTO_SYNCH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,73,247,14
+    CONTROL         "Automatically execute &Full Synch script",IDC_PROJ_OPTIONS_AUTO_FULL_SYNCH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,26,247,14
+    CONTROL         "Keep files &checked out after every check-in",IDC_PROJ_OPTIONS_KEEP_CHECKED_OUT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,119,247,14
+    CONTROL         "Join project as &Observer (no license necessary)",IDC_JOIN_PROJECT_OBSERVER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,167,247,8
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_PRO)
+#if defined(APSTUDIO_INVOKED)
+IDD_DISTRIB_TRANSFER$(COOP_PRO) DIALOGEX 0, 0, 231, 135
+#else
+IDD_DISTRIB_TRANSFER DIALOGEX 0, 0, 231, 135
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Transfer Distribution Licenses"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO,7,59,217,142,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Check1",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,83,11,11
+    DEFPUSHBUTTON   "OK",IDOK,7,114,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,174,114,50,14
+    LTEXT           "You have:",IDC_STATIC,7,8,40,11
+    EDITTEXT        IDC_EDIT1,52,7,31,12,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    LTEXT           "In the block assigned to:",IDC_STATIC,7,25,96,12
+    LTEXT           "licenses left",IDC_STATIC,91,8,68,11
+    EDITTEXT        IDC_EDIT2,117,25,107,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Transfer them to the new administrator, whose hub is:",IDC_STATIC,7,45,217,13
+    LTEXT           "Or save them on your desktop for manual transfer",IDC_STATIC,27,84,197,11
+    LTEXT           "(Move the .znc file to the target computer and double-click on it)",IDC_STATIC,7,96,217,14
+END
+#endif
+
+IDD_INVITE_SAT_PATH DIALOGEX 0, 0, 272, 172
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Code Co-op Dispatcher: Where Is Invited Satellite User?"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Dispatcher has no knowledge of such satellite",IDC_STATIC,3,82,266,67
+    EDITTEXT        IDC_PATH,30,111,176,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Dynamic ...",IDC_BROWSE,212,111,50,14
+    CONTROL         "This satellite exists and this is a forwarding path to it:",IDC_SAT_EXISTS,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,13,97,249,12
+    CONTROL         "There is no such satellite. The script is here by mistake. Remove it.",IDC_REMOVE_SCRIPT,
+                    "Button",BS_AUTORADIOBUTTON,13,133,249,12
+    DEFPUSHBUTTON   "OK",IDOK,3,154,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,219,154,50,14
+    GROUPBOX        "You have received an Invitation:",IDC_STATIC,3,3,266,77
+    LTEXT           "to the project:",IDC_STATIC,7,23,56,11
+    EDITTEXT        IDC_PROJECT_NAME,69,18,192,18,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    LTEXT           "for the user:",IDC_STATIC,7,42,38,8
+    EDITTEXT        IDC_USER_NAME,69,40,192,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "on the satellite:",IDC_STATIC,7,60,56,11
+    EDITTEXT        IDC_COMPUTER_NAME,69,59,192,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_PROJECT_INVITE DIALOGEX 0, 0, 284, 111
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Project Invitation"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PATH,14,64,200,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE,220,64,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,90,50,14
+    PUSHBUTTON      "Reject",IDC_REJECT,116,90,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,227,90,50,14
+    GROUPBOX        "Where do you want to create your local copy of the project?",IDC_STATIC,7,50,270,35
+    EDITTEXT        IDC_EDIT,7,7,270,38,ES_MULTILINE | ES_READONLY
+END
+
+IDD_REJECTED_INVITATION DIALOGEX 0, 0, 247, 179
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rejected Invitation"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,7,233,100
+    LTEXT           "You have received an invitation to the project:",IDC_STATIC,13,15,220,10
+    EDITTEXT        IDC_PROJECT_NAME,13,27,221,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "for the user:",IDC_STATIC,13,44,215,10
+    EDITTEXT        IDC_USER_NAME,13,56,221,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "on the following computer:",IDC_STATIC,14,74,215,10
+    EDITTEXT        IDC_COMPUTER_NAME,13,87,221,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Explanation",IDC_EXPLANATION,7,131,233,24,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,98,161,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,203,161,37,14,NOT WS_VISIBLE
+    CTEXT           "The invitation will be rejected.",IDC_STATIC,7,114,233,12,SS_SUNKEN
+END
+
+IDD_WIZARD_EMAIL_POP3SMTP DIALOGEX 0, 0, 294, 270
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EMAIL,112,21,147,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POP3SERVER,112,37,147,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POP3_USER,112,53,147,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POP3_PASSW,112,69,147,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_POP3_PASSWORD_VERIFY,112,85,147,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_SMTPSERVER,112,101,147,12,ES_AUTOHSCROLL
+    CONTROL         "SMTP server requires authentication",IDC_AUTH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,119,163,10
+    CONTROL         "Use same settings as my POP3 server",IDC_AUTH_SAME_AS_POP3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,44,134,163,10
+    EDITTEXT        IDC_SMTP_USER,111,150,147,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SMTP_PASSW,111,167,147,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_SMTP_PASSWORD_VERIFY,111,184,147,12,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "Advanced e-mail options...",IDC_ADVANCED_POP3SMTP,88,209,117,14
+    GROUPBOX        "POP3/SMTP account settings",IDC_STATIC,6,6,281,258
+    LTEXT           "Your e-mail address:",IDC_STATIC_EMAIL,31,23,75,10
+    LTEXT           "POP3 Server:",IDC_STATIC_POP3,31,39,75,9
+    LTEXT           "User:",IDC_STATIC_USER,31,56,75,9
+    LTEXT           "Password:",IDC_STATIC_PASSWORD,31,72,75,10
+    LTEXT           "SMTP server:",IDC_STATIC_SMTP,31,103,75,9
+    LTEXT           "User:",IDC_STATIC,46,152,57,9
+    LTEXT           "Password:",IDC_STATIC,46,169,56,9
+    ICON            ID_MAIN,IDC_STATIC,136,234,20,20
+    LTEXT           "Verify password:",IDC_STATIC,31,88,75,10
+    LTEXT           "Verify password:",IDC_STATIC,45,186,62,9
+END
+
+IDD_WIZARD_EMAIL_GMAIL DIALOGEX 0, 0, 294, 270
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_USER,56,19,82,12,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_PASSW,56,38,82,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD_VERIFY,203,38,82,12,ES_PASSWORD | ES_AUTOHSCROLL
+    GROUPBOX        "Gmail account information",IDC_STATIC,5,6,286,51
+    LTEXT           "User:",IDC_STATIC_USER,16,21,25,9
+    LTEXT           "Password:",IDC_STATIC,16,40,39,10
+    LTEXT           "@gmail.com",IDC_STATIC,140,21,49,11
+    CONTROL         247,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,1,75,292,194
+    LTEXT           "Log into your Gmail web page, gmail.com, and apply the following settings:",IDC_STATIC,6,62,282,10
+    LTEXT           "Verify password:",IDC_STATIC,144,40,59,10
+END
+
+IDD_WIZARD_EMAIL_SELECTION DIALOGEX 0, 0, 294, 270
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "How do you want to send and receive Co-op messages?",IDC_STATIC,6,6,281,258
+    CONTROL         "My E-mail program is Outlook (Express) and I want Code Co-op to use it",IDC_EMAIL_PROGRAM,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,17,24,263,12
+    CONTROL         "I have a POP3/SMTP account for exclusive use by Code Co-op",IDC_EMAIL_POP3SMTP,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,17,43,263,12
+    ICON            ID_MAIN,IDC_STATIC,136,233,21,20
+    CONTROL         "I have a Gmail account for exclusive use by Code Co-op",IDC_EMAIL_GMAIL,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,17,62,263,12
+END
+
+IDD_EMAIL_PROMPT DIALOGEX 0, 0, 180, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Co-op Dispatcher"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EMAIL_EDIT,23,34,132,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,8,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,122,69,50,14
+    GROUPBOX        "Please, specify your e-mail address: ",IDC_STATIC,7,14,166,46
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_LITE)
+#if defined(APSTUDIO_INVOKED)
+IDD_WIZARD_INTRO$(COOP_LITE) DIALOGEX 0, 0, 294, 270
+#else
+IDD_WIZARD_INTRO DIALOGEX 0, 0, 294, 270
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "You will now go step-by-step through the configuration process.",IDC_STATIC,7,23,280,13
+    GROUPBOX        "Are you planning on using Code Co-op:",IDC_STATIC,7,55,280,105
+    CONTROL         "&Standalone -- only on this machine (no collaboration)",IDC_STANDALONE,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,21,77,259,10
+    CONTROL         "Using &email for collaboration",IDC_EMAIL,"Button",BS_AUTORADIOBUTTON,21,125,259,10
+    CONTROL         "Only using &Local Area Network (LAN) for collaboration",IDC_LAN,
+                    "Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,21,93,259,10
+    CONTROL         "Using &both, LAN and email",IDC_BOTH,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,21,109,259,10
+    CTEXT           "Remember, you can always reconfigure your system, or select advanced configurations, by changing the Dispatcher's Collaboration Settings.",IDC_STATIC,41,185,202,29
+    ICON            ID_MAIN,IDC_STATIC,136,234,20,20
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_LITE)
+#if defined(APSTUDIO_INVOKED)
+IDD_UNKNOWN_STANDALONE_JOIN$(COOP_LITE) DIALOGEX 0, 0, 280, 180
+#else
+IDD_UNKNOWN_STANDALONE_JOIN DIALOGEX 0, 0, 280, 180
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Currently your Dispatcher is configured as ""Standalone.""\nYou are joining a project that is located on another machine.",IDC_DESCRIPTION,7,7,266,21
+    RTEXT           "Project name:",-1,7,34,135,10
+    EDITTEXT        IDC_EMAIL,151,51,122,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Email address:",-1,7,52,135,9
+    EDITTEXT        IDC_PROJECT,151,32,122,14,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    GROUPBOX        "What kind of collaboration are you planning?",-1,6,101,265,73
+    CONTROL         "I am a part of a &LAN group",IDC_LAN,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_GROUP | WS_TABSTOP,13,74,249,10
+    CONTROL         "I will be using &email",IDC_HUB,"Button",BS_AUTORADIOBUTTON,14,123,249,10
+    CONTROL         "I made a mistake. &Delete this script and defect from project",IDC_MISTAKE,
+                    "Button",BS_AUTORADIOBUTTON,14,149,249,10
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_LITE)
+#if defined(APSTUDIO_INVOKED)
+IDD_UNKNOWN_INTRO_JOIN$(COOP_LITE) DIALOGEX 0, 0, 280, 180
+#else
+IDD_UNKNOWN_INTRO_JOIN DIALOGEX 0, 0, 280, 180
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "I don't know--Ignore request, tell the joinee to defect.",IDC_NOT_IN_PROJECT,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,127,251,10
+    CONTROL         "The admin is on my satellite. I am this hub",IDC_ON_SATELLITE,
+                    "Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,9,77,144,10
+    CONTROL         "This user is accessible by email.",IDC_IS_REMOTE,"Button",BS_AUTORADIOBUTTON,14,153,256,10
+    GROUPBOX        "What do you know about the administrator? (If in doubt, select ignore)",IDC_STATIC,7,109,266,64
+    EDITTEXT        IDC_EMAIL,171,73,99,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
+    EDITTEXT        IDC_NAME,143,5,130,16,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_COMMENT,16,35,252,28,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | NOT WS_BORDER | WS_VSCROLL
+    LTEXT           "There is a join request for the project:",IDC_STATIC,13,8,125,11
+    CTEXT           "The dispatcher has no knowledge of this project's administrator.",IDC_STATIC,9,86,263,13
+    GROUPBOX        "Script comment: ",IDC_STATIC,10,25,263,42
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_LITE)
+#if defined(APSTUDIO_INVOKED)
+IDD_JOIN_PROJECT$(COOP_LITE) DIALOGEX 0, 0, 303, 230
+#else
+IDD_JOIN_PROJECT DIALOGEX 0, 0, 303, 230
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Join Existing Project"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "To me (I want to have more enlistments in this project)",IDC_JOIN_THIS_COMPUTER,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,13,27,274,10
+    CONTROL         "To an e-mail peer using the following address (type in or select) ",IDC_JOIN_REMOTE_CLUSTER,
+                    "Button",BS_AUTORADIOBUTTON,13,49,274,11
+    COMBOBOX        IDC_JOIN_REMOTE_CLUSTER_HUB_ID,35,68,253,219,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_JOIN_LOCAL_PROJECTS,89,112,199,129,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_JOIN_PROJECT_SOURCE_EDIT,15,148,218,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse ...",IDC_JOIN_PROJECT_BROWSE_SOURCE,242,148,46,12,BS_CENTER | BS_MULTILINE
+    EDITTEXT        IDC_JOIN_PROJECT_USER_NAME,119,183,169,12,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_JOIN_PROJECT_USER_PHONE,119,204,169,12,ES_AUTOHSCROLL
+    CONTROL         "To somebody on my LAN (hub or a satellite)",IDC_JOIN_THIS_CLUSTER,
+                    "Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,69,219,156,10
+    PUSHBUTTON      "Advanced...",IDC_JOIN_REMOTE_CLUSTER_TRANSPORT,151,4,46,12,NOT WS_VISIBLE
+    GROUPBOX        "Send request to an existing project member: ",IDC_JOIN_PROJECT_ADMINISTRATOR_FRAME,5,6,290,85
+    GROUPBOX        "Who is joining?",IDC_JOIN_PROJ_USER_FRAME,5,170,290,52
+    GROUPBOX        "The name of the project you are joining:",IDC_JOIN_PROJECT_NAME_FRAME,5,98,290,33
+    LTEXT           "Type in (or select):",IDC_STATIC,12,114,69,9
+    LTEXT           "Your name:",IDC_JOIN_PROJ_NAME_LABEL,12,187,95,10,NOT WS_GROUP
+    LTEXT           "Personal comment (phone #):",IDC_JOIN_PROJ_PHONE_LABEL,12,205,99,9,NOT WS_GROUP
+    GROUPBOX        "Where do you want to keep your local copy of the project tree?",IDC_JOIN_PROJECT_FRAME,5,134,290,33
+    EDITTEXT        IDC_THIS_CLUSTER_HUB_ID,201,4,101,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE | NOT WS_TABSTOP
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_LITE)
+#if defined(APSTUDIO_INVOKED)
+IDD_DIAGNOSTICS$(COOP_LITE) DIALOGEX 0, 0, 350, 214
+#else
+IDD_DIAGNOSTICS DIALOGEX 0, 0, 350, 214
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Dispatcher Diagnostics"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Test:",IDC_DIAG_TEST_KIND_FRAME,7,3,336,47
+    CONTROL         "&E-mail",IDC_TEST_EMAIL,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_GROUP | WS_TABSTOP,46,3,53,8
+    CONTROL         "&Forwarding",IDC_TEST_FORWARD,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,227,2,53,8
+    CONTROL         "Progress1",IDC_TEST_PROGRESS,"msctls_progress32",WS_BORDER,13,24,323,11
+    GROUPBOX        "Results:",IDC_TEST_STATUS_FRAME,7,51,336,141
+    EDITTEXT        IDC_TEST_STATUS,13,61,324,126,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL | WS_HSCROLL | NOT WS_TABSTOP
+    PUSHBUTTON      "&Start",IDC_TEST_START,6,196,50,14,WS_GROUP
+    PUSHBUTTON      "St&op",IDC_TEST_STOP,149,196,50,14
+    DEFPUSHBUTTON   "Done",IDOK,293,196,50,14
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(COOP_LITE)
+#if defined(APSTUDIO_INVOKED)
+IDD_UNKNOWN_INTRO$(COOP_LITE) DIALOGEX 0, 0, 280, 180
+#else
+IDD_UNKNOWN_INTRO DIALOGEX 0, 0, 280, 180
+#endif
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "This user with this ID is not a member of this project (ignore this user)",IDC_NOT_IN_PROJECT,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,125,249,10
+    CONTROL         "This user is on your satellite (you are the above hub)",IDC_ON_SATELLITE,
+                    "Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,14,168,249,10
+    CONTROL         "This user is accessible by email",IDC_IS_REMOTE,"Button",BS_AUTORADIOBUTTON,14,147,249,10
+    LTEXT           "The Dispatcher has no knowledge of the recipient:",IDC_STATIC,7,5,266,10
+    EDITTEXT        IDC_EMAIL,78,17,153,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           " having this user ID:",IDC_STATIC,7,35,68,10
+    EDITTEXT        IDC_LOCATION,78,33,38,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "in the project named:",IDC_STATIC,7,52,68,8
+    EDITTEXT        IDC_NAME,78,49,153,18,ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    LTEXT           "This recipient was found in the script with the following comment :",IDC_STATIC,7,67,266,8
+    EDITTEXT        IDC_COMMENT,7,77,266,23,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    GROUPBOX        "What do you know about the recipient? (If in doubt, choose to ignore this user.)",IDC_STATIC,7,106,266,67
+    RTEXT           "at this hub",IDC_STATIC,7,20,66,13
+END
+#endif
+
+IDD_WIZARD_RESTORE DIALOGEX 0, 0, 294, 270
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "Please, complete Code Co-op Dispatcher configuration wizard \n\nin order to verify or correct restored configuration settings..",IDC_STATIC,31,115,231,29
+    GROUPBOX        "You have restored the Code Co-op database from backup: ",IDC_STATIC,7,75,280,102
+    ICON            ID_MAIN,IDC_STATIC,136,33,20,20
+    ICON            ID_MAIN,IDC_STATIC,136,211,20,20
+END
+
+IDD_WIZARD_HUB_EMAIL_SELECTION DIALOGEX 0, 0, 294, 270
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "How do you want to send and receive Co-op messages?",IDC_STATIC,6,6,281,89
+    CONTROL         "My E-mail program is Outlook (Express) and I want Code Co-op to use it",IDC_EMAIL_PROGRAM,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,17,24,263,12
+    CONTROL         "I have a POP3/SMTP account for exclusive use by Code Co-op",IDC_EMAIL_POP3SMTP,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,17,49,263,12
+    ICON            ID_MAIN,IDC_STATIC,136,233,20,20
+    CONTROL         "I have a Gmail account for exclusive use by Code Co-op",IDC_EMAIL_GMAIL,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,17,74,263,12
+    CONTROL         216,IDC_SHARE_IMAGE,"Static",SS_BITMAP,17,137,27,23
+    LTEXT           "Static",IDC_HUB_SHARE,56,143,218,14,SS_SUNKEN
+    GROUPBOX        "Your Public Inbox folder is shared as: ",IDC_STATIC,6,115,281,61
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ID_MAIN                 ICON                    "main.ico"
+ID_WAITING_SCRIPTS      ICON                    "waiting.ico"
+ID_NOSCRIPTS            ICON                    "no_scripts.ico"
+ID_INVALID              ICON                    "invalid.ico"
+ID_OUT_SCRIPTS          ICON                    "out_scr.ico"
+ID_IN_SCRIPTS           ICON                    "in_src.ico"
+ID_USERS                ICON                    "users.ico"
+ID_USER                 ICON                    "LocalUser.ico"
+ID_ENVELOPE             ICON                    "envelope.ico"
+ID_EXUSER               ICON                    "ExLocalUser.ico"
+ID_SATUSER              ICON                    "SatelliteUser.ico"
+ID_EXSATUSER            ICON                    "ExSatelliteUser.ico"
+ID_REMOTE_HUB           ICON                    "RemoteHub.ico"
+ID_ALERT_WAITING        ICON                    "alert_in_out.ico"
+ID_ALERT_IN             ICON                    "alert_in.ico"
+ID_ALERT_OUT            ICON                    "alert_out.ico"
+ID_ALERT_NO             ICON                    "alert_no.ico"
+ID_ALERT_ACTIVITY       ICON                    "alert_activity.ico"
+ID_ERROR                ICON                    "error.ico"
+ID_ALERT_LOG            ICON                    "alertlog.ico"
+ID_TAB_RED              ICON                    "tab_red.ico"
+ID_TAB_YELLOW           ICON                    "tab_yellow.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+ID_BUTTONS              BITMAP                  "buttons.bmp"
+ID_PC                   BITMAP                  "PC.bmp"
+ID_MAIL                 BITMAP                  "Mail.bmp"
+ID_LONGARROW            BITMAP                  "LongArrow.bmp"
+ID_PCGRAY               BITMAP                  "PCGray.bmp"
+ID_LAPTOP               BITMAP                  "Laptop.bmp"
+ID_SHORTARROW           BITMAP                  "ShortArrow.bmp"
+ID_WIRELEFT             BITMAP                  "WireLeft.bmp"
+ID_WIRERIGHT            BITMAP                  "WireRight.bmp"
+ID_SHARE                BITMAP                  "Share.bmp"
+ID_ARROWUP              BITMAP                  "ArrowUp.bmp"
+ID_ARROWDOWN            BITMAP                  "ArrowDown.bmp"
+ID_BRACE                BITMAP                  "brace.bmp"
+ID_GMAIL_POP3           BITMAP                  "gmailPop3.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_EMAIL_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 296
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_POP3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_SMTP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 186
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_FWD_PATH_CHANGE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 140
+    END
+
+    IDD_WHAT_WITH_SCRIPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 333
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 244
+    END
+
+    "IDD_WIZARD_ROLE_EMAIL_LAN$(COOP_PRO)", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 263
+    END
+
+    "IDD_JOIN_PROJECT$(COOP_PRO)", DIALOG
+    BEGIN
+        RIGHTMARGIN, 302
+    END
+
+    "IDD_DISTRIB_TRANSFER$(COOP_PRO)", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_INVITE_SAT_PATH, DIALOG
+    BEGIN
+        RIGHTMARGIN, 269
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_PROJECT_INVITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_EMAIL_PROMPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    "IDD_JOIN_PROJECT$(COOP_LITE)", DIALOG
+    BEGIN
+        RIGHTMARGIN, 302
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_CAPTION              "Code Co-op Script Dispatcher"
+END
+
+#if defined(COOP_PRO)
+STRINGTABLE 
+BEGIN
+    IDS_REMOTE_TAB_NAME     "Remote Peers/Hubs"
+    IDS_STANDALONE_INFO     "This test is only relevant to network hub/satellite setups."
+END
+#endif
+
+#if defined(COOP_LITE)
+STRINGTABLE 
+BEGIN
+    IDS_REMOTE_TAB_NAME     "E-mail Peers"
+    IDS_STANDALONE_INFO     "This test is only relevant to e-mail peer setup."
+END
+#endif
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

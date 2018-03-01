@@ -1,0 +1,14 @@
+| Summary |Help Contents and Help Index display the same thing|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Priority |3|
+| Resolution | Cannot reproduce |
+| DateReported |Wednesday, November 15, 2006|
+==Description 
+Whether you select Help>Contents or Help>Index, the same help window is displayed--it just remembers the last view used. It should open on the appropriate tab in help.
+

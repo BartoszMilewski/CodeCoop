@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{b0733e0c-0598-43f4-bb88-27033f84978d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllCommon">
+      <UniqueIdentifier>{7461952f-2d7f-453d-a577-0ef266f2b4ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\SetupParams.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Address.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\BuildOptions.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Catalog.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\GlobalDb.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\OutputSink.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\PathRegistry.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\precompiled.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Registry.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\RegKeys.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\ReliSoftReg.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\Serialize.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\SerList.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\SerString.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\SerVector.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\SysPath.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\Transact.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\Transactable.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Transport.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\UserIdPack.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\XArray.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\XBitSet.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\XFileOffset.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\XHolder.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\XLong.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\XString.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateSetup.h" />
+    <ClInclude Include="PrepareFiles.h" />
+    <ClInclude Include="..\..\Common\AppInfo.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Licensing\Crypt.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\Address.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Catalog.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\GlobalDb.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\OutputSink.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\PathRegistry.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\precompiled.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\ReliSoftReg.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\Serialize.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\SerString.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\SysPath.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\Transact.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\Transactable.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Transport.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\UserIdPack.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\XBitSet.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateSetup.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PrepareFiles.cpp" />
+    <ClCompile Include="..\..\Common\AppInfo.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Licensing\Crypt.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

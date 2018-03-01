@@ -1,0 +1,1087 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>BorCon 2001: 3232 The Open Tools API: Extending the IDE</TITLE>
+<META http-equiv=Content-Type content=text/html;CHARSET=iso-8859-1>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<H1>Open Tools API: Extending the Delphi and C++Builder IDE</H1>
+<ADDRESS><A 
+href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#author">Ray 
+Lischner</A></ADDRESS>
+<P><A 
+href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#introduction">Introduction 
+to the Tools API</A></P>
+<BLOCKQUOTE>
+  <P><A 
+  href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#Wizards">Wizards</A><BR><A 
+  href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#Services">Services</A><BR><A 
+  href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#Notifiers">Notifiers</A><BR><A 
+  href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#Modules">Modules<BR></A><A 
+  href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#Registering">Registering 
+  the Add-in</A> </P></BLOCKQUOTE>
+<P><A 
+href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#WhatsNew">What's 
+New?</A></P>
+<P><A 
+href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#Interoperability">Interoperability</A></P>
+<P><A 
+href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#Examples">Examples</A></P>
+<BLOCKQUOTE>
+  <P><A 
+  href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#Together">Delphi 
+  Example</A><BR><A 
+  href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#C++ Builder">C++ 
+  Builder Example</A><BR><A 
+  href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#KylixExample">Kylix 
+  Example</A></P></BLOCKQUOTE>
+<P><A 
+href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#Exploring">Exploring 
+On Your Own</A></P>
+<H2>Preface</H2>
+<P>This paper introduces the Tools API in Delphi, C++ Builder, and Kylix (called 
+"RAD tools" for brevity), and discusses some of the new features in the Tools 
+API. The Tools API lets you extend and control the Integrated Development 
+Environment (IDE) in the RAD tools. You can learn the basics of the Tools API in 
+<A 
+href="http://www.amazon.com/exec/obidos/ASIN/0965736601/tempestsoftwarei"><CITE><U>Hidden 
+Paths of Delphi 3</U></CITE></A> (<A 
+href="http://www.amazon.co.uk/exec/obidos/ASIN/0965736601/bardwarecom">U.K.</A>, 
+<A href="http://www.amazon.de/exec/obidos/ASIN/0965736601">Deutschland</A>), and 
+read this article to learn about the new features of Delphi 6. Note that the 
+concepts remain the same since Delphi 3, so what you learn in <I>Hidden Paths of 
+Delphi 3</I> is applicable to subsequent versions, but some of the details have 
+changed, and many new interfaces have been added.</P>
+<H2><A name=introduction></A>Introduction to the Tools API</H2>
+<P>This section introduces the Tools API. If you are already familiar with it, 
+you can skip ahead to <A 
+href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#WhatsNew">What's 
+New?</A> The Tools API is a set of interfaces and related types and whatnot to 
+let you extend and customize the interface of Borland's RAD tools. You can add 
+items to the menu bar and tool bars, create new form and project wizards, open 
+new design windows, interact with the design tools--especially the source editor 
+and the form editor, and more. You don't have complete control over the IDE, and 
+each release of the Delphi introduces new functionality under the Tools API 
+umbrella.</P>
+<P>The Tools API is declared in a single file, the <CODE>ToolsAPI</CODE> unit or 
+<CODE>&lt;ToolsAPI.hpp&gt;</CODE>. Even if you are working in Windows, try to 
+use the correct case--you never know when you might want to port to Kylix and 
+its case-sensitive file names.</P>
+<H3><A name=Wizards></A>Wizards</H3>
+<P>The first step to using the Tools API is to create a wizard class. The Tools 
+API defines several different wizard interfaces, and your wizard class must 
+implement one or more of those interfaces:</P>
+<P>
+<TABLE cellSpacing=1 border=1>
+  <TBODY>
+  <TR>
+    <TH vAlign=top noWrap width=245>
+      <P align=left>Interface </P></TH>
+    <TH vAlign=top noWrap>
+      <P align=left>Description </P></TH></TR>
+  <TR>
+    <TD vAlign=top noWrap width=245><CODE>IOTAWizard</CODE></TD>
+    <TD vAlign=top>Base wizard interface; every wizard must implement 
+  this.</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap width=245><CODE>IOTAMenuWizard</CODE></TD>
+    <TD vAlign=top>Wizard adds a menu item to the Help menu. Useful for tests 
+      and prototypes.</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap width=245><CODE>IOTARepositoryWizard</CODE></TD>
+    <TD vAlign=top>Base interface for project and form wizards. You must also 
+      implement one of the following interfaces:</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap width=245><CODE>IOTAFormWizard</CODE></TD>
+    <TD vAlign=top>Wizard to create a new unit, form, or other file.</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap width=245><CODE>IOTAProjectWizard</CODE></TD>
+    <TD vAlign=top>Wizard to create a new project.</TD></TR>
+  <TR>
+    <TD width=245><CODE>IOTARepositoryWizard60</CODE></TD>
+    <TD>New in Delphi 6 to support CLX</TD></TR></TBODY></TABLE></P>
+<P>Menu wizards require one additional method, <CODE>GetMenuText</CODE>, which 
+is the menu item caption. The <CODE>GetState</CODE> method returns the state of 
+the menu item. Even non-menu wizards must implement the <CODE>GetState</CODE> 
+method, even though it isn't called. Just in case a future version of the RAD 
+tools calls <CODE>GetState</CODE>, though, you should probably write it so it 
+returns <CODE>[wsEnabled]</CODE>, just in case.</P>
+<P>Form and project wizards require an author's name, a one sentence comment, 
+and an icon handle, which the IDE displays in the New Items dialog box. Choose 
+View Details in the context menu to see examples of the comment and author. If 
+the page name is an empty string, the default page name is <SAMP>Wizards</SAMP>. 
+The IDE will also choose a default icon if your wizard returns 0 from 
+<CODE>GetGlyph</CODE>.</P>
+<P>The difference between a form and a project wizard is that the user can 
+choose a form wizard to be the default form when creating a new form or when 
+creating the main form of a default project. The user can choose a project 
+wizard to be the default application. What the wizards actually do is up to 
+you--you don't need to create a form in a form wizard, but it would be confusing 
+if you don't.</P>
+<P>The fourth kind of wizard is called an add-in wizard. It implements only the 
+<CODE>IOTAWizard</CODE> interface. The means of invoking the wizard is entirely 
+up to you: you can add a button to the IDE's tool bars, add a menu item to the 
+menu bar, create modal or modeless windows, or hide in the background. In fact, 
+any wizard can do any of the above.</P>
+<P>In Delphi 6, a repository wizard also need to implement 
+<CODE>IOTARepositoryWizard60</CODE> to return the kind of designer needed in the 
+IDE, that is, VCL, CLX, or agnostic.</P>
+<P>To create a wizard class in Pascal, derive a class from 
+<CODE>TNotifierObject</CODE> and implement <CODE>IOTAWizard</CODE> and any of 
+the other wizard interfaces you need. For example:</P><PRE><B>type
+</B>  TAutoSaveWizard = <B>class</B>(TNotifierObject, IOTAWizard)
+  <B>public
+</B>    <B>constructor</B> Create;
+    <B>destructor</B> Destroy; <B>override</B>;
+
+    // If you write your wizard in a DLL that does not use packages,
+    // Delphi calls the Destroyed method when the wizard must be freed.
+    // Use this method to free the wizard. In all other situations, the
+    // Destroyed method is not called, and the IDE frees the wizard at
+    // the appropriate time.
+    <B>procedure</B> Destroyed; <B>override</B>;
+
+    // IOTAWizard
+    <B>procedure</B> Execute;    // Called only for Menu, Form, and Project wizards
+    <B>function</B> GetIDString: <B>string</B>;     // return a unique string, e.g., 'Tempest Software.My wizard name'
+    <B>function</B> GetName: <B>string</B>;         // return a user-friendly string
+    <B>function</B> GetState: TWizardState;  // state of the menu item for IOTAMenuWizard; other wizards don't use
+                                      // the state, which raises the question, Why doesn't this method get defined
+                                      // in IOTAMenuWizard?
+  <B>end</B>;</PRE>
+<P>In C++, you need to write the code to handle multiple interfaces (stuff that 
+Pascal does automatically). The easiest way that I have found is to write a base 
+class (<CODE>TNotifierObject</CODE>) that inherits from 
+<CODE>IOTANotifier</CODE> (which inherits from <CODE>IUnknown</CODE>). Derive 
+from <CODE>TNotifierObject</CODE> all your wizard classes that must implement 
+interfaces. Use multiple inheritance to define more than one interface.</P>
+<P>The <CODE>TNotifierObject</CODE> class implements reference counting, and all 
+your derived classes call the inherited <CODE>AddRef</CODE> and 
+<CODE>Release</CODE> methods. <CODE>TNotifierObject</CODE> implements the 
+methods of <CODE>IOTANotifier</CODE> as do-nothing stubs. Most Tools API classes 
+so not need these methods, but your derived classes must implement them anyway. 
+You can usually implement them as do-nothing stubs--you don't need to call the 
+ancestor method because the ancestor methods don't do anything either.</P>
+<P>Implement <CODE>QueryInterface</CODE> for your class to check for the 
+interfaces that it implements, and then calls the inherited method to handle all 
+other interfaces. For example:</P><PRE>// Derive all wizard classes from TNotifierObject.
+<B>class</B> TNotifierObject : <B>public</B> IOTANotifier
+{
+<B>public</B>:
+   <B>__fastcall</B> TNotifierObject() : d_refcount(0) {}
+   <B>virtual</B> <B>__fastcall</B> ~TNotifierObject();
+
+   // IUnknown
+   <B>virtual</B> HRESULT STDMETHODCALLTYPE QueryInterface(
+            REFIID riid,
+            <B>void</B> __RPC_FAR *__RPC_FAR *ppvObject);
+   <B>virtual</B> ULONG STDMETHODCALLTYPE AddRef(<B>void</B>);
+   <B>virtual</B> ULONG STDMETHODCALLTYPE Release(<B>void</B>);
+
+   // IOTANotifier
+   <B>virtual</B> <B>void</B> __fastcall AfterSave();
+   <B>virtual</B> <B>void</B> __fastcall BeforeSave();
+   <B>virtual</B> <B>void</B> __fastcall Destroyed();
+   <B>virtual</B> <B>void</B> __fastcall Modified();
+
+<B>protected</B>:
+   <B>__property</B> <B>long</B> RefCount={read=d_refcount};
+<B>private</B>:
+   <B>long</B> d_refcount;
+};
+</PRE><PRE><A name=C++Wizard></A><B>class</B> TMenuItemWizard : <B>public</B> TNotifierObject, <B>public</B> IOTAWizard
+{
+   <B>typedef</B> TNotifierObject inherited;
+<B>public</B>:
+   <B>__fastcall</B> TMenuItemWizard();
+   <B>__fastcall</B> ~TMenuItemWizard();
+
+   <B>void</B> <B>__fastcall</B> EnableNewUnitItem();
+   <B>void</B> <B>__fastcall</B> AddWin32HelpItem();
+   <B>void</B> <B>__fastcall</B> OnClick(TObject* Sender);
+
+   // IUnknown
+   <B>virtual</B> HRESULT STDMETHODCALLTYPE QueryInterface(
+            REFIID riid,
+            <B>void</B> __RPC_FAR *__RPC_FAR *ppvObject);
+   <B>virtual</B> ULONG STDMETHODCALLTYPE AddRef(<B>void</B>);
+   <B>virtual</B> ULONG STDMETHODCALLTYPE Release(<B>void</B>);
+
+   // IOTANotifier
+   <B>virtual void __fastcall</B> AfterSave();
+   <B>virtual void __fastcall</B> BeforeSave();
+   <B>virtual void __fastcall</B> Destroyed();
+   <B>virtual void __fastcall</B> Modified();
+
+   // IOTAWizard
+   <B>virtual void __fastcall</B> Execute();
+   <B>virtual</B> AnsiString <B>__fastcall</B> GetIDString();
+   <B>virtual</B> AnsiString <B>__fastcall</B> GetName();
+   <B>virtual</B> TWizardState <B>__fastcall</B> GetState();
+   
+<B>private</B>:
+   TMenuItem* d_win32_help;
+};</PRE>
+<P>As you can see in the example, a wizard inherits from 
+<CODE>IOTANotifier</CODE>, so you must implement the methods of 
+<CODE>IOTANotifier</CODE>. In Pascal, the <CODE>TNotifierObject</CODE> class 
+does this for you, but in C++, you must explicitly reimplement these methods in 
+each derived class that uses multiple inheritance of Tools API interfaces. The 
+IDE does not call these methods for wizard, but it does for some of the other 
+classes in the Tools API.</P>
+<P>The <CODE>TNotifierObject</CODE> class is defined for you in Pascal. It is a 
+convenient base class for all notifier classes, wizard classes, and so on. It 
+defines stubs for all of the <CODE>IOTANotifier</CODE> methods. In your derived 
+classes, you can implement only the methods that you need, and ignore the 
+rest.</P>
+<P><CODE>IOTAWizard</CODE> declares several methods, some of which are 
+important. The ID string must be a unique string; typically you can ensure it is 
+unique by including your company or organization name, followed by a unique name 
+for the wizard (such as "Tempest Software.Auto Save Wizard". The 
+<CODE>GetName</CODE> method returns a more user-friendly name.</P>
+<P>See the <CODE>ToolsAPI</CODE> unit for details about the wizard interfaces. 
+The methods are self-explanatory, except for the comments above.</P>
+<H2><A name=Services></A>Services</H2>
+<P>The key connection between your wizard and the Tools API is a set of 
+interfaces called <EM>services</EM>. To access the services, start with the 
+variable <CODE>BorlandIDEServices</CODE>, and cast it to the desired service. 
+All the service interfaces have names ending with Services, and every interface 
+whose name ends in Services is a service interface, accessible from 
+<CODE>BorlandIDEServices</CODE>. Below is a list of the available services and a 
+brief description of each:</P>
+<DL>
+  <DT><CODE>IBorlandIDEServices</CODE> 
+  <DD>The <CODE>BorlandIDEServices</CODE> variable is of type 
+  <CODE>IBorlandIDEServices</CODE>. The <CODE>IBorlandIDEServices</CODE> 
+  interface is just a way to declare the variable as an interface so you can 
+  easily cast it to the other services types. It doesn't provide any services of 
+  its own. 
+  <DT><CODE>INTAServices</CODE> 
+  <DD>The <CODE>INTAServices</CODE> type defines the Native Tools services, that 
+  is, services that require direct access to the IDE's components. In 
+  particular, your wizard has full access to the menu bar, tool bars, image 
+  list, and action list. If your wizard adds an image to the image list, leave 
+  the image in place when your wizard is freed. Otherwise, you might upset 
+  wizards that load after yours. If your wizard adds actions, menu items, or 
+  buttons, though, be sure to free everything when your wizard is freed. 
+  <DT><CODE>IOTAActionServices</CODE> 
+  <DD>Action services are services that open, close, and save files. 
+  <DT><CODE>IOTADebuggerServices</CODE> 
+  <DD>Debugger services let your wizard examine processes and threads, set 
+  breakpoints, and define notifiers that alert your wizard when the debugger 
+  does something interesting. 
+  <DT><CODE>IOTAMessageServices</CODE> 
+  <DD>Message services let your wizard add messages to the message view window. 
+  You can supply a file name and line number for each message so when the user 
+  double-clicks the message, the IDE automatically positions the source editor 
+  at a specific location. You can use this to incorporate third-party tools or 
+  even to replace the standard tools (such as Find in Files). 
+  <DT><CODE>IOTAModuleServices</CODE> 
+  <DD>A module represents an open file, so the module services let your wizard 
+  work with files open in the form or source editors. You can create new 
+  modules, get the module interface for a file, and so on. 
+  <DT><CODE>IOTAPackageServices</CODE> 
+  <DD>The package services let your wizard query the list of packages and their 
+  components. 
+  <DT><CODE>IOTAServices</CODE> 
+  <DD>The Open Tools services interface provides miscellaneous services that are 
+  not covered by the other interfaces. For example, your wizard can get the main 
+  registry key, obtain the window handle for the IDE's main window, and so on. 
+  <DT><CODE>IOTAWizardServices</CODE> 
+  <DD>The wizard services let you add or remove a wizard. The only reason to use 
+  the wizard services is when you want to create a wizard that manages other 
+  wizards. Instead, use <CODE>RegisterPackageWizard</CODE> in a package or call 
+  the registration procedure that is passed to a DLL's initialization function. 
+  <DT><CODE>IOTAToDoServices</CODE> 
+  <DD>The to-do services let you add items to the To Do list, set notifiers to 
+  learn when the list changes, and so on. 
+  <DT><CODE>IOTAEditorServices</CODE> 
+  <DD>The editor services are a new way to work with the source code editor. 
+  Editor services offer much more flexibility and control than the older editor 
+  interfaces. 
+  <DT><CODE>IOTAKeyboardServices</CODE> 
+  <DD>The keyboard services give your expert access to keyboard bindings and 
+  keyboard macros. </DD></DL>
+<P>For example, to get the module interface, given a file name, you must use the 
+module services interface and call the <CODE>FindModule</CODE> method:</P><PRE>var
+  Module: IOTAModule;
+begin
+  Module := (BorlandIDEServices as IOTAModuleServices).FindModule(FileName);</PRE>
+<P>
+<HR align=center>
+
+<P></P><PRE>_di_IOTAModuleServices Services;
+BorlandIDEServices.QueryInterface(IID_IOTAModuleServices,(void**) &amp;Services);
+_di_IOTAModule Module = Services-&gt;FindModule(FileName);</PRE>
+<P>The <CODE>_di_IOTAModule</CODE>&nbsp;type is a smart pointer. You can treat 
+it as an <CODE>IOTAModule*</CODE>, but it keeps track of reference counting the 
+same way that Pascal does for interfaces. In Pascal, the compiler understands 
+the <CODE>as</CODE> operator, but in C++ you can use <CODE>QueryInterface</CODE> 
+to cast <CODE>BorlandIDEServices</CODE> to a particular Services interface. The 
+<CODE>_di_</CODE> types are created with the 
+<CODE>DECLARE_DINTERFACE_TYPE</CODE> macro. All the Tools API interfaces are 
+declared as <CODE>_di_</CODE> types, so you don't need to mess with 
+<CODE>DECLARE_DINTERFACE_TYPE</CODE>, but you should know it exists in case you 
+create your own interfaces.</P>
+<P>If you don't use the <CODE>DECLARE_DINTERFACE_TYPE</CODE> macro and instead 
+use the interface types directly, you do not get the advantage of reference 
+counting. If you have a method that holds an interface reference for a short 
+time, and you can clearly see where the interface reference is created and where 
+it is released, you might feel safe in skipping the reference counting. In most 
+cases, however, the extra safety is well-worth the extra effort. I encourage you 
+to use the reference counted interfaces as much as possible.</P>
+<H2><A name=Modules></A>Modules</H2>
+<P>A module represents a file that is open in the IDE. Each form, source file, 
+and project resource file has a module interface. A module can have one or more 
+editors associated with it, such as a source editor for a unit's source code and 
+a form editor for the visual form. A module can have multiple files, such as a 
+<SAMP>.dfm</SAMP> file, a <SAMP>.cpp</SAMP> file, and an <SAMP>.hpp</SAMP> 
+header file in C++.</P>
+<P>Modules represent open files only. You can ask the Tools API for a list of 
+the files in a project, but in that case, you get a module info interface for 
+each file name. Using a module info, you can open a file and get a module 
+interface.</P>
+<P>Just because a file has a module interface does not mean the file has an 
+editor, though. The project source file, for example, is always open, but is not 
+always visible. If a file is visible in an editor, it has an editor interface: 
+source editor, form editor, and so on. To get the editors, call 
+<CODE>GetModuleFileCount</CODE> to find out how many editors are associated with 
+a module, then call <CODE>GetModuleFileEditor</CODE> to get each 
+<CODE>IOTAEditor</CODE> interface. You can cast that interface to a particular 
+interface, such as <CODE>IOTAFormEditor</CODE> or <CODE>IOTASourceEditor</CODE>. 
+For example,</P><PRE><B>var
+</B>  I: Integer;
+<B>begin
+</B>  <B>for</B> I := 0 <B>to</B> Module.GetModuleFileCount-1 <B>do
+</B>    FileList.Add(Module.GetModuleFileEditor(I));</PRE>
+<P>
+<HR align=center>
+
+<P></P><PRE>int count = Module-&gt;GetModuleFileCount();
+for (int i = 0; i &lt; count; ++i)
+   FileList-&gt;Add(Module-&gt;GetModuleFileEditor(i));</PRE>
+<P>Using a module interface, you can close the file, save the file, check 
+whether the file has been modified, and register a notifier to learn when the 
+user saves, modifies, or closes the file.</P>
+<H2><A name=Notifiers></A>Notifiers</H2>
+<P>A notifier tells your wizard about interesting events. Your wizard can learn 
+when the user opens and closes files, installs and uninstalls packages, starts a 
+debugging session, and more. The table below lists the kinds of notifiers that 
+exist in the Tools API, and what kinds of interfaces they monitor.</P>
+<P>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TH noWrap>Notifier</TH>
+    <TH noWrap>Monitors</TH>
+    <TH noWrap>Notifies your wizard when:</TH></TR>
+  <TR>
+    <TD vAlign=top noWrap><CODE>IOTAIDENotifier</CODE></TD>
+    <TD vAlign=top noWrap><CODE>Global events</CODE></TD>
+    <TD>the user opens files, installs packages, compiles a project, 
+etc.</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap><CODE>IOTAEditorNotifier</CODE></TD>
+    <TD vAlign=top noWrap><CODE>IOTASourceEditor</CODE></TD>
+    <TD>the user opens, closes, or activates a source editor view</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap><CODE>IOTAFormNotifier</CODE></TD>
+    <TD vAlign=top noWrap><CODE>IOTAFormEditor</CODE></TD>
+    <TD>the form editor is activated or saves a form, or when adding, 
+      removing, or renaming a component</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap><CODE>IOTAModuleNotifier</CODE></TD>
+    <TD vAlign=top noWrap><CODE>IOTAModule</CODE></TD>
+    <TD>before saving, after saving, modifying, or renaming a file</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap><CODE>IOTABreakpointNotifier</CODE></TD>
+    <TD vAlign=top noWrap><CODE>IOTABreakpoint</CODE></TD>
+    <TD>a breakpoint is changed, deleted, or triggered</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap><CODE>IOTAThreadNotifier</CODE></TD>
+    <TD vAlign=top noWrap><CODE>IOTAThread</CODE></TD>
+    <TD>evaluation completes in a thread</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap><CODE>IOTAProcessNotifier</CODE></TD>
+    <TD vAlign=top noWrap><CODE>IOTAProcess</CODE></TD>
+    <TD>a thread is created or destroyed, or when a module is added or removed 
+      from a process</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap><CODE>IOTADebuggerNotifier</CODE></TD>
+    <TD vAlign=top noWrap><CODE>Debugger</CODE></TD>
+    <TD>a debug process begins or ends, or when a breakpoint is added or 
+      removed</TD></TR>
+  <TR>
+    <TD vAlign=top noWrap><CODE>IOTAEditLineNotifier</CODE></TD>
+    <TD vAlign=top noWrap><CODE>IOTAEditLineTracker</CODE></TD>
+    <TD>the user edits text</TD></TR></TBODY></TABLE></P>
+<P>To create a notifier, you must write a class that implements one or more 
+notifier interfaces. Your wizard creates an instance of your notifier and 
+registers the notifier with the Tools API. The <CODE>AddNotifier</CODE> method 
+returns an integer, which your wizard must keep track of. To unregister the 
+notifier, pass the same integer to <CODE>RemoveNotifier</CODE>.</P>
+<P>Always unregister your notifier when you are done using it. Most notifiers 
+call the <CODE>Destroyed</CODE> method when the interface being monitored is 
+about to be destroyed. For example, a module notifier's <CODE>Destroyed</CODE> 
+method is called when the user closes a file and the IDE must free the module 
+interface. The module notifier's <CODE>Destroyed</CODE> method should unregister 
+the notifier. In most cases, that should be sufficient to free the notifier. If 
+your wizard keeps any references to the notifier, be sure to set the references 
+to <CODE>nil</CODE> or <CODE>NULL</CODE> when the notifier is destroyed. IDE 
+notifiers' <CODE>Destroyed</CODE> method is not called. Typically, a wizard will 
+unregister an IDE notifier when the wizard is destroyed.</P>
+<P>As with wizards, you must define your own notifier class, so C++ users face 
+more work than Pascal users. You can use the old-style API notifiers, but they 
+have less functionality. One possibility is to write your notifiers in Pascal, 
+even if the rest of your wizard is in C++.</P>
+<P>The following example is a module notifier. It gets notification when 
+something happens to a file, such as closing, saving, renaming, etc. This 
+particular notifier keeps track of the module interface, so it can unregister 
+itself. Your module notifier class should probably do something similar because 
+the module notifier interface does not tell you which module is the subject of 
+the notification. It's up to you to keep track of that information. Thus, you 
+should create a separate instance of your notifier class and register each 
+instance with exactly one module.</P><PRE><B>type
+</B>  TModule = <B>class</B>(TNotifierObject, IOTAModuleNotifier)
+  <B>private
+</B>    fModule: IOTAModule;      // Tools API module interface
+    fNotifierIndex: Integer;
+  <B>protected
+</B>    <B>procedure</B> AddNotifier;
+    <B>procedure</B> RemoveNotifier;
+    <B>property</B> NotifierIndex: Integer read fNotifierIndex;
+  <B>public
+</B>    <B>constructor</B> Create(<B>const</B> Module: IOTAModule);
+    <B>destructor</B> Destroy; override;
+
+    // Delphi calls BeforeSave, AfterSave, Destroyed, and Modified
+    // as appropriate for the files that make up this module.
+    <B>procedure</B> AfterSave; <B>override</B>;
+    <B>procedure</B> BeforeSave; <B>override</B>;
+    <B>procedure</B> Destroyed; <B>override</B>;
+    <B>procedure</B> Modified; <B>override</B>;
+
+    // IOTAModuleNotifier method: called after a rename
+    <B>procedure</B> ModuleRenamed(<B>const</B> NewName: <B>string</B>);
+
+    <B>property</B> Module: IOTAModule <B>read</B> fModule;
+  <B>end</B>;</PRE>
+<P>Now you see a situation where Pascal uses the <CODE>IOTANotifier</CODE> 
+methods. When the user saves a file, the notifier is called before the file is 
+actually saved and after it has been saved. The <CODE>Modified</CODE> method is 
+called every time the user makes a change, e.g., for every keystroke, so don't 
+do any heavy computation there. The IDE calls <CODE>Destroyed</CODE> when the 
+file is closed. Your notifier must unregister and free itself.</P>
+<P>Registering a notifier works the same way throughout the new API. Call 
+<CODE>AddNotifier</CODE> and pass the interface as an argument. 
+<CODE>AddNotifier</CODE> returns an integer index. Save that index and pass it 
+to <CODE>RemoveNotifier</CODE> to unregister the notifier. You can unregister 
+notifiers in any order, but you must remember to unregister every notifier.</P>
+<P>Read the <SAMP>ToolsAPI.pas</SAMP> or <SAMP>Toolapi.hpp</SAMP> file, and you 
+will notice that many interfaces have <CODE>AddNotifier</CODE> methods. Look at 
+the argument type to learn what kind of notifier it takes. That tells you which 
+interface you must implement for that kind of notifier.</P>
+<H2><A name=Registering></A>Registering the Wizard</H2>
+<P>After you write the wizard, you need to inform the IDE about your new wizard. 
+You have two choices: you can put the wizard into a design-time package and 
+install the package in the IDE, or you can put the wizard in a DLL (Windows) or 
+shared object (Linux). I'll use the generic term "library" for a DLL or shared 
+object, depending on the operating system. If you use a library, you need to 
+tell the IDE about your library. On Windows, add a registry entry under the 
+Experts key for the RAD tool (e.g., 
+HKEY_CURRENT_USER\Software\Borland\Delphi\6.0\Experts). The name of your entry 
+should be the name of your wizard, and the value is the complete path to the 
+DLL. The IDE loads all the experts and wizards when it starts and unloads them 
+when it shuts down. Under Linux, add an entry to the user's .borland/delphi60rc 
+file, in the [Experts] section. Again, the name is the wizard name, and the 
+value is the complete path to the shared object. For example,</P><PRE>[Experts]
+Tempest Software.Sort=/usr/local/lib/libsort.so</PRE>
+<P>The advantage of using design-time packages is that you can load and unload 
+the package many times without starting, stopping, and restarting the program. 
+Thus, you probably want to use a package during development.</P>
+<P>Remember that if your wizard uses any of the interfaces whose names start 
+with <CODE>INTA</CODE>, you <EM>must</EM> use the appropriate VCL package 
+(VCL<I>x</I>0 on Windows where <I>x</I> is the version number, or 
+bplvcl.so.<I>x</I> on Linux). Because wizards are design-time entities and they 
+are useless without the RAD tool IDE, you can never run a wizard without the VCL 
+and related packages. In most cases, you will want to use packages anyway.</P>
+<P>The drawback to using packages is that all the design-time packages reside in 
+the global name space. In C++, you can use a separate namespace for your 
+classes, but forms all share a single name space (not the same as a C++ 
+namespace). In Pascal, all unit names reside in the same, global name space. 
+Using a DLL avoids any potential for name collisions.</P>
+<P>To use a package in Pascal, implement the unit's <CODE>Register</CODE> method 
+and call <CODE>RegisterPackageWizard</CODE>, as shown below:</P><PRE><B>procedure</B> Register;
+<B>begin</B>
+  RegisterPackageWizard(TAutoSaveWizard.Create);
+<B>end</B>;</PRE>
+<P>In C++, declare the <CODE>RegisterPackageWizard</CODE> procedure in the 
+<CODE>ToolsAPI</CODE> namespace, and your <CODE>Register</CODE> procedure in 
+your package's namespace:</P><PRE><B>namespace</B> ToolsAPI
+{
+   DECLARE_DINTERFACE_TYPE(IOTAServices);
+   DECLARE_DINTERFACE_TYPE(IOTAWizard);
+   <B>extern</B> PACKAGE <B>void</B> <B>__fastcall</B> RegisterPackageWizard(<B>const</B> _di_IOTAWizard Wizard);
+}
+
+// Register the wizard in a package.
+<B>namespace</B> Menuitemreg
+{
+   <B>void</B> PACKAGE <B>__fastcall</B> Register()
+   {
+      _di_IOTAWizard wizard = <B>new</B> TMenuItemWizard();
+      RegisterPackageWizard(wizard);
+   }
+}</PRE>
+<P>To register a wizard in a library, you must implement an initialization 
+function. The function has the name <CODE>INITWIZARD0001</CODE>. In Pascal, you 
+can export a function of any name with the name <CODE>WizardEntryPoint</CODE>. 
+In C++, use that given name or a module definition file.</P>
+<P>The IDE calls the initialization function, passing an interface reference for 
+<CODE>BorlandIDEServices</CODE>, a pointer to a wizard-registration function, 
+and a pointer where you can store a termination procedure. Usually, your 
+wizard's destructor is all you need for the termination, but if you want to, you 
+can store a pointer to a procedure that takes no parameters, and the IDE will 
+call it when the wizard is unloaded.</P>
+<P>If you use the VCL package, you don't need to set 
+<CODE>BorlandIDEServices</CODE>, but if your library does not use any of the VCL 
+packages, you must save the first argument in the 
+<CODE>BorlandIDEServices</CODE> variable:</P><PRE><B>function</B> InitWizard(Services: IBorlandIDEServices;
+  RegisterProc: TWizardRegisterProc;
+  <B>var</B> Terminate: TWizardTerminateProc): Boolean; <B>stdcall</B>;
+<B>begin</B>
+  BorlandIDEServices := Services; // only needed when linking without packages
+
+  // Save the application window handle.
+  Application.Handle := (Services as IOTAServices).GetParentHandle;
+
+  // Create and register the wizard(s).
+  RegisterProc(TAutoSaveWizard.Create);
+
+  // Return true for success, and false for failure.
+  Result := True;
+<B>end</B>;
+
+<B>exports</B>
+  InitWizard <B>name</B> WizardEntryPoint;</PRE>
+<P>
+<HR align=center>
+
+<P></P><PRE><B>extern</B> "C" <B>__export bool __stdcall</B> INITWIZARD0001(IBorlandIDEServices* services,
+  TWizardRegisterProc registerProc,
+  TWizardTerminateProc&amp; terminate)
+{
+   BorlandIDEServices = services; // only needed when linking without packages
+
+   // Save the application window handle.
+   _di_IOTAServices ota_services;
+   services-&gt;QueryInterface(IID_IOTAServices, (void**) &amp;ota_services);
+   Application-&gt;Handle = ota_services-&gt;GetParentHandle();
+
+   // Create and register the wizard(s).
+   registerProc(<B>new</B> TMenuItemWizard());
+
+   // Return true for success, and false for failure.
+   <B>return true</B>;
+}</PRE>
+<H2><A name=WhatsNew></A>What's New?</H2>
+<P>Version 4 of the Tools API first introduced COM-style interfaces instead of 
+abstract virtual base classes. Version 5 added a number of new interfaces. 
+Version 6 adds a few more.</P>
+<P>All the declarations for the new API are in a single file, 
+<SAMP>ToolsAPI.pas</SAMP> or <SAMP>ToolsAPI.hpp</SAMP>. The RAD tools don't come 
+with any Tools API documentation, but with a little help, you can figure out 
+most of the API from the source code, and this paper should give you the help 
+you need.</P>
+<P>The Tools API interfaces come in two flavors: OTA and NTA, for Open Tools API 
+and Native Tools API. The difference is that NTA interfaces <EM>must</EM> be 
+compiled and linked with the VCL packages. The NTA interfaces have direct access 
+to certain objects in the IDE, so you must use packages to make sure the 
+pointers and references remain valid.</P>
+<P>OTA interfaces, on the other hand, have a degree of separation that lets you 
+write your wizard in any language and build it into a separate library. The 
+language you use to write the library must support Borland's calling conventions 
+(<CODE>__fastcall</CODE> in C++, <CODE>register</CODE> in Pascal). The library 
+must also use Borland's shared memory manager (<SAMP>memmgr.lib</SAMP> in C++, 
+<CODE>ShareMem</CODE> in Pascal) in Windows and Borland's shared exception 
+manager in Linux. Strings use Pascal-style strings (<CODE>AnsiString</CODE> in 
+C++). But all the communication between the IDE and your wizard takes place via 
+interfaces, not through Pascal or C++ objects.</P>
+<P>Because the new Tools API uses interfaces, most of your memory management 
+headaches are gone. Usually, you need to make sure your wizard keeps track of 
+interface references, not object references. The proper way to free an 
+interfaced object is to release all the references to it, and let its reference 
+count become zero. If you try to call <CODE>Free</CODE> explicitly, you will get 
+an Invalid Pointer Operation (<CODE>EInvalidPointer</CODE>) exception.</P>
+<P>New in Delphi 6 is support for CLX and VCL. Most of the changes are internal 
+and hidden from view. (That's the point of the Tools API--to present a simple 
+interface to the internal guts of the IDE.)</P>
+<P>The first change is the additon of <CODE>IOTARepositoryWizard60</CODE>. A 
+form or project wizard should implement this interface to tell Delphi whether 
+the wizard is creating a VCL form or project, a CLX form or project, or if it 
+doesn't matter. Implement the <CODE>GetDesigner</CODE> method, which returns a 
+string. Use the constants <CODE>dCLX</CODE>, <CODE>dVCL</CODE>, or 
+<CODE>dAny</CODE>.</P>
+<P>The <CODE>IOTAModuleInfo</CODE> interface has also changed. It returns a 
+custom module ID (a string that provide additional information when 
+<CODE>ModuleType</CODE> is <CODE>omtCustom</CODE>) and information about 
+additional files that make up the logical module.</P>
+<H2><A name=Interoperability></A>Interoperability</H2>
+<P>For Kylix developers, I have some good news and some bad news. The good news 
+is that the Tools API has not changed since Delphi 5. The bad news is that the 
+Tools API has not changed since Delphi 5.</P>
+<P>The Tools API in Kylix is almost exactly the same as it is in Delphi 5. If 
+you have a lot of existing Tools API code, it might seem to be a blessing, but 
+if you think about the ramifications, you might change your mind. For example, 
+the Tools API uses the VCL, not CLX. (Astute readers of the previous section 
+have already caught the fact that libraries need the appropriate VCL package, 
+even on Linux.)</P>
+<P>"Wait a minute!" you cry. "Isn't Kylix all about cross-platform development? 
+A brand-new component hierarchy? What's the VCL doing on Linux?"</P>
+<P>The Kylix IDE is largely a port of the Delphi 5 IDE from Windows to Linux. 
+Borland did not have enough time to rewrite the IDE from scratch in CLX, so they 
+ported the existing VCL-based IDE. It's not running under a Windows emulator, 
+but there is a library that provides some of the Windows API and maps the 
+Windows API calls to native Linux functions and system calls. The VCL sits on 
+top of this library. It's all part of the <SAMP>vcl</SAMP> package. (Yes, that's 
+<CODE>vcl</CODE> not <CODE>vcl60</CODE>. Linux has its own way to support 
+version numbers for shared objects, so the numbers come after the file 
+extension, so the full file name is <SAMP>bplvcl.so.6.0</SAMP>. That means you 
+don't need to rewrite all your package source files for every new release of 
+Kylix.)</P>
+<P>Because the VCL and CLX maintain separate event queues, running in separate 
+threads, you must not try to create a CLX form from the VCL thread or <I>vice 
+versa</I>. In other words, don't use CLX in your Tools API wizard.</P>
+<P>You can use the VCL, but the Kylix IDE lets you edit only CLX forms. If you 
+want to use the VCL, therefore, you can design your forms in Delphi 5, then 
+recompile the files in Kylix.</P>
+<P>You will need to maintain separate package source files, though. The required 
+packages are different for Kylix than for Delphi for Windows, and Borland does 
+not support conditional compilation directives in packages. (More specifically, 
+the IDEs don't understand conditional compilation directives, so you cannot use 
+the package managers on Windows or Linux.)</P>
+<P>The <SAMP>designide</SAMP> package contains the <CODE>ToolsAPI</CODE> unit. 
+You can write a wizard that uses only CLX and the <CODE>ToolsAPI</CODE> unit, 
+but you cannot create any visual forms. You might use <SAMP>baseclx</SAMP>, for 
+example. If you do any visual work, remember to use the VCL, not VisualCLX, in 
+which case you need the <SAMP>vcl</SAMP> package, too.</P>
+<P>Register your wizard in the usual way: declare a procedure named 
+<CODE>Register</CODE> (case is important!), and have the <CODE>Register</CODE> 
+procedure call <CODE>RegisterPackageWizard</CODE> for each wizard instance you 
+want to register.</P>
+<P>Tools API extensions are usually binary compatible between Delphi and C++ 
+Builder with the same version number. Just load the package or library and go! 
+"Usually" means that sometimes new bugs are introduced in the C++ Builder 
+release, but the design and interfaces are the same. If you need to cross 
+version numbers, you can usually get by with a simple recompilation, provided 
+you are not using an interface that is unavailable in an older release.</P>
+<H2><A name=Examples></A>Examples</H2>
+<P>Now it's time to apply the theory you've been learning by writing real 
+wizards. Different examples are given for Delphi for Windows, C++ Builder for 
+Windows, and Kylix Pascal.</P>
+<H3><A name=Together></A>Delphi Example</H3>
+<P>Now it's time to apply the theory you've been learning by writing a real 
+wizard. This example is an auto-save wizard. It sits in the background, 
+automatically saving all the files you are editing. If the IDE were to crash 
+unexpectedly, the next time you want to edit a file, the auto-save wizard asks 
+if you want to restore the saved copy.</P>
+<P>The heart of this wizard is the <CODE>TIdeFile</CODE> class and its 
+subclasses. Each file is represented by a <CODE>TIdeFile</CODE> object. When the 
+user opens a file, the IDE notifier creates a <CODE>TIdeFile</CODE> object for 
+file, according to the type of the file's editor. The difference between the 
+subclasses is the <CODE>AutoSave</CODE> method, which knows how to save a backup 
+copy of its particular kind of file.</P><PRE><B>type
+</B>  TIdeFile = <B>class
+</B>  <B>private
+</B>    fEditor: IOTAEditor;
+    fFileName: <B>string</B>;
+  <B>public
+</B>    <B>constructor</B> Create(<B>const</B> Editor: IOTAEditor);
+    <B>procedure</B> AutoSave; <B>virtual</B>; <B>abstract</B>;
+    <B>procedure</B> Renamed; <B>virtual</B>;
+    <B>procedure</B> Saved; <B>virtual</B>;
+
+    <B>property</B> Editor: IOTAEditor <B>read</B> fEditor;
+    <B>property</B> FileName: <B>string</B> <B>read</B> fFileName;
+  <B>end</B>;
+
+  TFormFile = <B>class</B>(TIdeFile)
+  <B>public
+</B>    <B>procedure</B> AutoSave; <B>override</B>;
+  <B>end</B>;
+
+  TSourceFile = <B>class</B>(TIdeFile)
+  <B>public
+</B>    <B>procedure</B> AutoSave; <B>override</B>;
+  <B>end</B>;</PRE>
+<P>Saving a form file is easy because the new API has a method that saves the 
+form's resource to a stream. The only trick is that you need an 
+<CODE>IStream</CODE> interface, not a <CODE>TStream</CODE> object. Fortunately, 
+that's easy with a <CODE>TStreamAdapter</CODE> interface:</P><PRE><B>procedure</B> TFormFile.AutoSave;
+<B>var
+</B>  Stream: TStream;
+  Adapter: IStream;
+<B>begin
+</B>  // The form editor interface needs an IStream, so create
+  // an adapter for the TAutoSaveStream.
+  Stream := TAutoSaveStream.Create(Editor.FileName);
+  <B>try
+</B>    Adapter := TStreamAdapter.Create(Stream);
+    <B>try
+</B>      (Editor <B>as</B> IOTAFormEditor).GetFormResource(Adapter);
+    <B>except
+</B>    <B>on</B> Ex: Exception <B>do
+</B>      { Propagate the exception, but with the file name. }
+      <B>raise</B> Exception.CreateFmt(S_Error, [Editor.Filename, Ex.Message]);
+    <B>end</B>;
+  <B>finally
+</B>    Stream.Free;
+  <B>end</B>;
+<B>end</B>;</PRE>
+<P>Saving a source file isn't too difficult. The Tools API has an edit reader 
+interface, which lets your wizard read the editor's source buffer. The wizard 
+reads the buffer in 8KB chunks. You can choose a different size. The only thing 
+you can't do is read the entire buffer at once. The Tools API lacks any simple 
+interface for determining the size of a file in the source editor.</P><PRE>// Auto-save a file in the text editor.
+<B>procedure</B> TSourceFile.AutoSave;
+<B>const
+</B>  BufSize = 8192;
+<B>var
+</B>  SourceEditor: IOTASourceEditor;
+  Reader: IOTAEditReader;
+  Buffer: PChar;
+  Count: Integer;
+  Stream: TStream;
+<B>begin
+</B>  Buffer := <B>nil</B>;
+  Stream := <B>nil</B>;
+  SourceEditor := Editor as IOTASourceEditor;
+  Reader := SourceEditor.CreateReader;
+  <B>try
+</B>    GetMem(Buffer, BufSize);
+    Stream := TAutoSaveStream.Create(Editor.FileName);
+    <B>try
+</B>      <B>repeat
+</B>        Count := Reader.GetText(Stream.Position, Buffer, BufSize);
+        Stream.WriteBuffer(Buffer^, Count);
+      <B>until</B> Count &lt;&gt; BufSize;
+    <B>except
+</B>    <B>on</B> Ex: Exception <B>do
+</B>      { Propagate the exception, but with the file name. }
+      <B>raise</B> Exception.CreateFmt(S_Error, [Editor.Filename, Ex.Message]);
+    <B>end</B>;
+  <B>finally
+</B>    Stream.Free;
+    FreeMem(Buffer);
+  <B>end</B>;
+<B>end</B>;</PRE>
+<P>The wizard defines an IDE notifier, which gets notified when the user is 
+about to open a file and after the user has opened a file. When the user is 
+about to open a file, the wizard checks for an autosaved file. If one is 
+present, that means the system crashed and left the file behind, so the wizard 
+asks the user if he or she wants to use the autosaved file, use the current 
+file, or cancel. If the user chooses cancel, the wizard tells the IDE not to 
+open the file. If the user chooses to use the current file, the autosaved file 
+is deleted, and if the user wants to restore the autosaved file, the wizard 
+overwrites the current file with the autosaved file, and lets the IDE open the 
+file normally.</P>
+<P>After the user opens a file, the wizard creates a module notifier for it, and 
+keeps track of the files for the module.</P><PRE><B>function</B> TAutoSaveWizard.FileOpening(<B>const</B> FileName: <B>string</B>): Boolean;
+<B>var
+</B>  SaveFile: <B>string</B>;
+<B>begin
+</B>  Result := False;
+  SaveFile := MakeAutoSaveFileName(FileName);
+  <B>if</B> <B>not</B> FileExists(SaveFile) <B>then
+</B>    Exit;
+
+  MessageBeep(Mb_IconQuestion);
+  <B>case</B> MessageDlg(Format(S_LoadPrompt, [Filename]), mtConfirmation, mbYesNoCancel, 0) <B>of
+</B>  mrYes:
+    RestoreAutoSave(SaveFile, FileName);
+  mrNo:
+    DeleteFile(SaveFile);
+  mrCancel:
+    Result := True;
+  <B>end</B>;
+<B>end</B>;</PRE>
+<P>The rest of the wizard manages the bookkeeping of lists of files, the user 
+interface, and so on. Look at the complete source code for this wizard on the 
+conference CD-ROM.</P>
+<H3><A name="C++ Builder"></A>C++ Builder Example</H3>
+<P>Because module interfaces don't work correctly when writing a wizard in C++, 
+this example shows a different wizard. Delphi and C++ Builder have a menu item 
+on the File menu called New Unit. This menu item is a short cut to create a new 
+unit, just like choose Unit from the New Items dialog box. This menu item is 
+hidden by default. If you want to be able to create a unit quickly, you might 
+prefer that the menu item be visible. This wizard looks up the menu item and 
+makes it visible.</P>
+<P>The wizard also adds a menu item to the Help menu. A menu wizard adds menu 
+items to the end of the Help menu. If you want more control over where the menu 
+item is added, you need to write an Add-in wizard and create your own menu item, 
+which is exactly what this wizard does. The declaration for the wizard class 
+appeared at the <A 
+href="file:///d:/home/cyborg/reliable%20software/borland%20integration/borcon2001%20ota.htm#C++Wizard">start</A> 
+of this paper.</P>
+<P>Below is the function that adds the menu item for the Win32 API help file. 
+You can see how it retrieves an <CODE>INTAServices</CODE> interface and uses 
+that to get a pointer to the IDE's main menu. You can do almost anything you 
+want because it is the real pointer to the real <CODE>TMainMenu</CODE> object. 
+That means you need to be extra careful not to make mistakes, mistakes that 
+might delete all the menu items from the menu, for example.</P><PRE>// Add a menu item to the Help menu. The new menu item opens the Win32 help file.
+<B>void __fastcall</B> TMenuItemWizard::AddWin32HelpItem()
+{
+   // Find the Help&gt;Index menu item
+   _di_INTAServices nta_services;
+   <B>if</B> (Failed(BorlandIDEServices-&gt;QueryInterface(IID_INTAServices, (<B>void</B>**)&amp;nta_services)))
+      <B>throw</B> * <B>new</B> Exception("NTAServices failure");
+
+   TMainMenu* MainMenu = nta_services-&gt;GetMainMenu();
+   TMenuItem* HelpMenu = FindMenuItem(MainMenu-&gt;Items, "HelpMenu");
+   <B>if</B> (HelpMenu == NULL)
+      <B>throw</B> * <B>new</B> Exception("Cannot locate Help menu");
+
+   TMenuItem* IndexItem = FindMenuItem(HelpMenu, "HelpTopicSearchItem");
+   <B>if</B> (IndexItem == NULL)
+      throw * <B>new</B> Exception("Cannot locate Help&gt;Index menu item");
+
+   // Add a menu item to the Help menu.
+   d_win32_help = NewItem("&amp;Win32 API", 0, <B>false</B>, <B>true</B>, OnClick, 0, "HelpWin32Item");
+   HelpMenu-&gt;Insert(IndexItem-&gt;MenuIndex, d_win32_help);
+}</PRE>
+<P>To register the wizard, you can install it in its own design-time package, or 
+use a DLL that is linked with the VCL40 package. Because this wizard uses the 
+INTAServices interface, you must use the VCL40 package. To install the wizard as 
+part of a package, call RegisterPackageWizard:</P><PRE><B>namespace</B> ToolsAPI
+{
+   DECLARE_DINTERFACE_TYPE(IOTAServices);
+   DECLARE_DINTERFACE_TYPE(IOTAWizard);
+   <B>extern</B> PACKAGE <B>void</B> <B>__fastcall</B> RegisterPackageWizard(<B>const</B> _di_IOTAWizard Wizard);
+}
+
+// Register the wizard in a package.
+<B>namespace</B> Menuitemreg
+{
+   <B>void</B> PACKAGE <B>__fastcall</B> Register()
+   {
+      _di_IOTAWizard wizard = <B>new</B> TMenuItemWizard();
+      RegisterPackageWizard(wizard);
+   }
+}</PRE>
+<P>If you want to use a separate DLL, write the initialization function as shown 
+below. You can register as many wizards as you want. Return <CODE>true</CODE> 
+for success or <CODE>false</CODE> for failure.</P><PRE>// Register the wizard in a DLL.
+<B>extern</B> "C" <B>__export bool __stdcall</B> INITWIZARD0001(IBorlandIDEServices* services,
+  TWizardRegisterProc registerProc,
+  TWizardTerminateProc&amp; terminate)
+{
+  _di_IOTAServices ota_services;
+  services-&gt;QueryInterface(IID_IOTAServices, (<B>void</B>**) &amp;ota_services);
+  Application-&gt;Handle = ota_services-&gt;GetParentHandle();
+  registerProc(<B>new</B> TMenuItemWizard());
+  <B>return true</B>;
+}</PRE>
+<H3><A name=KylixExample></A>Kylix Example</H3>
+<P>This example is a port of an IDE extension I wrote in Delphi. To port it to 
+Kylix, I had to create a new package, but I made very few other changes. For 
+your convenience, the Delphi package is included on the CD-ROM, so you can use 
+this code in Delphi or Kylix. The discussion below applies equally to Delphi and 
+Kylix.</P>
+<P>This wizard sorts text in the source editor. The user highlights a block of 
+text in the usual manner, then invokes the wizard with a keyboard shortcut or a 
+menu item. The wizard reads the selected text into a string list, sorts the 
+text, and writes the sorted text back to the source editor.</P>
+<P>The main wizard class is in the <CODE>SortWiz</CODE> unit. The wizard adds a 
+menu item to the IDE's menu bar (Edit &gt; Sort). It also registers a key 
+binding for Ctrl+K, S. The menu item brings up the sort parameters dialog box, 
+but the key binding sorts using the current parameters. I think this is a 
+convenience for the user, but you are free to change this if you disagree.</P>
+<P>Adding a menu item is straightforward because you are using the actual 
+<CODE>TMainMenu</CODE> component from the IDE, so you can use all the familiar 
+code in the <CODE>Menus</CODE> unit. The keyboard shortcut is unique to the 
+Tools API, so take a closer look at how it works. To create a keyboard shortcut, 
+you need to define a class that implements <CODE>IOTAKeyboardBinding</CODE>. The 
+binding object provides information about the keyboard binding (e.g., a 
+user-friendly name and a unique identifier), and it provides a callback for 
+handling the keystroke event:</P><PRE><B>type</B>
+  TSortBinding = <B>class</B>(TNotifierObject, IOTAKeyboardBinding)
+  <B>protected</B>
+    <B>function</B> GetBindingType: TBindingType;
+    <B>function</B> GetDisplayName: <B>string</B>;
+    <B>function</B> GetName: <B>string</B>;
+    <B>procedure</B> BindKeyboard(<B>const</B> BindingServices: IOTAKeyBindingServices);
+
+    <B>procedure</B> KeyProc(<B>const</B> Context: IOTAKeyContext; KeyCode: TShortCut;
+        <B>var</B> BindingResult: TKeyBindingResult);
+  <B>end</B>;
+
+// Bind Ctrl+K, S to the Edit&gt;Sort function.
+<B>procedure</B> TSortBinding.BindKeyboard(<B>const</B> BindingServices: IOTAKeyBindingServices);
+<B>const</B>
+  Ctrl_K = ScCtrl + Ord('K');
+<B>begin</B>
+  BindingServices.AddKeyBinding([Ctrl_K, Ord('S')], KeyProc, <B>nil</B>, kfImplicitShift);
+<B>end</B>;
+
+<B>function</B> TSortBinding.GetBindingType: TBindingType;
+<B>begin</B>
+  Result := btPartial;
+<B>end</B>;
+
+<B>function</B> TSortBinding.GetDisplayName: <B>string</B>;
+<B>begin</B>
+  Result := 'Sort';
+<B>end</B>;
+
+<B>function</B> TSortBinding.GetName: <B>string</B>;
+<B>begin</B>
+  Result := 'Tempest Software.Sort';
+<B>end</B>;
+
+<B>procedure</B> TSortBinding.KeyProc(<B>const</B> Context: IOTAKeyContext;
+  KeyCode: TShortCut; <B>var</B> BindingResult: TKeyBindingResult);
+<B>begin</B>
+  SortSelection(Context.EditBuffer);
+  BindingResult := krHandled;
+<B>end</B>;</PRE>
+<P>When the wizard starts up, it registers the binding, and when it shuts down, 
+it removes the binding:</P><PRE>// Add the menu item when creating the expert.
+<B>constructor</B> TSortWizard.Create;
+<B>var</B>
+  MainMenu: TMainMenu;
+  EditMenu: TMenuItem;
+  I: Integer;
+<B>begin</B>
+  <B>inherited</B>;
+  fBindingIndex := (BorlandIDEServices <B>as</B> IOTAKeyboardServices).AddKeyboardBinding(TSortBinding.Create);
+  ...
+end;
+
+// Free the menu item when destroying the expert.
+<B>destructor</B> TSortWizard.Destroy;
+<B>begin</B>
+  (BorlandIDEServices <B>as</B> IOTAKeyboardServices).RemoveKeyboardBinding(fBindingIndex);
+  ...
+  <B>inherited</B> Destroy;
+<B>end</B>;</PRE>
+<P>The <CODE>SortReg</CODE> unit registers the wizard. I always like to put the 
+registration code in a separate unit, which lets me work with the wizard and its 
+code without stumbling over the registration code.</P>
+<P><CODE>SortSel</CODE> does the main work of sorting the selection. There are 
+two possibilities when selecting text: columnar selection or linear 
+selection.</P>
+<P>In columnar selection, the user identifies two corners of a text rectangle in 
+the editor. Selected lines are not contiguous. What make columnar selections 
+tricky is the possibility of having tabs in the selection or before the 
+selection on one or more lines. After sorting, the wizard tries to ensure the 
+text lines up nicely. It does so by keeping track of the text position of the 
+start of each line fragment. It inserts the sorted text at the same position on 
+each line.</P>
+<P>In linear selection, the user picks two endpoints, and all characters in 
+between are part of the selection. The exact endpoints might include or exclude 
+the character after the end of the selection. The distinction isn't important 
+because the wizard sorts entire lines of text, so the selection is extended to 
+include the entire line.</P>
+<P>The Tools API has three ways to identify a position in the editor:</P>
+<UL>
+  <LI>Buffer position, which is an integer offset from the start of the buffer. 
+  <LI>Character position, which is the line and character offset in the source 
+  editor. A tab is a single character. 
+  <LI>Editor position, which is the line and column offset in the source editor, 
+  after expanding tabs. </LI></UL>
+<P>The Tools API can convert between the different kinds of positions, which is 
+important because different functions need different information. For example, 
+the current selection is specified in terms of character positions. The sort 
+wizard converts to buffer positions to read the text to sort:</P><PRE>  // Get the limits of the selected text.
+  BlockStart := Buffer.BlockStart;
+  BlockAfter := Buffer.BlockAfter;
+
+  // Sort entire lines, so modify the positions accordingly.
+  BlockStart.CharIndex := 0;   // start of line
+  if BlockAfter.CharIndex &gt; 0 then
+  begin
+    // Select the entire line by setting the After position
+    // to the start of the next line.
+    BlockAfter.CharIndex := 0;
+    Inc(BlockAfter.Line);
+  end;
+
+  // Convert the character positions to buffer positions.
+  StartPos := View.CharPosToPos(BlockStart);
+  EndPos   := View.CharPosToPos(BlockAfter);
+
+  // Get the selected text.
+  Reader := Buffer.CreateReader;
+  SetLength(Text, EndPos - StartPos - 1);
+  Reader.GetText(StartPos, PChar(Text), Length(Text));</PRE>
+<P>After sorting, the editor buffer is modified by deleting the old text and 
+inserting the newly sorted text:</P><PRE>  Writer := Buffer.CreateUndoableWriter;
+  Writer.CopyTo(StartPos);
+  Writer.DeleteTo(EndPos);
+  Writer.Insert(PChar(Text));</PRE>
+<P>Finally, the sorted text is selected and scrolled into view:</P><PRE>  // Make sure the top of the sorted text is visible.
+  // Scroll the edit window if ncessary.
+  if (BlockStart.Line &lt; View.TopPos.Line) or
+     (BlockAfter.Line &gt;= View.TopPos.Line + View.ViewSize.CY) then
+  begin
+    View.ConvertPos(False, TopPos, BlockStart);
+    View.TopPos := TopPos;
+  end;
+
+  // Select the newly inserted, sorted text.
+  Buffer.BlockVisible := False;
+  Buffer.BlockType    := btNonInclusive;
+  Buffer.BlockStart   := BlockStart;
+  Buffer.BlockAfter   := BlockAfter;
+  Buffer.BlockVisible := True;</PRE>
+<P>The status bar message informs the user that the text has been sorted. 
+(Sometimes, the text starts out sorted, so the message tells the user that 
+something happened, even if the result is identical to the starting text.)</P>
+<P><CODE>SortParms</CODE> lets the user adjust some sorting parameters. If the 
+user chooses the Edit&gt;Sort menu item, the sort parameters dialog box is 
+shown. The user can sort in ascending or descending order, choose case 
+sensitivity, and decide whether to ignore Pascal keywords. The latter option 
+lets the user sort methods in a class declaration without putting all functions 
+before all procedures. The sort parameters dialog box is shown below.</P>
+<P><IMG height=171 src="" width=243 align=bottom border=0></P>
+<P>To use this wizard in Kylix, simply compile and install the 
+<CODE>sort.dpk</CODE> package. It's that simple.</P>
+<H2><A name=Exploring></A>Exploring On Your Own</H2>
+<P>The Tools API is big, much too big to cover in a single paper. This paper 
+introduces the basics, and armed with that knowledge, you can figure out much 
+more on your own. For some extra help, <CITE>Hidden Paths of Delphi 3</CITE> 
+explains the concepts, for example, how the Tools API manages a project's 
+resources. You can apply these same concepts to newer versions of the API, just 
+change the classes to use the new interfaces.</P>
+<P>Every release adds new interfaces and new features to the Tools API. 
+Ultimately, the source file <SAMP>ToolsAPI.pas</SAMP> is the sole source of 
+information about the new API features. Once you get used to the style of the 
+interfaces, you will find them fairly easy to work with.</P>
+<P>For example, any interface whose name ends with <CODE>Notifier</CODE> is a 
+notifier. All the notifiers work in the same manner: you must write a class that 
+implements the notifier interface, register your notifier object, and Delphi 
+calls back to your object when something interesting happens. Now that you know 
+how to work with IDE and module notifiers, you can figure out how to work with, 
+say, debugger notifiers or editor notifiers.</P>
+<P>Similarly, all the Services interfaces are the main interfaces between your 
+wizard and the IDE. Delphi and C++ Builder define the services objects, and your 
+wizard casts the <CODE>BorlandIDEServices</CODE> interface to the desired 
+service to call its methods.</P>
+<P>Read the Tools API source file to learn about the other services and 
+interfaces that are available. The Tools API is powerful and useful. Add the 
+features that you've always felt were missing from the IDE. Customize the IDE to 
+suit your needs. If you ever get stuck, drop a note in the Tools API <A 
+href="news://newsgroups.borland.com/borland.public.delphi.opentoolsapi">newsgroup</A>.</P>
+<H2><A name=author></A>About the Author</H2>
+<P><A href="http://www.tempest-sw.com/">Ray Lischner</A> is the author of <A 
+href="http://www.tempest-sw.com/nutshell"><CITE>Delphi in a Nutshell</CITE></A>, 
+the award-winning guide to the Delphi Pascal language. Ray recently completed 
+his M.S. in Computer Science at Oregon State University, and is now returning to 
+writing, slaving away at <CITE>RAD Programming for Linux</CITE> and other books. 
+He also wrote <A 
+href="http://www.bardware.com/bardware/sfd"><CITE><U>Shakespeare for 
+Dummies</U></CITE></A>, <A 
+href="http://www.tempest-sw.com/hiddenpaths"><CITE><U>Hidden Paths of Delphi 
+3</U></CITE></A>, and <A 
+href="http://www.tempest-sw.com/secrets"><CITE><U>Secrets of Delphi 
+2</U></CITE></A>. Ray's articles appear in a variety of technical magazines, and 
+he is a frequent speaker at conferences and user groups meetings across the 
+country. </P></BODY></HTML>

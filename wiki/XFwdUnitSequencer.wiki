@@ -1,0 +1,12 @@
+=SortedTree::XFwdUnitSequencer
+Two constructors
+
+Arguments: tree, startScriptId, unitId
+...
+---
+Argumentes: tree, UnitLineage::Sequencer lineageSeq
+
+Go through lineageSeq in order and try to find the scriptId in history. If found, ''this'' is positioned in history and lineagetSeq is positioned at the first common script ID
+
+If not found, ''this'' positioned at end. 
+If nothing at all found in history about this unit, _isTreeEmpty = true;

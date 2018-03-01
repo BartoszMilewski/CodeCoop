@@ -1,0 +1,23 @@
+| Summary |Multi-monitor display|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Priority |3|
+| Resolution | Pending |
+| DateReported |Monday, July 09, 2007|
+==Description 
+
+For people who typically work with a single instance of Code Co-op, changing projects within that instance, you should remember the position of the window so that when Code Co-op exits and is relaunched, it puts the window in the same place as it was last time, as long as that position is visible within the current bounds of the multi-window display. If it falls completely outside the visible screen area (or significantly outside) then reset it to the top left corner of the nearest display (better than using the primary display, e.g. if the resolution was just changed on your preferred secondary display).
+
+If a second instance of Code Co-op is opened at the same time, I see no problem with it using the same screen position as the first one. I normally switch between instances using either the task bar or Alt-Tab as I can rarely see the windows on screen anyway (covered by editors and other tools). I don't think that the current "automatic offset" mechanism achieves anything useful. If the user wants to see both instances at the same time, they can resize and drag the windows to make both visible. In this case, the last one closed would set the "remembered position".
+
+Another approach might be to remember a preferred window position for each project. If Code Co-op is opened via a shortcut which specifies the project name as a command line parameter, the window can open in that project's preferred position. If the project is selected in an existing window, the project's preferred position would be updated to match the current position of that window.
+
+A third and simple (but ugly) solution: perhaps you could add command line option to specify the window position. Anyone who wants the window in a fixed location can then open Code Co-op via a shortcut.
+
+While I'm thinking about it - I have observed a related minor bug. I have two shortcuts which launch Code Co-op and open my main projects (using e.g. -Project_Visit 1 -GUI). On some occasions (possibly the first time Code Co-op is launched after startup), one of them ends up with the task bar just saying "Code Co-op" instead of the project name. If I switch projects then switch back again, it shows the project name as expected.
+

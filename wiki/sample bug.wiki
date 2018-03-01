@@ -1,0 +1,9 @@
+| reportedBy| Bartosz|
+|name| GP-fault in foo.cpp|
+|status| open|
+|date| 04/04/06|
+|description| I was using co-op and then, '''boom!''' I think the code was:
+ char * ptr = 0;
+ char c = ptr [0]
+Why didn't anybody catch it?! |
+|resolution||

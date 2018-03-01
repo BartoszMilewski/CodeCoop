@@ -1,0 +1,15 @@
+| Summary |Changing hub address in projects|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Close|
+| DateReported |Monday, July 09, 2007|
+==Description
+| For every project I visit, I have to acknowledge the change of my hub's email address. Is there a way to update the address for all projects? I have about 50 projects on my system here and it gets tedious double clicking on each of it. |
+The problem is that the same information is duplicated in the catalog and in the project database. If addressing info were moved for co-op to the catalog, there would be only one point of change. Team project would solve this problem.
+
+Quick solution (in 5.0g): use AllCoopCmd. Add invisible command to Commander: UpdateHubId. No arguments. Just compares current hub ID with the one stored in the Catalog and, if different, updates current member data (and sends the script). Re-use Commander::Maintenance.
+
+==Notes
+Quick solution implemented.

@@ -1,0 +1,35 @@
+<?xml version="1.1" ?>
+<!doctype followed by some characters>
+<CodeCoopUpdateInfo>
+<!-- Version Information file
+	 Contains update information for all Code Co-op product lines
+ -->
+<MajorVersion Number="3">
+	<LatestVersion Number="3.5">
+		<Description href="http://www.relisoft.com/co_op/ReleaseNotes3x.txt">
+			 The most up-to-date version of 3.x series
+		</Description>
+		<Setup 
+			 href="ftp://ftp.relisoft.com/co-op35.exe" 
+			 Size="254321"
+		/>
+	</LatestVersion>
+	<Bulletin Number="1" href="http://www.relisoft.com/co_op/Bulletin3x.html">
+	 	  You must read it!
+	</Bulletin>
+</MajorVersion>
+<MajorVersion Number="4">
+	<LatestVersion Number="4.0g">
+		<Description href="http://www.relisoft.com/co_op/ReleaseNotes4x.txt">
+			 The most up-to-date version of 4.x series
+		</Description>
+		<Setup 
+			 href="ftp://ftp.relisoft.com/co-op.exe" 
+			 Size="254325"
+		/>
+	</LatestVersion>
+	<Bulletin Number="3" href="http://www.relisoft.com/co_op/Bulletin4x.html">
+	 	  You must read this one!
+	</Bulletin>
+</MajorVersion>
+</CodeCoopUpdateInfo>

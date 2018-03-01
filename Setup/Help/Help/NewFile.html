@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Creating a new file or folder</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Creating New Files or Folders</h1>
+<p class="first">When you want to create a new file or a sub-folder in your project, the best way to do it is to use the facilities of Code Co-op.</p>
+<br />
+<h2>To Create a File or Folder</h2>
+<ul>
+	<li>Select <em>New File</em> or <em>New Folder</em> from the <em>Folder</em> menu</li>
+	<li>Or, press the <em>New File</em><img src="../Images/newfile.gif" alt="New File Button" width="16" height="17" hspace="2" /> button in the Toolbar </li>
+</ul>
+<p class="first"> The advantage of using Code Co-op to create new files is that you won't forget to check them in. They will automatically appear in your <strong>Check-in area</strong> ready for check-in.</p>
+<br />
+
+<h2> File Types </h2>
+<p class="first">Code Co-op keeps information about various types of files. When you create a new file, you may choose from the following types: header, source, other text, or binary. For <b>header</b> files you have the option of creating a file initialized with the standard C (C++) preprocessor directives that prevent multiple inclusions. If you program in C or C++ we highly recommend using this feature. For both header and <b>source</b> files you may define your copyright notice (in the form of a comment). It will be added to the file you create. Here's an example of a header file <em>foo.h</em> created using these options:</p>
+<pre>#if !defined (FOO_H)
+#define FOO_H
+//
+// Your Company (c) 2007
+//
+#endif</pre>
+
+<p>There is an important distinction between <b>text</b> (including header, source, and other text) files and <b>binary</b> files. Code Co-op uses a special <em>binary differ</em> to find differences between versions of binary files. These binary diffs are highly optimized, but they cannot be displayed. Examples of binary files are: Word documents, Excel spreadsheets, MP3 files, images, etc.</p>
+<p>Code Co-op remembers association between file extensions and types.</p>
+<p>You can change the type of an existing project file using the <i>Selection>Change File Type</i> menu item.
+</body>
+</html>

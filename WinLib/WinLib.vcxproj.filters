@@ -1,0 +1,964 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Graph">
+      <UniqueIdentifier>{fd468d01-0719-4f5c-984e-91de260b8ae6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ctrl">
+      <UniqueIdentifier>{2fedd2cc-8cd9-4d76-8aff-3ec33f2d9ea6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File">
+      <UniqueIdentifier>{ec7c0a23-3d6d-431a-96b4-29850da4c315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sys">
+      <UniqueIdentifier>{e2637117-5e78-46da-87d1-f84591700d8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Win">
+      <UniqueIdentifier>{fe7f51d3-c226-47e4-81c5-e5690588ffc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Com">
+      <UniqueIdentifier>{6b592e73-eb6c-4e15-ac63-e3941402632b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Net">
+      <UniqueIdentifier>{24f4e88a-0f16-4ba7-9d90-c1261b82b7b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dbg">
+      <UniqueIdentifier>{23797968-d8f5-4e3e-ab1c-a5e2a21740ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{71ae450f-593c-4a09-9177-3e226c47660f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parse">
+      <UniqueIdentifier>{544615e9-e35e-46a0-b705-7a631b0c892a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mail">
+      <UniqueIdentifier>{86220889-fd1f-43b8-ab6c-22eff9445544}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ex">
+      <UniqueIdentifier>{51227963-cb5c-4a1b-b4a8-0a12fdb63f41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Graph\BitInfo.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph\Bitmap.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph\Canvas.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph\Cursor.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph\Font.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph\Icon.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph\ImageList.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Accelerator.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\ComboBox.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Command.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Controls.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\DatePicker.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\DropDown.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Edit.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\FileGet.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Focus.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\FocusBarWin.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\FontSelector.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Header.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\ListView.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\MarginCtrl.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Menu.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\MultiProgressDialog.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Output.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\ProgressBar.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\ProgressChannel.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\ProgressControlHandler.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\ProgressDialog.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\ProgressDialogController.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\PropertySheet.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Rebar.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\RichEditCtrl.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Scroll.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Splitter.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\StatusBar.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Tabs.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\ToolBar.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl\Tree.cpp">
+      <Filter>Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="File\ActiveCopy.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\Dir.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\Drives.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\ErrorLog.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\File.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\FileIo.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\FileSizer.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\FolderWatcher.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\LongSequence.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\MemFile.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\Path.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\SafePaths.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\Vpath.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\WildCard.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\Active.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\Clipboard.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\Crypto.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\Date.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\Dll.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\GlobalUniqueName.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\PackedTime.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\Process.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\RegKey.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\Security.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\SharedMem.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\Synchro.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\WheelMouse.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sys\WinString.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\Atom.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\Controller.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\Dde.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\Dialog.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\DialogTemplate.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\EnumProcess.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\Geom.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\Help.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\Instance.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\Keyboard.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\MsgLoop.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\OwnerDraw.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\Procedure.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\Region.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\Win.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\WinClass.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\WinMain.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\WinMaker.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Win\WinResource.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="Com\Automation.cpp">
+      <Filter>Com</Filter>
+    </ClCompile>
+    <ClCompile Include="Com\DragDrop.cpp">
+      <Filter>Com</Filter>
+    </ClCompile>
+    <ClCompile Include="Com\Shell.cpp">
+      <Filter>Com</Filter>
+    </ClCompile>
+    <ClCompile Include="Com\ShellRequest.cpp">
+      <Filter>Com</Filter>
+    </ClCompile>
+    <ClCompile Include="Com\TaskBarIcon.cpp">
+      <Filter>Com</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\BitsDownloader.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\BITService.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Connection.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Ftp.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\FtpDownloader.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\FtpUploader.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Internet.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\NetShare.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\NetShareNT.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\SecureSocket.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\ShareEx.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\SimpleSocket.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Socket.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Dbg\Assert.cpp">
+      <Filter>Dbg</Filter>
+    </ClCompile>
+    <ClCompile Include="Dbg\Log.cpp">
+      <Filter>Dbg</Filter>
+    </ClCompile>
+    <ClCompile Include="Dbg\Memory.cpp">
+      <Filter>Dbg</Filter>
+    </ClCompile>
+    <ClCompile Include="Dbg\Monitor.cpp">
+      <Filter>Dbg</Filter>
+    </ClCompile>
+    <ClCompile Include="Dbg\Out.cpp">
+      <Filter>Dbg</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\Scanner.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\Sink.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XmlParser.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Xml\XmlTree.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Parse\BufferedStream.cpp">
+      <Filter>Parse</Filter>
+    </ClCompile>
+    <ClCompile Include="Mail\Base64.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="Mail\EmailAddress.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="Mail\HeaderSeq.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="Mail\Mime.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="Mail\MsgParser.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="Mail\MsgTree.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="Mail\Pop3.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="Mail\Pop3Message.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="Mail\Smtp.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="Mail\SmtpMessage.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="Mail\SmtpUtils.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="Ex\Error.cpp">
+      <Filter>Ex</Filter>
+    </ClCompile>
+    <ClCompile Include="Ex\WinEx.cpp">
+      <Filter>Ex</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdLineScanner.cpp" />
+    <ClCompile Include="CrcTable.cpp" />
+    <ClCompile Include="Handlers.cpp" />
+    <ClCompile Include="HashTable.cpp" />
+    <ClCompile Include="precompiled.cpp" />
+    <ClCompile Include="StringOp.cpp" />
+    <ClCompile Include="TimeStamp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Graph\BitInfo.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\Bitmap.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\Brush.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\Canvas.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\CanvTools.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\Color.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\Cursor.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\Font.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\Holder.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\Icon.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\ImageList.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\Pen.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\StockObj.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Accelerator.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Button.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\ComboBox.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Command.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Controls.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\DatePicker.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\DropDown.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Edit.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\FileGet.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Focus.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\FocusBarWin.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\FontSelector.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Header.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\InfoDisp.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\ListBox.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\ListView.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\MarginCtrl.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Menu.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Messages.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\MultiProgressDialog.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Output.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\ProgressBar.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\ProgressChannel.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\ProgressControlHandler.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\ProgressDialog.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\ProgressDialogController.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\ProgressDialogData.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\ProgressMeter.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\PropertySheet.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Rebar.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\RichEditCtrl.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Scroll.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Spin.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Splitter.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Static.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\StatusBar.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Tabs.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\ToolBar.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Tooltip.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl\Tree.h">
+      <Filter>Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="File\ActiveCopy.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\ActiveCopyFile.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\Dir.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\Drives.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\ErrorLog.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\File.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\FileIo.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\FolderWatcher.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\LongSequence.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\MemFile.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\Path.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\Pipe.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\SafePaths.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\SerialUnVector.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\Vpath.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\WildCard.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\Active.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\BoundedQueue.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\Channel.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\Clipboard.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\Crypto.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\Date.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\Dll.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\GlobalUniqueName.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\PackedTime.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\Process.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\RegKey.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\Security.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\SharedMem.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\Synchro.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\SysTime.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\SysVer.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\Thread.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\Timer.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\WheelMouse.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\WinGlobalMem.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Sys\WinString.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\AppCmdHandler.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Atom.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Caret.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\ControlHandler.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Controller.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Dde.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Dialog.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\DialogTemplate.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\EnumProcess.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\GdiHandles.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Geom.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Handles.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Help.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Instance.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Keyboard.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Message.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Metrics.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Mouse.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\MsgLoop.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Notification.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\OwnerDraw.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Procedure.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Region.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\SysHandle.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\TickCounter.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Utility.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\Win.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\WinClass.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\WinMain.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\WinMaker.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Win\WinResource.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Com\Automation.h">
+      <Filter>Com</Filter>
+    </ClInclude>
+    <ClInclude Include="Com\Com.h">
+      <Filter>Com</Filter>
+    </ClInclude>
+    <ClInclude Include="Com\DragDrop.h">
+      <Filter>Com</Filter>
+    </ClInclude>
+    <ClInclude Include="Com\Shell.h">
+      <Filter>Com</Filter>
+    </ClInclude>
+    <ClInclude Include="Com\ShellRequest.h">
+      <Filter>Com</Filter>
+    </ClInclude>
+    <ClInclude Include="Com\TaskBarIcon.h">
+      <Filter>Com</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\BitsDownloader.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\BITService.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Connection.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Download.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Ftp.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\FtpDownloader.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\FtpUploader.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Internet.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\NetShare.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\NetShareImpl.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\NetShareNT.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\SecureSocket.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\SharedObject.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\ShareEx.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\ShareInfoNT.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\SimpleSocket.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Socket.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Dbg\All.h">
+      <Filter>Dbg</Filter>
+    </ClInclude>
+    <ClInclude Include="Dbg\Assert.h">
+      <Filter>Dbg</Filter>
+    </ClInclude>
+    <ClInclude Include="Dbg\Log.h">
+      <Filter>Dbg</Filter>
+    </ClInclude>
+    <ClInclude Include="Dbg\Memory.h">
+      <Filter>Dbg</Filter>
+    </ClInclude>
+    <ClInclude Include="Dbg\Monitor.h">
+      <Filter>Dbg</Filter>
+    </ClInclude>
+    <ClInclude Include="Dbg\Out.h">
+      <Filter>Dbg</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Scanner.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Sink.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XmlParser.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Xml\XmlTree.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Parse\BufferedStream.h">
+      <Filter>Parse</Filter>
+    </ClInclude>
+    <ClInclude Include="Parse\NamedPair.h">
+      <Filter>Parse</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\Base64.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\EmailAddress.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\HeaderSeq.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\Mime.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\MsgParser.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\MsgTree.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\Pop3.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\Pop3CharBlockSeq.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\Pop3Message.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\Sink.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\Smtp.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\SmtpMessage.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Mail\SmtpUtils.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex\Error.h">
+      <Filter>Ex</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex\WinEx.h">
+      <Filter>Ex</Filter>
+    </ClInclude>
+    <ClInclude Include="auto_array.h" />
+    <ClInclude Include="auto_vector.h" />
+    <ClInclude Include="Bit.h" />
+    <ClInclude Include="CmdLineScanner.h" />
+    <ClInclude Include="Crc.h" />
+    <ClInclude Include="GenericIo.h" />
+    <ClInclude Include="Handlers.h" />
+    <ClInclude Include="HashTable.h" />
+    <ClInclude Include="HtmlTag.h" />
+    <ClInclude Include="LargeInt.h" />
+    <ClInclude Include="LightString.h" />
+    <ClInclude Include="Lock.h" />
+    <ClInclude Include="MultiMap.h" />
+    <ClInclude Include="NamedBool.h" />
+    <ClInclude Include="PtrUtil.h" />
+    <ClInclude Include="StringOp.h" />
+    <ClInclude Include="TimeStamp.h" />
+    <ClInclude Include="TriState.h" />
+    <ClInclude Include="unmovable_vector.h" />
+    <ClInclude Include="WinLibBase.h" />
+    <ClInclude Include="array_vector.h" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+| Summary |Uncheckout delete displays warning|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Saturday, October 21, 2006|
+==Description 
+Uncheckout a deleted file. A nonsensical warning is displayed. By restoring a file the user will never "lose his edits".

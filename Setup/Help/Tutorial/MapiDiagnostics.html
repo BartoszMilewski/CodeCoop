@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>Tutorial: Peer Email diagnostics</title>
+		<link href="../images/help.css" rel="stylesheet" type="text/css" />
+	</head>
+<body>
+<h1>Using Outlook (Express)</h1>
+		
+<p>Code Co-op can communicate with Outlook or Outlook Express using MAPI interface. When you <a href="CheckIn3.html">check in</a> your files, a synchronization script is sent to other project members. This script appears as an attachment to an e-mail message that shows up in your Outlook's Outbox (and then in the Sent Items). The subject line of such a message starts with "Code Co-op Sync".</p>
+
+<p>When somebody else makes a check-in, their e-mail message will appear in your Outlook's Inbox Folder. Do not open such a message in Outlook--Code Co-op only looks at <b>unread messages</b>. Within a few minutes the message should disappear from your Outlook Inbox. That means Code Co-op got hold of it. (To expedite message retrieval, you can right-click on the dispatcher icon and select "Get Mail".) The new script will appear in your Code Co-op project's Inbox, from where it can be <a href="Sync.html">executed</a>.</p>
+
+<h2>Email Diagnostics </h2>
+
+<p>Now, test your Email client to ensure that it is Mapi compliant. Click <em>Run Diagnostics</em>.</p>
+<p>You will notice that Code Co-op displays the default Mapi client along with the test and its results. It should be Outlook or Outlook Express.</p>
+
+<ul>
+	<li>If the test did not PASS,  you should <a href="../FAQs/default.html">make sure your default email client is  the correct one</a>.</li>
+	<li>If the test PASSED, click <em>Next</em> to continue. </li>
+</ul>
+
+<p class="image">
+<img src="../Images/TutorialWizardMapiDiagnostics.gif" alt="diagnostics screen" />
+</p>
+
+	<p class="next"><a href="javascript:history.go(-1)">&lt; Back</a> &nbsp;&nbsp; <a href="emailSettings.html"><strong><strong>Next:</strong> </strong>Email Settings  &gt;</a>		</p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+| Summary |Add DOCTYPE header to wiki export|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |3|
+| Status |Open|
+| DateReported |Wednesday, October 04, 2006|
+==Description
+

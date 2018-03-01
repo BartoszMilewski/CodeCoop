@@ -1,0 +1,5 @@
+=Wiesiek: To Do
+I received and accepted an invitation. This is what is displayed in my inbox:
+[[Image:Invitation Weird State]]
+This is very confusing for the user. The problem is that not all the chunks have arrived, but the UI gives the impression as if something went wrong.
+

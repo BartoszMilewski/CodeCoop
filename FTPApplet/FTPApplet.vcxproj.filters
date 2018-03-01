@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="All Common">
+      <UniqueIdentifier>{6e383732-96a5-4e51-8a8c-c61c5f9a1d55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serial">
+      <UniqueIdentifier>{9edf22e8-5368-4266-a38a-45e5aa310f2f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\FtpSite.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\OutputSink.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\PathRegistry.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\precompiled.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Registry.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\Serialize.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\SerString.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdLineArgs.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\FtpSite.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\OutputSink.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PathRegistry.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\precompiled.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Registry.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\Serialize.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SerString.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="CmdLineArgs.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FtpApplet.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FTPApplet.rc" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Checking in files</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Checking In Files</h1>
+
+<h2>Change-based Check-ins and Atomic Synchronization </h2>
+<p>
+Code Co-op is a change-based system. This means that, once you have completed a certain task, you can check-in all the files involved in this task.  Additionally, Code Co-op operates in units of <em>logical changes</em> to the project, rather than in units of file changes. Each logical change may consist of many file changes, yet the check-in, as well as the sync, is atomic &ndash; a single database transaction. The dreaded <b>Partial synchronization</b>, when synchronization happens in the middle of somebody else's file-by-file check-in, isn't possible in Code Co-op.
+</p>
+<div class="note">
+The idea behind a change-oriented version control system like Code Co-op, is that you make all necessary changes to transform your project from one consistent state to another. When you check in your changes, they are supposed to produce a single <em>atomic</em> update to the project. It is highly advisable that this update lead to a project that <b>compiles and runs</b>.
+</div> 
+
+<h2>Reviewing your changes</h2>
+<p>
+The <a href="checkinTab.html"><strong>Check-in Area</strong></a> will list all new, deleted, moved, renamed, or checked-out files. By double-clicking on an <em>edited</em> file, you can <b>review your changes</b> using the built-in <a href="differ.html">differ</a>. You'll see a two-pane display. The <strong>left pane</strong> usually has two tabs: Before and Current. The Current tab is where you can make additional edits and also see the current state of the file. The Before tab shows the file state prior to any current edits.The <strong>right pane</strong> highlights the differences between the original version of the file and the current version.
+</p>
+<p>
+If you prefer, you can use the <a href="BeyondCompare.html">Beyond Compare differ</a> that's part of the distribution.
+</p>
+
+<h2>Performing the Check-in</h2>
+<p> To check in Selected files, select the files and: </p>
+<ul>
+	<li>Click  the <em>Check-in Selected Files</em> button <img src="../Images/checkinSelect.gif" alt="Check in selected files" width="19" height="22" hspace="2" />, or </li>
+	<li>  Use the <em>Selection</em> Menu &gt; select <em>Check-in</em>.</li>
+</ul>
+<p>To check in all the files in the <strong>Check-in Area</strong>: </p>
+<ul>
+	<li>Click  the <em>Check-in Selected Files</em> button <img src="../Images/checkinSelect.gif" alt="Check in selected files" width="19" height="22" hspace="2" />, or </li>
+	<li>Use the <em>All</em> menu &gt; <em>Check-in, or</em></li>
+	<li><em>use the keyboard chortcut, Ctrl+I</em></li>
+</ul>
+<p>
+As part of the check-in process,  you are prompted for a comment. This comment should describe the task in a sentence or two. The comment can span multiple lines. The check-in comment dialog also gives you the option to rate the level of testing yo've done. The dialog asks the question &quot;Have these changes been tested?&quot;. You can selected &quot;No&quot;, &quot;Somewhat&quot;, &quot;Thoroughly&quot;, or &quot;N/A (not applicable)&quot;.
+</p>
+<p class="note">Each  check-in comment  serves as a version name. When reviewing an incoming sync, the check-in comment will be visible in the Inbox  (expand them by clicking the down arrow to the right of the abbreviated comment) and, once it's executed, it will be listed in the project's History.</p>
+</body>
+</html>

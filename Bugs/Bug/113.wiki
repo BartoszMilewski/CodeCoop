@@ -1,0 +1,29 @@
+| Summary |STATUS.EXE doesn't report deleted files|
+| ReportedBy |Wieslaw|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 4 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+
+Bug #890 from the Web database.
+Originaly reported by Peter Verswyvelen pverswyvelen@playlogic.com
+
+It would be handy if the "STATUS.EXE -a" command line would return the status of all directories, not only all files. 
+
+---
+The STATUS.EXE command line tool does not seem to report files that are deleted and which much be checked in. 
+
+How can we find out which files are removed and deleted from the project? 
+
+We need this because we have our own GUI client that calls CHECKIN.EXE, passing all the files that must be checked in.
+
+|Date|Who|Comment|
+|8/13/2004|Bartek|Yes, report state of directories--especially important for New and Deleted directories|
+|9/21/2004|Wiesiek|Add private Code Co-op method that will return a absolute path list of all deleted project files/folders.|
+

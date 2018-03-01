@@ -1,0 +1,16 @@
+| Summary |BC Differ 3.0 line copying problem|
+| ReportedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |25 czerwca 2007|
+==Description 
+When we invoke BC Differ 3.0 with the left side marked as read-only (in both XLM and non-XML cases) it is impossible to copy lines from the left side to the rigth side - from version before to the current version.
+Right click on the changed line in the left side and you will see copy items disabled. Right click on the changed line in the right side and you will copy item enabled.
+Are we passing incorrectly the read-only information or they interpret it incorrectly?
+

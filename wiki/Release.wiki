@@ -1,0 +1,102 @@
+# Changes in code:
+## Set Version number -- Common\'''BuildOptions.h'''
+## Update copyright notice in Common\BuildOptions.h: © Reliable Software 1996 -- '''2010'''
+## Edit '''CmdLine/ReadMe.txt''' file
+## In debug builds: Set Expiration date -- License\TimeLock.h
+## In major version builds: Set RELEASE_TIME in Common\Trial.h <br/><span class="code">unsigned long const RELEASE_TIME = 0x3df60000; // Dec 10, 2002</span>
+## Update Release Notes:
+### Setup\'''ReleaseNotes.txt''' 
+### Setup\Help\'''ReleaseNotes.html'''
+## Update version resource for Code Co-op, Dispatcher and Differ - change only copyrigth if necessary, other fileds are defined in BuildOptions.h (edit resource file).
+## Update license : Common\CoopLicense.txt. Debbie creates/manages license docs. They are stored as licenseXX.doc files in Setup folder.
+### Check-out Common/CoopLicense.txt
+### Open appropriate Setup/LicenseXX.doc
+### Save it as Common/CoopLicense.txt
+## Version Information -- Setup\'''CoopVersion.xml'''	<br/>To publish:
+### A new version of Co-op:<br/>Edit:
+#### &lt;LatestVersion Number="'''xxx'''">
+#### A '''headline sentence''' (the body of a &lt;Description> tag)
+#### make sure the exe name in href attribute is correct
+### A new beta version od Co-op:
+#### same as above, but in &lt;LatestBeta> tag
+###New bulletin issue:<br/>Edit:
+#### &lt;Bulletin Number="'''xxx'''" Date="'''MM/DD/YY'''">
+#### A '''headline sentence''' (the body of a &lt;Bulletin&gt; tag)	
+# Changes in '''CSS RsWeb''' project:
+## Version Bulletin -- co_op\'''Bulletin51.html'''
+### Add release notes from Setup\Help\'''ReleaseNotes.html'''
+## Download page -- co_op\'''download.html''':
+### Code Co-op v. 5.0d released March 17, 2007</nowiki>
+## Release Notes page -- co_op\Help
+### Copy '''ReleaseNotes.html''' from Setup\Help\ReleaseNotes.html	
+# Build:
+## Co-op solution: both release and release lite
+## Command Line Tools solution: release
+## Remember to get the latest BCMerge.exe from ScooterSoftware!
+# Release:
+## Run release.exe
+
+
+=Old Release Process
+# Changes in code:
+## Set Version number -- Common\BuildOptions.h, CmdLine\about.txt, CmdLine\dialog.txt, Setup\about.txt, Setup\dialog.txt, 
+## Update copyright notice in Common\BuildOptions.h: © Reliable Software 1996 -- '''2006'''
+## Edit CmdLine/ReadMe.txt file
+## In debug builds: Set Expiration date -- License\TimeLock.h
+## In major version builds: Set RELEASE_TIME in Common\Trial.h <br/><span class="code">unsigned long const RELEASE_TIME = 0x3df60000; // Dec 10, 2002</span>
+## Update Release Notes:
+### Setup\ReleaseNotes.txt 
+### Setup\Help\ReleaseNotes.html
+## Update version resource for Code Co-op, Dispatcher and Differ - change only copyrigth if necessary, other fileds are defined in buildoptions.h (edit resource file).
+## Update license : Common\CoopLicense.txt. Debbie creates/manages license docs. They are stored as licenseXX.doc files in Setup folder.
+### Check-out Common/CoopLicense.txt
+### Open appropriate Setup/LicenseXX.doc
+### Save it as Common/CoopLicense.txt
+## Version Information -- Setup\CoopVersion.xml	<br/>To publish:
+### A new version of Co-op:<br/>Edit:
+#### &lt;LatestVersion Number="'''xxx'''">
+#### A '''headline sentence''' (the body of a &lt;Description> tag)
+#### make sure the exe name in href attribute is correct
+### A new beta version od Co-op:
+#### same as above, but in &lt;LatestBeta> tag
+###New bulletin issue:<br/>Edit:
+#### &lt;Bulletin Number="'''xxx'''" Date="'''MM/DD/YY'''">
+#### A '''headline sentence''' (the body of a &lt;Bulletin> tag)	
+# Build:
+## Co-op solution
+## Command Line Tools solution (before the next step!)
+# Build Setup exe
+## Remember to get the latest BCMerge.exe from ScooterSoftware!
+## Run copyX.bat
+## Open Setup\binX folder
+## Select all setup files and Add To Zip
+## Select all PDBs from setup\pdb-x and create a zipfile. Give it a meaningful name! Place the pdb zip close to the co-op.zip.
+## Update the files Setup\about.txt and Setup\dialog.txt
+## Run WinZip Self-Extractor to create co-op.exe
+# Repeat steps for Code Co-op Lite, remember to modify text in winzipSE dialog and about to include "Lite"
+# Build cmdline exe
+## Run CmdLine\copyX.bat 
+## Open CmdLine\binX folder
+## Select all files and Add To Zip, which should be in the Setup directory
+## Run WinZip Self-Extractor to create cmdline.exe (select "as admin")
+# Changes in '''CSS RsWeb''' project:
+## Version Bulletin -- co_op\BulletinX.html
+### Add release notes from Setup\Help\ReleaseNotes.html
+## Download page -- co_op\download.html:
+### &lt;strong>Code Co-op v. '''5.0'''&lt;/strong>d released '''March 17, 2007'''</nowiki>
+## Release Notes page -- co_op\Help
+### Copy ReleaseNotes.html from Setup\Help\ReleaseNotes.html	
+# Upload
+## Make sure that the following files are present in the \Setup folder
+### co-op.exe
+### co-opX.exe 
+### co-opLite.exe
+### co-opLiteX.exe 
+### cmdline.exe
+### cmdlineX.exe  
+## Modify file uploadAll.txt - change co-opX.exe, cmdlineX.exe and BulletinX.html to reflect released version of Code Co-op project.
+## Execute uploadAll.bat with the path to the project "CSS RSWeb" to update our Web site.
+# Co-op
+## Add label "X.Y version released".
+
+

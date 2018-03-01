@@ -1,0 +1,9 @@
+-setup
+-i setup.ico
+-a about.txt
+-t dialog.txt
+-le
+-st"Code Co-op Setup"
+-runasadmin
+-c CoopSetup.exe
+

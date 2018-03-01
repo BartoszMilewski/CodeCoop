@@ -1,0 +1,16 @@
+| Summary |Pasting a r/o file into project|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Saturday, November 25, 2006|
+==Description 
+I have two projects. There is a file foo.txt in both (not necessarily identical). I drag this file from one project to another. The target is checked out and overwritten as expected. However the file is left r/o, so I can't edit it.
+==Resolution
+After copying droped files to the target project make sure that all dropped files don't have the read-only attribute.
+

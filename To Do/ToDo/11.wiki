@@ -1,0 +1,10 @@
+| Summary |Wikify RSWL distribution|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |2|
+| Status |Done|
+| DateReported |Monday, October 02, 2006|
+==Description
+* Start wiki documentation of RSWL
+* Replace RSWL download with the beta of 5.0 (maybe after beta 2).

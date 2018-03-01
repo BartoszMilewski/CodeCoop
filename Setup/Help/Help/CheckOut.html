@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Checking out a file</title>
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>Checking Out a File.</h1>
+<p>
+To edit a file that's part of the project, you have to first check it out. From the<strong> Files tab</strong> select your file/s and do one of the following: </p>
+<ul>
+	<li class="first"><span class="first"><em>Check-out</em> <img src="../Images/checkout_button.gif" alt="check-out button" width="16" height="15" hspace="2" /> button in toolbar </span></li>
+	<li><span class="first"><b>Ctrl-O</b> from the keyboar</span><span class="first">d</span></li>
+	<li class="first"><em>Selection or Context </em>menu<em> &gt; Check-Out</em></li>
+</ul>
+<p>
+Checking out a file makes it <b>writable. </b>It also creates a backup of the current state of the file in the Code Co-op's database. This backup is used as a base for comparison when reviewing changes or creating  the script upon check-in. You can <a href="UnCheckOut.html">Un-CheckOut</a> the file (the <em>Un-CheckOut</em> button)--return to the state before check-out, if you change your mind before checking it in.
+</p>
+<p>You can also:</p>
+<ul>
+	<li>Check out all the files in the current directory by clicking the <em>Check Out All</em> <img src="../Images/checkoutAll_button.gif" alt="Check Out All button" width="16" height="15" hspace="2" /> button</li>
+	<li>Select <em>Check Out</em> from the <em>All</em> menu. </li>
+	<li>Do a recursive check-out</li>
+	<li>Select a file and then <em> Deep Check-out</em> from the <em>All</em> menu which checks out all the files in the current directory and all its subdirectories. </li>
+	<li>Select a folder and then <em>Deep Check-out</em> from the <em>Selection</em> menu which will check out the selected directory and all its children</li>
+</ul>
+<h2>Viewing the Checked out Files</h2>
+<p>
+After a  check-out, you'll see all the files in the <a href="CheckInTab.html">Check-in Area</a>. Files that have been  modified will say &quot;<em>Edited</em>&quot; in the <em>Changed</em> column. Clicking <em>Refresh</em> <img src="../Images/refresh.gif" alt="Refresh Button" width="13" height="16" hspace="2" /> will update this information. To see all the <em>Edited</em> files easily, click on the Change column. All the changed files will appear at the top of the list by default. You can also sort the files by any of the other column headings. After you're done reviewing changes, click the <em>Check-in All</em> button. The files that haven't been changed will be conveniently ignored in the change script.
+</p>
+<h2>Checking out a file with third party software</h2>
+<p>
+You can  perform a check-out from the built in Differ/Editor. The moment you make your first edit, a dialog will pop up asking if you want to check the file out. Advanced users usually skip this dialog by selecting "Don't show this dialog again" checkbox.
+</p>
+
+<p>You can check-out files from any application that uses <a href="integrate.html">Microsoft SCC API </a>, in particular <b>VisualStudio</b>.</p>
+</body>
+</html>

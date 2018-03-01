@@ -1,0 +1,19 @@
+| Summary |Deadlocking co-op|
+| ReportedBy |Bartosz Milewski|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Unknown|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |Sunday, August 26, 2007|
+==Description 
+Dave Calkins reported the deadlocked background co-op. He was running the command:
+|coopcmd -p:1  -c:"Help_SaveDiagnostics catalog:\"yes\" target:\"c:\Documents and Settings\coop\Local Settings\Temp\1\diag.txt\""|
+many times a day, until it deadlocked. It could be thtat the project with ID 1 received a script while the command was executing or the other way around. The first thing to do is to reproduce it with the ''release'' version. Then we should try the debug version and attach the debugger after the deadlock. We might also try to run the server under the debugger, but chances are the bug won't happen then. Still, worth trying!
+==Comments
+Cannot reproduce. I was running the following batch file couple of times with release and debug versions and no deadlock detected.
+---
+There was a lock inversion in IPC Queue. Model lock was taken under the queue lock. The fix is to release the queue lock while taking the model lock.

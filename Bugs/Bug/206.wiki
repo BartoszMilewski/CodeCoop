@@ -1,0 +1,14 @@
+| Summary |Exclusive access to catalog fails|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Sometimes|
+| Severity |Serious|
+| Status |Open|
+| Priority |1|
+| Resolution | Pending |
+| DateReported |Friday, September 05, 2008|
+==Description 
+The error is "Cannot open switch.bin. The file is in use by another process.". Catalog's switch.bin is protected by a semaphore, so it can only be accessed by one process. We need to write a test program that tests a semaphore / file access on multiple processes.
+

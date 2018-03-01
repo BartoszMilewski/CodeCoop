@@ -1,0 +1,8 @@
+= WorkQueue::TransferRequests
+Synchronized method
+== Arguements
+* scriptTicketList: ScriptVector (auto_vector<ScriptTicket>)
+== Implementation
+* For each script
+** pop it from scriptTicketList, add to _toDoList, and add script name to _knownScriptFiles
+* reset timeout

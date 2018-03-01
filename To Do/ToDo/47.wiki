@@ -1,0 +1,9 @@
+| Summary |Open with... in file view|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Tuesday, November 13, 2007|
+==Description
+Add "Open with..." to context menu (Selection menu) in file view. This should work just like the shell's open with (right now we only allow the execution of the default action).

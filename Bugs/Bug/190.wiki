@@ -1,0 +1,14 @@
+| Summary |Fix "revisit: use XML" in Differ|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |3|
+| Resolution | Fixed |
+| DateReported |Wednesday, August 08, 2007|
+==Description 
+There is still some functionality in the differ which hasn't been reimplemented in the new XML system.
+

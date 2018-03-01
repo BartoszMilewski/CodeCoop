@@ -1,0 +1,9 @@
+=Bartosz
+==Open Pending Bugs
+? SELECT Summary, Component, Priority FROM bug WHERE AssignedTo = Bartosz AND Status = Open AND Resolution=Pending ORDER BY Priority
+==Open Resolved
+? SELECT Summary, Component, Resolution, Priority DELETE FROM bug WHERE AssignedTo = Bartosz AND Status = Open AND Resolution<>Pending ORDER BY Priority
+
+==Not Open
+? SELECT Summary, Resolution, Status, DELETE FROM bug WHERE AssignedTo = Bartosz AND Status <> Open
+

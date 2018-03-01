@@ -1,0 +1,7 @@
+= Mailbox::Db::XGetInsertDisposition
+Arguments: ScriptFile (const reference)
+* if not membership, return Insert
+* if we don't know the modified member, return Insert (special case for 4.0)
+* extract senderId
+* if we don't know about sender, return Insert (special for 4.0)
+* 4.0 code

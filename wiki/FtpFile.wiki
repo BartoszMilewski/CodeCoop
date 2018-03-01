@@ -1,0 +1,19 @@
+= Ftp::File
+Inherits from pure interface [[ActiveCopyFile]]. Represents a remote file on an FTP server.
+==Data
+* path and file name
+* Ftp::Session
+* Internet::AutoHandle
+* Ftp::AutoHandle
+* file: auto_ptr to [[FtpRemoteFile|Ftp::RemoteFile]]
+==Methods
+* Constructor: initializes session with server, user, and password. Arguments:
+** server name (e.g., ftp.relisoft.com)
+** path and file name
+** user and password
+* OpenRead
+** establish internet connection, session, and open ftp handle
+** change directory
+** Create Ftp::FileReadable and story it in _file
+* Read and Write (buf, size)
+** Delegate to RemoteFile methods

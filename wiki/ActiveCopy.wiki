@@ -1,0 +1,22 @@
+=ActiveCopy
+Spawns a worker thread, which copies source file to destination file in chunks of fixed size. After every chunk, it notifies the [[CopyProgressSink]]. Source file and destination file are [[ActiveCopyFile]]s.
+==Data
+* sink: [[CopyProgressSink]]
+* worker: auto_active pointer to ActiveCopy::Worker (below)
+==Methods
+* Constructor ([[CopyProgressSink]]): stores sink.
+* StartCopy ([[ActiveCopyFile]] src, [[ActiveCopyFile]] dst)
+** Create ActiveCopy::Worker with the two files and sink
+==ActiveCopy::Worker
+Inherits from ActiveObject.
+* Data: two ActiveCopyFiles and the sink
+* Run
+** Open source file for read: sourceFile.OpenRead
+** Open destination file for write: destFile.OpenWrite
+** Loop
+*** Read source to chunk buffer
+*** Write chunk buffer to destination
+*** Call sink->OnProgress passing total size and size transferred
+** Commit destination file
+** Call sink->OnCompleted
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Request Verification</title>
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Request Project Verification</h1>
+
+<p>If you're suspecting that the project <b>membership list is out of sync</b> with other members' lists, you can synchronize it using Project>Request Verification menu item. (For instance, you may know that a particular  member has defected from the project, but he or she still shows in your membership list.)</p>
+
+<p>Code Co-op will send a special "verification request" script to a selected project member. In response, that member's Code Co-op will send back the information about its own membership list, as well as the list of recent scripts that you might have missed.</p>
+
+<p>Verification request is also sent after you <b>change your status</b> in the project from "observer" to "voting member". This is a necessery precaution, because observers may have gaps in their histories.</p>
+<p>Similarly, verification is performed in all projects after Code Co-op database has been <a href="RestoreFromBackup.html">restored from backup</a>.</p>
+
+<p>By default, after requesting a verification and before receiving back the verification script, all <b>check-ins in the project are blocked</b>. This is to prevent check-ins that could reject large portions of project history (the portions unknown to the current member).</p>
+
+<p>Note: If you are blocked waiting for verification request from one member, you can always re-issue a verification request to another member. You can also select the checkbox "Don't block check-ins" while doing that.</p>
+
+<p>When verification is requested, the following dialog is displayed, in which you can select the member to whom the verification request will be sent (by default, it's the project administrator).</p>
+
+<p class="image"><img src="../images/RequestVerification.gif"/></p>
+
+</body>
+</html>

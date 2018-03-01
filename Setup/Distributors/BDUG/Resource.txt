@@ -1,0 +1,5 @@
+Borland Delphi Users Group
+    ID_WWW_HOME_PAGE        "http://www.relisoft.com"
+    ID_WWW_PURCHASE_LICENSE "http://www.qbssoftware.com/BUGzone/product_overview.asp?product=CODECOOP"
+
+

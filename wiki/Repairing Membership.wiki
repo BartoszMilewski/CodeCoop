@@ -1,0 +1,55 @@
+= Repairing Membership Tree
+* Removing duplicate scripts/placeholders
+* Finding forks whose branches start with scripts from the same user
+---
+* Do tree traversal with a RepairGatherer
+
+=Repair Gatherer
+* members: stack of segments, set of visited nodes, doRemove flag (initialy false)
+== ProcessNode
+* if ID is in the set (duplicate!)
+** if top segment empty, set doRemove and mark segment as doRemove
+** else (duplicate inside a segment)
+*** call Push with its predecessor as "fake" branchpoint
+*** set doRemove and mark the new to segment as doRemove
+* if !doRemove
+** insert ID into visited set
+* top segment push script ID
+== Push
+* create new empty segment
+** set branch ID
+** inherit doRemove flag from previous segment
+== BackTo (branchPoint) ???
+* do
+** pop top segment
+** if it's marked doRemove, remove all scripts
+** else clear doRemove flag
+* while segment branch point != branchPoint
+
+==Problems
+During repair script id is not a good key for tree search. Better is tree index.
+
+==Tree in which RepairGatherer deletes too many nodes
+
+             0-84
+      [0-38]  |  <-- missing script node (duplicate)
+        |     |
+ 0-82   |     |
+ 0-7a   |     |
+   +---0-77   |
+        +-- 0-38 <-- the original correct script 0-38
+             0-2
+
+RepairGatherer deletes nodes 0-38 (missing) and 0-84. Why 0-84? Because during tree traversal we visit nodes in the linear order, so after visitng the node [0-38] (missing duplicate) we visit node 0-84. Node 0-84 has predecessor 0-83 which is equal to the previous node (missing 0-38), so the node 0-84 is pushed back onto the 'do delete' segment containing 0-38.
+
+This happens because there is an alternative interpretation of this history:
+
+       0-84
+      [0-38]  <-- missing script node (duplicate)
+        |
+ 0-82   |
+ 0-7a   |
+   +---0-77
+       0-38 <-- the original correct script 0-38
+       0-2
+

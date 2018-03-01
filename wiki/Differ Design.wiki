@@ -1,0 +1,44 @@
+=Differ Design
+* [[DifferToDo|To Do]]
+* [[DifferArguments]]
+==Callers
+===As Editor
+* ::ExecuteEditor (MergerProxy.cpp)
+** Commander::Selection_Edit
+** Model::Open
+*** with uname
+** Model::OpenHistoryDiff
+*** when IsSimpleEdit (info from restorer.CreateDifferArgs
+
+===As Differ
+* ::ExecuteDiffer
+** Model::Open
+*** if not merge
+*** if called with "show only local changes" -- from the check-in area
+*** calls shotgun Model::AddProjectPaths '''commented out'''
+** Model::OpenHistoryDiff
+*** if not simple edit
+
+===As Merger
+* ::ExecuteMerger
+** Model::Open
+*** if file state merge content (and not "show only local changes")
+** MergeExec::MergeContent
+*** MergeCreateExec::DoMerge
+*** MergeReCreateExec::DoMerge
+*** MergeContentsExec::DoMerge
+* ::ExecuteAutoMerger
+** MergeExec::MergeContent
+
+*Merge Execs are created in HistoricalFiles::GetMergeExec
+** DoMerge called in
+*** Commander::DoMergeFileVersion
+*** Commander::DoAutoMergeFileVersion
+
+===Summary
+* Commander::Selection_Edit
+* Commander::DoMergeFileVersion
+* Commander::DoAutoMergeFileVersion
+* Model::Open
+* Model::OpenHistoryDiff
+* Model::MergeContent

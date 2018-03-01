@@ -1,0 +1,15 @@
+| Summary |Assertion: AveCharWidth|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Resolution | Non Repro |
+| Priority | 3 |
+| DateReported |Thursday, October 12, 2006|
+==Description 
+Eddie's report:
+
+[[Image:92]]

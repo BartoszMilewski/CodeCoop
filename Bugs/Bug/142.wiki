@@ -1,0 +1,23 @@
+| Summary |Dragged file appears not in project|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority | 1 |
+| Resolution | Cannot reproduce |
+| DateReported |Tuesday, October 31, 2006|
+==Description 
+Stefan Gartz:
+
+I added a file by "drag n drop" and the "new" indicator was not shown. I switch tab to "check in area" and there it was new.
+
+I restarted and there was a promt that there was some problem (I dont remember the text. ) and now all is OK.
+
+[[Image:142a]]
+
+[[Image:142b]]
+
+[[Image:142c]]

@@ -1,0 +1,16 @@
+| Summary |Unnecessary limitation in the e-mail dialog|
+| ReportedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Dispatcher|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |29 grudnia 2006|
+==Description 
+The SMTP port number I need to use is 5190, but your GUI only
+allows me to enter a three digit number.
+
+

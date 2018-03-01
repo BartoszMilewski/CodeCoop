@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="WinLib.lib"/>
+    <OBJFILES value="..\..\..\winlib31\Sys\RegKey.obj ..\..\..\winlib31\Sys\WinString.obj 
+      ..\..\..\winlib31\Sys\Dll.obj ..\..\..\winlib31\File\File.obj 
+      ..\..\..\winlib31\LightString.obj ..\..\..\winlib31\File\Path.obj 
+      ..\..\..\winlib31\Ex\WinEx.obj"/>
+    <RESFILES value=""/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi vcldb.bpi adortl.bpi 
+      ibsmp.bpi bdertl.bpi vcldbx.bpi qrpt.bpi teeui.bpi teedb.bpi tee.bpi 
+      dss.bpi teeqr.bpi ibxpress.bpi dsnap.bpi vclie.bpi inetdb.bpi inet.bpi 
+      nmfast.bpi webdsnap.bpi bcbie.bpi dclocx.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;..\..\..\winlib31\Sys;..\..\..\winlib31\Sys;..\..\..\winlib31\Sys;..\..\..\winlib31\File;..\..\..\winlib31;..\..\..\winlib31\File;..\..\..\winlib31\Ex"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <LINKER value="TLib"/>
+    <USERDEFINES value="BORLAND_COMPILER=1"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="WinLib.bpf"/>
+    <INCLUDEPATH value="..\..\..\winlib31\Sys;..\..\..\WinLib31\Ex;..\..\..\WinLib31;..\..\..\WinLib31\File;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\..\..\winlib31\Sys;..\..\..\WinLib31\File;..\..\..\WinLib31\Ex;..\..\..\WinLib31;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <LISTFILE value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I..\..\..\winlib31\Sys -I..\..\..\WinLib31\Ex -I..\..\..\WinLib31 
+      -I..\..\..\WinLib31\File -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix 
+      cpp -DBORLAND_COMPILER=1 -boa"/>
+    <CFLAG1 value="-O2 -H=c:\PROGRA~1\borland\CBUILD~2\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b- 
+      -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value=""/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="$(OBJFILES)"/>
+    <ALLLIB value=""/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="WinLib.bpf" FORMNAME="" UNITNAME="WinLib" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\winlib31\Sys\RegKey.cpp" FORMNAME="" UNITNAME="RegKey" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\winlib31\Sys\WinString.cpp" FORMNAME="" UNITNAME="WinString" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\winlib31\Sys\Dll.cpp" FORMNAME="" UNITNAME="Dll" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\winlib31\File\File.cpp" FORMNAME="" UNITNAME="File" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\winlib31\LightString.cpp" FORMNAME="" UNITNAME="LightString" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\winlib31\File\Path.cpp" FORMNAME="" UNITNAME="Path" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\winlib31\Ex\WinEx.cpp" FORMNAME="" UNITNAME="WinEx" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\winlib31\File\Path.h" FORMNAME="" UNITNAME="Path.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=13
+Item0=..\..\..\winlib31\Sys;..\..\..\WinLib31\Ex;..\..\..\WinLib31;..\..\..\WinLib31\File;$(BCB)\include;$(BCB)\include\vcl
+Item1=..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;..\..\WinLib\Sys;..\..\..\winlib31\Sys;..\..\..\WinLib31\Ex;..\..\..\WinLib31;..\..\..\WinLib31\File;$(BCB)\include;$(BCB)\include\vcl
+Item2=..\..\..\winlib31\Sys;..\..\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;$(BCB)\include;$(BCB)\include\vcl
+Item3=..\..\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;$(BCB)\include;$(BCB)\include\vcl
+Item4=C:\Program Files\Microsoft Visual Studio.NET\Vc7\include;..\..\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;$(BCB)\include;$(BCB)\include\vcl
+Item5=..\..\WinLib\Sys;..\..WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;$(BCB)\include;$(BCB)\include\vcl
+Item6=..\..\WinLib\Sys;..\..WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;$(BCB)\include\stlport;$(BCB)\include\vcl
+Item7=..\..WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;$(BCB)\include\stlport;$(BCB)\include\vcl
+Item8=..WinLib\Sys;..0\WinLib\Sys;..op40\WinLib\Sys;..o-op40\WinLib\Sys;..\co-op40\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;..\..\WinLib\Sys;..\..\co-op40\WinLib;..\..\co-op40\WinLib\Sys;..\..\co-op40\WinLib\Ex;..\..\co-op40\WinLib\File;..\WinLib;..\WinLib\Sys;..\WinLib\Ex;..\WinLib\File;$(BCB)\include\stlport;$(BCB)\include\vcl
+Item9=..WinLib\Sys;..0\WinLib\Sys;..op40\WinLib\Sys;..o-op40\WinLib\Sys;..\co-op40\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;..\..\WinLib\Sys;..\..\co-op40\WinLib;..\..\co-op40\WinLib\Sys;..\..\co-op40\WinLib\Ex;..\..\co-op40\WinLib\File;..\WinLib;..\WinLib\Sys;..\WinLib\Ex;..\WinLib\File;$(BCB)\include;$(BCB)\include\vcl
+Item10=..WinLib\Sys;..0\WinLib\Sys;..op40\WinLib\Sys;..o-op40\WinLib\Sys;..\co-op40\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;..\..\WinLib\Sys;..\..\co-op40\WinLib;..\..\co-op40\WinLib\Sys;..\..\co-op40\WinLib\Ex;..\..\co-op40\WinLib\File;..\WinLib;..\WinLib\Sys;..\WinLib\Ex;..\WinLib\File;..\WinLib\Sys;..\WinLib\Ex;..\WinLib\File;..\WinLib;$(BCB)\include;$(BCB)\include\vcl
+Item11=..\WinLib;$(BCB)\include;$(BCB)\include\vcl
+Item12=..\WinLib\Sys;..\WinLib\Ex;..\WinLib\File;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=11
+Item0=..\..\..\winlib31\Sys;..\..\..\WinLib31\File;..\..\..\WinLib31\Ex;..\..\..\WinLib31;$(BCB)\lib\obj;$(BCB)\lib
+Item1=..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;..\..\WinLib\Sys;..\..\..\winlib31\Sys;..\..\..\WinLib31\File;..\..\..\WinLib31\Ex;..\..\..\WinLib31;$(BCB)\lib\obj;$(BCB)\lib
+Item2=..\..\..\winlib31\Sys;..\..\..\WinLib31\File;..\..\..\WinLib31\Sys;..\..\..\WinLib31\Ex;..\..\..\WinLib31;$(BCB)\lib\obj;$(BCB)\lib
+Item3=..\..\..\winlib31\Sys;..\..\WinLib\File;..\..\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;$(BCB)\lib\obj;$(BCB)\lib
+Item4=..\..\WinLib\File;..\..\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;$(BCB)\lib\obj;$(BCB)\lib
+Item5=C:\Program Files\Microsoft Visual Studio.NET\Vc7\lib;..\..\WinLib\File;..\..\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;$(BCB)\lib\obj;$(BCB)\lib
+Item6=..\..\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;$(BCB)\lib\obj;$(BCB)\lib
+Item7=..WinLib\Sys;..0\WinLib\Sys;..op40\WinLib\Sys;..o-op40\WinLib\Sys;..\co-op40\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;..\..\WinLib\Sys;..\..\co-op40\WinLib;..\..\co-op40\WinLib\Sys;..\..\co-op40\WinLib\Ex;..\..\co-op40\WinLib\File;..\WinLib;..\WinLib\Sys;..\WinLib\Ex;..\WinLib\File;$(BCB)\lib\obj;$(BCB)\lib
+Item8=..WinLib\Sys;..0\WinLib\Sys;..op40\WinLib\Sys;..o-op40\WinLib\Sys;..\co-op40\WinLib\Sys;..\..\WinLib\Ex;..\..\WinLib;..\..\WinLib\File;..\..\WinLib\Sys;..\..\co-op40\WinLib;..\..\co-op40\WinLib\Sys;..\..\co-op40\WinLib\Ex;..\..\co-op40\WinLib\File;..\WinLib;..\WinLib\Sys;..\WinLib\Ex;..\WinLib\File;..\WinLib\Sys;..\WinLib\Ex;..\WinLib\File;..\WinLib;$(BCB)\lib\obj;$(BCB)\lib
+Item9=..\WinLib;$(BCB)\lib\obj;$(BCB)\lib
+Item10=..\WinLib\Sys;..\WinLib\Ex;..\WinLib\File;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=4
+Item0=BORLAND_COMPILER=1
+Item1=BORLAND_COMPILER=1;_DEBUG
+Item2=BORLAND_COMPILER
+Item3=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=C:\Program Files\Borland\CBuilder6\Bin\bcb.exe
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+  </IDEOPTIONS>
+</PROJECT>

@@ -1,0 +1,8 @@
+= CopyProgressSink
+Pure interface. All methods return bool: false to abort copy.
+==Methods
+* OnConnecting
+* OnProgress (bytesTotal, bytesTransferred)
+* OnCompleted
+* OnTransientError
+* OnFatalError

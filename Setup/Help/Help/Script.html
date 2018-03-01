@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>The contents of a script</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>Differential script</h1>
+<p class="first">Every check-in produces a script. The script contains all the information about the change&mdash;enough to be able to recreate the new state of the project based on the previous state. The script, by default, is automatically distributed to all project members in the form of a file. It is routed to the recipient Co-op's <a href="inboxTab.html">Inbox</a> tab where it has to b e executed to create the same new state of the project.</p>
+ 
+<p class="note">  If the file being checked in is very large&mdash;multi-MBs&mdash;the diffing may take a long time. For binary files, Code Co-op uses a very efficient binary differ, to minimize the size of the script. All scripts are compressed and  big ones are split into chunks for e-mail transoprt.</p>
+<h2>Script routing</h2>
+<p class="first">A script is a regular file with the extension <em><b>.snc</b></em> (or <strong><em>.znc</em></strong> when compressed). The outgoing script is deposited in the <b>Public Inbox</b> folder for routing (it's usually located in  your co-op\PublicInbox directory). The <a href="Dispatcher.html">Dispatcher</a> then takes care of transporting it to other members of the project.</p>
+<br/>
+
+<p>See also:
+<ul>
+<li><a  href="EmailScript.html">Distributing scripts through email</a></li>
+<li><a  href="SyncScripts.html">Synchronizing or executing a script</a></li>
+<li><a  href="ReviewScript.html">Reviewing the changes in a script</a></li>
+</ul>
+</p>
+</body>
+</html>

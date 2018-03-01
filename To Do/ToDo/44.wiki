@@ -1,0 +1,28 @@
+| Summary |Integrate ECMerge|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |1|
+| Status |Open|
+| DateReported |Monday, October 15, 2007|
+==Description
+I was playing with the registry. I'm not sure if these work any more, but it's a good starting point.
+
+I was trying to be clever with diffing from history. Pretend that it's merge, so that the current version could be displayed as well. We should discuss it.
+
+| [HKEY_CURRENT_USER\Software\Reliable Software\Code Co-op\Preferences\Differ\Alternative]</br>
+"Path"="C:\\Program Files\\Ellié Computing\\Merge\\GuiMerge.exe"</br>
+"CmdLine"="--mode=merge3 --script-text="execute_macro('solve_all_right')" --to=\"$file2\" --title1=\"$title1\" \"$file2\" \"$file1\" \"$file2\""</br>
+"CmdLine2"="--mode=diff2 --title1=\"$title1\" --title2=\"$title2\" \"$file1\" \"$file2\""</br>
+"On"=dword:00000001</br>
+"UseXml"=dword:00000000 |
+
+| [HKEY_CURRENT_USER\Software\Reliable Software\Code Co-op\Preferences\Merger\Alternative]</br>
+"Path"="C:\\Program Files\\Ellié Computing\\Merge\\GuiMerge.exe"</br>
+"CmdLine"="--mode=merge3 --to=\"$file4\" --title0=\"$title3\" --title1=\"$title1\" --title2=\"$title2\" \"$file3\" \"$file1\" \"$file2\""</br>
+"On"=dword:00000001</br>
+"AutoPath"="C:\\Program Files\\Ellié Computing\\Merge\\Merge.exe"</br>
+"AutoCmdLine"="--mode=merge3 --quiet --to=\"$file4\"  \"$file3\" \"$file1\" \"$file2\""</br>
+"UseXml"=dword:00000000 |
+
+

@@ -1,0 +1,15 @@
+| Summary |Defect during uninstall fails|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Open|
+| Priority |2|
+| Resolution | Pending |
+| DateReported |Sunday, March 08, 2009|
+==Description 
+During uninstall, co-op server is called to defect from a project. The defect code asserts that co-op is not in quick visit and not in project (Commander.cpp 1775). The calling program is ''DefectFromAll''.
+
+

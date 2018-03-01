@@ -1,0 +1,52 @@
+=VS Integration
+==Binding
+If you already have a Code Co-op project that is also a Visual Studio solution and you want to tell Visual Studio to use Code Co-op to check files out for you, follow these instructions.
+In Visual Studio:
+* Select "Source Control" from the "File" menu.
+* Select "Change Source Control..." submenu.
+* You'll see a list that contains the solution file and one or more projects in this solution.
+* Select them all (shift-click the last item)
+* Press the "Bind" button. The "Connected" checkboxes should change to the checked state.
+
+[[Image:Bind]]
+==Check Out
+By default, at this point, VS will ask you if you want to check out your .sln and .vcproj files. You don't want VS to be asking you these questions again, so check the "Don't show..." checkbox at the lower left corner and press the button "Check Out".
+
+[[Image:CheckOut]]
+==Allow Replacement
+Then VS will ask you if you want to protect your files from the source control overwriting them. Select "Allow...". This option makes sense only for server-based source-control systems.
+
+[[Image:AllowReplacement]]
+
+At this point, VS will check out and modify your .sln and .vcproj files. Open the Code Co-op project and check those files in. 
+
+==Options
+The major advantage of integration is that VS will be able to check files out as soon as you start editing them. To make your work flow smooth, you probably don't want VS to keep asking you whether you want to check a file out every time. So go to Tools>Options in VS, Select "Environment" under "Source Control" and select the checkbox "Don't show Check out dialog box when checking out items". Also select the option "Check out automatically" for the "On Edit" behavior choices. Do not check any other checkboxes in this dialog!
+
+[[Image:Options]]
+==Adding existing Item
+Right-click on a project (or folder) in the Solution Explorer, select Add.Existing Item...
+<br/>A selected file is already added to Co-op project.
+<br/>Recommended action: Add the item
+[[Image:AddExisting|Add Existing Dialog]]
+
+==Deleting a File
+Right-click on a file in the Solution Explorer and selects Exclude From Project command from the context menu.
+<br/>Recommended action: the dialog is self-explanatory
+[[Image:Delete Dialog|Delete Dialog]]
+
+==Removing or Deleting Files from VS Project
+Select a file in the Solution Explorer and press Delete button or
+<br/>Right-click on a file in the Solution Exploror and select Remove command from the context menu.
+<br/>Recommended action: Doesn't matter. In both cases the file is removed from Code Co-op project.
+[[Image:RemoveOrDelete|Remove Or Delete Dialog]]
+
+==Removing Files from VS Project
+''I couldn't reproduce this situation, so let's not mention it in the Help''.
+
+This dialog is displayed when one selects "Remove" in the previous dialog for a checked-out file.
+[[Image:2005delete_by_sccp|Cannot Delete Items Dialog]]
+===Unloading Project
+This happens usually when the project file has changed outside of VS and the project is reloaded. The user should check the checkbox and select Continue.
+[[Image:UnloadProject|Unload Project]]
+

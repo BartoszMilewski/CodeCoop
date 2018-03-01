@@ -1,0 +1,1684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Diff">
+      <UniqueIdentifier>{17d8276a-462f-4cfe-9dca-372867a52a85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{e05a69a4-7f41-42e9-a918-c7bdaaf9b379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serial">
+      <UniqueIdentifier>{5283e506-eeab-497c-b1a4-fe636a496189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{cf533251-125b-4605-a69f-985a3e2a4914}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\WikiBrowser">
+      <UniqueIdentifier>{ce85a278-a0bf-4118-a7c3-1a92ea75e2fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{1b424855-d857-4d38-9132-8b4e92e825df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="All Common">
+      <UniqueIdentifier>{0cedb678-749c-4c4d-9d2f-a464387a8e6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SccDll">
+      <UniqueIdentifier>{b510f193-7768-4a85-958c-2c30cad46c92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wiki">
+      <UniqueIdentifier>{f026d6b8-32c9-486f-ae1e-695cf96bf943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Email">
+      <UniqueIdentifier>{127ef42a-8936-448d-bdb4-1367814ca168}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Licensing">
+      <UniqueIdentifier>{dea93b6d-4461-44cd-9192-d48df6d3deee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Diff\BinDiffer.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\BlockFinder.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\CluLines.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\Cluster.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\Clustering.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\CluSum.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\Diff.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\LineBuf.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\LineCounter.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\Lines.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\Merge.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\ScriptSerialize.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\Serialize.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\SerString.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\SysPath.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\Transact.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\Transactable.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\XBitSet.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\AboutDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\AccelTab.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\AddFilesDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\BackupDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\BackupSummaryDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\BeginnerMode.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\BranchBrowser.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\BranchView.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\ButtonTable.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\CheckInDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ChecksumDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ConflictDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\Controllers.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\Diagnostics.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\DisplayPane.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\DisplayWin.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ExportImportHistoryDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ExportProject.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\FeedbackBar.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\FileAttribMergeDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\FileDiffDisplay.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\FileDropDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\FilePropertiesDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\FtpOpenFileDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\HelpEngine.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\HideExtensionDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Hierarchy.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\HierarchyView.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\InputSource.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\InstrumentBar.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\JoinProj.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\Layout.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\LicenseDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\LicensePrompter.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MenuTable.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MergeInstrumentBar.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MoveFilesDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\MoveProj.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\NewFile.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\NewProj.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\OpenSaveFileDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\OverdueScriptDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\ProgramOptionsDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ProjDefect.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ProjectAdminDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\ProjectBranchDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ProjectInviteDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ProjectMembers.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ProjectPropsDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ProjectRecoveryDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\PromptMode.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\ReceiverJoinDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\ReportDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\RevertDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\SaveFilesDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\SaveHtml.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\ScriptInstrumentBar.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ScriptPropertySheet.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ScriptRecipients.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\SelectFileDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\SelectIter.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\SelectProjectDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\SelectRootPathDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Tab.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\TableBrowser.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\TableViewer.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ToolOptionsDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\TreeBrowser.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\UiManager.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UpdateHubIdDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\VerifyReportDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\WidgetBrowser.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\WikiBrowser.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\WikiController.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\WikiBrowser\InPlaceBrowser.cpp">
+      <Filter>UI\WikiBrowser</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\WikiBrowser\WebBrowserSite.cpp">
+      <Filter>UI\WikiBrowser</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\ColumnInfo.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\CoopBlocker.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\DispatcherProxy.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\DistributorLicense.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\FileDisplayTable.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\HistoryRange.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MergeStatus.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\ProgramOptions.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\ProjectInviteData.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\ProjectOptionsEx.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\ProjectPathVerifier.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\RecordSet.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\TablePreferences.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\ToolOptions.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Address.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Addressee.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\AltDiffer.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\AppHelp.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\AppInfo.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\BackupFileName.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\BrowseForFolder.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Catalog.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\CheckSum.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DispatcherCmd.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DispatcherRegistry.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DispatcherScript.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DisplayFrameCtrl.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DynamicRebar.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\EditStyle.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Encryption.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\FileState.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\FileStateList.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\FtpSite.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GlobalDb.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GlobalId.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Invitee.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\IPCExchange.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\JoinProjectData.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\License.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\MemberDescription.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\MemberInfo.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Observer.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\OutputSink.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\PathRegistry.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\PopupDisplay.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\precompiled.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\PreferencesStorage.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ProjectBlueprint.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ProjectMarker.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ProjectSeats.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Prompter.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RandomUniqueName.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RegFunc.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Registry.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ReliSoftReg.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RichDumpWin.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ScriptName.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Table.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Transport.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\TransportHeader.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Trial.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\UserIdPack.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Validators.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SccDll\SccProxy.cpp">
+      <Filter>SccDll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SccDll\SccProxyEx.cpp">
+      <Filter>SccDll</Filter>
+    </ClCompile>
+    <ClCompile Include="Wiki\ExternHtmlSink.cpp">
+      <Filter>Wiki</Filter>
+    </ClCompile>
+    <ClCompile Include="Wiki\HtmlSink.cpp">
+      <Filter>Wiki</Filter>
+    </ClCompile>
+    <ClCompile Include="Wiki\LinkParser.cpp">
+      <Filter>Wiki</Filter>
+    </ClCompile>
+    <ClCompile Include="Wiki\Sql.cpp">
+      <Filter>Wiki</Filter>
+    </ClCompile>
+    <ClCompile Include="Wiki\SqlHtmlSink.cpp">
+      <Filter>Wiki</Filter>
+    </ClCompile>
+    <ClCompile Include="Wiki\SqlNode.cpp">
+      <Filter>Wiki</Filter>
+    </ClCompile>
+    <ClCompile Include="Wiki\SqlParser.cpp">
+      <Filter>Wiki</Filter>
+    </ClCompile>
+    <ClCompile Include="Wiki\WikiConverter.cpp">
+      <Filter>Wiki</Filter>
+    </ClCompile>
+    <ClCompile Include="Wiki\WikiDef.cpp">
+      <Filter>Wiki</Filter>
+    </ClCompile>
+    <ClCompile Include="Wiki\WikiLexer.cpp">
+      <Filter>Wiki</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\EmailAccount.cpp">
+      <Filter>Email</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\EmailConfig.cpp">
+      <Filter>Email</Filter>
+    </ClCompile>
+    <ClCompile Include="AckBox.cpp" />
+    <ClCompile Include="ActiveMerger.cpp" />
+    <ClCompile Include="ActivityLog.cpp" />
+    <ClCompile Include="AdminElection.cpp" />
+    <ClCompile Include="Agents.cpp" />
+    <ClCompile Include="Area.cpp" />
+    <ClCompile Include="AttributeMerge.cpp" />
+    <ClCompile Include="BackupArchive.cpp" />
+    <ClCompile Include="BackupRestorer.cpp" />
+    <ClCompile Include="BuiltInMerger.cpp" />
+    <ClCompile Include="CheckIn.cpp" />
+    <ClCompile Include="CheckInArea.cpp" />
+    <ClCompile Include="CheckoutNotifications.cpp" />
+    <ClCompile Include="Chunker.cpp" />
+    <ClCompile Include="CmdExec.cpp" />
+    <ClCompile Include="CmdLineMaker.cpp" />
+    <ClCompile Include="CmdLineSelection.cpp" />
+    <ClCompile Include="CmdMain.cpp" />
+    <ClCompile Include="CmdVector.cpp" />
+    <ClCompile Include="Commander.cpp" />
+    <ClCompile Include="Conflict.cpp" />
+    <ClCompile Include="CoopCtrl.cpp" />
+    <ClCompile Include="CoopMain.cpp" />
+    <ClCompile Include="CoopMemento.cpp" />
+    <ClCompile Include="CtrlScriptProcessor.cpp" />
+    <ClCompile Include="Database.cpp" />
+    <ClCompile Include="Directory.cpp" />
+    <ClCompile Include="DirTraversal.cpp" />
+    <ClCompile Include="ExportedHistoryTrailer.cpp" />
+    <ClCompile Include="ExtensionScanner.cpp" />
+    <ClCompile Include="FileCopyist.cpp" />
+    <ClCompile Include="FileData.cpp" />
+    <ClCompile Include="FileDb.cpp" />
+    <ClCompile Include="FileDropInfo.cpp" />
+    <ClCompile Include="FileDropInfoCollector.cpp" />
+    <ClCompile Include="FileFilter.cpp" />
+    <ClCompile Include="FileList.cpp" />
+    <ClCompile Include="FileMerge.cpp" />
+    <ClCompile Include="FileProps.cpp" />
+    <ClCompile Include="FileTransform.cpp" />
+    <ClCompile Include="FileType.cpp" />
+    <ClCompile Include="FileTyper.cpp" />
+    <ClCompile Include="FolderContents.cpp" />
+    <ClCompile Include="FtpProxy.cpp" />
+    <ClCompile Include="HistoricalFiles.cpp" />
+    <ClCompile Include="History.cpp" />
+    <ClCompile Include="HistoryChecker.cpp" />
+    <ClCompile Include="HistoryFilter.cpp" />
+    <ClCompile Include="HistoryNode.cpp" />
+    <ClCompile Include="HistoryPath.cpp" />
+    <ClCompile Include="HistoryPolicy.cpp" />
+    <ClCompile Include="HistorySortedTree.cpp" />
+    <ClCompile Include="HistoryTraversal.cpp" />
+    <ClCompile Include="Inbox.cpp" />
+    <ClCompile Include="IpcConversation.cpp" />
+    <ClCompile Include="IpcQueue.cpp" />
+    <ClCompile Include="JoinContext.cpp" />
+    <ClCompile Include="Lineage.cpp" />
+    <ClCompile Include="Mailbox.cpp" />
+    <ClCompile Include="MailboxHelper.cpp" />
+    <ClCompile Include="MailboxScriptInfo.cpp" />
+    <ClCompile Include="Mailer.cpp" />
+    <ClCompile Include="MembershipChange.cpp" />
+    <ClCompile Include="MembershipUpdateVerifier.cpp" />
+    <ClCompile Include="MemoryLog.cpp" />
+    <ClCompile Include="MergeExec.cpp" />
+    <ClCompile Include="MergerProxy.cpp" />
+    <ClCompile Include="Messengers.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="MultiLine.cpp" />
+    <ClCompile Include="PathFind.cpp" />
+    <ClCompile Include="PathSequencer.cpp" />
+    <ClCompile Include="Permissions.cpp" />
+    <ClCompile Include="PhysicalFile.cpp" />
+    <ClCompile Include="Predicate.cpp" />
+    <ClCompile Include="Project.cpp" />
+    <ClCompile Include="ProjectChecker.cpp" />
+    <ClCompile Include="ProjectDb.cpp" />
+    <ClCompile Include="ProjectPath.cpp" />
+    <ClCompile Include="ProjectProxy.cpp" />
+    <ClCompile Include="ProjectTable.cpp" />
+    <ClCompile Include="RecordSets.cpp" />
+    <ClCompile Include="RefFile.cpp" />
+    <ClCompile Include="Restorer.cpp" />
+    <ClCompile Include="ScriptBasket.cpp" />
+    <ClCompile Include="ScriptCmd.cpp" />
+    <ClCompile Include="ScriptCommandList.cpp" />
+    <ClCompile Include="ScriptCommands.cpp" />
+    <ClCompile Include="ScriptHeader.cpp" />
+    <ClCompile Include="ScriptIo.cpp" />
+    <ClCompile Include="ScriptKind.cpp" />
+    <ClCompile Include="ScriptList.cpp" />
+    <ClCompile Include="ScriptProps.cpp" />
+    <ClCompile Include="SelExec.cpp" />
+    <ClCompile Include="ServerCtrl.cpp" />
+    <ClCompile Include="Sidetrack.cpp" />
+    <ClCompile Include="Synch.cpp" />
+    <ClCompile Include="SynchArea.cpp" />
+    <ClCompile Include="SynchTrans.cpp" />
+    <ClCompile Include="TmpProjectArea.cpp" />
+    <ClCompile Include="Transformer.cpp" />
+    <ClCompile Include="UniqueName.cpp" />
+    <ClCompile Include="UnitTest.cpp" />
+    <ClCompile Include="Visitor.cpp" />
+    <ClCompile Include="WikiDirectory.cpp" />
+    <ClCompile Include="Workspace.cpp" />
+    <ClCompile Include="..\Common\OpenSaveFileData.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\CopyRequest.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Licensing\Crypt.cpp">
+      <Filter>Licensing</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Diff\BinDiffer.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\BlockFinder.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\CluLines.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\Cluster.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\Clustering.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\CluSum.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\Diff.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\DiffRecord.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\LineBuf.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\LineCounter.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\Lines.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\Merge.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\DistributorInfo.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\resource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\ScriptSerialize.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SerDateTime.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\Serialize.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SerList.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SerString.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SerVector.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SysPath.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\Transact.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\Transactable.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\XArray.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\XBitSet.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\XFileOffset.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\XLong.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\XString.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\AboutDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\AccelTab.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\AddFilesDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\BackupDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\BackupSummaryDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\BeginnerMode.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\BranchBrowser.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\BranchView.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\ButtonTable.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\CheckInDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ChecksumDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ConflictDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\Controllers.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\CoopMsg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\Diagnostics.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\DisplayMan.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\DisplayPane.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\DisplayWin.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ExportImportHistoryDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ExportProject.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\FeedbackBar.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\FileAttribMergeDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\FileDiffDisplay.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\FileDropDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\FilePropertiesDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\FtpOpenFileDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\HelpEngine.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\HideExtensionDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Hierarchy.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\HierarchyView.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Image.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\InputSource.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\InstrumentBar.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\JoinProj.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\Layout.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\LicenseDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\LicensePrompter.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\ListObserver.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\MenuTable.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\MergeInstrumentBar.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\MoveFilesDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\MoveProj.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\NewFile.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\NewProj.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\OpenSaveFileDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\OverdueScriptDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\ProgramOptionsDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ProjDefect.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ProjectAdminDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\ProjectBranchDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ProjectInviteDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ProjectMembers.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ProjectPropsDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ProjectRecoveryDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\PromptMode.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\ReceiverJoinDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\ReportDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\RevertDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\SaveFilesDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\SaveHtml.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\ScriptInstrumentBar.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ScriptPropertySheet.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ScriptRecipients.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\SelectFileDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\SelectProjectDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\SelectRootPathDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Tab.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\TableBrowser.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\TableViewer.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ToolOptionsDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\TreeBrowser.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\UiManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\UiManagerIds.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UpdateHubIdDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\VerifyReportDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\WidgetBrowser.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\WikiBrowser.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\WikiController.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\WikiBrowser\ClientSite.h">
+      <Filter>UI\WikiBrowser</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\WikiBrowser\InPlaceBrowser.h">
+      <Filter>UI\WikiBrowser</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\WikiBrowser\InPlaceSite.h">
+      <Filter>UI\WikiBrowser</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\WikiBrowser\WebBrowserEvents.h">
+      <Filter>UI\WikiBrowser</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\WikiBrowser\WebBrowserSite.h">
+      <Filter>UI\WikiBrowser</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ActivityLog.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\AdminElection.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\AttributeMerge.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CheckoutNotifications.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CmdVector.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ColumnInfo.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Conflict.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CoopBlocker.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DispatcherProxy.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DistributorLicense.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ExtensionScanner.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FeedbackMan.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FeedbackUser.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FileCtrlState.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FileDisplayTable.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FileProps.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FolderContents.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GidPredicate.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GuiCritSect.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\HistoryChecker.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\HistoryRange.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\HistoryScriptState.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MailboxScriptState.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MergeStatus.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Messengers.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MultiLine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\PathFind.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\PathSequencer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Permissions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Predicate.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ProgramOptions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ProjectInviteData.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ProjectOptionsEx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ProjectPath.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ProjectPathClassifier.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ProjectPathVerifier.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ProjectState.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\RecordSet.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ScriptProps.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\SelectionMan.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\SelectIter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\TablePreferences.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\TmpProjectArea.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ToolOptions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\UiStrings.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\UserDropPreferences.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\VerificationReport.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\VersionInfo.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Visitor.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Address.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Addressee.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\AltDiffer.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\AppHelp.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\AppInfo.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Area.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\BackupFileName.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Bookmark.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\BrowseForFolder.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\BuildOptions.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Catalog.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\CheckSum.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\CommonUserMsg.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\CoopExceptions.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DispatcherCmd.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DispatcherIpc.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DispatcherMsg.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DispatcherScript.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DisplayFrameCtrl.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DynamicRebar.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\EditStyle.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Encryption.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\FileFilter.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\FileState.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\FileStateList.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\FileTypes.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\FtpSite.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Global.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GlobalDb.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GlobalFileNames.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GlobalId.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Invitee.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\IPCExchange.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\JoinProjectData.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\License.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Lineage.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\MemberDescription.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\MemberInfo.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Observer.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\OutputSink.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Params.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PathRegistry.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PopupDisplay.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\precompiled.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PreferencesStorage.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ProjectBlueprint.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ProjectData.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ProjectDb.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ProjectMarker.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ProjectOptions.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ProjectSeats.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Prompter.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RandomUniqueName.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RegFunc.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Registry.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RegKeys.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ReliSoftReg.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RichDumpWin.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ScriptName.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Table.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\TableChange.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\TestFile.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Transport.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\TransportHeader.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Trial.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\UniqueName.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\UserId.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\UserIdPack.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Validators.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SccDll\SccProxy.h">
+      <Filter>SccDll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SccDll\SccProxyEx.h">
+      <Filter>SccDll</Filter>
+    </ClInclude>
+    <ClInclude Include="Wiki\ExternHtmlSink.h">
+      <Filter>Wiki</Filter>
+    </ClInclude>
+    <ClInclude Include="Wiki\HtmlSink.h">
+      <Filter>Wiki</Filter>
+    </ClInclude>
+    <ClInclude Include="Wiki\LinkParser.h">
+      <Filter>Wiki</Filter>
+    </ClInclude>
+    <ClInclude Include="Wiki\Sql.h">
+      <Filter>Wiki</Filter>
+    </ClInclude>
+    <ClInclude Include="Wiki\SqlHtmlSink.h">
+      <Filter>Wiki</Filter>
+    </ClInclude>
+    <ClInclude Include="Wiki\SqlNode.h">
+      <Filter>Wiki</Filter>
+    </ClInclude>
+    <ClInclude Include="Wiki\SqlParser.h">
+      <Filter>Wiki</Filter>
+    </ClInclude>
+    <ClInclude Include="Wiki\WikiConverter.h">
+      <Filter>Wiki</Filter>
+    </ClInclude>
+    <ClInclude Include="Wiki\WikiDef.h">
+      <Filter>Wiki</Filter>
+    </ClInclude>
+    <ClInclude Include="Wiki\WikiLexer.h">
+      <Filter>Wiki</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\EmailAccount.h">
+      <Filter>Email</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\EmailConfig.h">
+      <Filter>Email</Filter>
+    </ClInclude>
+    <ClInclude Include="AckBox.h" />
+    <ClInclude Include="ActiveMerger.h" />
+    <ClInclude Include="Agents.h" />
+    <ClInclude Include="BackupArchive.h" />
+    <ClInclude Include="BackupRestorer.h" />
+    <ClInclude Include="BuiltInMerger.h" />
+    <ClInclude Include="CheckInArea.h" />
+    <ClInclude Include="Chunker.h" />
+    <ClInclude Include="CmdExec.h" />
+    <ClInclude Include="CmdLineMaker.h" />
+    <ClInclude Include="CmdLineSelection.h" />
+    <ClInclude Include="Commander.h" />
+    <ClInclude Include="CoopCtrl.h" />
+    <ClInclude Include="CoopMemento.h" />
+    <ClInclude Include="CtrlScriptProcessor.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="Directory.h" />
+    <ClInclude Include="DirTraversal.h" />
+    <ClInclude Include="DummyTable.h" />
+    <ClInclude Include="ExportedHistoryTrailer.h" />
+    <ClInclude Include="FileCopyist.h" />
+    <ClInclude Include="FileData.h" />
+    <ClInclude Include="FileDataSequencer.h" />
+    <ClInclude Include="FileDb.h" />
+    <ClInclude Include="FileDropInfo.h" />
+    <ClInclude Include="FileDropInfoCollector.h" />
+    <ClInclude Include="FileList.h" />
+    <ClInclude Include="FileTag.h" />
+    <ClInclude Include="FileTrans.h" />
+    <ClInclude Include="FileTyper.h" />
+    <ClInclude Include="FolderEvent.h" />
+    <ClInclude Include="FtpProxy.h" />
+    <ClInclude Include="HistoricalFiles.h" />
+    <ClInclude Include="History.h" />
+    <ClInclude Include="HistoryFilter.h" />
+    <ClInclude Include="HistoryNode.h" />
+    <ClInclude Include="HistoryPath.h" />
+    <ClInclude Include="HistoryPolicy.h" />
+    <ClInclude Include="HistorySortedTree.h" />
+    <ClInclude Include="HistoryTraversal.h" />
+    <ClInclude Include="IpcConversation.h" />
+    <ClInclude Include="IpcQueue.h" />
+    <ClInclude Include="JoinContext.h" />
+    <ClInclude Include="Mailbox.h" />
+    <ClInclude Include="MailboxHelper.h" />
+    <ClInclude Include="MailboxScriptInfo.h" />
+    <ClInclude Include="Mailer.h" />
+    <ClInclude Include="MembershipChange.h" />
+    <ClInclude Include="MembershipUpdateVerifier.h" />
+    <ClInclude Include="Memento.h" />
+    <ClInclude Include="MemoryLog.h" />
+    <ClInclude Include="MergeExec.h" />
+    <ClInclude Include="MergerProxy.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="PhysicalFile.h" />
+    <ClInclude Include="ProjectChecker.h" />
+    <ClInclude Include="ProjectProxy.h" />
+    <ClInclude Include="ProjectTable.h" />
+    <ClInclude Include="RecordSets.h" />
+    <ClInclude Include="RefFile.h" />
+    <ClInclude Include="Restorer.h" />
+    <ClInclude Include="ScriptBasket.h" />
+    <ClInclude Include="ScriptCmd.h" />
+    <ClInclude Include="ScriptCommandList.h" />
+    <ClInclude Include="ScriptCommands.h" />
+    <ClInclude Include="ScriptHeader.h" />
+    <ClInclude Include="ScriptIo.h" />
+    <ClInclude Include="ScriptKind.h" />
+    <ClInclude Include="ScriptList.h" />
+    <ClInclude Include="ScriptTrailer.h" />
+    <ClInclude Include="ServerCtrl.h" />
+    <ClInclude Include="Sidetrack.h" />
+    <ClInclude Include="SynchArea.h" />
+    <ClInclude Include="SynchKind.h" />
+    <ClInclude Include="SynchTrans.h" />
+    <ClInclude Include="Transformer.h" />
+    <ClInclude Include="WikiDirectory.h" />
+    <ClInclude Include="Workspace.h" />
+    <ClInclude Include="..\Common\OpenSaveFileData.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\CopyRequest.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\WikiBrowser\InPlaceFrame.h">
+      <Filter>UI\WikiBrowser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Licensing\Crypt.h">
+      <Filter>Licensing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Licensing\TimeLock.h">
+      <Filter>Licensing</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\awaiting.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\buttons.bmp">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\co-op.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\cur_out_proj.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\cur_proj.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\cut.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\del.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\folder.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\FolderClosed.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\FolderClosedGrey.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\folderin.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\FolderOpen.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\FolderOpenGrey.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\FullSyncPrj.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\in.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\in_script.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\label.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\locked.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\merge.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\merge_conflict.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\missing_script.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\new.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\next_script.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\none.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\out.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\out_proj.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\out_script.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\ProjClosed.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\project.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\ProjectAdmin.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\ProjectMember.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\ProjOpen.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\RecoveryPrj.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\rejected_script.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\RS.bmp">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\script.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\SortDown.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\SortUp.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\syn.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\syn_del.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\syn_new.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\syn_prj.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\tab_red.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\tab_yellow.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\ThisMember.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\ThisVerifiedMember.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\ver_cur.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\ver_cur_r.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\VerifiedMember.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\version.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\version2.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\version2_r.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\version_r.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\viewer.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\vrange1.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\vrange1_r.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\vrange2.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\vrange2_r.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\Wait.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="..\Common\CoopLicense.txt">
+      <Filter>All Common</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Resource\Co-op.exe.manifest">
+      <Filter>Resource</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\Co-op.rc">
+      <Filter>Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

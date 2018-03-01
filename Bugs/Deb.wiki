@@ -1,0 +1,8 @@
+=Deb
+==Open bugs
+|Note: When a bug contains an image, delete the image first. Here: [[Pictures]].|
+? SELECT Summary, Resolution, DELETE FROM bug WHERE AssignedTo = Deb AND Status = Open
+
+==Not Open
+? SELECT Summary, Resolution, Status, DELETE FROM bug WHERE AssignedTo = Deb AND Status <> Open
+

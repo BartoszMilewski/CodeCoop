@@ -1,0 +1,8 @@
+= DispatchRequest
+== Data
+* script: back-pointer to ScriptSlip
+* recipIdx
+* transport
+* done
+* retry
+* delivered

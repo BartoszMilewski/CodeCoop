@@ -1,0 +1,20 @@
+Non-default settings in VC++ projects
+C/C++
+	C++ Language:
+		Enable exception Handling
+		Enable Run-Time Type Information
+	Code Generation:
+		Use run-time library: 
+		Release: Multithreaded
+		Debug: Debug Multithreaded
+	Preprocessor definitions: 
+		All: STRICT 
+		Debug: TESTING [Only in Co-op]
+	Additional include directories:
+		resource,diff,lib,serial,common,ui,license [Co-op]
+Link:
+	Input:
+		Object/library modules: 
+		All: comctl32.lib 
+		Debug: BaseLibD.lib WinLibD.lib
+		Release: BaseLibR.lib WinLibR.lib 

@@ -1,0 +1,7 @@
+=Wieslaw
+==Open Items
+? SELECT Summary, Priority, DELETE FROM ToDo WHERE AssignedTo = Wieslaw AND Status = Open ORDER BY Priority
+
+==Other Items
+? SELECT Summary, Priority, Status, DELETE FROM ToDo WHERE AssignedTo = Wieslaw AND Status <> Open
+

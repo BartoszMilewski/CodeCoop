@@ -1,0 +1,34 @@
+| Summary ||
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |Thursday, October 29, 2009|
+==Description 
+From Dave Calkins:
+
+I multi-selected 3 directories (which were not part of the project) and used right-click >> add to project.
+
+It showed the first dialog listing the types of files to add, I clicked Select All and then OK.
+
+It then showed me the second dialog (I think it does one for each top level directory which was selected).  At this point, I changed my mind and cancelled it and the next dialog.
+
+The files from the first dialog (and the first top level directory which was selected) were added and shown in the check out area.
+
+I drag selected them all and did an uncheckout.
+
+I then got the below error.
+
+Transformer.cpp line 666, 
+
+ parentState.isCheckedIn() 
+ || parentState.IsRelevantIn (Area::Original) 
+ || (is Virtual && parentState.IsNone()
+
+==Resolution
+The assumption was too strong. It's okay to uncheckout folders before children.

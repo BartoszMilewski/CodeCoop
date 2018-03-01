@@ -1,0 +1,15 @@
+| Summary |Auto Synch stops|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority | 2 |
+| Resolution | Non Repro |
+==Description 
+Assertion:
+ _model.AllIncomingScriptsAreUnpacked ()
+was hit in Commander.cpp. After than, the remaining scripts in the project inbox were not processed. The scripts were probably copied during the processing of a background call from the Dispatcher. It happend in the project ''CSS RSWeb'', which is in auto-synch.
+| Conditions? Code Co-op was open to my CSS RSWeb project. It’s window was below Dreamweaver which I have at full screen. I was working on files that are already checked out in Dreamweaver. |

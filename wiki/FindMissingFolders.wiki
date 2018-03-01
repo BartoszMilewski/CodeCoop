@@ -1,0 +1,11 @@
+foreach project folder do
+{
+**if folder is checked out don't check it
+
+**if parent folder state is none remember parent as absent folder
+
+**if parent folder is checked out don't check the folder
+
+**if folder doesn't exists on disk then materialize folder path
+}
+

@@ -1,0 +1,59 @@
+=Wiki Parser
+Characters in parens are starts or follows, they are not accepted at that point.
+
+ Wiki ::= {
+        | '\n'
+        | ('|') Table
+        | Block
+      }
+
+ Table ::= // ''set stop char to '|' ''
+        { ('|') TableRow }
+
+ TableRow ::=
+        '|' { TableData }<sub>+</sub> '\n'
+
+ TableData
+       {'!'}<sub>opt</sub> WHITE { Block }<sub>+</sub> '|'
+
+ Block ::=
+          '\n'
+        |  ('=') Heading
+        | ('*' | '#') List
+        | (WHITE) Pre
+        | "---" Line
+        | Line
+
+ Heading ::=
+          '=' {'='}<sub>&lt; 3</sub> Line
+
+ List ::=
+
+ Pre ::= 
+        { WHITE Line }
+
+ Line ::= {
+          '[' WikiLink
+        | ' ' Emph
+        | &lt; "nowiki" Nowiki
+        | ''any char''
+      } '\n' (''or stop char--not accepted!'')
+
+It's supposed to parse something like this
+ <nowiki>
+|
+=a1 | a2 | a3
+|
+|b1
+|b2| ''white space''
+ b
+ 3 |
+</nowiki> 
+|
+=a1 | a2 | a3
+|
+|b1
+|b2| 
+ b
+ 3 |
+end table

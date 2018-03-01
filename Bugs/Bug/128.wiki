@@ -1,0 +1,16 @@
+| Summary |Deleting a file takes a long time|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Resolution | Fixed |
+| Priority | 1 |
+| DateReported |Sunday, October 22, 2006|
+==Description 
+Select a non-project file in Files view and click the delete button. This command takes a long time. Why?
+==Comment
+When user deleted a single file (not a folder!), use File::Delete instead of shell action.
+

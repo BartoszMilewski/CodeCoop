@@ -1,0 +1,19 @@
+This email confirms your order for a &COOP_SEATS;-seat upgrade license to Code Co-op v5.x for $&PRICE;.
+
+Upgrading info:
+
+License installation information:
+
+If you haven't done it yet, download the latest version 5.0 from ftp://ftp.relisoft.com/co-op.exe. If this is an upgrade, install this exe over your existing installation of Code Co-op. Command-line applets can be downloaded from ftp://ftp.relisoft.com/cmdline.exe.
+ 
+Input the license information exactly as shown below in each installation of Code Co-op.  This is done by running Code Co-op and selecting Program > License.  The following licensee name and alphanumeric license key must be entered exactly as shown below.  This key will unlock the time limit and make you fully licensed for &COOP_SEATS; workstations/enlistments.
+ 
+Licensee name: &LICENSEE_NAME;
+License key:   &LICENSE_KEY;
+ 
+If you have any questions or comments about Code Co-op, please contact us at support@relisoft.com.
+Best regards,
+ 
+Debbie Ehrlich
+Reliable Software -- Home of Code Co-op, peer-to-peer version control system
+www.relisoft.com

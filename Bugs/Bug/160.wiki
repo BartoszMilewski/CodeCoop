@@ -1,0 +1,14 @@
+| Summary |Disable auto-merge option when file change is a move|
+| ReportedBy |Deb|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Priority |4|
+| Resolution | Pending |
+| DateReported |Monday, November 13, 2006|
+==Description 
+
+When performing a merge on a file that has only moved, both merge options are available -- colored. What's confusing is that the Auto-merge option does not do anything when the only thing that has changed is the file has moved. The GUI would be clearer if we disabled (grayed) the auto-merge button in situations like this where the auto-merge does nothing. 

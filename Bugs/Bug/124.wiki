@@ -1,0 +1,512 @@
+| Summary |184: Zombie membership change script|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Fixed |
+| Priority | 3 |
+| DateReported |Wednesday, October 18, 2006|
+==Description 
+On the Regression machine, the Custom Configuration 2002 project has a membership script saying that the project administratior has changed it's membership status.  But this script is "Awaiting it's Turn" but there is no other scripts and no way to delete it.
+
+[[Image:124]]
+==Comment
+This script is disconnected and it depends on a script that nobody can resend.
+
+Fixing bug 96 will fix this too.
+
+==General information:
+*System Version: 5.1 (2600) [Service Pack 2]
+*Code Co-op Version 5.0 (beta 1)
+==Email
+*Default e-mail client name: Microsoft Outlook
+==Code Co-op Setup
+*All users setup
+*Program path: C:\Program Files\Reliable Software\Code Co-op
+*Catalog path: C:\dev\co-op\database
+*Command line tools path:C:\Program Files\Reliable Software\Code Co-op
+==Project catalog:
+*Trial start: Sun, 9/24/2006 1:35:50 PM
+*Global license -- licensee: FieldServer Technologies; seats: 23; version: 4
+*Distribution license -- NOT PRESENT
+*Topology: hub
+*Hub Id: co-op@fieldserver.com
+*Transports to my hub (active: Unknown):
+*Transports to my computer used within my cluster (active: Network):
+**\\G8W0CB1-REG\CODECOOP (Network)
+*Transports from other hubs to my hub (active: Email):
+**co-op@fieldserver.com (Email)
+===Satellite users:
+|! State |! Project name |! User hub id |! User project id |! Transport |
+| active | Documentation: Driver Manuals | pdubal@fieldserver.com | id-6 | e:\temp\co-op orphans (Network) |
+| active | Work: ExtDrv Profibus MS | co-op@fieldserver.com | id-New | \\REGRESS\CODECOOP (Network) |
+===Remote hubs:
+|! State |! Hub id |! Transport |
+| active | nSoft_co-op@fieldserver.com | nSoft_co-op@fieldserver.com (Email) |
+| active | pchipkin@yahoo.com | pchipkin@yahoo.com (Email) |
+| active | tjaartvr@telkomsa.net | tjaartvr@telkomsa.net (Email) |
+| active | edward.hague@fieldserver.com | edward.hague@fieldserver.com (Email) |
+| active | nsoft@mweb.co.za | nsoft@mweb.co.za (Email) |
+| active | eddie_co-op@fieldserver.com | eddie_co-op@fieldserver.com (Email) |
+| active | jens-coop@nsoft.co.za | jens-coop@nsoft.co.za (Email) |
+| active | prashant_co-op@fieldserver.com | prashant_co-op@fieldserver.com (Email) |
+| active | shaheen@nsoft.co.za | shaheen@nsoft.co.za (Email) |
+| active | lle@sierramonitor.com | lle@sierramonitor.com (Email) |
+| active | ssamra_co-op@deta.ca | ssamra_co-op@deta.ca (Email) |
+| active | cramilo@fieldserver.com | cramilo@fieldserver.com (Email) |
+| active | pdubal@fieldserver.com | pdubal@fieldserver.com (Email) |
+| active | mark_co-op@fieldserver.com | mark_co-op@fieldserver.com (Email) |
+| active | sfint@comcast.net | sfint@comcast.net (Email) |
+| active | adam@fieldserver.com | adam@fieldserver.com (Email) |
+| active | co-op@eeds.dnsalias.com | co-op@eeds.dnsalias.com (Email) |
+| active | craig_co-op@fieldserver.com | craig_co-op@fieldserver.com (Email) |
+| active | mnguyen@sierramonitor.com | mnguyen@sierramonitor.com (Email) |
+| active | megfourie@telkomsa.net | megfourie@telkomsa.net (Email) |
+| active | Funvill@funvill.com | Funvill@funvill.com (Email) |
+| active | rual_co-op@fieldserver.com | rual_co-op@fieldserver.com (Email) |
+| active | benniedewet@gmail.com | benniedewet@gmail.com (Email) |
+| active | lcalderon@fieldserver.com | lcalderon@fieldserver.com (Email) |
+| active | co-op@sfintegration.com | co-op@sfintegration.com (Email) |
+| active | craigsampson@telkomsa.net | craigsampson@telkomsa.net (Email) |
+| active | brashant@msn.com | brashant@msn.com (Email) |
+| active | jon.pio2@telkomsa.net | jon.pio2@telkomsa.net (Email) |
+| active | franco@parsec.co.za | franco@parsec.co.za (Email) |
+| active | haemish_co-op@fieldserver.com | haemish_co-op@fieldserver.com (Email) |
+| active | jdemoraes@sierramonitor.com | jdemoraes@sierramonitor.com (Email) |
+| active | deonroelofse@worldonline.co.za | deonroelofse@worldonline.co.za (Email) |
+| active | cae@telkomsa.net | cae@telkomsa.net (Email) |
+| active | kdiwan@fieldserver.com | kdiwan@fieldserver.com (Email) |
+| active | ehague@fieldserver.com | ehague@fieldserver.com (Email) |
+| active | eddiehague@earthlink.net | eddiehague@earthlink.net (Email) |
+| active | cpeterson@protocessor.com | cpeterson@protocessor.com (Email) |
+| active | co-op@eeds.co.za | co-op@eeds.co.za (Email) |
+| active | george@edev.co.za | george@edev.co.za (Email) |
+| active | george_co-op@fieldserver.com | george_co-op@fieldserver.com (Email) |
+| active | ssamra@deta.ca | ssamra@deta.ca (Email) |
+| active | George_co-op@sierramonitor.com | George_co-op@sierramonitor.com (Email) |
+| active | KKamran@fieldserver.com | KKamran@fieldserver.com (Email) |
+| active | cunningg@gmail.com | cunningg@gmail.com (Email) |
+| active | jeggers@mweb.co.za | jeggers@mweb.co.za (Email) |
+
+==Code Co-op options:
+*Original Beyond Compare Differ: C:\Program Files\Beyond Compare 2\BC2.exe
+*Boundled Beyond Compare Differ: C:\Program Files\Reliable Software\Code Co-op\BCDiffer.exe
+*Built-in Code Co-op Differ used.
+**Beyond Compare Merger: C:\Program Files\Beyond Compare 2\BC2.exe
+*Built-in Code Co-op Merger used.
+*Re-send request delay: half an hour; repeat interval: one day
+*Automatic update checking; Manual download of new version; check period: 7 days
+*Max chunk size: 1024kB
+==Project Custom Configuration 2002 (local id = 21)
+===Options:
+*Auto-sync mode
+*Regular full sync mode
+*Regular join mode
+*Use TO-recipients
+*After check-in keep files checked in
+===Membership:
+*Current user id = 0xa
+
+|! Project user id |! Name |! State |! Hub id & user id string |! Pre-historic script |! Most recent script |! License |
+| 0 | Prashant | Defected; _V:0, _A:0, _Adm:0, _S:1, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-1ed | FieldServer Technologies; seats: 1d; version: 4 |
+| 1 | PKD - Laptop | Defected; _V:0, _A:0, _Adm:0, _S:0, _Ver:0, _Distr:0, _Recv:0, _NoBra:0 | prashant_co-op@fieldserver.com; id-1 | 1-9 | 1-17 | FieldServer Technologies; seats: 12; version: 4 |
+| 2 | Eddie Hague | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | 2-204 | FieldServer Technologies; seats: 17; version: 4 |
+| 3 | Mark van Niekerk | Defected; _V:0, _A:0, _Adm:0, _S:0, _Ver:0, _Distr:0, _Recv:0, _NoBra:0 | cae@telkomsa.net; id-3 | fff-fffff | fff-fffff | Fieldserver Technologies; seats: 11; version: 4 |
+| 5 | Gordon MacLachlan | Defected; _V:0, _A:0, _Adm:0, _S:0, _Ver:0, _Distr:0, _Recv:0, _NoBra:0 | mac@fieldserver.com; id-5 | 5-4 | 5-b | FieldServer Technologies; seats: 10; version: 4 |
+| 6 | Robin Chazen | Defected; _V:0, _A:0, _Adm:0, _S:0, _Ver:0, _Distr:0, _Recv:0, _NoBra:0 | robin_co-op@fieldserver.com; id-6 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 11; version: 4 |
+| 7 | Mark van Niekerk | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | 7-a7 | Fieldserver Technologies; seats: 16; version: 4 |
+| 8 | Loree Calderon | Defected; _V:0, _A:0, _Adm:0, _S:0, _Ver:0, _Distr:0, _Recv:0, _NoBra:0 | lcalderon@fieldserver.com; id-8 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 12; version: 4 |
+| 9 | Loree Calderon | Defected; _V:0, _A:0, _Adm:0, _S:1, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | lcalderon@fieldserver.com; id-9 | fff-fffff | 9-11 | FieldServer Technologies; seats: 12; version: 4 |
+| a | Regression Machine | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | a-be6 | FieldServer Technologies; seats: 17; version: 4 |
+| b | nSoft Regression Machine | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | nSoft_co-op@fieldserver.com; id-xb | b-0 | b-aa | FieldServer Technologies; seats: 19; version: 4 |
+| c | nSoft Regression Machine | Defected; _V:0, _A:0, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | nSoft_co-op@fieldserver.com; id-xc | c-0 | fff-fffff | FieldServer Technologies; seats: 18; version: 4 |
+===Scripts files recorded in the project's inbox:
+
+Project name: Custom Configuration 2002
+Script sender: pdubal@fieldserver.com (id-0)
+Transport flags: 
+Script recipients:
+   co-op@fieldserver.com (id-10), NOT delivered
+
+
+C:\dev\co-op\database\Inbox\21\0000017c to Regression Machine 4 (id# a) in Custom Configuration 2002.snc
+Script id: [0-17c]; Project: Custom Configuration 2002
+Script kind: edit member; Type: Unit::Member; Unit id: 0-a
+''''Main lineage: [0-31] <-- Note script 0-17c depends on the script 0-31 not recorded on the user 0xa membership history.''''
+Comment: User Regression Machine 4 (id: a) state is changed by the project administrator from Administrator to Observer
+State: from the future
+
+===Scripts files present in the folder 'C:\dev\co-op\database\Inbox\21':
+
+*0000017c to Regression Machine 4 (id# a) in Custom Configuration 2002.snc
+===Scripts recorded in the project history:
+
+ Most recent executed scripts:
+
+ *REF:  [2-19e] (2-16e), executed, confirmed, lineage: [2-16e]
+     -------------------------------------------------- End of current lineage for the file changes tree
+        [2-16e] (2-144), executed, confirmed, lineage: 2-144, [0-170]
+        [2-144] (0-170), executed, confirmed, lineage: [0-170]
+        [0-170] (2-39), executed, confirmed, lineage: [2-39]
+        [2-39] (9-10), executed, confirmed, lineage: [9-10]
+        [9-10] (9-6), executed, confirmed, lineage: 9-6, 5-b, 0-15, 1-a, 5-5, [0-1]
+        [9-6] (5-b), executed, confirmed, lineage: 5-b, 0-15, 1-a, 5-5, [0-1]
+        [5-b] (0-15), executed, confirmed, lineage: 0-15, 1-a, 5-5, [0-1]
+        [0-15] (1-a), executed, confirmed, lineage: 1-a, 5-5, [0-1]
+        [1-a] (5-5), executed, confirmed, lineage: 5-5, [0-1]
+        [5-5] (0-1), executed, confirmed, lineage: [0-1]
+        [0-1] (0-0), executed, confirmed, lineage: [0-0]
+        [0-0] (fff-fffff), executed (milestone), confirmed, empty lineage
+
+ Next script marker: fff-fffff
+
+ Current lineage reference id: 2-19e
+
+ First interesting script: 2-19e
+
+===Membership changes for the user: 0
+* [2-19c] (2-19a), executed, confirmed, lineage: 2-19a, 2-199, [a-776], User Prashant (id: 0) is removed from the project by the administrator
+**Member removal:
+| 0 | Prashant | Defected; _V:0, _A:0, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [2-19a] (2-199), executed, confirmed, lineage: 2-199, [a-776], User Prashant (id: 0) is no longer the project administrator
+**Member data change.
+***Old data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-1e6 | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [2-199] (a-776), executed, confirmed, lineage: [a-776], User Prashant (id: 0) becomes the project administrator
+**Member data change.
+***Old data:
+| 0 | Prashant | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-1e6 | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [a-776] (a-770), executed, confirmed, lineage: a-770, a-76f, 0-17d, [a-5ea], User Prashant (id: 0) state is changed by the project administrator from Observer to Voting Member
+**Member data change.
+***Old data:
+| 0 | Prashant | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-196 | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [a-770] (a-76f), executed, confirmed, lineage: a-76f, 0-17d, [a-5ea], User Prashant (id: 0) is no longer the project administrator
+**Member data change.
+***Old data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-196 | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [a-76f] (0-17d), executed, confirmed, lineage: 0-17d, [a-5ea], User Prashant (id: 0) becomes the project administrator
+**Member data change.
+***Old data:
+| 0 | Prashant | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-196 | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [0-17d] (a-5ea), executed, confirmed, lineage: a-5ea, [0-16f], User Prashant (id: 0) changes his/her state from Administrator to Voting Member
+**Member data change.
+***Old data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-17c | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-17c | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [a-5ea] (0-16f), executed, confirmed, lineage: 0-16f, [a-d5], User Prashant (id: 0) state is changed by the project administrator from Voting Member to Administrator
+**Member data change.
+***Old data:
+| 0 | Prashant | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-177 | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [0-16f] (a-d5), executed, confirmed, lineage: [a-d5], User Prashant (id: 0) changes his/her state from Observer to Voting Member
+**Member data change.
+***Old data:
+| 0 | Prashant | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-16e | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [a-d5] (a-cf), executed, confirmed, lineage: a-cf, a-ce, 0-30, 0-26, 0-25, [0-24], User Prashant (id: 0) state is changed by the project administrator from Observer to Voting Member
+**Member data change.
+***Old data:
+| 0 | Prashant | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-35 | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [a-cf] (a-ce), executed, confirmed, lineage: a-ce, 0-30, 0-26, 0-25, [0-24], User Prashant (id: 0) is no longer the project administrator
+**Member data change.
+***Old data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-35 | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [a-ce] (0-30), executed, confirmed, lineage: 0-30, 0-26, 0-25, [0-24], User Prashant (id: 0) becomes the project administrator
+**Member data change.
+***Old data:
+| 0 | Prashant | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-35 | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [0-30] (0-26), executed, confirmed, lineage: 0-26, 0-25, [0-24], User Prashant (id: 0) changes his/her state from Administrator to Voting Member
+**Member data change.
+***Old data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-2f | FieldServer Technologies; seats: 1d; version: 4 |
+***New data:
+| 0 | Prashant | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-2f | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [0-26] (0-25), executed, confirmed, lineage: 0-25, [0-24], User Prashant (id: 0) changes his/her license
+**Member data change.
+***Old data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-25 | FieldServer Technologies; seats: 16; version: 4 |
+***New data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 1d; version: 4 |
+
+* [0-25] (0-24), executed, confirmed, lineage: [0-24], User Prashant (id: 0) changes his/her license
+**Member data change.
+***Old data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-24 | FieldServer Technologies; seats: 10; version: 4 |
+***New data:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 16; version: 4 |
+
+* [0-24] (fff-fffff), executed, confirmed, lineage: [fff-fffff], User Prashant (id: 0) upgrades to Code Co-op version 4.5
+**New member announcement:
+| 0 | Prashant | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | pdubal@fieldserver.com; id-0 | fff-fffff | 0-24 | FieldServer Technologies; seats: 10; version: 4 |
+
+
+===Membership changes for the user: 1
+
+===Membership changes for the user: 2
+* [2-19b] (a-d6), executed, confirmed, lineage: [a-d6], User Eddie Hague (id: 2) becomes the project administrator
+**Member data change.
+***Old data:
+| 2 | Eddie Hague | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | 2-19a | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| 2 | Eddie Hague | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [2-34] (2-38), missing, confirmed
+* [2-38] (2-34), missing, confirmed
+* [2-34] (a-d6), missing (rejected), confirmed
+* [a-d6] (a-d1), to be rejected (branch point), confirmed, lineage: a-d1, a-d0, 2-38, 2-34, [2-14], User Eddie Hague (id: 2) state is changed by the project administrator from Observer to Voting Member
+**Member data change.
+***Old data:
+| 2 | Eddie Hague | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | 2-39 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| 2 | Eddie Hague | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [a-d1] (a-d0), to be rejected, confirmed, lineage: a-d0, 2-38, 2-34, [2-14], User Eddie Hague (id: 2) is no longer the project administrator
+**Member data change.
+***Old data:
+| 2 | Eddie Hague | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | 2-39 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| 2 | Eddie Hague | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [a-d0] (2-38), to be rejected, confirmed, lineage: 2-38, 2-34, [2-14], User Eddie Hague (id: 2) becomes the project administrator
+**Member data change.
+***Old data:
+| 2 | Eddie Hague | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | 2-39 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| 2 | Eddie Hague | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [2-38] (2-34), to be rejected (branch point), confirmed, lineage: 2-34, [2-14], User Eddie Hague (id: 2) changes his/her Hub's Email Address
+**Member data change.
+***Old data:
+| 2 | Eddie Hague | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | ehague@fieldserver.com; id-2 | fff-fffff | 2-37 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| 2 | Eddie Hague | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [a-777] (2-34), to be rejected, confirmed, lineage: [2-34], User Eddie Hague (id: 2) state is changed by the project administrator from Observer to Voting Member
+**Member data change.
+***Old data:
+| 2 | Eddie Hague | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | 2-f6 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| 2 | Eddie Hague | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [a-772] (2-34), to be rejected, confirmed, lineage: [2-34], User Eddie Hague (id: 2) is no longer the project administrator
+**Member data change.
+***Old data:
+| 2 | Eddie Hague | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | 2-f6 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| 2 | Eddie Hague | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [a-771] (2-34), to be rejected, confirmed, lineage: [2-34], User Eddie Hague (id: 2) becomes the project administrator
+**Member data change.
+***Old data:
+| 2 | Eddie Hague | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | 2-f6 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| 2 | Eddie Hague | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | edward.hague@fieldserver.com; id-2 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [2-34] (2-14), executed (branch point), confirmed, lineage: [2-14], User Eddie Hague (id: 2) changes his/her license
+**Member data change.
+***Old data:
+| 2 | Eddie Hague | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | ehague@fieldserver.com; id-2 | fff-fffff | 2-33 | FieldServer Technologies; seats: 10; version: 4 |
+***New data:
+| 2 | Eddie Hague | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | ehague@fieldserver.com; id-2 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [2-14] (fff-fffff), executed, confirmed, lineage: [fff-fffff], User Eddie Hague (id: 2) upgrades to Code Co-op version 4.5
+**New member announcement:
+| 2 | Eddie Hague | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | ehague@fieldserver.com; id-2 | fff-fffff | 2-14 | FieldServer Technologies; seats: 10; version: 4 |
+
+
+===Membership changes for the user: 3
+
+===Membership changes for the user: 5
+
+===Membership changes for the user: 6
+
+===Membership changes for the user: 7
+* [a-778] (a-774), executed, confirmed, lineage: a-774, a-773, [a-d7], User Mark van Niekerk (id: 7) state is changed by the project administrator from Observer to Voting Member
+**Member data change.
+***Old data:
+| 7 | Mark van Niekerk | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | 7-74 | Fieldserver Technologies; seats: 16; version: 4 |
+***New data:
+| 7 | Mark van Niekerk | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | fff-fffff | Fieldserver Technologies; seats: 16; version: 4 |
+
+* [a-774] (a-773), executed, confirmed, lineage: a-773, [a-d7], User Mark van Niekerk (id: 7) is no longer the project administrator
+**Member data change.
+***Old data:
+| 7 | Mark van Niekerk | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | 7-74 | Fieldserver Technologies; seats: 16; version: 4 |
+***New data:
+| 7 | Mark van Niekerk | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | fff-fffff | Fieldserver Technologies; seats: 16; version: 4 |
+
+* [a-773] (a-d7), executed, confirmed, lineage: [a-d7], User Mark van Niekerk (id: 7) becomes the project administrator
+**Member data change.
+***Old data:
+| 7 | Mark van Niekerk | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | 7-74 | Fieldserver Technologies; seats: 16; version: 4 |
+***New data:
+| 7 | Mark van Niekerk | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | fff-fffff | Fieldserver Technologies; seats: 16; version: 4 |
+
+* [a-d7] (a-d3), executed, confirmed, lineage: a-d3, a-d2, 7-35, [7-15], User Mark van Niekerk (id: 7) state is changed by the project administrator from Observer to Voting Member
+**Member data change.
+***Old data:
+| 7 | Mark van Niekerk | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | 7-43 | Fieldserver Technologies; seats: 16; version: 4 |
+***New data:
+| 7 | Mark van Niekerk | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | fff-fffff | Fieldserver Technologies; seats: 16; version: 4 |
+
+* [a-d3] (a-d2), executed, confirmed, lineage: a-d2, 7-35, [7-15], User Mark van Niekerk (id: 7) is no longer the project administrator
+**Member data change.
+***Old data:
+| 7 | Mark van Niekerk | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | 7-43 | Fieldserver Technologies; seats: 16; version: 4 |
+***New data:
+| 7 | Mark van Niekerk | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | fff-fffff | Fieldserver Technologies; seats: 16; version: 4 |
+
+* [a-d2] (7-35), executed, confirmed, lineage: 7-35, [7-15], User Mark van Niekerk (id: 7) becomes the project administrator
+**Member data change.
+***Old data:
+| 7 | Mark van Niekerk | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | 7-43 | Fieldserver Technologies; seats: 16; version: 4 |
+***New data:
+| 7 | Mark van Niekerk | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | fff-fffff | Fieldserver Technologies; seats: 16; version: 4 |
+
+* [7-35] (7-15), executed, confirmed, lineage: [7-15], User Mark van Niekerk (id: 7) changes his/her license
+**Member data change.
+***Old data:
+| 7 | Mark van Niekerk | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | 7-34 | FieldServer Technologies; seats: 10; version: 4 |
+***New data:
+| 7 | Mark van Niekerk | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | fff-fffff | Fieldserver Technologies; seats: 16; version: 4 |
+
+* [7-15] (fff-fffff), executed, confirmed, lineage: [fff-fffff], User Mark van Niekerk (id: 7) upgrades to Code Co-op version 4.5
+**New member announcement:
+| 7 | Mark van Niekerk | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | mark_co-op@fieldserver.com; id-7 | fff-fffff | 7-15 | FieldServer Technologies; seats: 10; version: 4 |
+
+
+===Membership changes for the user: 8
+
+===Membership changes for the user: 9
+* [0-2f] (9-11), executed, awaiting ack from: 2 , empty lineage, User Loree Calderon (id: 9) is removed from the project by the administrator
+**Member removal:
+| 9 | Loree Calderon | Defected; _V:0, _A:0, _Adm:0, _S:0, _Ver:0, _Distr:0, _Recv:0, _NoBra:0 | lcalderon@fieldserver.com; id-9 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 12; version: 4 |
+
+* [9-11] (9-8), executed, confirmed, empty lineage, User Loree Calderon (id: 9) defects from the project
+**Member removal:
+| 9 | Loree Calderon | Defected; _V:0, _A:0, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | lcalderon@fieldserver.com; id-9 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 12; version: 4 |
+
+* [9-8] (fff-fffff), executed, confirmed, lineage: [fff-fffff], User Loree Calderon (id: 9) upgrades to Code Co-op version 4.5
+**New member announcement:
+| 9 | Loree Calderon | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | lcalderon@fieldserver.com; id-9 | fff-fffff | 9-8 | FieldServer Technologies; seats: 12; version: 4 |
+
+
+===Membership changes for the user: a
+* [a-bd1] (2-19d), executed, awaiting ack from: b , lineage: 2-19d, 2-198, a-775, a-5eb, a-d4, [a-3f], User Regression Machine (id: a) changes his/her state from Observer to Voting Member
+**Member data change.
+***Old data:
+| a | Regression Machine | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | a-bd0 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| a | Regression Machine | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [2-19d] (2-198), executed, awaiting ack from: 2 , lineage: 2-198, a-775, a-5eb, a-d4, a-3f, [a-a], User Regression Machine 4 (id: a) member description is changed by the project administrator
+**Member data change.
+***Old data:
+| a | Regression Machine 4 | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | a-c14 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| a | Regression Machine | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [2-198] (a-775), executed, awaiting ack from: 2 , lineage: a-775, a-5eb, a-d4, a-3f, [a-a], User Regression Machine 4 (id: a) is no longer the project administrator
+**Member data change.
+***Old data:
+| a | Regression Machine 4 | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | a-c14 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| a | Regression Machine 4 | Observer; _V:0, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [a-775] (a-5eb), executed, awaiting ack from: b , lineage: a-5eb, a-d4, a-3f, [a-a], User Regression Machine 4 (id: a) becomes the project administrator
+**Member data change.
+***Old data:
+| a | Regression Machine 4 | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | a-774 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| a | Regression Machine 4 | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [a-5eb] (a-d4), executed, awaiting ack from: b , lineage: a-d4, a-3f, [a-a], User Regression Machine 4 (id: a) changes his/her state from Administrator to Voting Member
+**Member data change.
+***Old data:
+| a | Regression Machine 4 | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | a-5ea | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| a | Regression Machine 4 | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | a-5e9 | FieldServer Technologies; seats: 17; version: 4 |
+
+* [a-d4] (a-3f), executed, awaiting ack from: b , lineage: a-3f, [a-a], User Regression Machine 4 (id: a) becomes the project administrator
+**Member data change.
+***Old data:
+| a | Regression Machine 4 | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | a-d3 | FieldServer Technologies; seats: 17; version: 4 |
+***New data:
+| a | Regression Machine 4 | Administrator; _V:1, _A:1, _Adm:1, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [a-3f] (a-a), executed, confirmed, lineage: [a-a], User Regression Machine 4 (id: a) changes his/her license
+**Member data change.
+***Old data:
+| a | Regression Machine 4 | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | a-3e | FieldServer Technologies; seats: 10; version: 4 |
+***New data:
+| a | Regression Machine 4 | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | fff-fffff | FieldServer Technologies; seats: 17; version: 4 |
+
+* [a-a] (fff-fffff), executed, confirmed, lineage: [fff-fffff], User Regression Machine 4 (id: a) upgrades to Code Co-op version 4.5
+**New member announcement:
+| a | Regression Machine 4 | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | co-op@fieldserver.com; id-10 | fff-fffff | a-a | FieldServer Technologies; seats: 10; version: 4 |
+
+
+===Membership changes for the user: c
+* [a-152] (0-29), executed, confirmed, lineage: [0-29], User nSoft Regression Machine (id: c) is removed from the project by the administrator
+**Member removal:
+| c | nSoft Regression Machine | Defected; _V:0, _A:0, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | nSoft_co-op@fieldserver.com; id-xc | fff-fffff | fff-fffff | FieldServer Technologies; seats: 18; version: 4 |
+
+* [0-29] (fff-fffff), executed, confirmed, empty lineage, User nSoft Regression Machine (id: c) joins the project
+**New member announcement:
+| c | nSoft Regression Machine | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | nSoft_co-op@fieldserver.com; id-xc | c-0 | fff-fffff | FieldServer Technologies; seats: 18; version: 4 |
+
+
+===Membership changes for the user: b
+* [0-27] (fff-fffff), executed, confirmed, empty lineage, User nSoft Regression Machine (id: b) joins the project
+**New member announcement:
+| b | nSoft Regression Machine | Voting Member; _V:1, _A:1, _Adm:0, _S:0, _Ver:1, _Distr:0, _Recv:0, _NoBra:0 | nSoft_co-op@fieldserver.com; id-xb | b-0 | fff-fffff | FieldServer Technologies; seats: 19; version: 4 |
+
+ Disconnected missing scripts 
+     0-31    Unit::Member
+
+===Missing scripts:
+ [0-31]; unit id: Unit::Member; next re-send request goes on Wednesday, October 18, 2006, 4:28:29 PM; to user 7
+
+ [2-34]; unit id: Unit::Member; next re-send request goes on Wednesday, October 18, 2006, 4:28:29 PM; to user b
+    Re-send request have been sent to the following project members: 7 
+
+ [2-38]; unit id: Unit::Member; re-send list exhausted
+    Re-send request have been sent to the following project members: 7 b 2 
+
+*There are 3dd files/folders recorded in the project database.
+

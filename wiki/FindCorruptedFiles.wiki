@@ -1,0 +1,22 @@
+forall files in the project database do
+{
+*if file state is new don't check this file/folder
+
+*if duplicate global id found throw exception
+
+*if file data with empty name found throw exception
+
+*if parent file data not found throw exception
+
+*if file state is checked in {
+**if file doesn't exists on disk then remember corrupted file and don't perform additional checks
+**compute file checksum in the Area::Project
+**if file checksum is ok and file on disk doesn't have read-only attribute remember file with missing read-only attribute 
+*} else {
+**if file state is present in the Area::Project and file doesn't exist on disk then remember corrupted file and don't perform additional checks
+**compute file checksum in the Area::Original
+*}
+*if file checksum doesn't match checksum stored in the databse then remember corrupted file
+*if parent state is none then remember absent folder
+}
+

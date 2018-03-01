@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="All Common">
+      <UniqueIdentifier>{635147bd-3207-4d63-8658-43870794c115}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serial">
+      <UniqueIdentifier>{c265907e-312b-4516-bbd3-d52a24ec43dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\OutputSink.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\precompiled.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\PreferencesStorage.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Registry.cpp">
+      <Filter>All Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\Serialize.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\SerString.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="AccelTab.cpp" />
+    <ClCompile Include="CmdVector.cpp" />
+    <ClCompile Include="Commander.cpp" />
+    <ClCompile Include="MenuTable.cpp" />
+    <ClCompile Include="UiManager.cpp" />
+    <ClCompile Include="WikiBrowser.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\OutputSink.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\precompiled.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PreferencesStorage.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Registry.h">
+      <Filter>All Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\Serialize.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SerString.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="AccelTab.h" />
+    <ClInclude Include="CmdVector.h" />
+    <ClInclude Include="Commander.h" />
+    <ClInclude Include="MenuTable.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="UiManager.h" />
+    <ClInclude Include="WikiBrowser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WikiBrowser.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WikiBrowser.rc" />
+  </ItemGroup>
+</Project>

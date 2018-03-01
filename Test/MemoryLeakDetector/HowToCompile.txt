@@ -1,0 +1,10 @@
+Instructions for VC .NET 2003:
+
+1. Add file vld.cpp to the project
+2. Select file vld.cpp in the solution explorer, click right mouse button and execute properties.
+   In the Configuration Properties/C/C++/Precompile Headers set Not using precompiled headers.
+3. Open Tools>Options dialog. Select Projects folder and VC++ Directories. In the drop down 'Show directories for:'
+   select 'Include files'. Add to the list the following folder:
+       $(VCInstallDir)crt\src
+4. Rebuild your project.
+

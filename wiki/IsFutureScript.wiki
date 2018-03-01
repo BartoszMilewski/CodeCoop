@@ -1,0 +1,4 @@
+Member::IsFutureScript
+* if _mostRecentScript == gidInvalid, return Maybe
+* scriptId > _mostRecentScript, return Yes
+* else return No

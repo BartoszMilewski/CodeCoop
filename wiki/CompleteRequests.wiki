@@ -1,0 +1,9 @@
+=Model::CompleteRequests
+* WorkQueue::GetDoneScripts
+* For each done script:
+** if email error, quarantine script, add to finishedList, continue
+** For each request:
+*** If request IsDone but not IsRetry, mark request delivered, stamp final delivery in script header
+** If any requests pending, add to continueList and erase from done list, else add to finishedList
+* FinishScripts(finishedList): deletes finished scripts, except when quarantined, invitation, postponed, or undeliverable
+* WorkQueue::[[RecycleScripts]](doneList, continueList)

@@ -1,0 +1,9 @@
+| Summary |"Last modified" column in project view|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |4|
+| Status |Completed|
+| DateReported |Friday, November 03, 2006|
+==Description
+Add a column to project view that shows the last modified time. Users could then sort by that column. We could use the timestamp of the CmdLog.bin file that is only modified when a change occurs to project files (not by membership changes or acknowledgments).

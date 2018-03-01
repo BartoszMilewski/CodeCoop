@@ -1,0 +1,9 @@
+| Summary |Update Help on VS|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |1|
+| Status |Open|
+| DateReported |Wednesday, August 27, 2008|
+==Description
+The help describes v. 6.0

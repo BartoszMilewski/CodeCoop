@@ -1,0 +1,53 @@
+| Summary |Co-op Lite dispatcher dialog not working|
+| ReportedBy |Bartosz Milewski|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Fixed|
+| Priority |1|
+| Resolution | Pending |
+| DateReported |Wednesday, August 29, 2007|
+==Description 
+
+I regularly receive scripts that say : Can deliver to this recepient, unknown email address XYZ@ABC.COM, what do you want to do :
+
+A) Ignore this is not a '''hub''' in the project, 
+
+B) This is me... 
+
+C) This is another '''hub''' (not an exact copy of the text). 
+
+So here... we'd want option B) excepted that using CodeCoop Lite it doesnt allow us to click on the Finish button (it just does nothing), option C) kind of do something, but then it cant deliver the script... so we got the option to Ignore or Delete the script. 
+
+Tried '''Co-op Pro''', still didn't manage to get that far... 
+
+I spent two nights already to solve those issues...
+
+==Notes
+IDD_UNKNOWN_INTRO dialog has to have two versions for Lite and Pro (like IDD_UNKNOWN_INTRO_JOIN)
+
+==Test case
+Change hub id on e-mail peer. Visit some project and hold hub id change membership update. From some other project members send script to old hub id. Test this with e-mal program receiving messages from old and new hub ids.
+#Without purge can Dispatcher handle this?
+#With purge Dispatcher probably will ask unknown recipient - is this a case?
+If project name and user id are present on the receiving computer then no need to ask questions - just copy the script to the project enlistment identified by project name and user id.
+
+==Test notes
+#Without purge Dispatcher can handle incoming script. After finding removed project member, Dispatcher relaxes the search criteria by ignoring hub id and finds the active recipient with changed hub id.
+#After purge, Dispatcher cannot handle incoming script and displays dialog with two choices:
+##This script is here by mistake - delete button
+##I'm not sure. Leave the script in the mailbox - ignore button.
+
+==Resolution
+Changed implementation of AddressDb::Find as follows:
+#FindRelaxed on local recipient list:
+##If found active recipeint then return it.
+#FindRelaxed on cluster recipient list:
+##If found active recipient then return it.
+#If NOT found on the local recipeitn list then return cluster recipirnt search result.
+#If NOT found on the cluster recipient list then return local recipient search result.
+#Return local recipient search result - when both found recipients are removed favor local recipient.
+
+

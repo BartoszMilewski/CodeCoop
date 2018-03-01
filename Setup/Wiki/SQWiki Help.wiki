@@ -1,0 +1,99 @@
+=SQWiki
+Any subdirectory of the wiki folder can be treated as a database table. What does it mean? 
+* You can store ''records'', which are nothing more than wiki files with property tables
+* You can display these records in table form.
+==Creating a Table
+There is no special step to create a table. The moment you add the first record or a template, you have a table. 
+
+Suppose you want to organize a ''to do'' list. The table will be called '''ToDo''', and the records in the table will contain:
+* a short summary, 
+* priority, and 
+* a long description.
+It's a good idea to start with a template for your records. It's a wiki file called ''template.wiki'' that will be used as a template for your new records. To create a template in ToDo, create a link
+ <nowiki>[[ToDo:template]]</nowiki>
+[[system:ToDo:template|ToDo:template]]
+
+and click on it. The first time you click, both the directory ''ToDo'' and the file ''template.wiki'' in it will be created. You will also be able to edit this file. Here's how the file might look like:
+ | Summary | |
+ | Priority | |
+ == Description
+This is your template for a table record. Notice that a record is just a two-column wiki table. You interpret the first column as containing property names and the second property values. Other than that, the record may contain any additional text formatted using wiki (or HTML) markup both before and after the table. Moreover, after the table, the record can continue with any free-form wiki -- in this case we start a chapter named ''Description''. For example, by including the following table as the first table in this file:
+| NextPage | Forms Help |
+we have just defined property ''NextPage'' with the value ''Forms Help''.
+==Creating a Record
+Since a record is nothing else but a wiki file with a two-column table, you can create it as any other wiki file, by starting a wiki link that specifies the directory (table name) followed by record name. For instance, you can create a link:
+ <nowiki>[[ToDo:Trip]]</nowiki>
+When you click on the link, a new wiki file, Trip.wiki, in the directory ToDo, will be created for you. If the directory contains a template, it will be used to initialize your new file. The file will be opened in the editor and you may start editing it immediately, filling the blanks and adding anything else you wish. Here's an example:
+
+[[system:ToDo:Trip|ToDo:Trip]]
+
+You can also create a record using a '''SQWiki''' command. All SQWiki commands start on a new line with a question mark. Their syntax is very similar to SQL commands. A new record is created using an '''INSERT INTO''' command. For instance
+ ? INSERT INTO ToDo (Priority = High, Summary="Buy Code Co-op")
+This type of insertion is useful when you want to use [[system:Forms Help|wiki forms]]. Note that records created using this method have numbers for their names. These numbers serve as unique IDs for records and are very useful, for instance, as bug IDs in a wiki bug database.
+
+If you want the '''INSERT INTO''' command to create a file with a non-default name, specify the special pseudo-property '''FILENAME'''. For instance:
+ ? INSERT INTO ToDo (FILENAME = Trip, Priority = High, Summary="Trip to Hawaii")
+will create a file Trip.wiki in the ToDo directory.
+==Listing Records
+The advantage of storing data in the form of records (in particular, embedding the two-column tables) is that you can easily list them. 
+===SELECT
+To list all records from the ToDo table, and display the ''Summary'' and ''Priority'' for each, you use the '''SELECT''' statement
+ ?SELECT Summary, Priority FROM ToDo
+Here's what this statement expands to:
+?SELECT Summary, Priority FROM system:ToDo
+Note that the first column contains links to the individual records. You can click on any of them to view the complete record. 
+===DELETE
+Optionally, you can specify a pseudo-property '''DELETE''' (all caps) in your '''SELECT''' statement. The listing will then have an additional column filled with ''delete'' links. By clicking on a ''delete'' link you delete a database record (however, if the record contains any links, the linked pages or images will not be deleted!). Here's an example of such a query:
+ ?SELECT Summary, Priority, DELETE FROM ToDo
+===WHERE
+You can also restrict your listing by specifying the '''WHERE''' clause. For instance, to list only high priority items, use:
+ ?SELECT Summary FROM ToDo WHERE Priority = high
+?SELECT Summary FROM system:ToDo WHERE Priority = high
+The '''WHERE''' clause can combine simple conditions:
+| property = value | equality |
+| property <> value | non-equality |
+| property < value | lexicographically earlier |
+| property > value | lexicographically later |
+| property <= value | lexicographically earlier or equal |
+| property >= value | lexicographically later or equal |
+| property LIKE pattern | match pattern |
+| property CONTAINS value | property contains word or phrase defined by value |
+| property IN (value1, value2, ...) | property is equal to one of the values in the list |
+with the use of Boolean operators '''AND''', '''OR''', '''NOT''', and parentheses. 
+
+All comparisons are done using '''case insensitive''' string comparison, so for instance, "file" is equal to "File" or "FILE", etc. 
+Here's an example:
+ ?SELECT Summary, Priority FROM ToDo WHERE Summary CONTAINS buy
+?SELECT Summary, Priority FROM system:ToDo WHERE Summary CONTAINS buy
+Note that, to select records that do ''not'' contain a certain phrase, use the '''NOT''' operator, e.g., 
+ NOT Summary CONTAINS buy
+(as opposed to the incorrect "<span class="code">Summary NOT CONTAINS buy</span>").
+
+The pattern in the '''LIKE''' clause is a string that may contain wildcard percent signs. A percent matches 0 or more arbitrary characters. For instance ''trip%'' will match any property that starts with '''trip'''. The pattern ''%co%co%'' will match any property that contains ''co'' twice (for instance "Buy '''Co'''de '''Co'''-op").
+===ORDER BY
+Records are, by default, sorted by modification date--the last modified, first. You can also sort alphabetically (again, '''case insensitive''') by any property, using the '''ORDER BY''' clause, optionally followed by '''DESC''' (for descending order). Here's an ordered SELECT statement and its result:
+ ?SELECT Summary, Priority FROM ToDo ORDER BY Priority DESC
+?SELECT Summary, Priority FROM system:ToDo ORDER BY Priority DESC
+===Pseudo Properties
+The following pseudo-properties are defined:
+|! Property Name |! Description |
+| DELETE | Use as a name of display column to include delete links|
+| FILENAME | It's value is equal to the name of the record file, for instance "1.wiki" |
+| COUNT | Only in predicates =, <, or <=. Limits the maximum number of records listed |
+===REGISTRY
+There are some property-value pairs that are settable by each user separately. They are stored in the local registry. You can access them using <nowiki>[@propName]</nowiki> in a wiki page. If the property is not set, it will display "value of propName not found in local registry".
+
+To set values in the registry, you can use the INSERT statement with the special table name REGISTRY. For instance:
+ ?INSERT INTO REGISTRY (MyName=Chad, MyAge=100)
+Normally such a statement is put in an action file for a [[Forms Help|form]], which prepares property names and values to be inserted.
+===Table values
+The first table in a wiki file is treated as a table defining property-value tuples. You may reference these values within the same wiki file (in fact, even before the table) using the following syntax <nowiki>[!propName]</nowiki>. Since the first table in this file defines the property ''NextPage'', it can be accessed here: 
+ <nowiki>=[!NextPage]=</nowiki> shows as =[!NextPage]=
+==Listing Images
+You can also list the special Image directory using the command
+ ?FROM Image
+This is the result:
+?FROM system:Image
+| Note: Normally you also see "delete" links when listing images. When you click a "delete" link, the image gets deleted from the project. |
+
+For more information, see [[system:FAQ|Frequently Asked Questions]].

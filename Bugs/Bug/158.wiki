@@ -1,0 +1,15 @@
+| Summary |Remember path to images in wiki|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Saturday, November 11, 2006|
+==Description 
+There is a dialog that uses a shell browser and doesn't remember the last path in the registry. This dialog opens when the user clicks on an unresolved image link. The code is in Commander.cpp line 2768. It would be nice if the last path were remembered and the browser positioned on it.
+
+

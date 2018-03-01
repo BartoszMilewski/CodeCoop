@@ -1,0 +1,43 @@
+=Dispatcher
+* [[Work Queue]]
+* [[Transport Manager]]
+==Model::ProcessInbox
+Calls:
+=== PublicInbox::ProcessScripts
+* UpdateFromDisk, fills _scriptFile, ScriptFileList (a monitor), member of Mailbox
+* WorkQueue::GetNewAndMarkOldScripts, 
+** calls ScriptFileList::GetSetDifference, with the _scriptsInProgress list of file names
+** marks _scriptFiles "in progress" if present in the in-progress list
+** returns a list of new files to be processed
+* create local scriptList: auto_vector of ScriptTicket
+* fill scriptList using ReadTransportHeaders
+* ProcessAttachments, nulls entries in scriptList corresponding to dispatcher scripts
+** For dispatcher scripts, ForwardDispatcherScripts
+*** Transfers script to MailTruck, ships it if necessary, otherwise stamps delivery
+*** Executes attachments if not shipped
+** For other scripts, ExecAttachments; if done, null the script in scriptInfoList
+* Iterate over scripts, skipping nulled entries
+** Transfer script to MailTruck, from now on use script ticket reference from the truck
+** For each addressee
+*** Find recipient and AcceptScript -- may stamp delivery to local recipients, otherwise MailTruck::Ship
+*** If recipient not found, DispatchToRemote or DispatchToLocal (either stamps delivery or ships the script)
+
+Note: Script "shipping" adds a request to script ticket
+=== Clean up MailTruck
+* MailTruck::GetDoneScripts, iterates over truck's script slips, returns a list of those with no pending requests
+* Model::FinishScripts, iterates over done scripts
+** if CanDelete, delete from disk
+** skip the ones that should wait (quarantined chunks, invitations, postponed scripts)
+At this point MailTruck owns active scripts
+=== MailTruck::Distribute (transfer to work queue)
+* WorkQueue::[[TransferRequests]]
+== Script post-processing
+In response to UM_REQUESTS_DONE
+=== Model::OnFinishScripts
+* WorkQueue::TransferDoneScripts, copies script tickets from _finished to doneList
+* Iterate over doneList
+** if email error, quarantine
+** call Model::FinishScript
+*** if script.CanDelete (delivered to all), delete file and call WorkQueue::ForgetScript (remove from _knownScriptFiles)
+*** skip the ones that should wait (quarantined chunks, invitations, postponed scripts)
+

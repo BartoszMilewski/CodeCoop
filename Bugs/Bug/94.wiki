@@ -1,0 +1,13 @@
+| Summary |Member state incompatible with history|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Cannot Reproduce |
+| Priority | 2 |
+| DateReported |Sunday, October 15, 2006|
+==Description 
+It happens rarely, so it's hard to reproduce. Member state is different than what the history says. We had a case when the state was "defected", but the defect script was absent, and another when the state was "distribution admin" although there was a script in the history changing the member to "voting".

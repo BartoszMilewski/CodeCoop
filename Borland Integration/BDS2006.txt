@@ -1,0 +1,13 @@
+SCC API integration:
+
+Based on survey results that said it wasn't widely used and the amount 
+of work required to fix bugs, test, and add C++ support; a decision 
+was made to deliver the existing (Delphi 2005) SCC API support in 
+DeXter but not register it so it won't be visible or an official part 
+of the product.
+
+There will be instructions added to the documentation on how to get to it if 
+you want to use it. 
+
+Tim Del Chiaro (Borland)
+

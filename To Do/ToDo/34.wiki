@@ -1,0 +1,15 @@
+| Summary |Merge documentation|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |1|
+| Status |Open|
+| DateReported |Monday, July 09, 2007|
+==Description
+| Do you have a document which explains in detail how the new branch/merging process works and what exactly is going on?  The online help from within the app seems very minimal.  It would be good if we could more completely understand it. |
+
+| I was recently working on some code and noticed in coop when I went to 
+accept an incoming script that I was asked to execute or postpone.  I 
+clicked execute.  I then noticed a branch (italics entry) in the history.
+So, I right-clicked it and selected merge to current version.  I 
+thought I did everything correctly, but the history still shows it in italics.|

@@ -1,0 +1,11 @@
+| Summary |Named database items|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |3|
+| Status |Done|
+| DateReported |Monday, October 02, 2006|
+==Description
+Dempson: I would like to have a little more control over the name of the file created by INSERT INTO. The numbered items are fine by default, but in some cases I'd like to be able to supply the filename in a specific field in the form (base name, with .wiki appended).
+==Resolution
+Added pseudo-property FILENAME

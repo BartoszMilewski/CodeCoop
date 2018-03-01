@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Comparing versions of a project</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Comparing Versions</h1>
+<p>You can visually compare any two versions of the project. </p>
+<h2>Comparing Historical Version with Current Version </h2>
+<p>
+Go to <strong>History tab</strong> and select the version you're interested in comparing. By just highlighting that version (script), you will see, in the lower pane, the list of files changed by that script. After selecting <em>Show Changes Since this Script </em> from the <em>Selection</em> or the <em>Context</em> menu, you will see the list of all the files that have been changed by the selected script and all script that follow it, up to the current version. Double-click a file to view the cumulative changes in a differ.
+</p>
+<p>
+Notice that scripts marked with boxed <img src="../Images/historyundo.gif" alt="Affected Scripts" width="18" height="17" /> icon (the <b>range</b>) would be undone if you were to <a href="branch.html">Branch</a>, <a href="RestoreProject.html">Restore</a>, or <a href="exportVersion.html">Export</a> from the selected version.
+</p>
+
+<h2> Comparing Two Arbitrary Versions</h2>
+<p>
+If you want to compare two arbitrary versions, select one of them and then Ctrl- select the other--the range. The Details pane will list all the files that were changed by the scripts marked with the boxed icon. Double-click a file to view the changes in a differ.
+</p>
+<p>
+Note: There is a subtle difference between selecting the <i>last script</i> in the history and the <i>Current Version</i>, as the endpoint for comparison. When the Current Version is selected, the comparison will also take into account the changes in the currently checked out files.
+</p>
+</body>
+</html>

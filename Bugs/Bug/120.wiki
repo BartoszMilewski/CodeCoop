@@ -1,0 +1,23 @@
+| Summary |Esc key doesn't close property sheet|
+| ReportedBy |Wieslaw|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 4 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+
+Bug #716 from the Web database.
+
+Double click on a script in the history view -- script property sheet opens. Press Esc key -- nothing happens -- script property should close.
+
+|Date|Who|Comment|
+|3/27/2003|Wiesiek|When initializing script property sheet we call 
+// Disable Cancel button and change OK to Close 
+CancelToClose (); 
+which disables ECS button. 
+|

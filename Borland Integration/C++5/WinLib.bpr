@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.05.03"/>
+    <PROJECT value="WinLib.lib"/>
+    <OBJFILES value="..\..\..\WinLib31\File\File.obj ..\..\..\WinLib31\LightString.obj 
+      ..\..\..\WinLib31\Sys\Dll.obj ..\..\..\WinLib31\File\Path.obj 
+      ..\..\..\WinLib31\Ex\WinEx.obj ..\..\..\WinLib31\Sys\RegKey.obj 
+      ..\..\..\WinLib31\Sys\WinString.obj"/>
+    <RESFILES value=""/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <PACKAGES value=""/>
+    <PATHCPP value=".;..\..\..\WinLib31\File;..\..\..\WinLib31;..\..\..\WinLib31\Sys;..\..\..\WinLib31\Ex"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <LINKER value="TLib"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT"/>
+    <MAINSOURCE value="WinLib.bpf"/>
+    <INCLUDEPATH value="..\..\..\WinLib31\Ex;..\..\..\WinLib31\Sys;..\..\..\WinLib31;..\..\..\WinLib31\File;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\..\..\WinLib31\Ex;..\..\..\WinLib31\Sys;..\..\..\WinLib31;..\..\..\WinLib31\File;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <LISTFILE value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I..\..\..\WinLib31\Ex -I..\..\..\WinLib31\Sys -I..\..\..\WinLib31 
+      -I..\..\..\WinLib31\File -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix 
+      cpp -boa"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Vx -Ve -X- -a8 -b- -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -v -JPHNE -M"/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="$(OBJFILES)"/>
+    <ALLLIB value=""/>
+  </LINKER>
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

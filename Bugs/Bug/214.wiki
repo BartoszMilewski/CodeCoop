@@ -1,0 +1,20 @@
+| Summary |Multiselection in history doesn't shrink|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Open|
+| Priority |1|
+| Resolution | Pending |
+| DateReported |Thursday, December 03, 2009|
+==Description 
+Dave Calkins:
+
+In the project history view, if you select an entry, then hold down the shift key and use the up arrow to also include newer entries in the selection, the change area at the bottom updates to show the combined changes.
+
+If you then, while still holding the shiftkey, hit the down arrow to remove items from the selection, the bottom display area does not update.
+
+Minor bug, but I thought I'd let you know as it threw me off a little this morning while looking at changes.
+

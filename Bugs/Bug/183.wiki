@@ -1,0 +1,14 @@
+| Summary |Wrong window title|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Priority |3|
+| Resolution | Pending |
+| DateReported |Monday, July 09, 2007|
+==Description 
+
+I have two shortcuts which launch Code Co-op and open my main projects (using e.g. -Project_Visit 1 -GUI). On some occasions (possibly the first time Code Co-op is launched after startup), one of them ends up with the task bar just saying "Code Co-op" instead of the project name. If I switch projects then switch back again, it shows the project name as expected.

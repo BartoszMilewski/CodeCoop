@@ -1,0 +1,18 @@
+| Summary |5.0 doesn't work with Exchange|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Open|
+| Priority |1|
+| Resolution | Pending |
+| DateReported |Friday, February 02, 2007|
+==Description 
+This client had problems with Exchange unable to provide user address through Outlook. But it worked with 4.6! It looks like 5.0 is too strict.
+
+| I am able to create only one outlook e-mail account. 
+However I compared with some of my colleagues. They have tried 5.0 and 5.0b, but due to problems with connection they decided to use 4.6e. I did the same, and now it all works fine with me!! |
+
+

@@ -1,0 +1,12 @@
+Project repair operation is executed in the following context:
+#Menu command Project>Repair
+#Menu command Project>Visit - Code Co-op performs project verification and if [[VerificationReport|project verification]] detects missing files then [[RepairDuringVisit|project repair]] is executed.
+#Menu command Project>Branch
+#Menu command Accept Join Request
+#Menu command Project>Invite
+#Menu command Tools>Restore from backup 
+
+Project repair operation is carried out by the objects of the class ProjectChecker.
+
+* [[ProjectChecker.Verify|Project verification]]
+* [[ProjectChecker.Repair|Project repair]]

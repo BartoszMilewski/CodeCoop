@@ -1,0 +1,23 @@
+| Summary |Double-clicking a script in the history view|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Monday, October 23, 2006|
+==Description 
+Ivan Vecerina: Double-clicking a line in the history view will open one of the affected 
+files.
+
+This is unexpected and unsettling.
+The "Open" option just doesn't make sense anymore (neither in the 
+right-click pop-up menu),
+since the scripts are automatically opened in the details pane.
+Just get rid of it, and maybe use Details as a default ?
+==Comment
+Did somebody else complain about it? Or was it Ivan only? I'm still not sure what to do.
+
+The best solution would be to check if the script modified only one single file. In that case, open it. Otherwise show script details.

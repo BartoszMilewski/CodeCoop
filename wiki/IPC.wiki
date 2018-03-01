@@ -1,0 +1,18 @@
+=IPC
+==In GUI
+* CoopController::OnRegisteredMessage
+** _msgIpcInitiate. 
+*** Lock
+*** SwitchToCmdLine
+*** [[IpcQueue]]::[[InitiateConv]]
+** _msgIpcTerminate
+*** Lock
+*** if IpcQueue is idle, SwitchToGui (queue->IsContinueInGui ())
+** _msgIpcAbort
+==In Server
+The difference is on IpcTerminate
+* OnQueueDone, if not continue in GUI, set pending merge timer
+* On pending merge timer
+** Lock
+** if pending merges, set timer again
+** else if not stay in project, Commander::LeaveProject, wait for 3 sec

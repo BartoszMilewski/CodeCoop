@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common with Code Co-op">
+      <UniqueIdentifier>{bf4412e0-f9d3-4af0-b26e-67fefe387f1f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\PathRegistry.cpp">
+      <Filter>Common with Code Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="CoopServerStress.cpp" />
+    <ClCompile Include="precompiled.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\PathRegistry.h">
+      <Filter>Common with Code Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="precompiled.h" />
+  </ItemGroup>
+</Project>

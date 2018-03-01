@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Code Co-op and Visual Studio 6.0</title>
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>Visual C++ 6.0 Source Control Settings</h1>
+<a name="Settings"></a>
+<p class="first">To improve how Visual C++ 6.0 and Code Co-op work together, you can modify 
+	Visual C++ 6.0's's Source Control options. In Visual C++ 6.0, click on the <b>Tools</b> menu and select <b>Options</b>. In the Options dialog, click on <b> Source&nbsp;Control</b> tab. You'll see several options.</p>
+<br />
+<p class="first">Here are our recommendations for Visual C++ 6.0 Source Control options:</p>
+<ul>
+	<li><b>Check</b> <em>&quot;Check out source file(s) when edited&quot; </em>Since Code 
+		Co-op works without a server, you don't need to be connected to a network to 
+		check out files. You can always check out your files, because you always have 
+		them with you.</li>
+	<li><b>Uncheck</b> <em>&quot;Check in files when closing the workspace&quot;</em> You'll 
+		likely want more control over when you check in files, since checking in will 
+		make your changes visible to other project members. An exception would be if 
+		you're the only member of a project and you want to checkpoint your work in 
+		Code Co-op every time you close the solution.</li>
+</ul>
+<a name="Workspace"></a>
+<h2>Putting Visual C++ 6.0 Workspaces and Projects under version control</h2>
+<p class="first">If you have an <b>existing Visual C++ 6.0 Workspace</b>, here's how to 
+	associate it with a Code Co-op project.</p>
+<p>Let's say the workspace file for your project is in <em>c:\work\projects\KillerApp\KillerApp.dsw</em></p>
+<ol>
+	<li>In Code Co-op, create a new project (via the <b>Project</b> menu). For the 	project location (&quot;Where to find or create&nbsp; the project&quot;), enter a the directory that contains the workspace file.  In our case, that would be<em> c:\work\projects\KillerApp</em>
+		<ul style="list-style:circle">
+			<li>You can choose any directory along the path (e.g. <em>c:\work\projects</em> or<em> c:\work </em>would also be acceptable), depending on how many directories you want your Code Co-op project to cover. <strong>Note</strong> that in this version of Code Co-op, 
+				projects cannot overlap.</li>
+			<li>Enter the rest of the information in the New Project dialog and click OK.</li>
+			<li>Code Co-op will offer to add selected project files to the project. Since 
+				we'll let Visual C++ 6.0 add the files for us, click Cancel. You've now 
+				created a Code Co-op project that has no checked in files.</li>
+		</ul>
+	</li>
+	<li>Open the workspace in Visual C++ 6.0 (an easy way to do this within Code Co-op is to right click on the <em>.dsw</em> file and select <b>Open with Shell</b>.
+		<ul>
+			<li>In the Visual C++ 6.0 Workspace window (press Alt-0 if you don't see it), right click on the top 
+				Workspace item and select <b>Add to Source 
+				Control</b>. Visual C++ 6.0 adds the workspace file to the Code Co-op 
+				project.</li>
+			<li>Still in Visual C++ 6.0, again in the Workspace window, right click on each 
+				project item and select <b>Add to Source 
+				Control</b>. Visual C++ 6.0 adds the project files to the Code Co-op 
+				project.</li>
+			<li>Close the workspace in Visual C++ 6.0.</li>
+		</ul>
+	</li>
+	<li>
+		<p class="first">In Code Co-op, click on the <b>Check In Area </b>tab and you'll see all 
+			the newly added files. Click on the <b>All</b> menu menu item and select <b> Check In</b>. Enter a comment (e.g. <em>First versions</em>), and click OK. All 
+			workspace and project files are now checked in to the Code Co-op project.</p>
+	</li>
+</ol>
+<p class="first">Your Visual C++ 6.0 workspace is now fully integrated with your Code Co-op 
+	project. You can open the workspace in Visual C++ 6.0 and get to work.</p>
+<p>&nbsp;</p>
+<a name="Projects"></a>
+<h2>Putting additional Visual C++ 6.0 projects under version control</h2>
+<p class="first">After your Visual C++ 6.0 workspace is under version control, you might <b>add 
+	new Visual C++ 6.0 projects to your workspace</b>. To add these projects to your Code Co-op 
+	project, it's simplest to let Visual C++ 6.0 add it for you. And to make it 
+	easy to see which files are being added and changed, it's best not to have other 
+	files in the project checked out when you are adding a new project to version 
+	control.</p>
+<ol>
+	<li>In Visual C++ 6.0, open your workspace and in the workspace window right 
+		click on the project you want to add to source control. Select <b>Add to Source 
+		Control</b>. Visual C++ 6.0 adds the project files to the Code Co-op 
+		project.</li>
+	<li>Now close the workspace in Visual C++ 6.0.</li>
+	<li>In Code Co-op, click on the <b>Check In Area </b>tab and you'll see all 
+		the newly added files. Select the Click on the <b>All</b> menu menu item and 
+		select <b>Check In</b>. Enter a comment (e.g. <em>New sub-project</em>), and click 
+		OK. The files are now checked in to the Code Co-op project.</li>
+</ol>
+<p class="first">Your new Visual C++ 6.0 project is now fully integrated with your Code 
+	Co-op project. You can open the workspace in Visual C++ 6.0 and get to work.</p>
+<p>&nbsp;</p>
+<a name="NewWorkspace"></a>
+<h2>Putting a new Visual C++ 6.0 Workspace under version control</h2>
+<p>If you are going to create a <b>new Visual C++ 6.0 Workspace</b>, here's how 
+	to associate it with a Code Co-op project.</p>
+<p>Let's say you plan to create your new Visual C++ 6.0 Workspace in the 
+	directory <em>c:\work\projects\NextApp</em></p>
+<ol>
+	<li>If you don't already have a Code Co-op project that covers <em> c:\work\projects\NextApp</em>, create one (via the <b>Project</b> menu). For the 
+		project location (&quot;Where to find or create&nbsp;the project&quot;), enter a the 
+		directory that will contain the workspace file. Note, in our case, that would be<em> c:\work\projects\NextApp</em>
+		<ul>
+			<li>You can choose any directory along the path (e.g. <em>c:\work\projects</em> or<em> c:\work </em>would also be acceptable), depending on how many directories you 
+				want your Code Co-op project to cover. Note that in this version of Code Co-op, 
+				projects cannot overlap.</li>
+			<li>Enter the rest of the information in the New Project dialog and click OK.</li>
+			<li>Code Co-op will offer to add selected project files to the project. Since 
+				we'll let Visual C++ 6.0 add the files for us, click Cancel. You've now 
+				created a Code Co-op project that has no checked in files.</li>
+		</ul>
+	</li>
+	<li>In Visual C++ 6.0 create a new Workspace, and enter the location you selected above (e.g. <em>c:\work\projects\NextApp </em>). When Visual C++ 6.0 creates your workspace and project, it will ask you if you want to put the newly created project under source code control. Click Yes.</li>
+	<li>Visual C++ 6.0 will show you the files it will add. Click OK.</li>
+	<li>Now close the workspace in Visual C++ 6.0</li>
+	<li>In Code Co-op, click on the <b>Check In Area </b>tab and you'll see all the newly added files. Click on the <b>All</b> menu menu item and select <b> Check In</b>. Enter a comment (e.g. <em>First versions</em>), and click OK. All solution files are now checked in to the Code Co-op project.</li>
+</ol>
+<p class="first">Your Visual C++ 6.0 workspace is now fully integrated with your Code Co-op 
+	project. You can open the workspace in Visual C++ 6.0 and get to work.</p>
+<p>&nbsp;</p>
+</body>
+</html>

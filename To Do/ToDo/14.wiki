@@ -1,0 +1,30 @@
+| Summary |Improve shell browsing experience|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Closed|
+| DateReported |Monday, October 23, 2006|
+==Description
+# Search for all uses of ShellMan::FolderBrowser. 
+# Find out if we could store the last used path in the registry.
+# If so, initialize the FolderBrowser with that path, rather than starting browsing from the Desktop.
+Here's the code from SaveFilesDlg.cpp that already does it:
+    case IDC_SAVE_OLD_FILES_TARGET_BROWSE:
+        if (Win::SimpleControl::IsClicked (notifyCode))
+        {
+            ShellMan::Path path ('''_dlgData.GetTargetFolder ().GetDir ()''');
+            ShellMan::FolderBrowser folder (
+                GetWindow (),
+                path,
+                "Select where to save files");
+            if (folder.IsOK ())
+            {
+                _dlgData.SetTargetFolder (folder.GetPath ());
+                _targetFolder.SetString (folder.GetPath ());
+                _userSelectedNewTargetFolder = true;
+            }
+            return true;
+        }
+        break;
+

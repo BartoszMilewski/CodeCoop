@@ -1,0 +1,19 @@
+| Summary |Auto accept invitation|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |1|
+| Status |Done|
+| DateReported |Wednesday, December 13, 2006|
+==Description
+| Regarding the new streamlined invite option in 5.0.
+
+
+Often there is another computer that is a member of projects for back up purposes (e.g., a server, or hub located somewhere else). With the new invite option, getting such a computer to join a project for backup is now much easier, but it still requires user-intervention to process the invite request.
+
+
+A new option "Auto-accept invites" would be very useful in these situations. Obviously you would also need to select a path where such auto-invite projects would be located (e.g., "c:\code co-op projects"). If security was a worry (the machine getting "spammed" by projects) perhaps another option could be available to only auto-accept requests from known locations (known hub email addresses and LAN machines) that the disaptcher already knows about.
+
+
+With this, a fully unattended backup becomes possible, for existing and new projects. |
+

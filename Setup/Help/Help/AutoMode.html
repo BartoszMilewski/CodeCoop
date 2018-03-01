@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Working in Auto-Synch mode</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Auto-Sync Mode</h1>
+<p>When a project is in Auto-Sync mode (use <em>Project</em> &gt; <em>Options</em> to turn it on), Code Co-op will automatically execute and accept all incoming scripts for this project as soon as they arrive. For that, Code Co-op  <em>does not</em> have to be running. This automation is especially useful when you create or join a project on a <b>server</b> and you want it to be always up-to-date. For instance, you may want to test your web pages on your local web server or you may want a project copy on a server, which you back-up offsite.</p>
+<p>Warning: It is not recommended to use auto-sync mode in projects that you are actively developing. Automatic synchronization may happen at inopportune moments and may even lead to the loss of unsaved changes.
+<h3>Merges in Auto-Sync mode</h3>
+<p>If the execution of a script would result in a merge situation, Code Co-op will not proceed with auto-sync. If you do check-out files in an auto-sync project, you will need to manually address merges that affect these files. </p>
+<h3>Handling Join Requests </h3>
+<p>For Administrators of a project, the  Project Options dialog also lets you decide whether you want join requests to be automatically processed. If you have security concerns, you might want to turn this option off.</p>
+<h3>Auto Accepting Invitations</h3>
+<p>To automatically accept all <a href="Invitation.html">project invitations</a> on a given computer, select the appropriate option in the Project Options dialog. You have to specify the root directory where the new projects are to be created. Each invitation received in this way will create a subdirectory of that folder (named after the project name) and use it as the root of the new project.</p>
+
+<h3>Calling a Batch file after an Auto-Sync</h3>
+<p>If you want to perform a specific action after every auto-sync, you can do so by putting a file named 
+    <b>OnSync.bat</b> in the root of your project. It will be automatically executed after every auto sync. (Similarly, 
+    you can also execute <b>OnCheckin.bat</b> after every check-in)</p>
+</body>
+</html>

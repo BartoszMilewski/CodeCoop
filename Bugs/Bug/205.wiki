@@ -1,0 +1,14 @@
+| Summary |Deleting folder in tree view freezes co-op|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |Friday, August 15, 2008|
+==Description 
+Select a controlled folder in tree view and delete it. Code Co-op is caught in an infinite loop of folder notifications.
+

@@ -1,0 +1,30 @@
+| Summary |Auto merge during sync doesn't work with XML|
+| ReportedBy |Bartosz Milewski|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |Friday, August 17, 2007|
+==Description 
+* ExecuteSetChange (Synch.cpp)  calls MergeContent.
+* Model::MergeContent (FileMerge.cpp), without checking the useXml flag creates '''AltMergerCmdLineMaker''' with PhysicalFile and calls '''MakeAutoCmdLine'''
+* AltMergerCmdLineMaker::MakeAutoCmdLine (CmdLineMaker.cpp) asserts !useXml
+
+Compare this with another path:
+
+* MergeExec::MergeContent (MergeExec.cpp) calls '''ExecuteAutoMerger'''
+* ExecuteAutoMerger (MergerProxy.cpp) checks the useXml flag and either
+** calls ExecuteXmlDifferMerger with XML tree or
+** creates '''AltMergerCmdLineMaker''' with XML and calls '''MakeAutoCmdLine'''
+
+==Solution
+Model::'''MergeContent''' should build an XML tree and call '''ExecuteAutoMerger'''. To see how the XML tree should be built, look at the '''MakeAutoCmdLine''' that uses PhysicalFile.
+	_args.push_back (std::make_pair ("$file1", file.GetFullPath (Area::Project)));
+	_args.push_back (std::make_pair ("$file2", file.GetFullPath (Area::Synch)));
+	_args.push_back (std::make_pair ("$file3", file.GetFullPath (Area::Reference)));
+	_args.push_back (std::make_pair ("$file4", file.GetFullPath (Area::Project)));
+

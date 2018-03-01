@@ -1,0 +1,9 @@
+| Summary |Rationalize CoopCmd|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Thursday, January 10, 2008|
+==Description
+The syntax of CoopCmd is crazy!

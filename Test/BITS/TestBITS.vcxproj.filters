@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{b7648c57-8f90-45f9-89dd-6485c18a67b6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\precompiled.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="BITSMain.cpp" />
+    <ClCompile Include="TestController.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\precompiled.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="TestController.h" />
+  </ItemGroup>
+</Project>

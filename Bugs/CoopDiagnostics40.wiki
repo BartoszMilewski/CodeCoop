@@ -1,0 +1,88 @@
+==General information:
+*System Version: 5.1 (2600) [Service Pack 2]
+*Code Co-op Version 5.0
+==Email
+*Default e-mail client name: Microsoft Outlook
+==Code Co-op Setup
+*All users setup
+*Program path: C:\Program Files\Reliable Software\Code Co-op
+*Catalog path: C:\co-op
+*Command line tools path:
+==Project catalog:
+*Trial start: Sat, 9/10/2005 9:39:13 AM
+*Global license -- licensee: debbie; seats: 2; version: 4
+*Distribution license -- NOT PRESENT
+*Topology: hub
+*Hub Id: dehrlich@relisoft.com
+*Transports to my hub (active: Unknown):
+*Transports to my computer used within my cluster (active: Network):
+**\\DEBRA-PC\CODECOOP (Network)
+*Transports from other hubs to my hub (active: Email):
+**dehrlich@relisoft.com (Email)
+===Local projects:
+|! Project id |! State |! Name |! Path |
+| 1 | active | Pitbull Project | C:\Projects\Pit Bull Project |
+| 2 | active | RSWeb | C:\Projects\RSWeb |
+| 3 | active | relisoft | C:\Projects\relisoft Sales |
+| 5 | active | OneNotes | C:\Documents and Settings\debra ehrlich\My Documents\My Notebook |
+| 8 | active | CSS RSWeb | C:\Projects\CSS RSWeb |
+| 9 | active | Rebecca | C:\Projects\Rebecca |
+| 4 | active | test | C:\Projects\_CodeCo-op |
+| 6 | active | Code Co-op | C:\Projects\CodeCo-op |
+===Local users:
+|! Project id |! User state |! Project name |! User hub id |! User project id |
+| 1 | active | Pitbull Project | dehrlich@relisoft.com | id-11 |
+| 3 | active | relisoft | dehrlich@relisoft.com | id-7 |
+| 2 | active | RSWeb | dehrlich@relisoft.com | id-20 |
+| 5 | active | OneNotes | dehrlich@relisoft.com | id-0 |
+| 8 | active | CSS RSWeb | dehrlich@relisoft.com | id-1 |
+| 10 | removed | Code Co-op | dehrlich@relisoft.com | id-43 |
+| 9 | active | Rebecca | dehrlich@relisoft.com | id-42 |
+| 4 | active | test | dehrlich@relisoft.com | id-0 |
+| 6 | active | Code Co-op | dehrlich@relisoft.com | id-42 |
+===Satellite users:
+|! State |! Project name |! User hub id |! User project id |! Transport |
+| active |  | dehrlich@relisoft.com | id- | \\DEB-LAPTOP\CODECOOP (Network) |
+| active |  | dehlrich@relisoft.com | id- | \\DEB-LAPTOP\CODECOOP (Network) |
+| active | CSS RSWeb | dehrlich@relisoft.com | id-b | \\DEB-LAPTOP\CODECOOP (Network) |
+| active | CSS RSweb | debraehrlich@yahoo.com | id-a | \\DEB-LAPTOP\CODECOOP (Network) |
+===Remote hubs:
+|! State |! Hub id |! Transport |
+| active | bartosz@relisoft.com | bartosz@relisoft.com (Email) |
+| active | piotr@trojanowski.a4.pl | piotr@trojanowski.a4.pl (Email) |
+| active | coop@metasoft.internetdsl.pl | coop@metasoft.internetdsl.pl (Email) |
+| active | metaeducation@gmail.com | metaeducation@gmail.com (Email) |
+| active | rswl@relisoft.com | rswl@relisoft.com (Email) |
+| active | piotroj@poczta.onet.pl | piotroj@poczta.onet.pl (Email) |
+| active | dev@relisoft.com | dev@relisoft.com (Email) |
+| active | codecoop@vip.wp.pl | codecoop@vip.wp.pl (Email) |
+| active | piotr@trojanowski.x.pl | piotr@trojanowski.x.pl (Email) |
+| active | piotrtrojanowski@gmail.com | piotrtrojanowski@gmail.com (Email) |
+| active | coop.piotrtrojanowski@gmail.com | coop.piotrtrojanowski@gmail.com (Email) |
+| active | debraehrlich@yahoo.com | debraehrlich@yahoo.com (Email) |
+| active | zz@relisoft.com | zz@relisoft.com (Email) |
+
+==Code Co-op options:
+*Original Beyond Compare Differ: C:\Program Files\Beyond Compare 2\BC2.exe
+*Boundled Beyond Compare Differ: C:\Program Files\Reliable Software\Code Co-op\BCDiffer.exe
+*Guiffy Differ: C:\Program Files\guiffy73\guiffy.exe
+*Built-in Code Co-op Differ used.
+**Beyond Compare Merger: C:\Program Files\Beyond Compare 2\BC2.exe
+*Guiffy Merger: C:\Program Files\guiffy73\guiffy.exe
+*Built-in Code Co-op Merger used.
+*Re-send request delay: half an hour; repeat interval: one day
+*Automatic update checking; Manual download of new version; check period: 7 days
+*Max chunk size: 2000kB
+==Project Code Co-op (local id = 6)
+===Options:
+*Regular sync mode
+*Regular full sync mode
+*Regular join mode
+*Use BCC-recipients
+*After check-in keep files checked in
+===Membership:
+*Current user id = 0x42
+
+|! Project user id |! Name |! State |! Hub id & user id string |! Pre-historic script |! Most recent script |! License |
+| 7 | Wieslaw Kalkus
+

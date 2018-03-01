@@ -1,0 +1,32 @@
+| Summary |Inbox detail view not refreshed|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Unknown|
+| Severity |Annoying|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Friday, October 20, 2006|
+==Description 
+'''Dempson''': 
+This might be a new bug in beta2 as I didn't notice it before.
+
+My inbox is empty, but when I switched to it, it showed something in the "detail" area at the bottom of the window. The data displayed was taken from one of the scripts I had displayed in the History tab prior to switching to Inbox, and seemed to be latched - I could select other items in History and it would still show the previous bogus entry when I switched back to Inbox.
+
+Trying to click on the file listed in the Inbox detail view resulted in an assertion but I didn't note the details. I aborted and ran the application again but haven't been able to repeat the problem yet.
+---
+'''Ivan''': I saw the same problem, here's how I seem to be able to reproduce it on a project with an empty inbox:
+* restart code co-op
+* go straight to the history view, and select a script
+* go to the inbox: in "details" I still see the files from the selected history script.
+Clicking them at this point does not seem to crash.
+* go back to history view, and select another script
+* go to inbox view: the files of the previous script are still shown.
+Selecting one of the files triggers an assert:
+ Program: C:\Program Files\Reliable Software\Code Co-op\Co-op.exe
+ File: .\Restorer.cpp
+ Line: 421
+ Expression: selection->size () == 1
+==Resolution
+When there is no selection in the range table then we have to force 'CreateRange' command, becuase there will be no item change notification to trigger 'CreateRange' command.

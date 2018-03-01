@@ -1,0 +1,25 @@
+| Summary |Database format change for missing disconnected|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |1|
+| Status |Done|
+| DateReported |Thursday, September 13, 2007|
+==Description
+History.cpp XRememberDisconnectedScript takes additional parameter, unit ID, but doesn't store it yet. Change database format to include unit ID in missing-disconnected. 
+
+The use of these IDs will be in Synch.cpp Model::XCreateFullSync. Existing code
+ joineeInfo.SetUserId (projectDb.XMakeUserId ());
+should be changed. After getting a new user id from projectDb, the missing-disconnected list from history should be checked for unitIDs. If a higher unitId is found, this ID + 1 should be used instead for the new user. 
+
+This will solve the problem of switching admins. 
+
+==Test Case
+The old admin has a new member registered, but the announcement hasn't reached the new admin. When the old admin designates a new admin, the new user announcement will appear in a side lineage and will land in the missing-disconnected list. Without the new fix, the same ID would be issued to the next joinee.
+
+==Resolution
+Code Co-op will throw the following exception:
+ throw Win::InternalException ("Code Co-op cannot accept the join request, because project membership database is incomplete.\n"
+                               "Code Co-op has requested the missing membership updates. Once they have been received\n"
+                               "try accepting join request again.");
+

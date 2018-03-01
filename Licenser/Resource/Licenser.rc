@@ -1,0 +1,174 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+DLG_ICON                ICON                    "licenser.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ID_MAIN DIALOGEX 0, 0, 134, 67
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_NOPARENTNOTIFY | WS_EX_APPWINDOW
+CAPTION "License Maker"
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,11,19,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,71,41,50,14
+END
+
+IDD_BLOCK DIALOGEX 0, 0, 217, 82
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT1,97,7,51,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT2,97,33,51,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT3,97,61,51,12,ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "&Number of licenses:",IDC_STATIC,7,8,81,12
+    RTEXT           "&Seats per license:",IDC_STATIC,7,62,87,12
+    RTEXT           "S&tarting serial number:",IDC_STATIC,7,34,84,15
+    CTEXT           "License block\nwill be saved\nin the file\n\nBlock.txt",IDC_STATIC,159,7,51,68,SS_SUNKEN
+END
+
+IDD_SINGLE DIALOGEX 0, 0, 217, 153
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    LTEXT           "Use the following form letter:",IDC_STATIC,7,15,103,12
+    COMBOBOX        IDC_COMBO1,112,14,98,131,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "E-mail:",IDC_STATIC,7,35,45,15
+    EDITTEXT        IDC_EDIT1,57,33,153,12,ES_AUTOHSCROLL
+    RTEXT           "Licensee:",IDC_STATIC,8,53,45,15
+    EDITTEXT        IDC_EDIT2,57,52,153,12,ES_AUTOHSCROLL
+    RTEXT           "Co-op Seats:",IDC_STATIC,7,72,46,12
+    EDITTEXT        IDC_EDIT3,57,72,51,12,ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "BC Seats:",IDC_STATIC,7,89,45,12
+    EDITTEXT        IDC_EDIT4,57,89,51,12,ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "Total price:",IDC_STATIC,7,114,46,12
+    EDITTEXT        IDC_EDIT5,57,114,51,12,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           "Please update the\nPurchaseReceipt.pdf\nfor every licensee!",IDC_STATIC,117,71,92,30,SS_SUNKEN
+    CONTROL         "Preview the message before sending.",IDC_PREVIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,134,156,10
+    GROUPBOX        "Version",IDC_STATIC,118,102,92,30
+    CONTROL         "Pro",IDC_RADIO_PRO,"Button",BS_AUTORADIOBUTTON,125,114,30,10
+    CONTROL         "Lite",IDC_RADIO_LITE,"Button",BS_AUTORADIOBUTTON,170,114,27,10
+END
+
+IDD_DISTRIB DIALOGEX 0, 0, 217, 106
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT1,57,7,153,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,57,42,153,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,69,62,51,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT4,159,62,51,12,ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "Licensee:",IDC_STATIC,7,42,45,15
+    RTEXT           "Starting Serial #:",IDC_STATIC,7,64,59,12
+    RTEXT           "E-mail:",IDC_STATIC,7,9,45,15
+    RTEXT           "Count:",IDC_STATIC,126,64,30,12
+    CONTROL         "Preview the message before sending.",IDC_PREVIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,85,156,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_BLOCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_SINGLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_DISTRIB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

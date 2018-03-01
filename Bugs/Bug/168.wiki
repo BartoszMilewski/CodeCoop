@@ -1,0 +1,14 @@
+| Summary |Case renaming doesn't work|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Sunday, December 31, 2006|
+==Description 
+In the files view, try renaming a file by capitalizing its first letter. It's impossible.
+

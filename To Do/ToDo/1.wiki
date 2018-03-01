@@ -1,0 +1,20 @@
+| Summary |Automatic merge|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Closed|
+| DateReported |Sunday, October 01, 2006|
+==Description 
+* Add button "Auto Merge" to lower pane in the merge view (menu: Selection>Auto Merge)
+* Use the selection from lower pane
+* For each item try performing auto merge
+
+Perform merge operations without asking:
+* New at source, deleted at source
+* Attribute merge: select defaults
+* Content merge: call external merger in auto mode
+
+Important: Check '''return codes''' of external mergers. If conflict detected:
+
+Dialog: Automatic merging of "file name" resulted in conflicts. Would you like to review the merge? Yes, Cancel, and a box: "Don't ask this question again." The default is ''Yes''.

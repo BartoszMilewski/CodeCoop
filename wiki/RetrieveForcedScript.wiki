@@ -1,0 +1,12 @@
+= History::Db::RetrieveForcedScript
+Arguments: ScriptHeader, CommandList (by mutable reference)
+Returns: true if forced script found.
+* if [[HasNextScript]] (set)
+** ...
+* Loop through SortedTree::ForwardSequencer (_membershipChanges)
+** if node->IsForceExec ()
+*** [[RetrieveScript]]
+*** InitScriptHeader 
+*** return true
+* return false
+

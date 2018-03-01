@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Move Projects</title>
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Move Projects from Current Computer to New Computer</h1>
+	<em><span style="color: dodgerblue">(This feature is <b>not</b> available in Code Co-op Lite)<br />
+	</span></em>
+	<br />
+<p>If you want to move the whole Code Co-op database (all projects and their histories) from your current computer to a new computer follow these steps:
+<ol>
+	<li>On the source computer
+		<ul>
+	 	<li>Create a full Code Co-op backup using <i>Tools>Create Backup</i>. Move the resulting file to the new computer.</li>
+		<li>If the Disptatcher is using e-mail, make sure you know how to configure it on the new machine.</li>
+		</ul>
+	</li>
+	<li>On the target computer
+		<ul>
+		<li>You should have a fresh installation of Code Co-op with no projects present</li>
+		<li>Select <i>Tools>Restore From Backup</i> and select the backup file created in step 1</li>
+		<li>The process of restoring projects may take a very long time with very slow progress. Be patient!</li>
+		<li>For each project a verification request is sent to another project member--please select them from the list</li>
+		<li>After the procedure completes, check-ins will be blocked in those projects that haven't received back verification scripts. (If necessary, you can unblock them using <i>Project>Request Verification</i> and clicking on the checkbox "Don't block check-ins".)
+		</ul>
+	<li>On the source computer (after the process finished successfully on the target computer)
+		<ul>
+		<li>Uninstall Code Co-op. Make sure to select the option of <b>not defecting from projects!</b></li>
+		</ul>
+	</li>
+</ol>
+
+<p>See also: <a href="CreateBackup.html">Create Backup</a> and <a href="RestoreFromBackup.html">Restore from Backup</a> for explanation of Backup and Restore.</p>
+
+</body>
+</html>

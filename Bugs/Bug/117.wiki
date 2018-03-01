@@ -1,0 +1,16 @@
+| Summary |In the Check in Area tab, the Changed field doesn't automatically refresh|
+| ReportedBy |Deb|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 4 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+
+Bug #780 from the Web database.
+
+After editing and saving a file, I would expect the Changed field to reflect this by adding a 'c' in the Changed field. now, you have to click refresh.

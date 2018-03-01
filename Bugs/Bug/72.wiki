@@ -1,0 +1,13 @@
+| Summary |Assertions after cancelled merge|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Sunday, October 01, 2006|
+==Description 
+Open inter-project branch merge in a script with lots of files. Cancel the progres meter. The lower pane shows files in Unknown state. Double-click on such a file and you get an assertion (followed by more assertions).
+ Assert (restorer.IsReconstructed ());

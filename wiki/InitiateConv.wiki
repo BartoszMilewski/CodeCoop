@@ -1,0 +1,5 @@
+=IpcQueue::InitiateConv
+* Lock
+* new [[ConversationData]]
+* [[RequestQueue]]::Add (convData)
+* _event.Release -- wake up my thread to pick up the conversation

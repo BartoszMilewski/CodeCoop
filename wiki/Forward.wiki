@@ -1,0 +1,13 @@
+= WorkQueue::Forward
+* while there are scripts with forwards in _toDoList
+** FindScriptWithForwards
+** Create transTable Transport->recipient index (in ScriptSlip)
+** For each transport
+*** if not destination ignored
+**** SafePaths tmpScriptPaths on the stack
+**** If need to change the forwarding flag, make a temporary copy using tmpScriptPaths. If it fails, remove from _toDoList, continue. Else stamp the tmp copy.
+**** copy script using FolderMan::CopyMaterialize
+*** Deal with errors and mark requests done
+
+== Feedback
+* ActivityIndicator on the stack. Sets/resets activity in _feedbackMan

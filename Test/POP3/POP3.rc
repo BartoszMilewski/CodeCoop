@@ -1,0 +1,236 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_POP3 DIALOGEX 0, 0, 193, 180
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "POP3 Mail Account Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Account name (just for referral, may be arbitrary)",
+                    IDC_STATIC,7,8,179,11
+    EDITTEXT        IDC_NAME,7,21,179,14,ES_AUTOHSCROLL
+    LTEXT           "POP3 server (e.g. pop3.provider.net):",IDC_STATIC,7,42,
+                    179,11
+    EDITTEXT        IDC_EDIT1,7,56,179,15,ES_AUTOHSCROLL
+    GROUPBOX        "Login",IDC_STATIC,7,75,179,80
+    LTEXT           "User:",IDC_STATIC,15,90,57,12
+    EDITTEXT        IDC_EDIT2,80,89,99,13,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,15,111,56,14
+    EDITTEXT        IDC_EDIT3,80,111,99,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Verify Password:",IDC_STATIC,15,134,57,12
+    EDITTEXT        IDC_EDIT4,80,133,98,14,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDCANCEL,7,159,50,14
+    DEFPUSHBUTTON   "OK",IDOK,136,159,50,14
+END
+
+IDD_MAIL_ACCOUNT DIALOGEX 0, 0, 193, 326
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Mail Account Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Account name (just for referral, may be arbitrary)",
+                    IDC_STATIC,9,8,172,11
+    EDITTEXT        IDC_NAME,7,20,179,14,ES_AUTOHSCROLL
+    LTEXT           "Your email address (e.g., john@domain.com)",IDC_STATIC,
+                    9,38,172,11
+    EDITTEXT        IDC_EMAIL,7,50,179,14,ES_AUTOHSCROLL
+    GROUPBOX        "Incoming mail server",IDC_STATIC,7,67,179,102
+    LTEXT           "POP3 server (e.g. pop3.provider.net):",IDC_STATIC,14,78,
+                    163,11
+    EDITTEXT        IDC_EDIT_POP3,14,89,165,15,ES_AUTOHSCROLL
+    LTEXT           "User:",IDC_STATIC,23,110,45,12
+    EDITTEXT        IDC_POP3_USER,79,108,99,13,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,23,128,44,14
+    EDITTEXT        IDC_POP3_PASS,79,128,99,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Verify Password:",IDC_STATIC,21,151,57,10
+    EDITTEXT        IDC_POP3_PASS2,79,149,98,14,ES_PASSWORD | ES_AUTOHSCROLL
+    GROUPBOX        "Outgoing mail server",IDC_STATIC,7,175,179,121
+    LTEXT           "SMTP server (e.g. smtp.provider.net):",IDC_STATIC,14,
+                    187,162,10
+    EDITTEXT        IDC_EDIT_SMTP,14,198,165,15,ES_AUTOHSCROLL
+    CONTROL         "My server requires authentication",IDC_AUTH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,216,164,10
+    LTEXT           "User:",IDC_STATIC,24,234,45,12
+    EDITTEXT        IDC_SMTP_USER,80,233,99,13,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,24,255,44,14
+    EDITTEXT        IDC_SMTP_PASS,80,255,99,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Verify Password:",IDC_STATIC,22,279,57,10
+    EDITTEXT        IDC_SMTP_PASS2,80,277,98,14,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDCANCEL,7,300,50,14
+    DEFPUSHBUTTON   "OK",IDOK,136,300,50,14
+END
+
+IDD_MAIL_TO DIALOGEX 0, 0, 186, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Mail Account Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_RCPT,7,20,172,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,129,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,7,41,50,14
+    LTEXT           "Send a test message to (e.g. support@relisoft.com):",-1,
+                    7,7,172,11
+END
+
+IDD_SMTP DIALOGEX 0, 0, 193, 180
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "SMTP Mail Account Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Your e-mail adress",IDC_STATIC,7,8,179,11
+    EDITTEXT        IDC_EMAIL,7,20,179,14,ES_AUTOHSCROLL
+    LTEXT           "SMTP server (e.g. smtp.provider.net):",IDC_STATIC,7,37,
+                    179,11
+    EDITTEXT        IDC_EDIT1,7,48,179,15,ES_AUTOHSCROLL
+    GROUPBOX        "Login",IDC_STATIC,7,67,179,88
+    CONTROL         "My server requires authentication",IDC_AUTH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,81,163,10
+    LTEXT           "User:",IDC_STATIC,15,97,57,12
+    EDITTEXT        IDC_EDIT2,80,96,99,13,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,15,115,56,14
+    EDITTEXT        IDC_EDIT3,80,115,99,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Verify Password:",IDC_STATIC,15,135,57,12
+    EDITTEXT        IDC_EDIT4,80,134,98,14,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDCANCEL,7,159,50,14
+    DEFPUSHBUTTON   "OK",IDOK,136,159,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_POP3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 186
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_MAIL_ACCOUNT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 186
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 319
+    END
+
+    IDD_MAIL_TO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_SMTP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 186
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// BINARYDATA
+//
+
+IDR_ACK_SCRIPT BINARYDATA 
+BEGIN
+    0xc912, 0x0373, 0x30cd, 0x10c3, 0x9951, 0x1620, 0x1899, 0x1a89, 0x8cb4, 
+    0x0a43, 0x45d3, 0x13a9, 0x164a, 0x24e0, 0x8c2b, 0x0d0c, 0x715c, 0x6482, 
+    0x3896, 0x69a3, 0x4c51, 0x0602, 0x0206, 0x4642, 0x37e6, 0x4113, 0x9f1a, 
+    0x3fa0, 0x1e1e, 0x30e0, 0x5f1a, 0xe673, 0xbdfb, 0xe9de, 0xe1c4, 0x2991, 
+    0xd24c, 0x0e1e, 0x123f, 0x83ac, 0x699f, 0x36f3, 0x6896, 0x0d7d, 0xeb3e, 
+    0xdc67, 0xfc3e, 0xc79b, 0x476d, 0x9395, 0x6b31, 0x1f52, 0xe552, 0xe7e3, 
+    0xc0e6, 0x1963, 0xf860, 0xd135, 0x6af2, 0x3589, 0x8b00, 0x12c2, 0x66b2, 
+    0x6a2d, 0x13db, 0xd756, 0xcc42, 0xb170, 0x4add, 0xdaa9, 0x431f, 0xac50, 
+    0xae48, 0x719d, 0xb349, 0xebe0, 0x21c3, 0xda24, 0x661e, 0x9055, 0xed73, 
+    0x63c7, 0x6b29, 0xd1dd, 0x2d04, 0xf5d9, 0x6dbf, 0x2671, 0xbc5c, 0xa47c, 
+    0xe3dd, 0xcafc, 0x0449, 0xd9c6, 0xe110, 0x035d, 0x4b33, 0xe927, 0xcace, 
+    0xffa0, 0xf9f3, 0x116b, 0xb095, 0x873e, 0xfd3d, 0x9091, 0x44bd, 0xb021, 
+    0x030f, 0x8f69, 0xfdd6, 0x7ad1, 0xce1b, 0x213f, 0x613f, 0x8fab, 0x17b4, 
+    0xb803, 0xe01d, 0xf22b, 0x4856, 0x6ffe, 0x155d, 0xeca3, 0x789f, 0x0c05, 
+    0xb2b9, 0x6a7e, 0xbfa5, 0x7215, 0x2c7a, 0x7779, 0xfda6, 0x7dd1, 0x1880, 
+    0x3bab, "\177" 
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,4 @@
+=Mailbox::XUnpackScripts
+* for all scripts in the mailbox
+** if [[XCanUnpackScript]]
+*** [[XUnpackScript]]

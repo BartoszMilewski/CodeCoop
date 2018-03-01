@@ -1,0 +1,23 @@
+= ScriptSlip
+Internal representation of a script header
+== Immutable data
+* fileName
+* size
+* mailboxPath
+* fullPath
+* scriptId
+* senderAddress
+* comment
+* partNumber
+* partCount
+* maxChunkSize
+== Mutable Data
+* statusList: reference to ScriptFileList owned by mailbox
+* flags: describing script properties and EmailError and Postponed
+* recipients: AddresseeList
+* recipientFlags: per recipient {Uunknown, passedOver, Error }
+* requests: multimap (recipient idx) -> [[DispatchRequest]]
+* emailReqCount
+* fwdReqCount
+== Public Methods
+* MarkRequestsDone

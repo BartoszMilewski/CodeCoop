@@ -1,0 +1,14 @@
+| Summary |The editor dialog field "Current File" shows "Unchanged" when the file has changed.|
+| ReportedBy |Deb|
+| AssignedTo |Deb|
+| Component |Differ|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Priority | 2 |
+| Resolution | Fixed |
+==Description 
+
+When you first open a file, the Current File field states "checked in" which makes perfect sense. Once you start typing and check out the file, the Current File field changes to "unchanged". This doesn't make sense since i just made changes to the file. I'm not sure what the purpose of this field is but shouldn't it show as "edited" since i just modified the file?
+

@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{3692be1b-259f-4865-9738-0b6ead7760c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllCommon">
+      <UniqueIdentifier>{9f24d8e7-f8a2-41f5-af08-eb388abb7420}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packer">
+      <UniqueIdentifier>{78dd2bfd-1cfc-4bc7-8e3d-892b74dae79d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Email">
+      <UniqueIdentifier>{584bbdd8-f573-4eb8-abd1-cac172d7d2eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Email\Mapi">
+      <UniqueIdentifier>{615e68c2-9dc7-4573-acc6-29060db39e09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Email\SimpleMapi">
+      <UniqueIdentifier>{8e479696-0ab4-47b4-8345-a8b07e799d1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Email\Pop3Smtp">
+      <UniqueIdentifier>{1ce7ec9a-128f-4d18-98ee-bafd1a76b624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Licensing">
+      <UniqueIdentifier>{0f919004-81b6-4be8-878d-a38335c0b4de}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Licenser.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\Licenser.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Address.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Addressee.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DispatcherCmd.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DispatcherScript.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DistributorScriptSend.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\EmailConfigData.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GlobalId.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Invitee.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\precompiled.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RegFunc.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\ScriptProcessorConfig.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\ScriptSerialize.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SerDateTime.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\Serialize.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SerString.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\TransportHeader.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\UserIdPack.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Validators.h">
+      <Filter>AllCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\BitCode.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\BitStream.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\BlockCoder.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\Bucketizer.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\CodingTables.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\Compressor.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\Decompressor.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\ForgetfulHashTable.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\HuffmanTree.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\NamedBlock.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\PackerGlobal.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\RepetitionFinder.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\Repetitions.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packer\Statistics.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Email.h">
+      <Filter>Email</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\EmailAccount.h">
+      <Filter>Email</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\EmailConfig.h">
+      <Filter>Email</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\EmailMan.h">
+      <Filter>Email</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\EmailMessage.h">
+      <Filter>Email</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\EmailRegistry.h">
+      <Filter>Email</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\EmailSession.h">
+      <Filter>Email</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\EmailTransport.h">
+      <Filter>Email</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiAddrBook.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiAddrList.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiBuffer.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiContentsTable.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiDefDir.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiEx.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiGPF.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiHelpers.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiIface.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiMailer.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiMailReader.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiMessage.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiProperty.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiRecipientList.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiRestriction.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiSession.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiStatusTable.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiStore.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Mapi\MapiUser.h">
+      <Filter>Email\Mapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\SimpleMapi\AddrBook.h">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\SimpleMapi\MailReader.h">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\SimpleMapi\SimpleMapi.h">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\SimpleMapi\SimpleMapiEx.h">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\SimpleMapi\SimpleMapiMailer.h">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\SimpleMapi\SimpleMapiMessage.h">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\SimpleMapi\SimpleRecipient.h">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\SimpleMapi\SimpleRecipientList.h">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\SimpleMapi\SimpleSession.h">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\SimpleMapi\SimpleStore.h">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Pop3Smtp\Pop3InboxIterator.h">
+      <Filter>Email\Pop3Smtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Pop3Smtp\Pop3Session.h">
+      <Filter>Email\Pop3Smtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Pop3Smtp\SmtpMailer.h">
+      <Filter>Email\Pop3Smtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Email\Pop3Smtp\SmtpSession.h">
+      <Filter>Email\Pop3Smtp</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCtrl.h" />
+    <ClInclude Include="LicenseRequest.h" />
+    <ClInclude Include="LocalMailer.h" />
+    <ClInclude Include="MainCtrl.h" />
+    <ClInclude Include="Maker.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="OutSink.h" />
+    <ClInclude Include="..\Common\Transport.h" />
+    <ClInclude Include="..\Common\PathRegistry.h" />
+    <ClInclude Include="..\Licensing\Crypt.h">
+      <Filter>Licensing</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Address.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Addressee.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DispatcherCmd.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DispatcherRegistry.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DispatcherScript.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DistributorScriptSend.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GlobalId.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Invitee.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\precompiled.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RegFunc.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\ScriptSerialize.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\Serialize.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\SerString.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\TransportHeader.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\UserIdPack.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Validators.cpp">
+      <Filter>AllCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\BitStream.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\BlockCoder.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\Bucketizer.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\CodingTables.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\Compressor.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\Decompressor.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\ForgetfulHashTable.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\HuffmanTree.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\NamedBlock.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\RepetitionFinder.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\Repetitions.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packer\Statistics.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Email.cpp">
+      <Filter>Email</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\EmailAccount.cpp">
+      <Filter>Email</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\EmailConfig.cpp">
+      <Filter>Email</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\EmailMan.cpp">
+      <Filter>Email</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\EmailMessage.cpp">
+      <Filter>Email</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\EmailRegistry.cpp">
+      <Filter>Email</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiAddrBook.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiAddrList.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiBuffer.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiContentsTable.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiDefDir.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiEx.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiGPF.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiMailer.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiMailReader.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiMessage.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiProperty.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiRecipientList.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiSession.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiStatusTable.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiStore.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Mapi\MapiUser.cpp">
+      <Filter>Email\Mapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\SimpleMapi\AddrBook.cpp">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\SimpleMapi\MailReader.cpp">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\SimpleMapi\SimpleMapiEx.cpp">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\SimpleMapi\SimpleMapiMailer.cpp">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\SimpleMapi\SimpleMapiMessage.cpp">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\SimpleMapi\SimpleRecipientList.cpp">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\SimpleMapi\SimpleSession.cpp">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\SimpleMapi\SimpleStore.cpp">
+      <Filter>Email\SimpleMapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Pop3Smtp\Pop3InboxIterator.cpp">
+      <Filter>Email\Pop3Smtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Email\Pop3Smtp\SmtpMailer.cpp">
+      <Filter>Email\Pop3Smtp</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCtrl.cpp" />
+    <ClCompile Include="LocalMailer.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainCtrl.cpp" />
+    <ClCompile Include="Maker.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="..\Common\Transport.cpp" />
+    <ClCompile Include="..\Common\PathRegistry.cpp" />
+    <ClCompile Include="..\Licensing\Crypt.cpp">
+      <Filter>Licensing</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

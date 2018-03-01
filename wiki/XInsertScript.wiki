@@ -1,0 +1,17 @@
+=Mailbox::Db::XInsertScript
+Arguments: ScriptFile (mutable reference), Agent
+* project DB [[XUpdateSender]]
+* if script IsControl
+** ...
+** return true
+* disposition = [[XGetInsertDisposition]]
+* if disposition = DontKnow
+** inspeck command list
+* if disposition = Insert
+** history.[[XInsertIncomingScript]]
+** scan commands for new folders, remember them in agent
+** return true
+* else (Ignore or ExecuteOnly)
+** ...
+*return false
+

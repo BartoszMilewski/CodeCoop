@@ -1,0 +1,258 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "..\..\Common\buildoptions.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""..\\..\\WinLib\\afxres.h""\r\n"
+    "#include ""..\\..\\Common\\buildoptions.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION DIFFER_FILE_VERSION_NUMBER
+ PRODUCTVERSION DIFFER_FILE_VERSION_NUMBER
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x2bL
+#else
+ FILEFLAGS 0x2aL
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Distributed Version Control System"
+            VALUE "CompanyName", "Reliable Software"
+            VALUE "FileDescription", "Differ"
+            VALUE "FileVersion", COOP_PRODUCT_VERSION
+            VALUE "InternalName", "Differ"
+            VALUE "LegalCopyright", COPYRIGHT
+            VALUE "LegalTrademarks", "Reliable Software"
+            VALUE "OriginalFilename", "Differ.exe"
+            VALUE "PrivateBuild", "Reliable Software"
+            VALUE "ProductName", COOP_PRODUCT_NAME
+            VALUE "ProductVersion", COOP_PRODUCT_VERSION
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 0, 0, 169, 138
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Differentiator"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,61,117,50,14,BS_CENTER
+    CTEXT           "",IDC_ABOUT,7,5,155,8
+    CTEXT           "Copyright",IDC_COPYRIGHT,7,20,155,8
+    CTEXT           "Static",IDC_ABOUT_MSG,7,35,155,73,SS_SUNKEN,WS_EX_CLIENTEDGE
+END
+
+IDD_FIND_IN_FILE DIALOGEX 0, 0, 290, 71
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_FIND_WORD,67,9,156,70,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Whole word(s)",IDC_FIND_WHOLE_WORD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,34,90,10
+    CONTROL         "&Match case",IDC_FIND_MATCH_CASE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,48,96,10
+    CONTROL         "&Up",IDC_FIND_UP,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,149,33,53,10
+    CONTROL         "&Down",IDC_FIND_DOWN,"Button",BS_AUTORADIOBUTTON,149,45,52,10
+    DEFPUSHBUTTON   "&Find next",IDC_FIND_NEXT,236,8,50,14
+    PUSHBUTTON      " &Replace...",IDC_FIND_REPLACE,236,28,50,14
+    PUSHBUTTON      "&Close",IDC_FIND_CLOSE,236,48,50,14
+    GROUPBOX        "Direction:",IDC_FIND_DIRECTORY,142,24,82,37
+    GROUPBOX        "Match options:",IDC_STATIC,7,24,127,37
+    LTEXT           "  Find what:",IDC_STATIC,7,9,57,12
+END
+
+IDD_REPLACE_IN_FILE DIALOGEX 0, 0, 290, 87
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Replace in file"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_REPLACE_WHAT,67,7,156,70,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_REPLACE_WITH,67,26,156,70,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Hint?",IDC_REPLACE_HINT,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,28,34,32,8
+    CONTROL         "&Whole word(s)",IDC_REPLACE_WHOLE_WORD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,55,90,10
+    CONTROL         "&Match case",IDC_REPLACE_MATCH_CASE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,69,96,10
+    CONTROL         "&Up",IDC_REPLACE_UP,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,149,54,53,10
+    CONTROL         "&Down",IDC_REPLACE_DOWN,"Button",BS_AUTORADIOBUTTON,149,67,52,9
+    PUSHBUTTON      "&Find next",IDC_REPLACE_FIND_NEXT,236,8,50,14
+    DEFPUSHBUTTON   "&Replace",IDC_REPLACE,236,28,50,14
+    PUSHBUTTON      " Replace &all",IDC_REPLACE_ALL,236,48,50,14
+    PUSHBUTTON      "&Close",IDC_REPLACE_CLOSE,236,68,50,14
+    LTEXT           "Find word:",IDC_STATIC,10,9,54,11
+    LTEXT           "Replace with:",IDC_STATIC,10,23,55,9
+    GROUPBOX        "Match options:",IDC_STATIC,7,45,127,37
+    GROUPBOX        "Direction:",IDC_FIND_DIRECTORY,142,45,82,37,WS_TABSTOP
+END
+
+IDD_GOTOLINE DIALOGEX 0, 0, 140, 70
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Go To Line"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_GOTOLINE_NUMBER_LINE,7,26,126,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,7,49,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,84,49,50,14
+    LTEXT           "Static",IDC_LINE_RANGE,7,7,126,14
+END
+
+IDD_TAB_SIZE DIALOGEX 0, 0, 186, 49
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change Tab Size"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT,45,28,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,28,50,14
+    CTEXT           "Tabs are represented as \na number of spaces",IDC_STATIC,7,7,114,18
+END
+
+IDD_CHECKOUT DIALOGEX 0, 0, 186, 92
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Check Out"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,71,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,71,50,14
+    CONTROL         "Don't ask this question again!",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,51,172,15
+    LTEXT           "This file is under Code Co-op control and is currently checked in. \n\nDo you want to check it out for editing?",IDC_STATIC,7,7,172,44
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ID_MAIN                 ICON                    "Editor.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_INV_POINTER         CURSOR                  "InvArrow.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BUTTONS             BITMAP                  "buttons.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_GOTOLINE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_TAB_SIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_CHECKOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        BOTTOMMARGIN, 85
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_MAIN                 "WinDiffer"
+    ID_CAPTION              "Differentiator"
+    IDC_MARGIN              "MarginPane"
+    IDC_EDITPANE            "EditPaneClass"
+    IDC_EDIT                "TextEditControlClass"
+    IDC_DIFFER_INFO         "DiffInfoClass"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

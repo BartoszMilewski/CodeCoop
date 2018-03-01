@@ -1,0 +1,18 @@
+| Summary |Exception when passing XML to BCMerge|
+| ReportedBy |Bartosz Milewski|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Friday, September 28, 2007|
+==Description 
+Sometimes file paths and file names contain characters, such as '&' or Hebrew characters, that have special meaning in XML. We should encode such text according to XML standards.
+==Fix
+Use SetTransformAttr when adding paths to XML tree.
+
+Still to do: Decode these paths in Differ
+

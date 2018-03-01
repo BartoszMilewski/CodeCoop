@@ -1,0 +1,8 @@
+=External Links
+* Microsoft [http://msdn.microsoft.com/newsgroups/default.aspx?dg=microsoft.public.inetsdk.programming.webbrowser_ctl|WebBrowser Forum]
+*[http://msdn2.microsoft.com/en-us/library/ms171339(VS.80).aspx|Microsoft VSIP] integration of source control with VS
+*[http://sourceforge.net/projects/libjingle/|LibJingle]--a P2P library with SSL support
+*[http://www.edgewall.com/trac/|Trac]--a wiki-based issue tracker integrated with Subversion
+*[http://www.cmcrossroads.com/component/option,com_wrapper/Itemid,106/|CM Wiki] by CM Crossroads
+==C++
+* [http://www.artima.com/cppsource|The C++ Source]

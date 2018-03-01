@@ -1,0 +1,14 @@
+| Summary |File types predefined types|
+| ReportedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 2 |
+| DateReported |27 wrzeœnia 2006|
+==Description 
+File typer has to recognize some predefined set of file extension and matching file types.
+

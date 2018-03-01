@@ -1,0 +1,17 @@
+| Summary |Alert dialog very annoying!|
+| ReportedBy |Deb|
+| AssignedTo |Bartosz|
+| Component |Dispatcher|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor |
+| Status |Closed|
+| Priority |2|
+| Resolution | By Design |
+| DateReported |Thursday, November 09, 2006|
+==Description 
+Currently i have a situation where I'm getting a MAPI error "Cannot initialize Mapi subsystem". Right now I am getting an open dialog EVERY TIME the dispatcher checks email. When i close the dialog, it pops back open. If i leave it open, it comes to the top of my desktop. This is hugely annoying. So, in situations like this where i have to continue working even though the dispatcher is complaining, I get bombarded by this dialog.
+
+Why can't I close the dialog and have it be closed permanently? 
+==Bartosz
+If the mapi subsystem is not usable, there is no reason to use the dispatcher. You can always move the window to the side of your screen and resize it.

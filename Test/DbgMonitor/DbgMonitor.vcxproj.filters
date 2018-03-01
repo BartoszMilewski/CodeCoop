@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common with Co-op">
+      <UniqueIdentifier>{3303a2dd-8dcb-4a82-881e-57431b45c115}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{feafb157-56be-4081-842d-ff172a1964b7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\DumpWin.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\EditStyle.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Global.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\OutputSink.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Registry.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\RichDumpWin.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\Serialize.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\SerString.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuTable.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="CmdVector.h" />
+    <ClInclude Include="Commander.h" />
+    <ClInclude Include="DbgMonitor.h" />
+    <ClInclude Include="DbgMonitorCtrl.h" />
+    <ClInclude Include="precompiled.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\EditStyle.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\OutputSink.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Registry.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\RichDumpWin.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\Serialize.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\SerString.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuTable.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdVector.cpp" />
+    <ClCompile Include="Commander.cpp" />
+    <ClCompile Include="DbgMonitor.cpp" />
+    <ClCompile Include="DbgMonitorCtrl.cpp" />
+    <ClCompile Include="precompiled.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DbgMonitor.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DbgMonitor.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

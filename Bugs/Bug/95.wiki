@@ -1,0 +1,14 @@
+| Summary |Co-op update not accessible|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Resolved|
+| Resolution | Fixed by 38-69f |
+| DateReported |Wednesday, October 18, 2006|
+==Description 
+The dispatcher icon shows that there is an update and the tooltip says to double-click to see the details. But when I double-clicked, the dispatcher's main window was open. If I didn't know to use context menu, I would have no idea how to install the update.
+==Comments
+19 Oct 2006, Piotr: double clicking on taskbar icon was not checking status of co-op updates

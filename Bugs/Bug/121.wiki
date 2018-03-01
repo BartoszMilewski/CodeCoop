@@ -1,0 +1,26 @@
+| Summary |There is still no straightforward way to open explorer.exe in the folder I am currently viewing in Code Co-op.|
+| ReportedBy |Wieslaw|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 4 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+
+Bug #654 from the Web database.
+
+This is a long time request, which other Co-op users I know also miss. In spite of the tabbed file view and other enhancements, explorer.exe will always be needed for various reasons (e.g. rename/replace/copy files independently of co-op, view thumbnails of files/pictures that are in the folder, etc...). 
+Suggestions: 
+- A menu and keyboard shortcut would be nice 
+- The viewed project sub-path is currently displayed at the top of the Co-op window. What about launching explorer.exe with it when this displayed path is 
+double-clicked ? (when in the project root, display instead of 
+the path, rather than hiding the text widget). 
+- Allow right-click in the tree view, have an "Explore" command in the pop-up menu. 
+
+|Date|Who|Comment|
+|12/10/2002|Wiesiek|Closing. Review when 4.0 ships.|
+|3/9/2004|Bartek|This is available as Open with shell. Maybe we should change it to Explore when a folder is selected?|

@@ -1,0 +1,21 @@
+| Summary |Branch merge crash|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Cannot reproduce |
+| DateReported |Monday, October 02, 2006|
+==Description 
+Here is a step-by-step tutorial on how to crash co-op 5 beta 1 ;)
+* Create a dummy project
+* Do dummy check-in (optional)
+* Create a branch of your project
+* Go back to your original project, and from the project menu select 'Merge with Branch Project'
+* In the Target Project combo, select your branch
+* Boom, assertion failure. My guess is an attempt to access an element in an empty std::vector. Sure you'll have no problem fixing this one ;)
+==Comment
+Cannot reproduce with build after script 3f-48a.
+

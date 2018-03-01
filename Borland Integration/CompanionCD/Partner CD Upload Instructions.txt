@@ -1,0 +1,265 @@
+From: "Karen Giles" <kgiles@borland.com>
+To: <piotr@relisoft.com>
+Cc: <support@relisoft.com>
+Subject: Borland .Net Partner CD Upload Instructions
+Date: Saturday, September 04, 2004 2:43 AM
+
+September 03, 2004
+
+Dear Piotr:
+
+We are pleased to announce the .Net Partner CD has been opened to all BTPs supporting Delphi.  We have managed a way to give everyone supporting our .Net products an opportunity to be part of the Borland .Net Partner CD.  If you've already responded to this request, please do not respond again.  
+
+Borland would like extended an innvitation for you to participate in the Delphi/C#Builder Partner CD. The Partner CD is a unique opportunity to co-market the products you sell to the Borland .Net community.  We would like to invite your company to be part of this exclusive Partner CD we plan to release with the next version of Delphi/C#Builder. Your company has been specifically contacted for first rounds reservations for the Delphi/C# Builder Partner CD.  Space on the Delphi Partner CD is very limited.  
+
+IF YOU ARE SINCERELY INTERESTED IN SHIPPING YOUR DELPHI FOR .NET OR C# COMPATIBLE PRODUCTS IN THE BOX WITH THE UPCOMING RELEASE OF DELPHI, PLEASE RSVP BY SEPTEMBER 8TH.  Again, space is very limited on the Delphi/C#Builder Partner CD.  You must send an email to kgiles@borland immediately upon receiving this message with the size of your product for if you wish to participate.  All you need to say in the email is, for example, "AZZ Computers would like to participate in your .Net Partner CD. The file we are planning to submit is 33 megs". 
+
+Below are instructions and passwords for uploading your product files to Code Central for the Partner CD.  You must contact me first and let us know you are participating.  Please follow each step below as each step is important for prepare your files for our manufacturing and production team.  Be sure to test your product with this release of Delphi/C#Builder, codename Diamondback field test.  Our hope to is have the space on the CD filled with products from our most avid supporters by mid September.
+
+--------
+Benefits
+--------
+
+Companies participating in our Partner CD project will gain exposure for
+their products to a broad base of Borland customers. Listed below are
+the benefits for participating in our exclusive Partner CD:
+
+* Your product is on the Partner CD in every Delphi box
+* Partner CD ships in Professional and Enterprise Studio versions
+* Automatic download or installs of your product through our online
+* CodeCentral Repository
+* Provides another vehicle to showcase your products and services
+
+
+DELPHI PARTNER CD GUIDELINES AND UPLOAD INSTRUCTIONS
+
+--------
+Criteria
+--------
+
+Your company must:
+
+- Be a Borland Technology Partner (BTP). The base program is free and
+  simple to join. If you aren't already signed up, please email me
+  immediately to get it set up.
+- Support Delphi with your product(s)
+- Must mention support for Delphi in your advertising or an intention
+  of including this in your advertising
+- Mention support for Delphi on the web site for your product(s)
+
+Your products must:
+
+- Be submitted before the final submission deadline (OCTOBER 8TH)
+- Fit in the Partner CD categories listed below
+- Have a documented install process
+- Work out-of-the-box without an Internet connection 
+- must submit a company logo, product name, and a short and long description
+  of your products.
+- Pass our internal install and functionality testing (e.g. install, drop,
+  compile, run)
+- Trials can only expire from time of install.  No fixed fail dates please.
+- No Freeware or Shareware products
+
+----------
+Categories
+----------
+
+* Exclusive
+    Components and software versions that are currently only available on
+    this CD
+* Full
+    Full versions of products available on this CD 
+* Lite
+    Lite versions of commercial products, with a subset of the features
+    of the full commercial product. Lite versions do not require a purchase
+    to be used.
+* IDE-Only
+    Commercial third-party products that require the IDE to be present to
+    run.
+* Trial
+    Commercial products that expire after a certain period of time or
+    demonstration versions of products provided to save you the download.
+* Info
+    Articles, on-line books, and other technical information about the
+    Borland product or software development in general
+
+If you are planning to submit your product for the next Delphi Partner CD, please 
+download our Software License Agreement located at 
+ftp://bortech:welcome@bekins1.borland.com/companioncd/SoftwareLicenseAgreement.d
+oc.  Complete the agreement and fax a copy to 831-431-4119.  Only those with a 
+completed Software License Agreement on file will be included on our Partner CD.
+
+------------------------------
+Making a Partner CD Submission
+------------------------------
+
+After you have read this information and are ready to make your submission for the 
+Partner CD, you will need to upload the following items as part of
+the same attachment (one zip file) to CodeCentral.
+
+This zip file cannot contain any embedded directories.
+
+    your product logo as a GIF or JPG, no larger than 200x200 pixels 
+    your install image as a single file any installation instructions necessary 
+
+Please make one unique submission for each content item you want to submit for the CD, 
+whether it's an article, book, a component set, or one of your
+commercial products.
+
+To use CodeCentral, go to http://codecentral.borland.com/ 
+
+If your submission is for a product that is not yet released, you must be registered as a 
+field tester in CodeCentral so you can set the appropriate
+versions for your submission.  The user name and password for field test registraion is 
+provided by the respective product field test coordinator.
+
+TO BEGIN UPLOADING YOUR PRODUCT FILES, BE SURE YOU ARE A 
+MEMBER OF THE BORLAND DEVELOPER NETWORK (bdn.borland.com) THEN 
+FOLLOW THE STEPS BELOW.  If you need assistance, contact kgiles@borland.com.
+
+-------------------------------------------------------
+Field Test and Partner CD Registration - PASSWORDS REQUIRED!
+-------------------------------------------------------
+
+* If you are not a member of the Borland Developer Network Site, be sure to login as a new member first under "My Account" on the left side bar at http://bdn.borland.com/.  The proceed below.
+
+To begin registering for the Delphi field test and Partner CD, follow these
+steps:
+
+  1. Set your Borland community cookie by going to http://bdn.borland.com
+     If you are not greeted by name on the home page, log in by clicking the
+     login link.
+
+  2. Go to http://codecentral.borland.com/codecentral/ccweb.exe/ftmenu
+     You should see your name and email address at the top of the HTML form.
+     If it is not there, do step one (1).
+
+3. Enter user name "diamondback" and password "ratt13r" (copy and paste if you're unsure)
+
+
+  4. If you enter the correct user name and password, you will see the text
+     "Registration Successful." If you do not enter the correct user name and
+     password, you will see the text "Thanks for registering!" 
+
+After successfully completing the last step, you will be registered in
+CodeCentral as a field tester for that product.
+
+----------------------
+Uploading a submission
+----------------------
+
+After you have set your login cookie and registered as a field tester in
+CodeCentral, you are ready to upload your submission by following these
+steps:
+
+1. Go to the CodeCentral home page. 
+2. Click on the "New CD" icon to create a new Partner CD entry 
+3. Fill in all the required information. Under the "Product" field select Delphi.  Under the "Version" field set both a low version for which release of Delphi your product is compatible.  Set the highest version to "9", (i.e. 1-9, 6-9).  This will insure that your product is to be included on the next Delphi Partner CD when we extract all the products for the master CD.
+4. Press the "Save" button 
+5. Upload your zip file containing everything your product logo, install
+image, and any other necessary files. 
+6. After the http upload has been completed, the size of your upload will
+be displayed in the browser, along with an ID number for your submission. You may want to save this ID for locating it in the future or in case you need to go back and edit your submission at a later date.
+
+-------------------------
+Modifying your submission
+-------------------------
+
+You can edit your submission, re-upload the attachment for it, or delete it
+at any time by going to the detail entry for your submission and using the
+relevant link.  (These links are also available on the search results form.)
+
+-----------------------------------
+Finding your Partner CD submissions
+-----------------------------------
+
+After you register as a field tester, you will see a new link on the
+CodeCentral Home Page called <Product> CD. In this case "C++ Beta CD". You
+can click on that to get a list of all current Partner CD submissions for
+that product.
+
+Or, if you want to find your Partner CD submissions, do a search by going
+to the CodeCentral Home Page and clicking the search icon, and
+
+    Set the author to your name or email address 
+    Hit the search button 
+
+All of your submissions will be listed. You can then find the status of your
+Partner CD submission by clicking on a specific submission. The Partner CD
+entry for your detail listing will be one of the following values:
+
+    "No" (not a Partner CD submission) 
+    "Yes, untested" (it has not been tested since you uploaded it, or since
+the IDE has changed) 
+    "Yes, rejected" (comments field should have reasons why) 
+    "Yes, accepted" (will be on the Partner CD unless a retest is
+required) 
+
+------------------------------------
+Finding Other Partner CD submissions
+------------------------------------
+
+If you're looking for Partner CD submissions for a field test version after you have 
+registered, do a search by going to the CodeCentral Home
+Page and clicking the search icon, and:
+
+    Set the product to the specific product you're looking for. 
+    Set the high version to the field test version you're looking for. 
+    Hit the search button 
+
+All submissions that are listed for the field test for that product should now be displayed.
+
+----------------------
+Submission Suggestions
+----------------------
+
+Please be aware that Borland has editorial control on the content of the
+Partner CD, so your product description may be reworded. You can avoid
+potential rewording by making your product descriptions as clear, concise,
+and business-like as possible.
+
+You should use the both the short description and the long description to
+get developers interested in looking at your product and leading them to
+additional information on your web site. Do not attempt to use this space as
+advertising, as it will be edited as necessary.
+
+If you have comments about your submission, you can include them with the
+submission in the field provided. Only Borland representatives will see
+those comments.
+
+We will only be approving submissions on the Partner CDs that pass our
+rudimentary compatibility tests. These tests involve installing the
+submission, using its components in the IDE, and running the project. If you
+have specific suggestions for testing your submission to increase its
+likelihood of being approved for the Partner CD, make sure you provide
+them.
+
+IMPORTANT: ALL CONTENT IS ACCEPTED FOR PARTNER CDs AT BORLAND'S SOLE DISCRETION 
+
+If you have any questions about our Partner CDs, contact Karen Giles 
+(kgiles@borland.com) or call 831-431-1029.  Also, pay special attention to
+the Delphi newsgroups.  Anders Ohlsson,  Developer Relations Manager and lead on the Delphi Partner CD project.  He can also address questions about the Partner CD on the Delphi Field Test newsgroups.  
+
+-----
+Dates
+-----
+
+OCTOBER 8TH Partner CD submission deadline
+
+Thank you so much for your time. And of course, feel free to contact me
+with questions about the Partner CD and Borland products.
+
+
+Best Regards, 
+Karen Giles, Developer Relations/Partner Relations 
+Borland Software Corp. 
+Tel:  831-431-1029 
+Fax:  831-431-4119
+
+
+
+
+
+To: piotr@relisoft.com
+CC: support@relisoft.com
+ 

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Restore From Backup</title>
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Restore From Backup</h1>
+	<em><span style="color: dodgerblue">(This feature is not available in Code Co-op Lite)<br />
+	</span></em>
+	<br />
+<p>The archive created with <a href="CreateBackup.html">Tools > Create Backup</a> can be used to restore the complete Code Co-op database with all the projects present on the machine at the time of backup. This is useful in two situations:
+<ul>
+	<li>The machine crashed and the disk is not recoverable</li>
+	<li>You are moving the database to another computer.</li>
+</ul>
+</p>
+<p>
+Before you restore from backup file, make sure the computer doesn't already have a non-empty Code Co-op database. The restoration may only proceed on a <b>fresh installation of Code Co-op</b>. 
+</p>
+<p>You will first be asked for the location of the backup (see dialog below). If the backup is stored on the internet, it will be downloaded using FTP.</p>
+
+<p>Once the database has been restored, Code Co-op enters the stage of <b>project recovery</b>. First it tries to recreate project roots, and if it can't, the <a href="VerifyRootPaths.html">Verify Root Paths</a> dialog is displayed, prompting for new locations. Next, Code Co-op sends a <a href="RequestVerification.html">Verification Request</a> for each project. Until verification scripts are received, all check-ins are blocked. (Making a check-in from a project that is not up to date risks massive rejections of historical scripts.)
+
+Finally, Code Co-op visits all the projects and performs <a href="RepairProject.html">Project Repair</a>. This step might take a long time. </p>
+
+<p>Warning: If you are using Backup/Restore to <a href="MoveProjects.html">move Code Co-op to a different computer</a>, make sure not to perform any Code Co-op actions on the source machine, after restoring the database on the target machine. The only thing you can do on the source machine is to uninstall Code Co-op <b>without defecting</b> from any projects.
+
+<p class="image"><img src="../Images/RestoreFromBackup.gif" /></p>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+| Summary |Default action in history/merge view|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Done|
+| DateReported |Sunday, October 01, 2006|
+==Description 
+Don't open the differ/merger when user double-clicks in history/merge. Make the "view script details" the default.
+==Comment
+Open differ when there's only one file, otherwise open details.

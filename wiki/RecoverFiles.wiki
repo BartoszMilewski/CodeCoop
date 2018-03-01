@@ -1,0 +1,20 @@
+if synch are is not empty then accept sync
+
+under transaction {
+*execute repair selection
+*foreach item in the repiar selection do {
+**copy file from Area::Reference to Area::Project
+**force item state to checked in
+*}
+}
+
+if preserved local edits are present in the project database folder then {
+*convert file names to global ids
+*under transaction {
+**check-out file
+**copy file from Area::LocalEdits to Area::Project
+**delete file from Area::LocalEdits
+*}
+*delete all remaining *.out files from the project database folder
+}
+

@@ -1,0 +1,18 @@
+| Summary |Distribute full sync on external media|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |1|
+| Status |Done|
+| DateReported |Thursday, May 10, 2007|
+==Description
+In the invitation dialog and in the accept-join dialog, add option to store full sync somewhere else rather than in the public inbox, from where it is immediately emailed. The user can then copy it to a CD ROM or an FTP site and by-pass the email. 
+
+== Implementation
+Modify Project>Invite (don't bother with Join). Add a radio button to options:
+* Save invitation to my disk -- I will copy it manually to the Public Inbox directory (usually c:\co-op\PublicInbox) on the new user's machine.
+If the "satellite" radio button is checked, this text should end in "...on the new user's hub".
+
+Important thing: turn off the script's forwarding flag, so the recipient's dispatcher doesn't complain about "new satellite user".
+
+

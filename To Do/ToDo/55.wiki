@@ -1,0 +1,10 @@
+| Summary |Create RSWLCo-op.exe with 5.1|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |1|
+| Status |Open|
+| DateReported |Wednesday, August 27, 2008|
+==Description
+Update the Co-op setup program that joins RSWL
+

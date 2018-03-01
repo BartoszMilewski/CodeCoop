@@ -1,0 +1,14 @@
+| Summary |Branch from unconfirmed script|
+| CreatedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |1|
+| Status |Done|
+| DateReported |26 paüdziernika 2006|
+==Description
+Add two markers - one after FIS and one after selected script. The one after FIS marks the fork point, the one after selected script marks the branch start. If later the selected script is rejected we still will be able to find fork point using the marked inserted after the FIS.
+==Implementation
+*Add new script state bit - not interpreted by version 4.6 (back-compatbility) - DeepFork
+*Add flag to GetForkIds telling it to return normal forks (what we do now) or deep forks.
+*During branch from unconfirmed script mark FIS marker as DeepFork.
+

@@ -1,0 +1,10 @@
+| Summary |Multi-threaded Dispatcher|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Tuesday, September 11, 2007|
+==Description
+Create a separate thread for copying each script.
+

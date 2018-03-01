@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+	<title>FAQ: Configuring Dispatcher to work with Lotus Notes</title>
+	
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>How do I configure Lotus Notes to work with Code Co-op?</h1>
+<p class="first">There have been a lot of variabilities in the implemention of MAPI and SimpleMapi and Lotus Notes. So, depending on your version of Lotus Notes, you may or may not be able to interface Code Co-op with Lotus notes.<strong> We recommend moving to POP3/SMTP support. You can use Gmail which is a free email account that supports this protocol. </strong></p>
+<p>The information provided here is a guide to trouble-shooting your particular version.</p><br />
+
+
+<h2>Lotus Notes 6.x</h2>
+<p class="first">It has been found that after upgrading to Lotus Notes 6.x, MAPI may stop working.
+Go to the <a href="http://www-1.ibm.com/support/docview.wss?rs=0&q1=mapi&uid=swg21172816&loc=en_US&cs=utf-8&cc=us&lang=en" target="_blank">IBM support page</a> for this MAPI issue for  information on trouble-shooting this problem. And remember, Code Co-op uses MAPI and Simple MAPI. </p>
+<br />
+
+ 
+<h2>Pre Release 5.0.5  of Lotus Notes </h2>
+<p class="first">In order to use earlier versions of Lotus Notes with Code Co-op, you will need to have the Lotus Notes Service Provider installed.</p>
+   <br />
+ <div style="margin: 8px; padding: 10px 20px; background-color:#ffffcc; border:#999999 thin solid;">
+	<h3>What is the Lotus Notes Service provider?</h3>                                       
+    
+  </p>
+</h3>
+<p>The Lotus Notes MAPI service provider (or NOTES MAPI support) is a .dll file 
+provided with Lotus Notes. It allows programs that require a MAPI interface, 
+including the Microsoft Exchange client and Microsoft Outlook to access LOTUS 
+NOTES e-mail. </p>
+
+ 
+<h3>How do I install Notes MAPI support?</h3>
+<p>When you install Lotus Notes, if the setup program finds MAPI support installed, it will add NOTES to the list of MAPI services available to the Exchange/Outlook profile. In practice, this means it will always be installed in Windows NT 4. For NT 3.51 or Windows 95, it will be installed if Windows Messaging, Exchange or Outlook is already installed. </p>
+<p>If you installed Lotus Notes first, you can re-install Notes after installing Exchange, Outlook or Windows Messaging. It will just add the necessary MAPI transport .dll file while preserving the rest of your Lotus Notes setup. This means you'll see Lotus Notes as an available service when you set up or modify your Outlook profile. </p>
+
+<h3>How do i tell applications to use this service provider?</h3>
+<p>Before applications can use Notes MAPI support, you must include Lotus Notes as a service in your Exchange/Outlook profile. In Windows NT 4 and Windows 95, use Control Panel | Mail (or Mail and Fax). For Windows NT 3.51, a separate icon is installed to allow MAPI services to be conffigured. Once a profile is defined, it is available to all MAPI-enabled applications.</p>
+
+<h3>Which versions of Lotus Notes have MAPI support?</h3>
+<p>All 32-bit versions of Lotus Notes from 4.5 onwards provide the necessary .dll. However, version 4.5.4 works reliably in all situations. Version 4.6 and 4.6a were missing some fixes to the MAPI support that were in 4.5.4 and so do not work properly.</p>
+<p><br />
+  You can find more information from 
+    <a href="http://www.slipstick.com/addins/services/lotusnotes.htm" target="_blank">www.slipstick.com/addins/services/lotusnotes.htm</a>
+</p>
+</div>
+ 
+</body>
+</html>

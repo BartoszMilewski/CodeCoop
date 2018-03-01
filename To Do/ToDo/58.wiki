@@ -1,0 +1,12 @@
+| Summary |Support for Hotmail|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Dispatcher|
+| Priority |1|
+| Status |Open|
+| DateReported |Thursday, May 14, 2009|
+==Description
+Details in [http://www.mydigitallife.info/2009/01/16/hotmail-free-pop3-and-smtp-access-and-server-configuration-settings/|this article].
+* Update help and web site.
+* Add this option to Dispatcher wizard (just like Gmail)
+

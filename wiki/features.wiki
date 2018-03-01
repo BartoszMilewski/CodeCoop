@@ -1,0 +1,18 @@
+=Feature Requests
+*Add Selection>Export - exports selected files at current version. Allow for export to ftp sites (easier to update WEB projects).
+*Ordinals in history. Create an ordinal during check-in: one more than the last accepted script in history. Display in history in decimal. Give access through command-line tool (versionno.exe). (People want to use it to mark builds. Doesn't matter if rejected scripts have duplicate ordinals.)
+*Check-out status (list of checked out GIDs sent during each check out and attached to every script)
+*Implement Ctrl-F in History view to search for particular scripts by script ID, or by comment. It will translate the search string into a filter string.
+*Add FTP option to export project (version). For easy deployment on a server.
+*Operations on multiple project
+**On Vacation status--changes status in all projects to ''observer''
+**Manage membership by member instead of by project
+**Move a tree of projects to another drive/directory
+**Synch and Accept All button to synchronize all projects with one click
+**"Join all of these projects on another computer".... then based on a multi-selection of projects, they are auto joined on another coop station. Great for when you add a new machine.
+* During dispatcher auto-setup, display a feedback window: "detecting email client", "retrieving email address", etc.
+* Not expecting these to be seriously considered at this stage in development but here are some ideas from people I know who use co-op.
+** Ability to select a point in project history and send it to a recipent list. <br/>Think of this like a new observer status who you can send snapshots of your code to. The recipents would be running co-op as an observer and this feature can be used for things like deployment (server is the observer), showing clients or managers stable snapshots of the application etc.<br/>I liked this idea because it doesn't seem like a tough one to implement, as co-op already does all of these things but just not this way.
+** Ability to send a file out to project members without it being in code control. I've had a few cases where I wanted all project members to have a file that was about the project itself but that didn't make sense to code-control and have as a permanent part of the project. Being able to send out a script that delivers a file outside of code-control also sounds like an easy addition to the featureset as co-op would again just have to do something differently that it already does well.
+** Ability to deploy history as scripts to project members. Instead of having to export and send to project members for them to import it would be nice to be able to 'push' out history to project members that would be processed in a script and added to their station.
+

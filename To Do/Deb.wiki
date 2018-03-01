@@ -1,0 +1,6 @@
+=Deb
+==Open Items
+? SELECT Summary, Priority, DELETE FROM ToDo WHERE AssignedTo = Deb AND Status = Open
+
+==Other Items
+? SELECT Summary, Priority, Status, DELETE FROM ToDo WHERE AssignedTo = Deb AND Status <> Open

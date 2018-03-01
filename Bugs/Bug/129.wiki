@@ -1,0 +1,27 @@
+| Summary |Assertion when right-clicking mail details pane|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Monday, October 23, 2006|
+==Description 
+Ivan Vecerina: Right click on details of incoming script => ASSERT failure & Crash if ignored
+ Assertion info:
+   Program: C:\Program Files\Reliable Software\Code Co-op\Co-op.exe
+   File: .\UI\Layout.cpp
+   Line: 826
+   Expression: iter != _panes.end ()
+
+Reproduced as follows:
+
+In the Inbox tab, I have an incoming script.
+'''right'''-clicking on any file in the details pane appears to trigger the 
+failure.
+==Resolution
+Corrected couple of can_ ... methods that validated selection menu items displayed in the context menu. Some of can_ methods used tables not displayed in the mailbox view. Fix in Beta2.
+
+

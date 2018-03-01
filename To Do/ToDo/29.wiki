@@ -1,0 +1,9 @@
+| Summary |Change co-op icon when pending sync|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |3|
+| Status |Open|
+| DateReported |Tuesday, March 06, 2007|
+==Description
+Dempson has several Co-ops open at once. He wants to have some visual indication that a given instance of Code Co-op has pending scripts. An icon change would be visible in the taskbar. It could be triggered at the same time the Inbox Tab changes the red dot icon.

@@ -1,0 +1,16 @@
+| Summary |Wiki: implement WM_APPCOMMAND|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |2|
+| Status |Done|
+| DateReported |Thursday, October 26, 2006|
+==Description
+The wiki view should watch for WM_APPCOMMAND messages and handle APPCOMMAND_BROWSER_FORWARD/BACKWARD appropriately.
+
+How do you generate such events? Backspace key?
+
+I have a 5-button mouse and two of the buttons are linked to the 
+forward/backward commands.  Some of the multimedia keyboards use them too.
+
+

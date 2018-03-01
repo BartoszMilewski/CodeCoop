@@ -1,0 +1,24 @@
+| Summary |Dispatcher closes after windows password changed|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |Sunday, December 10, 2006|
+==Description 
+When windows password changes, we are not able to decrypt the user's SMTP/POP3 password and the dispatcher dies. 
+Solution: Catch the exception when decrypting password from registry, show dialog which explains that:
+ Code Co-op could failed to decrypt the stored e-mail account password (you probably changed your Windows login). Please provide your password for the account:
+
+ E-mail address:
+ User Name: 
+ POP3 password: [    ]
+ o My SMTP account requires a password too:
+    o Same as POP3
+    o Different: [    ]
+
+When the password is provided, store it in the registry as usual.

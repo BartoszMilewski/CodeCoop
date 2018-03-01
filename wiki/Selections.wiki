@@ -1,0 +1,52 @@
+=Selection and Focus
+==Reacting to item change notification in listview
+A command has to be executed on item change. Problem: the pane where the change took place might not have the focus yet--focus notification comes later.
+* File View: Clicking in treeview causes directory change. The selection is passed **explicitly** as argument.
+* Project View: Interesting because both panes use the same table. Fortunately, no commands executed on single click (yet!).
+* History View: Selecting a script executes the Create Range command, which needs history selection. Focus might still be in Script Details pane. Use table name when creating selection in the Commander (don't ignore table name in UiManager.
+==Reacting to item change notification in treeview
+Clicking on the folder in the tree view triggers the following sequence of calls:
+
+Notification from Windows intercepted by HierarchyController::OnSelChanged
+#HierarchyController::ChangeCurFolder
+##TreeBrowse::OnSelect
+###Hierarchy::OnSelect
+###Model::Query
+##Executor::ExecuteCommand ("SetCurrentFolder")
+###Model::ChangeDirectory
+###Commander::AfterDirChange
+####Commander::VerifyRecordSet
+####DisplayMan::Rebuild (isWikiFolder)
+####Commander::View_Default
+#####DisplayMan::SelectPage which does nothing because we are already diaplying selected page
+##ListObserver::OnContentsChange
+###''''Current Layout::Invalidate''''
+###Current Layout::RefreshToolBars
+
+*[[SetCurrentFolderLog|Clicking on a folder in the tree view - debug log]]
+*[[SelectionOpenFolderLog|Double clicking on a folder in the file view - debug log]]
+*[[GoToRootLog|Executing Folder>Goto Root menu command - debug log]]
+*[[GoUpLog|Executing Folder>GoUp menu command - debug log]]
+
+==Browsing Page serious design problem
+The Browsing Page (File View) has serious problem - it displays two panes using the same table id - tree view pane and file list view pane use the same table id (Table::folderTableId). Because of that the following Layout class method gives different results depending where is the the focus:
+ WidgetBrowser * Layout::GetBrowser (Table::Id tableId)
+ {
+	 WidgetBrowser * browser = GetCurBrowser ();
+	 Assert (browser != 0);
+	 if (browser->GetTableId () == tableId)
+		 return browser;
+
+	 auto_vector<Pane>::const_iterator iter =
+		 std::find_if (_panes.begin (), _panes.end (), IsEqualTableId (tableId));
+	 if (iter != _panes.end ())
+		 return (*iter)->GetBrowser ();
+
+	 return 0;
+ }
+Getting Table::folderTableId browser return the following browser:
+*TreeBrowser when the focus is in the folder pane
+*TableBrowser when the focus is in the file pane
+*TableBrowser when the focus is in the mini project pane
+The same problem is ha the method '''RecordSet const * Layout::GetRecordSet (Table::Id tableId) const''' 
+

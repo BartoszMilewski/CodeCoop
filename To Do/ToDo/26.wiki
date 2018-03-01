@@ -1,0 +1,13 @@
+| Summary |Wiki token concatentaion|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |3|
+| Status |Open|
+| DateReported |Friday, December 15, 2006|
+==Description
+This should work:
+ ? SELECT Summary FROM Feature WHERE FILENAME LIKE %<nowiki>[?FeatureName]</nowiki>%
+So should this:
+ ?SELECT Summary FROM Feature WHERE FILENAME LIKE <nowiki>[?FeatureName]</nowiki>
+All this could be accomplished if the parser had a production for "Identifier" that would collect and concatenate tokens. I think the lexer already does the substiturion of <nowiki>[?FeatureName]</nowiki> in some cases.

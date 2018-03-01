@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Inter-Project Merge</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Inter-Project Merge</h1>
+<p class="first">You can merge changes from one Code Co-op project to another under the following conditions:</p>
+<ul>
+	<li>One of the projects was created as a branch of the other, and</li>
+	<li>The branch project has enough history to include the original branching point.</li>
+</ul>
+<p class="first">Note: When a branch project is created, it inherits the history of the original project, which includes the branching point. However, when new members join the <em>branch</em> project, they don't get its full history. If a new member of a branch project wants to perform a merge with the original project, he or she has to <a href="ImportHistory.html">import the history</a> from the creator of the branch (or somebody else who has already imported it).</p>
+<p>A merge is done in order to propagate changes from one project to another. It doesn't matter which project was the original one, and which was created as the branch&mdash;the merge can go either way. </p>
+<br/>
+
+<h2>Performing a Merge</h2>
+<p class="first"> The project from which you are propagating the changes is considered the <em>source</em> (branch); and the other project, the <em>target</em> (branch). The merging will propagate the changes made by a selected script (or, cumulatively, from all scripts since the branch point up to the selected script) in the <em>source</em> branch to the current version of the <em>target</em> branch. The merged changes will appear as file edits in the target branch, and they have to be checked in in that project.</p>
+<br />
+<h3 class="first">Starting a Merge 
+</h3>
+<ul>
+	<li>Open the source project in Code Co-op and go to the History tab</li>
+	<li>Select the script you want to propagate.</li>
+	<li>Click on the <i>Open Branch Merge View </i> button<img src="../Images/automergebranch.gif" alt="Merge Branch button" width="20" height="17" hspace="2" /> in the upper left corner. You will be taken to the <a href="branchmergeTab.html">Branch Merge tab</a>. (You can skip the two first steps and instead open the Branch Merge tab directly from the <i>View</i> menu.)</li>
+	<li>In the details pane at the bottom of the window, select the <i>Target Project</i> from the drop down list in the lower pane.	</li>
+	<li>If  you do not see the project listed in the drop down, click &quot; <i>Select branch...&quot;</i> from the list. A dialog will appear with the list of all projects on the local machine. Select your target project from that list.</li>
+</ul>
+<p class="note">At this point, Code Co-op performs a check to see if the target project shares history with the source project. If the test  fails, either the projects are not releated or their histories don't reach far enough into the past. </p>
+<h3>Reviewing the Merge </h3>
+<p class="first">When the projects are related&mdash;the common branching version is established&mdash; all the pre-branch scripts are greyed out. You can now select any post-branch script and do the <b>file-by-file</b> merge from within the details pane. </p>
+<p>You will notice that each file has a Merge Status. Files will be marked as follows:</p>
+<ul>
+	<li><em>Identical</em> - There are no differences in this file between the branches </li>
+	<li><em>Different</em> - There are differences in this file between the branches. This includes content changes and file renames and moves.</li>
+	<li><em>New at Source - </em> This file is new in the source project and it will be added to the target project as a result of the Merge</li>
+	<li><em>Deleted at Source</em> - This file will be deleted in the target project as a result of a merge</li>
+</ul>
+<p class="first">You can select individual files or all the files in the details pane and choose one of the following ways to perform the merge:</p>
+<ul>
+<li>To review the merge and manually make changes, select  the <em>Merge Branch files</em> button <img src="../Images/mergebranch.gif" alt="Merge Branch button" width="15" height="16" hspace="2" />. This will launch the merger. </li>
+<li> To automatically merge the files, select the <em>Automatically Merge Branch Files button <img src="../Images/automergebranch.gif" alt="Merge Branch button" width="20" height="17" hspace="2" /></em>
+</li>
+</ul>
+<p>There are three <b>merge modes</b> available from a dropdown.
+<ul>
+  <li>Selective</li>
+  <li>Common Ancestor</li>
+  <li>Cumulative</li>
+</ul></p>
+<p>The easiest one to explain is the <i>Cumulative</i> merge. All changes to all files, from the branching point up to and including the selected script, are considered. Use this type if you want to update the target in one fell swoop.<p>
+<p>A <i>Common Ancestor</i> merge is restricted to the files modified in the selected script, but it also goes back to the branching point. Use this merge if you want to update the target script-by-script. Start with the earliest script, do the ancestor merger, and check in the files in the target (maybe even using the same script comment as in the source). Repeat the same with the next script and so on. After each step, the next merge will will only involve the changes made by the consecutive script, since all previous changes have allready been propagated to the target. This way of merging will preserve the granularity of scripts.</p>
+<p><i>Selective</i> merge is probably the most natural to use. It only propagates changes made by the selected script. There is however an oddity that you'll have to accept.</p>
+<p>The merger will show, in the left pane, the changes made by the selected source script. These changes will also appear in the merge-result pane. However, the right pane will also display some changes that are, in a way, spurious. They are the result of comparing the current target-branch version to the version just before the selected script in the source branch. These pseudo-changes will also appear in the result pane. It all works out just fine, but it requires some getting used to.</p>
+<p class="first">Once you have merged a file, its status will change to <em>Merged</em>. The <em>Merged</em> status is not persistent, it is kept only during the current session.</p>
+<p>&nbsp;</p>
+<h3>Accepting the Merge </h3>
+<p class="first">After you have merged all the changes, go to the Check-in Area tab in the target project. You can review the changes once again by double-clicking on each file. Once you are satisfied, check-in the files to propogate the merge results to other project members. </p>
+
+<p>See also:</p>
+<ul>
+	<li><a href="ProgramOptions.html">Selecting the Merger</a></li>
+	<li>Understanding the difference between <a href="MergeVersion.html">Merge File Branches and Auto-Merge Files Branches</a> </li>
+</ul>
+</body>
+</html>

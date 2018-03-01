@@ -1,0 +1,15 @@
+| Summary |Review Help|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Sunday, October 01, 2006|
+==Description
+Help on merging needs screenshots.
+
+Add "Merging 101" that explains local conflicts, rejected scripts, and inter-project merges.
+
+Explain how to use BCMerge.
+
+Integration with VS 2005 requires explanation and screenshots.

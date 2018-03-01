@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{0b62a956-cc4e-4f40-8a43-07dbbd21f3ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{d600e33b-e4a6-4696-997e-b4501109aac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serial">
+      <UniqueIdentifier>{ebefd555-d70b-4178-a172-16ed08e71b91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\buttons.bmp">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\del.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\dif.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\drive.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\file.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\folder.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\main.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\new.ico">
+      <Filter>Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\CmpDir.rc">
+      <Filter>Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource\resource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\IPCExchange.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PathRegistry.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\precompiled.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RandomUniqueName.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ReliSoftReg.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\Serialize.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SerString.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="AccelTable.h" />
+    <ClInclude Include="CmdVector.h" />
+    <ClInclude Include="CmpDirReg.h" />
+    <ClInclude Include="Commander.h" />
+    <ClInclude Include="Ctrl.h" />
+    <ClInclude Include="DataChunk.h" />
+    <ClInclude Include="DataPortal.h" />
+    <ClInclude Include="DataQuery.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="Lister.h" />
+    <ClInclude Include="ListViewer.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Session.h" />
+    <ClInclude Include="ToolBar.h" />
+    <ClInclude Include="View.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\IPCExchange.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\PathRegistry.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\precompiled.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RandomUniqueName.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ReliSoftReg.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\Serialize.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\SerString.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="AccelTable.cpp" />
+    <ClCompile Include="CmdVector.cpp" />
+    <ClCompile Include="CmpDirMain.cpp" />
+    <ClCompile Include="Commander.cpp" />
+    <ClCompile Include="Ctrl.cpp" />
+    <ClCompile Include="DataChunk.cpp" />
+    <ClCompile Include="Lister.cpp" />
+    <ClCompile Include="ListViewer.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Session.cpp" />
+    <ClCompile Include="ToolBar.cpp" />
+    <ClCompile Include="View.cpp" />
+  </ItemGroup>
+</Project>

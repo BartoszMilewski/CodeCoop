@@ -1,0 +1,8 @@
+= CommandIpc::Context
+* Members
+** Commander (ref)
+** CmdVector (ref)
+** Model Critical Section (ref)
+** FeedbackUser
+* Methods
+** VisitProject: Lock model, Commander::VisitProject

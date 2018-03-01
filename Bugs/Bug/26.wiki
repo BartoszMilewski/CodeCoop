@@ -1,0 +1,15 @@
+| Summary |Quarantine view and balloon help don't work together|
+| ReportedBy |Wieslaw|
+| AssignedTo |Piotr|
+| Component |Dispatcher|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Open|
+| Resolution | Deferred |
+==Description 
+
+When quarantine view list several script Dispatcher will display for each of them the balloon tip over the task bar icon. The user sees open quarantine window with 10 scripts and 10 times balloon pops up with message 'undeliverable script'.
+If we open quarantine view then don't show balloon messages any more.
+
+24 Aug 06, Piotr: We have no good solution for this. We cannot tell whether the Dispatcher window is displayed on top or it is obscured by other windows. If we could say that we could modify the behaviour.

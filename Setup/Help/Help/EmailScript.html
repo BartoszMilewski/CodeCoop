@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Distributing scripts through E-mail</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>Distributing Scripts through E-mail</h1>
+<p>Synchronization scripts can be automatically distributed directly through SMTP/POP3 or your SimpleMAPI or MAPI  email client. When you use our built-in SMTP/POP3 support, Code Co-op will talk directly with your mail server to send and retrieve Code Co-op scripts. When using a Mapi client like Outlook or Outlook Express, the scripts will be sent and received through your e-mail program.</p>
+<p>Emailed scripts are compressed&mdash;the compressed script has the extension <b>.znc</b>. Code Co-op setup makes a shell association of this extension with the program unznc.exe. Unznc decompresses a script and copies it to the local Public Inbox. Thanks to this arrangement you may double-click on the script attachment in a sync message and it will be processed by your dispatcher (this trick is useful if your e-mail client doesn't support MAPI).</p>
+<br />
+<h2>Handling of Large Scripts </h2>
+<p>Sometimes, even after compression, some scripts&mdash;usually full-sync scripts&mdash;may be too large for your mail server. The Code Co-op dispatcher has an option to split such scripts into separate chunks for e-mailing. After all the chunks  arrive at their destination, the dispatcher will pick them up, combine into one file, and decompress.</p>
+<br/>
+<p>See also: </p>
+<ul>
+	<li><a href="../Tutorial/EmailPeer.html">Setting up email collaboration</a></li>
+	<li><a href="../FAQs/encrypt.html">Email encryption</a> </li>
+</ul>
+</body>
+</html>

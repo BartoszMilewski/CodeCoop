@@ -1,0 +1,2 @@
+=Bug Report
+? INSERT INTO Bug (ReportedBy = [?ReportedBy], DateReported = [?DateReported], AssignedTo = [?AssignedTo], Component = [?Component], Version = [?Version], Summary = [?Summary], Reproducible = [?Reproducible], Severity = [?Severity], Priority = [?Priority], Status=Open )

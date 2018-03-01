@@ -1,0 +1,16 @@
+= Differ and Merger Command
+==DifferCmd
+    SerString    _currentFile;
+    SerString    _beforeFile;
+    SerString    _afterFile;
+    SerString    _title;
+    BitSet<Options> _bits;
+==MergerCmd
+    SerString    _currentFile;
+    SerString    _referenceFile;
+    SerString    _mergeSourceFile;
+    SerString    _mergeTargetFile;
+    SerString    _title;
+    BitSet<FileState> _bits;
+    // volatile
+    BitSet<Area::Location> _exists;

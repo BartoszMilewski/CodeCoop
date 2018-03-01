@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Working from the History tab</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<h1>History Tab</h1>
+	<p class="image">
+	<img src="../Images/historyTab.gif" alt="History area" width="543" height="418" hspace="5" vspace="10" border="1" />
+	</p>
+	<p>The <strong>History tab</strong> shows  the repository of all check-ins (scripts), whether done by you or other project members, in the order in 
+	which they were applied to the project. </p>
+	<p>Each script listing shows additional details including who made the change, when it was made, and the state of the script.</p>
+
+	<h3>Script States</h3>
+	<p>In order to understand various script states, here's the glossary of terms used in the &quot;State&quot; column of the 
+		History display</p>
+	<ul>
+		<li> Confirmed: All project members accepted this script</li>
+		<li> Branch: The script was in conflict with a higher priority script and was 
+			branched (see <a href="LocalBranch.html">Branch</a>)</li>
+		<li>Tentative: Your own script waiting for acknowledgments from other project members</li>
+		<li>Unconfirmed: Somebody else's script waiting for final acknowledgment from its sender</li>
+		<li>Overdue: Your own script that has been tentative for more than two weeks</li>
+	</ul>
+	<p>In many case a script becomes <em>overdue</em> because some project members 
+		stopped responding to scripts. You should notify the administrator of the project
+		about such &quot;dead souls.&quot; The administrator should either remove those members from
+		the project or change their status to <a href="observer.html">Observer</a>.<br />
+	</p>
+	<h3>Details Pane</h3>
+	<p>The Details pane at the bottom shows all the files affected by a particular script. From within this pane you can:</p>
+	<ul>
+		<li><span class="first">Double-click a file to view the changes in the visual differ</span></li>
+		<li>Save selected files either before or after the script to a designated location</li>
+		<li>Select a file and add it to the history filter and later remove it</li>
+	</ul>
+
+	<h2>History Tab Functions</h2>
+	<p>It is from within the  History tab that you can do any of the following:</p>
+	<ul>
+		<li><a href="ProjectHistory.html">Review historical versions</a></li>
+		<li><a href="LocalMerge.html">Merge branched scripts</a> that were the result of a <a href="LocalBranch.html">conflict</a> </li>
+		<li><a href="Branch.html">Branch your project </a></li>
+		<li> <a href="restoreVersion.html">Restore previous  version of specific files </a></li>
+		<li><a href="RestoreProject.html">Restore previous project version</a></li>
+		<li><a href="ExportVersion.html">Export historical project version </a></li>
+		<li><a href="CompareVersions.html">Comparing versions in history</a></li>
+		<li><a href="FileHistory.html">Filtering project history</a></li>
+	</ul>
+</body>
+</html>

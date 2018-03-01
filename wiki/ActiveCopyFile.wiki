@@ -1,0 +1,9 @@
+= ActiveCopyFile
+Interface
+* OpenRead
+* OpneWrite
+* Read
+* Write
+* Commit
+
+

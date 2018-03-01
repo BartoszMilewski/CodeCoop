@@ -1,0 +1,38 @@
+| Summary |Make transactable methods/object into templates|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |3|
+| Status |Open|
+| DateReported |Thursday, April 26, 2007|
+==Description
+Example:
+ template<class Trans>
+ void Db::GetLineageStartingWith (Lineage & lineage, GlobalId refVersionId) const
+ {
+    GidList reverseLineage;
+    GetReverseLineage<Trans> (reverseLineage, refVersionId);
+    lineage.InitReverse (reverseLineage);
+ }
+
+ template<class Trans>
+ void Db::GetReverseLineage (GidList & reverseLineage, GlobalId refVersionId) const
+ {
+    reverseLineage.clear ();
+    for (SortedTree::FullSequencer<Trans> seq (_setChanges); !seq.AtEnd (); seq.Advance ())
+    {
+        Node const * node = seq.GetNode ();
+        if (node->IsExecuted ())
+        {
+            GlobalId scriptId = node->GetScriptId ();
+            reverseLineage.push_back (scriptId);
+            if (scriptId == refVersionId)
+                break;
+        }
+    }
+ }
+
+ Node const * History::SortedTree::FullSequencer<Trans>::GetNode () const 
+ {
+    return _nodes.Get<Trans> (_curIdx);
+ }

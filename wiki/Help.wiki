@@ -1,0 +1,126 @@
+=Help
+==Line Formatting
+
+|! Display | Wiki Markup | Comment |
+| One paragraph.<br/>&nbsp;<br/>Another paragraph. | ''empty line'' | Start new paragraph |
+| =Title=
+| <nowiki>=Title</nowiki> | Heading |
+| ==Heading 1
+| <nowiki>==Heading 1</nowiki> | Subheading |
+| ===Heading 2
+| <nowiki>===Heading 2</nowiki> | Sub-subheading |
+| ====Heading 3
+| <nowiki>====Heading 3</nowiki> | Sub-sub-subheading |
+| * Top item
+* Another top item
+** subitem
+*** sub-subitem
+* One more top item 
+|<nowiki>* Top item</nowiki><br/>
+<nowiki>* Another top item</nowiki><br/>
+<nowiki>** subitem</nowiki><br/>
+<nowiki>*** sub-subitem</nowiki><br/>
+<nowiki>* One more top item</nowiki> | Unnumbered lists<br/>''Start line with asterisk(s)'' |
+| # Top item
+# Another top item
+## subitem
+### sub-sub-item
+# One more top item
+| <nowiki># Top item</nowiki><br/>
+<nowiki># Another top item</nowiki><br/>
+<nowiki>## subitem</nowiki><br/>
+<nowiki>### sub-subitem</nowiki><br/>
+<nowiki># One more top item</nowiki> | Numbered lists<br/>''Start line with pound sign(s)'' |
+| # Top item
+#* Subitem
+#** Sub-subitem
+# Another top item
+|<nowiki># Top item</nowiki><br/>
+<nowiki>#* Subitem</nowiki><br/>
+<nowiki>#** Sub-subitem</nowiki><br/>
+<nowiki># Another top item</nowiki> | Mixed lists<br/>''Start line with a mixture of <br/>asterisks and pound signs'' |
+|
+ bool less (int i, int j)
+ {
+     return i < j;
+ }| &nbsp; bool less (int i, int j)<br/>
+&nbsp; {<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; return i &lt; j;<br/>
+&nbsp; }<br/> | Preformatted<br/>''Start lines with whitespace'' |
+<small>Note: Inside a preformatted block, less-than signs, &lt;, are not treated as HTML markup. Wiki markup is still acceptable.</small>
+
+==Character Formatting
+|! Display | Markup | Description |
+| ''italics'' | <nowiki>''italics''</nowiki> | Two apostrophes on both sides |
+| '''bold''' | <nowiki>'''bold'''</nowiki> | Three apostrophes |
+| ''''bold italic'''' | <nowiki>''''bold italic''''</nowiki> | Four apostrophes |
+
+==Wiki Links
+Wiki links are of the form 
+    <nowiki>[[another page]]</nowiki>. 
+You can create such a link even if the target page doesn't exist (in fact, this is the preferred way of creating new pages). The first time you click on a non-existing wiki link, an empty wiki page is created in the current directory and the editor is open on this page. The new file, in this case "another page.wiki", is added to project (it will be visible in the check-in area, ready to be checked in).
+
+A wiki link may contain alternative text after the ''pipe'' sign, like this 
+    <nowiki>[[another page| Don't Click Me]]</nowiki>. 
+This link apperas on the page as: [[another page| Don't Click Me]], even though it points to (absent!) ''another page.wiki''.
+
+==Namespaces
+An internal link may have a ''namespace'' component, equivalent of putting the wiki file in a separate subdirectory. For instance, if you create a link:
+ <nowiki>[[bug:wrong icon]]</nowiki>
+and click on it the first time, a file ''wrong icon.wiki'' will be created in the subdirectory ''bug''. Some namespeces, such as ''Image'' and ''Delete'' are reserved (see topic below). Clicking on a link that has a prefix '''Delete:''' results in file deletion.
+
+==Templates
+When a wiki directory contains a file named ''template.wiki'' its contents will be used to initialize every new wiki file created through a link. In particular, you might find it useful to create a template file in a subdirectory/namespace. In that case, every file created in this namespace will be appropriately initialized. For instance, here's a To Do List template: [[ToDo:template]]. Every new file created using the ''ToDo'' namespace, will be initialized with the contenst of ''ToDo\template.wiki''.
+
+==Images
+To embed an image, use a wiki link with the ''Image:'' namespace prefix. For instance, 
+    <nowiki>[[Image:My Photo]]</nowiki>. 
+The first time you click on such a link, a dialog appears, prompting you to find the intended image anywhere on your disk. This image is then be copied to the ''Image'' subdirectory of the current directory (it will also be added to the project). Once the image file is present in the ''Image'' subdirectory, the picture is automaticall displayed in the source page. Note: the image file may have any extension that is understood by the browser, for instance .gif, .jpg, .png, etc. 
+
+An image link may contain alternative text after the ''pipe'' sign, e.g., 
+    <nowiki>[[Image:My Photo| It's me!]]</nowiki>. 
+The alternative text is displayed when the mouse hovers over the picture.
+
+[[Image:Sunset| Tropical Sunset]]
+ <nowiki>[[Image:Sunset| Tropical Sunset]]</nowiki>
+==External links
+To create a link to an external page, enclose it in single brackets. You can also provide an alternative text after the ''pipe'' sign. For instance, the following link
+    <nowiki>[http://www.relisoft.com|Reliable Software]</nowiki>
+is displayed as [http://www.relisoft.com|Reliable Software]. Note: only strings starting with internet transport prefixes, like 
+|http:| ftp:| https:| ftps:| mailto:|
+are treated as links. Otherwise, single brackets are displayed normally, as in A[0].
+
+==Boxes, Tables, and Rules
+To create a box like this:
+| start and end a line with a vertical bar |
+
+Similarly, to create a table, start each table row with a vertical bar. Separate items in a row with vertical bars. For instance, the following markup:
+ | one   | two  |
+ | three | four |
+is displayed as
+| one    | two |
+| three | four |
+To make a table heading, follow the vertical bar with an exclamation mark. For instance:
+ |! Country |! Language |
+ |  USA     |  English  |
+is displayed as:
+|! Country |! Language |
+| United States | American English |
+You can have multi-line entries in a table. There is even a trick to start an entry on a new line. Just type a space after the opeining vertical bar, so it won't be confused with the closing bar. Use this trick, for instance, to include pre-formatted text in a table. For instance, this code:
+ | Next entry is pre-formatted | 
+ &nbsp; previous line ends in a space! |
+Produces this display:
+| Next entry is pre-formatted | 
+ previous line ends in a space! |
+To make a horizontal rule like this:
+---
+start a line with three hyphens: ---.
+==No Wiki
+To turn off the wiki interpretation of markup, put it between &lt;nowiki&gt; and &lt;/nowiki&gt; tags.
+==HTML markup
+As long as it doesn't interfere with wiki markup, standard HTML markup may be embedded in .wiki files. For instance <span style="color:#d90;font-family:serif;">'''Orange Serif'''</span> is encoded as
+ <nowiki>&lt;span style="color:#d90;font-family:serif;"&gt;'''Orange Serif'''&lt;/span&gt;</nowiki>
+==SQWiki
+[[SQWiki Help| SQWiki] is our simplified database language. 
+==Forms
+You can create [[Forms Help| wiki forms] using HTML. A form may be submitted to another wiki file--the results of the form can be accessed there using simple syntax.

@@ -1,0 +1,12 @@
+= Model::ExecuteMembershipChange
+Arguments: ScriptHeader, CommandList (const references), AckBox
+* [[MembershipUpdateVerifier]].[[CheckUpdate]]
+* Transaction
+** if verifier.[[CanExecuteMembershipChange]]
+*** get MemberCmd from script, create CmdMemberExec and execute
+*** verify that the member is in the database (throw if not!)
+*** agent.[[XFinalize]]
+*** if !IsAddMember, 
+**** if dead or observer: [[XRemoveFromAckList]]
+**** if dead: [[XCleanupMemberTree]]
+* history.[[XMarkExecuted]]

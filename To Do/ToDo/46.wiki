@@ -1,0 +1,9 @@
+| Summary |Create project from a history file|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |2|
+| Status |Closed|
+| DateReported |Tuesday, November 13, 2007|
+==Description
+This is Dempson's idea. Why not use an exported history file to create a new copy of a project? It has enough data to restore all project files. Membership may be a little tricky, but we could maybe change the format of .his to make it easier. It also seems like we have all the building blocks.

@@ -1,0 +1,14 @@
+| Summary |Can't uninstall Code CO-op with existing project|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Resolution | Fixed |
+| Priority | 2 |
+| DateReported |Monday, October 02, 2006|
+==Description 
+
+Currently, if you try to install Code Co-op without defecting from all projects, you get a dialog warning you that this is the case. You are given the option to continue with the uninstall. When I say "YES, i want to uninstall", it fails. There isn't a warning. Code Co-op just doesn't uninstall.

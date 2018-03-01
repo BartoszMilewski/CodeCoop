@@ -1,0 +1,18 @@
+=Differ: To Do
+== Setup
+* Installer.cpp
+* Installer::SetupRegistry
+** change SetAlternativeDiffer for BcMergerExe to SetBcDiffer -- set the UseXml flag in registry
+** SetAlternativeMerger -> SetBcMerger
+** SetAlternativeAutoMerger remove for BcMergerExe
+* Installer::PerformInstallation
+** ConfigDefaultDifferMerger
+** SetUpOurAltDifferMerger
+| SetupRegistry is called first, the ConfigDefaultDifferMerger. They seem to be overlapping. |
+== 
+* ExecuteDiffer (MergerProxy.cpp)
+* UsesAltDiffer (AltDiffer.cpp) should take ''bool & useXml''
+* If useXml true, then go through ExecuteBuiltInDiffer
+* ExecuteBuiltInDiffer should take the path (for our differ, it's "Differ")
+* create SharedMem buffer
+* Same thing with ExecuteMerger and UsesAltMerger

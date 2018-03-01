@@ -1,0 +1,14 @@
+| Summary |Browser eats keyboard shortcuts|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Open|
+| Priority |2|
+| Resolution | Pending |
+| DateReported |Monday, October 01, 2007|
+==Description 
+There are several keyboard shortcuts that involve interaction between the browser control and the rest of the program--for instance backspace Ctrl-D (select text in the address bar), etc. These shortcuts are currently ignored. When the browser has focus, its accelerator is switched on, and the co-op accelerator is disabled. Probably both of them should be enabled in the message loop. Or, there should be a way to register our shortcut handler with the browser control.
+

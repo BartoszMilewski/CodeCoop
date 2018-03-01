@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common with Dispatcher">
+      <UniqueIdentifier>{2b153f46-2b10-4714-9642-727f866eee64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{436eab16-4eee-4bc5-8bc2-d95ed19ba35a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packer">
+      <UniqueIdentifier>{9a824147-c47d-4cd4-9bf8-adfb79d377fc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\Catalog.cpp">
+      <Filter>Common with Dispatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\GlobalDb.cpp">
+      <Filter>Common with Dispatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\GlobalId.cpp">
+      <Filter>Common with Dispatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\OutputSink.cpp">
+      <Filter>Common with Dispatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\Serialize.cpp">
+      <Filter>Common with Dispatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\Transact.cpp">
+      <Filter>Common with Dispatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Address.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\CmdArgs.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\license\Crypt.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\PathRegistry.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\precompiled.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\SerString.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\SysPath.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Transport.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\UserIdPack.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\BitStream.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\BlockCoder.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\Bucketizer.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\CodingTables.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\Compressor.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\Decompressor.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\ForgetfulHashTable.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\HuffmanTree.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\NamedBlock.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\RepetitionFinder.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\Repetitions.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\Statistics.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="Unznc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\Catalog.h">
+      <Filter>Common with Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\FileTypes.h">
+      <Filter>Common with Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\GlobalDb.h">
+      <Filter>Common with Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\GlobalId.h">
+      <Filter>Common with Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\OutputSink.h">
+      <Filter>Common with Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\params.h">
+      <Filter>Common with Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\serialize.h">
+      <Filter>Common with Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\SysPath.h">
+      <Filter>Common with Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\transactable.h">
+      <Filter>Common with Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Address.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\BuildOptions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\CmdArgs.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\CmdFlags.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\CmdLineVersionLabel.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\license\Crypt.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Global.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\PathRegistry.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\precompiled.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\ProjectData.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\SerString.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Transport.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\UserIdPack.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\BitCode.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\BitStream.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\BlockCoder.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\Bucketizer.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\CodingTables.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\Compressor.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\Decompressor.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\ForgetfulHashTable.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\HuffmanTree.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\NamedBlock.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\PackerGlobal.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\RepetitionFinder.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\Repetitions.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\Statistics.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

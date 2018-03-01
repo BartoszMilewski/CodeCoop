@@ -1,0 +1,22 @@
+=Download/Upload
+==Downloader
+WinLib\Net\Download.h
+
+Downloader is an interface for 
+* [[FtpDownloader|Ftp::Downloader]]
+* BITS::Downloader. 
+It is designed to support multiple downloads at the same time (only with BITS)
+==Methods
+* SetServerName
+* SetLogin (user, password) (if not set, use anonymous)
+* IsAvailable: is the service available
+* CountDownloads: how many downloads are active
+* StartGetFile: Starts downloading a file
+** sourceFolder, sourceFile
+** destFolder, destFile
+* Continue: continue interrupted download (BITS only)
+** localFile
+* CancelCurrent: cancel current download
+* CancelAll: cancel all downloads
+* SetTransientErrorIsFatal: abort download on transient errors
+* SetForegroundPriority, SetNormalPriority (only for BITS)

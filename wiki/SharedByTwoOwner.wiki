@@ -1,0 +1,23 @@
+= Win::SharedByTwoOwner
+template class T, assumed to inherit from [[SharedByTwo]], in particular [[ActiveObject]]
+
+Members: _shared (pointer to T)
+==Constructor
+Arguments: shared (pointer to T, default 0)
+* _shared (shared)
+==Constructor
+Arguments: p (SharedByTwoOwner<T> const ref)
+* _shared (p._shared)
+* if (_shared != 0) _shared.Acquire
+==Destructor
+* Release
+==operator=
+Arguments: p (SharedByTwoOwner<T> const ref)
+* if this != &p
+** Release
+** _shared = p._shared
+** if _shared != 0, _shared->Acquire
+==Release
+* if (_shared && _shared->Release ())
+** delete _shared
+** _shared = 0

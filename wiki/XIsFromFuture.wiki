@@ -1,0 +1,4 @@
+==Project::Db::XIsFromFuture
+* if my ID invalid, return Maybe (waiting for full sync)
+* if known member, return MemberNote::[[IsFutureScript]]
+else return Maybe

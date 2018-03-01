@@ -1,0 +1,10 @@
+| Summary |Copy comment|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |4|
+| Status |Implemented|
+| DateReported |Thursday, November 30, 2006|
+==Description
+Right clicking on a script in the merge history should popup the current context menu, but if there could be an extra entry - ''Copy script comment to clipboard''. Then after you have clicked the jump to button you will have a comment ready to paste into the checkin dialog.
+

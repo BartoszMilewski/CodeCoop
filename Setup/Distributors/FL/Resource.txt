@@ -1,0 +1,3 @@
+Flashline
+    ID_WWW_HOME_PAGE        "http://www.flashline.com/components/view.jsp?sid=1008899800234-3460299672-50&prodid=3115&viewSub=0&page=7"
+    ID_WWW_PURCHASE_LICENSE "http://www.flashline.com/components/view.jsp?sid=1008899800234-3460299672-50&prodid=3115&viewSub=0&page=6"

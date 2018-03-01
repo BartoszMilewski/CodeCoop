@@ -1,0 +1,15 @@
+| Summary |Cannot close browser page|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Open|
+| Priority |3|
+| Resolution | Pending |
+| DateReported |Wednesday, November 04, 2009|
+==Description 
+There should be a button that closes the browser page.
+
+

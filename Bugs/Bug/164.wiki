@@ -1,0 +1,30 @@
+| Summary |User unexpectedly asked for max chunk size|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |2|
+| Resolution | Cannot reproduce |
+| DateReported |Sunday, December 10, 2006|
+==Description 
+The user probably had his registry messed up.
+
+| I opened the "Collaboration Settings" dialog and clicked on Email Options. I now get a different message than before: "Please specify a valid maximum size of script attachments". After clicking OK, the E-mail Options dialog opens, and I can edit the email settings. 
+
+
+Note that the split size for scripts is the default 1024 KB. Even when I set it to the minimum 100 KB or to 100000 KB, I still get that message.
+
+
+Also note that I only get that message when clicking on the "Email Options" button in the "Collaboration Settings" dialog. I do NOT get the message when clicking on "E-mail Options" in the context menu of the system tray.
+
+
+I'm fairly certain that I never saw that message before, so that would imply that something is still a little messed up somewhere.|
+
+Hypothesis: The user had invalid chunk size in the regitsry. The email options in collaboration settings does some strange things
+* displays warning ''before'' opening the dialog
+* doesn't save the correcter value
+
+Cannot verify the above hypothesis.

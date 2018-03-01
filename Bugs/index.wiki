@@ -1,0 +1,26 @@
+=Bug Database
+|! Actions |! Bugs By Owner |! Utilities |
+| 
+[[Report]] a new bug</br>
+[[View]] bugs selectively</br>
+<form name="ViewBug" method="get" action="[[[DoViewBug]]]">
+<input type="Submit" name="Accept" value="View Bug #"> 
+<input type="text" name="BugNumber" size="4"></input>
+</form>| 
+*[[Wieslaw]]
+*[[Piotr]]
+*[[Bartosz]]
+*[[Deb]] | 
+* [[Pictures]]
+* [[Bug:Template|Bug Template]] |
+==Serious Unresolved Bugs
+? SELECT Summary, AssignedTo, Resolution, Priority FROM Bug WHERE Status = Open AND Severity = Serious AND Resolution = Pending ORDER BY Priority
+==Other Serious Bugs
+? SELECT Summary, AssignedTo, Resolution, FROM Bug WHERE Status = Open AND Severity = Serious AND Resolution <> Pending ORDER BY Priority
+==Annoying Bugs
+? SELECT Summary, AssignedTo, Resolution, FROM Bug WHERE Status = Open AND Severity = Annoying ORDER BY Resolution
+==Other Bugs
+? SELECT Summary, Severity, AssignedTo, Resolution, FROM Bug WHERE Status = Open AND Severity <> Serious AND Severity <> Annoying ORDER BY Resolution
+==Closed Bugs
+? SELECT Summary, AssignedTo, Status, Resolution, DELETE FROM Bug WHERE Status <> Open
+

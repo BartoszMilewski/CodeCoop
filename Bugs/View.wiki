@@ -1,0 +1,33 @@
+= View Bugs
+<form method="get" action="[[[DoView]]]">
+| Assigned To: | 
+<select name="AssignedTo" size="1">
+<option value="Wieslaw">Wieslaw</option>
+<option value="Piotr">Piotr</option>
+<option value="Bartosz">Bartosz</option>
+<option value="Deb">Deb</option>
+<option value="NOT nobody">Anybody</option>
+</select> |
+| Status | 
+<select name="Status" size="1">
+<option value="Open">Open</option>
+<option value="NOT Open">Not Open</option>
+</select> |
+| Severity | 
+<select name="Severity" size="1">
+<option value="NOT specified">Any</option>
+<option value="Serious">Serious</option>
+<option value="Stopper">Show Stopper</option>
+<option value="Annoying">Annoying</option>
+<option value="Minor">Minor</option>
+</select> |
+| Priority | 
+<select name="Priority" size="1">
+<option value="NOT specified">Any</option>
+<option value="1">1-High</option>
+<option value="2">2-Medium</option>
+<option value="3">3-Low</option>
+<option value="4">4-Wish</option>
+</select> |
+| <input type="Submit" name="Accept" value="View"> | Or start over: <input type="Reset" name="Reset"> |
+</form>

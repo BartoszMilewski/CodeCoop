@@ -1,0 +1,2 @@
+=Piotr: To Do
+* Resend request should be timed depending on the size of the requested script. Large full synchs, for instance, generate a lot of unnecessary resends.

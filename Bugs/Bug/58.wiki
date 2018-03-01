@@ -1,0 +1,43 @@
+| Summary |Deadlock with VS|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Unknown|
+| Severity |Serious|
+| Status |Keep for reference|
+| Resolution | Fixed |
+==Description 
+I was adding a bunch of existing files to VS project. VS checks out every file. Code Co-op was running in UI mode. At some point it deadlocked. I attached the debugger. There were three threads deadlocked. Two of them had reasonable stack trace, the third one's stack trace was meaningless. 
+[[Image:Stack1]]
+[[Image:Stack2]]
+==Fix
+The following scenario could have caused this problem.
+* There is a conversation number 1.
+* Message IPC_INITIATE is posted by an external application
+* Conversation 1 successfully terminates. The Conversation Queue was empty, so it posts IPC_TERMINATE to the main thread.
+* The main thread processes IPC_INITIATE and the Conversation Queue creates a new conversation.
+* The main thread processes IPC_TERMINATE and switches to GUI, resetting the flag _quickVisit. This is incorrect, because another conversation is already going on.
+* The second conversation terminates in the state where _quickVisit is false, and calls CommitNotifications with delayRefresh == false. The refreshing of GUI deadlocks.
+To fix this problem, I added the check _ipcQueue->IsIdle () before calling SwitchToGui
+
+	else if (msg == _msgIpcTerminate)
+	{
+		Win::Lock lock (_critSect);
+		try
+		{
+			if (_executionStateMemento.get () != 0 && ''''_ipcQueue->IsIdle ()'''')
+			{
+				SwitchToGUI (_ipcQueue->IsContinueInGui ());
+			}
+		}
+		catch ( ... )
+		{
+			// Ignore all exceptions
+			Win::ClearError ();
+		}
+		dbg << "<-- CoopController::OnRegisteredMessage -- TERMINATE" << std::endl;
+		return true;
+	}
+Note: The switch to GUI is guaranteed to occur at a later time, since there is a conversation in the queue--when it terminates, another IPC_TERMINATE will be generated.
+

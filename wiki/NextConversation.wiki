@@ -1,0 +1,13 @@
+= IpcCmd::Queue::NextConversation
+* Lock
+* while there are requests in the queue
+** get request from [[RequestQueue]]
+** if projectId != -1
+*** [[IpcContext|CmdIpc::Context]]. '''VisitProject''' (projId) (if fails, continue)
+** set _lastProjectId
+** new [[ServerConversation]] becomes _activeConv
+** return true // started conversation
+* _requests.Clear
+* set idle
+* return false (no more conversations)
+

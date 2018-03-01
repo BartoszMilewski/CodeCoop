@@ -1,0 +1,19 @@
+| Summary |WHen a checked out file has pending merge and is later modifed, new edits aren't displayed well|
+| ReportedBy |Deb|
+| AssignedTo |Bartosz|
+| Component |Differ|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Priority | 4 |
+| Resolution | Pending |
+==Description 
+
+I had a file checked out and unedited when an incoming sync came in. The incoming sync affected this unedited file. I decided to make additional changes to this file before merging the incoming changes. 
+
+When i edited the file by double-clicking it in the Check-in Area, the changes were highlighted in the differ. However, if i closed and reopened the file after making edits, the changes are no longer highlighted. The do appear in the left pane-Current tab. 
+
+If changes are made outside of Code Co-op, the changes are displayed in the Current tab but they are not highlighted.
+
+I would have expected the changes to be either highlighted in the left pane-Current tab or for the changes to appear highlighted in the right pane. To me, showing them in the right pane makes the most sense.

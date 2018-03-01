@@ -1,0 +1,14 @@
+| Summary |Co-op crashes when clicking on the "Check out all files button" on the Sync Merge screen|
+| ReportedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |23 stycznia 2007|
+==Description 
+Pressing "Check out selected file(s)" works ok, even when selecting all the files in the list.
+

@@ -1,0 +1,18 @@
+==Ligth weight full sync script
+The light version of the full synch script will have a different initial inventory part. The initial inventory part of the regular full sync script contains a sequence of new folder commands followed by the sequence of the new file commands. In the light version of the initial inventory part the list of new file commands is replaced by the list of global ids of all files present in the project at the reference version (the reference version is the most recent executed and confirmed script). Alternatively we could create a version of the new file command that will only introduce the file global id without the actual file text.
+==Processing of the light weight initial inventory
+The receving side will process the light weight version of the initial file inventory in the following steps:
+#execute all new folder commands
+#process the GidList (list of global ids) or the list of modified new file commands:
+##add FileData to the file database and set the state to missing
+##add missing file request to the SideTrack
+
+Once the light weight full sync has been executed the project will have the complete membership information, complete folder tree and the list of missing project files.
+==Missing file request
+The missing file request contains the version at which the file is requested and the file global id.
+SideTrack will process the missing file request in the same way as the missing script requests. The missing file requests will be periodically send to all project members. The missing file requests can be blocked resulting in a single missing file request script. Once the missing file has been received appropriate missing file request will be removed from the SideTrack. When we introduce the light weight full sync then SideTrack has to be compared with history and file database, because both databases can contain a missing item.
+==Missing file request script
+The missing file request script will contain the version at which the file has to be reconstruced and the GidList of requested files. The receiver of the missing file request script will do the following:
+#temporarily revert requested files state to the requested version.
+#create the script adding the requested file to the project.
+The recipient of the script generated as the result of the missing file request script will execute new file commands. The FileData in the state missing will be replaced by the FileData carried by the script. When the script arrives and the recipient already has the FileData in the non-missing state then the new file command from the script is ignored.

@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Diff">
+      <UniqueIdentifier>{e1c8b803-5ddc-465d-bd1e-a5ba344f3bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor">
+      <UniqueIdentifier>{e37cbad0-f3be-40b3-a130-06fa27afd9f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serial">
+      <UniqueIdentifier>{c1d2b05e-c906-400d-8937-c6c0b4c8f47c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{915d1537-d4d3-4c33-8791-75b60848fc58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{962bc6d3-67c1-4628-903f-e8e051d9ef19}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Diff\CluLines.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\cluster.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\Clustering.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\CluSum.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\diff.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\LineBuf.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\LineCounter.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\lines.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Diff\merge.cpp">
+      <Filter>Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\BrushBox.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Caret.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Document.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\EditCtrl.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\EditLog.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\EditPane.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Mapper.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Navigation.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\PaintContext.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Parser.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Search.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Select.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\UndoSink.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\ViewPort.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\serialize.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Serial\SerString.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\AppHelp.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\CommandParams.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DisplayFrameCtrl.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DynamicRebar.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\EditStyle.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\IPCExchange.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\PathRegistry.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\precompiled.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\PreferencesStorage.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RandomUniqueName.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Registry.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RichDumpWin.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SccDllFile.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SccDll\SccProxy.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="AccelTab.cpp" />
+    <ClCompile Include="BackupFile.cpp" />
+    <ClCompile Include="ButtonTable.cpp" />
+    <ClCompile Include="CheckOutDlg.cpp" />
+    <ClCompile Include="CmdVector.cpp" />
+    <ClCompile Include="Commander.cpp" />
+    <ClCompile Include="DifferCtrl.cpp" />
+    <ClCompile Include="DiffMain.cpp" />
+    <ClCompile Include="EditorPool.cpp" />
+    <ClCompile Include="FileNames.cpp" />
+    <ClCompile Include="FindDlg.cpp" />
+    <ClCompile Include="GoToLineDlg.cpp" />
+    <ClCompile Include="InstrumentBar.cpp" />
+    <ClCompile Include="MenuTable.cpp" />
+    <ClCompile Include="TabCtrl.cpp" />
+    <ClCompile Include="TabDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Diff\CluLines.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\cluster.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\Clustering.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\CluSum.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\diff.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\DiffRecord.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\LineBuf.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\LineCounter.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\lines.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Diff\merge.h">
+      <Filter>Diff</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\BrushBox.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Caret.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\ClipboardText.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\DocPosition.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Document.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\EditCtrl.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\EditLog.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\EditPane.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\EditParams.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Mapper.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\PaintContext.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Parser.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\resource.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Search.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Select.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\UndoSink.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\ViewPort.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\serialize.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SerList.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Serial\SerString.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\AppHelp.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\BuildOptions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\CommandParams.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\CommonUserMsg.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DisplayFrameCtrl.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DumpWin.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DynamicRebar.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\EditStyle.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Global.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GlobalId.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\IPCExchange.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ListingWin.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\OutputSink.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PathRegistry.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\precompiled.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PreferencesStorage.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RandomUniqueName.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Registry.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RegKeys.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RichDumpWin.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SccDllFile.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SccDll\SccDllFunctions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SccDll\SccProxy.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\resource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="AccelTab.h" />
+    <ClInclude Include="BackupFile.h" />
+    <ClInclude Include="ButtonTable.h" />
+    <ClInclude Include="CheckOutDlg.h" />
+    <ClInclude Include="CmdVector.h" />
+    <ClInclude Include="Commander.h" />
+    <ClInclude Include="DifferCtrl.h" />
+    <ClInclude Include="DiffMain.h" />
+    <ClInclude Include="EditorPool.h" />
+    <ClInclude Include="FileNames.h" />
+    <ClInclude Include="FileViews.h" />
+    <ClInclude Include="FindDlg.h" />
+    <ClInclude Include="GoToLineDlg.h" />
+    <ClInclude Include="InstrumentBar.h" />
+    <ClInclude Include="MenuTable.h" />
+    <ClInclude Include="TabCtrl.h" />
+    <ClInclude Include="TabDlg.h" />
+    <ClInclude Include="UiDifferIds.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\buttons.bmp">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\Editor.ico">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="Resource\InvArrow.cur">
+      <Filter>Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\Differ.rc">
+      <Filter>Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="Resource\differ.exe.manifest">
+      <Filter>Resource</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+</Project>

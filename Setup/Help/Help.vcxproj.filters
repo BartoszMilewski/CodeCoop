@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FAQs">
+      <UniqueIdentifier>{27b042a8-c1db-4148-97a8-857fed56304e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Images">
+      <UniqueIdentifier>{75da9502-498c-4288-b493-85fc46da749e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Help">
+      <UniqueIdentifier>{d0bfd7c9-2caf-4c94-bda9-b5b24da56c17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tutorial">
+      <UniqueIdentifier>{df739b0f-c6bb-4f7c-a149-54b20d488ae0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FAQs\admin.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\archive.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\backup.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\backupdbase.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\borland.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\branchScripts.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\central.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\changeEmail.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\checksum.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\default.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\delivery.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\dual.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\encrypt.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\faq.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\freeemail.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\hang.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\homesite.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\hubsat2peer.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\imap.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\intermittent.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\lostAck.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\lotus.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\manual.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\ManyTentative.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\mapidll.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\missing.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\mozilla.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\MSIntegration.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\new.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\newhub.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\notify.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\notSentOut.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\OEsecurity.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\reconfig.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\recover.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\renameproj.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\share.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\subproj.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\unattend.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\unread.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\vb.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\VC6.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\vs60.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\VSNet.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\winMessaging.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="FAQs\xp.html">
+      <Filter>FAQs</Filter>
+    </None>
+    <None Include="Images\acceptchange.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\acceptselect.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\addfiles.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\assoc.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\deskico.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\dispatch.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\files.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\fullsyncNew.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\help.css">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\hide.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\HomeSite.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\icobusy.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\invite.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\joinreq.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\member.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\NetworkAlert.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\newmenu.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\OE.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\OutlookAlert.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\project.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\remote.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\rs_ani.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\select.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\synch.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\taskico.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Images\tecpartner.gif">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="Help\acceptSynch.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\ActiveProjects.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\addFile.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\AddMore.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\archive.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\autoMode.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\BeginnerMode.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\beyondcompare.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\branch.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\branchmergeTab.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\ChangeFileType.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\checkin.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\checkinTab.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\checkout.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\command.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\CommandLine.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\CompareVersions.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\ComputerName.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\coopcmd.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\CoopUpdate.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\createProject.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\defect.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\deleteFile.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\differ.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\DifferTool.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\DirectoryTree.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\distribution.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\editDiffer.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\editing.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\EditorTool.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\editsync.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\emailScript.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\ExportHistory.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\exportVersion.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\exportWiki.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\FileFilter.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\fileHistory.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\filesTab.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\guiffy.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\historyTab.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\importHistory.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\inboxsave.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\inboxTab.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Index.hhk">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\integrate.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\invitation.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\joinProject.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\labels.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\license.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\localbranch.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\LocalMerge.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\manualreject.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\mapi.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\memberChange.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\merge.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\MergerTool.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\MergeVersion.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\moveFile.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\MoveFolder.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\MoveProject.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\MoveProjects.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\newFile.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\observer.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\Overview.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\ProgramOptions.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\ProjectHistory.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\ProjectMerge.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\ProjectOptions.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\ProjectsTab.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\QuickReference.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\renameFile.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\repairProject.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\report.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\RequestVerification.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\resendScript.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\RestoreProject.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\restoreVersion.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\reviewScript.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\script.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\ScriptDetails.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\support.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\SyncMergeTab.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\SyncScripts.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\Uncheckout.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\visitProject.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\WikiBrowser.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\wikify.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\wikiproject.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\workingfiles.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Help\yahoo.html">
+      <Filter>Help</Filter>
+    </None>
+    <None Include="Tutorial\AcceptingJoinRequest.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\addfile.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\checkin1.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\checkin2.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\checkin3.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\checkout1.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\checkout2.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\defect.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\emailGmail.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\emailLive.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\emailOptions.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\EmailPeer.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\emailSettings.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\emailSMTP.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\fullsync.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\GeneratingInvitation.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\history.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\HubConfig.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\inviteLite.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\invitePro.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\JoinExistingLite.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\JoinExistingPro.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\JoiningProject.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\lan.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\LANandEmailStart.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\lanmix.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\LanStart.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\mapiDiagnostics.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\newproj.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\newproj1.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\newproj2.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\newproj3.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\newproj4.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\ProjectNavigate.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\ReceivingInvitation.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\Restore.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\SatelliteConfig.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\SmtpPop3Diagnostics.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\StartingCollaboration.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\StartingCollaborationOverview.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\sync.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\TroubleshootingLan.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\tutorial.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\uncheckout.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Tutorial\WizardStart.html">
+      <Filter>Tutorial</Filter>
+    </None>
+    <None Include="Images\addTool.gif" />
+    <None Include="CodeCoop.hhp" />
+    <None Include="Help\ConfigureDispatching.html" />
+    <None Include="Help\CreateBackup.html" />
+    <None Include="Help\Dispatcher.html" />
+    <None Include="Help\FunctionalityOverview.html" />
+    <None Include="Help\HelpTemplate.html" />
+    <None Include="makefile" />
+    <None Include="Help\Merger.html" />
+    <None Include="Help\NewFromHistory.html" />
+    <None Include="Help\OpenInvitation.html" />
+    <None Include="ReleaseNotes.html" />
+    <None Include="FAQs\rename.html" />
+    <None Include="Help\RestoreFromBackup.html" />
+    <None Include="Help\SearchWithShell.html" />
+    <None Include="TableOfContents.hhc" />
+    <None Include="Help\VerifyRootPaths.html" />
+    <None Include="FAQs\VSNet_setup.html" />
+  </ItemGroup>
+</Project>

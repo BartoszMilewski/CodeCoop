@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+	<title>FAQ: Setting up Hubs to work over LAN</title> 
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>How do I reconfigure our Hubs to distribute scripts over the LAN?</h1> 
+
+<br />
+<p class="first">If you have multiple groups on your LAN with their own Satellite/Hub configurations, you can configure the Hubs to collaborate over the network instead of through Email. Keep in mind, this is for LAN only collaboration. If you have a Hub which also has off-site project members, you will not want to changes your current settings. </p>
+ 
+<ol>
+	<li>Check the configuration of all Hubs. Double-click the dispatcher icon in your task tray. This will open 
+  &quot;Collaboration Settings&quot; (Network Hub should be selected) 
+  
+			<ul>
+			<li>Make sure &quot;Use email&quot; is NOT checked. You won't be using email </li>
+    
+			<li>Below &quot;This Hub's email address (or name)&quot; click &quot;Advanced&quot;. Select Alternative Transport tab. Do NOT change the Hub's name (this is usually its email address or fake email). Change &quot;Hub transport&quot;: enter the share name of this Hub's public Inbox. For instance, if your Hub machine is called DENVER, type in \\DENVER\CODECOOP . </li>
+			</ul>
+		</li>
+	<li>When another person/workstation wants to join the project, send them an invitation (<em>Project &gt; Invite</em>). It will 
+  contain the Hub name and transport which they will need to join the project. </li>
+  
+	<li>The joiner will do the following: 
+  
+		<ul>
+		<li>Select <em>Project &gt; Join</em></li>
+    
+		<li>In the frame &quot;Who invited you to this project?&quot; select &quot;Somebody from a different Hub or peer&quot;. Click the &quot;Advanced&quot; button and enter the name of the target Hub (the Hubs name or email address) and then type in that Hub's share name. For instance if you are joining from PORTLAND to DENVER, type in \\DENVER\CODECOOP </li>
+		</ul>      
+	</li>
+	
+
+
+</ol>
+
+
+</body>
+</html>

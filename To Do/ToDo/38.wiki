@@ -1,0 +1,10 @@
+| Summary |Don't mail full sync under transaction|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |1|
+| Status |Open|
+| DateReported |Friday, July 20, 2007|
+==Description
+Model::XCreateFullSynch both creates a full sync parts in memory and mails them (which might include chunking) under transaction. This functionality should be split. The creation of the full sync should be done under transaction, then the transaction should commit, and only then the script mailed (or copied, if it's a manual send).
+

@@ -1,0 +1,19 @@
+| Summary |No progress meter when restoring from history|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Resolution | Fixed |
+| Priority | 2 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+
+Bug #951 from the Web database.
+
+With really large files (100s of MB) restoration takes a long time and there is no progress meter except for Reverting Changes, which is just a small part of the process.
+
+|Date|Who|Comment|
+|12/23/2003|Bartek|One more thing, there is no way to cancel it when the selection is being filled with commands. In my case the commands were adding and removing movies, so they were quite big. I had to wait until the computer ran out of memory.|

@@ -1,0 +1,10 @@
+| Summary |History Restore should include selected script|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |3|
+| Status |Open|
+| DateReported |Wednesday, August 01, 2007|
+==Description
+People get confused about Export Version and Restore Version. Maybe we shouldn't display the film on the left of History, since it's obscured by the dialog anyway, and make Restore use the same logic and Export--don't undo the selected script. Edge cases have to be re-thought: selecting last script, selecting current version, selecting full sync.
+

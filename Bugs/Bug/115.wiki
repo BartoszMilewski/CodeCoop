@@ -1,0 +1,18 @@
+| Summary |Paste into Co-op after Cut from shell doesn't remove original file|
+| ReportedBy |Wieslaw|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 4 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+
+Bug #829 from the Web database.
+
+If I Cut a file from the shell and paste it into a code co-op folder the original file is still there. 
+Confirmed still present in 4.0.
+

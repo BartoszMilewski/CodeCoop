@@ -1,0 +1,18 @@
+| Summary |Split Catalog into 3 databases|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Monday, July 16, 2007|
+==Description
+The catalog is turning into a kitchen sink. It should be split inot three databases:
+# Shared between all co-op projects (multi-access)
+#* File types
+#* Differ and Merger settings
+# Private Dispatcher data
+#* Local Users
+#* Transports
+#* SMTP/POP3
+# Shared between co-op and dispatcher (multi-access)
+

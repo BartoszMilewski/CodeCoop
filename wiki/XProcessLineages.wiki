@@ -1,0 +1,11 @@
+=History::XProcessLineages
+Arguments: ScriptHeader, Mailbox::Agent, processMainLineage (bool)
+<br/>Returns: scriptStatus
+* Extract senderId from script ID
+* Set scriptStatus to Connected
+* if (processMainLineage)
+** scriptStatus = [[XProcessUnitLineage]] with main lineage
+* if Prehistoric, return Prehistoric
+* agent.SetKnownMissingScript to script ID:gidInvalid, unit ID:gidInvalid
+* For each side lineage: [[XProcessUnitLineage]] (no effect on status)
+* return scriptStatus

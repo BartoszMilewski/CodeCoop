@@ -1,0 +1,172 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Dispatching</title>
+</head>
+
+<body>
+
+<font face="Arial">
+
+<table border="1" cellspacing="2" cellpadding="2" bgcolor="#ccccff">
+<tr>
+	<td rowspan="4" bgcolor="#9999cc"></td>
+    <td colspan="3"><b>Private Outbox</b></td>
+    <td colspan="6"><b>Public Inbox</b></td>
+</tr>
+<tr>
+    <td colspan="2"><b>Hub</b></td>
+    <td><b>Satellite</b></td>
+    <td colspan="4"><b>Hub</b></td>
+    <td colspan="2"><b>Satellite</b></td>
+</tr>
+<tr>
+    <td colspan="3">-</td>
+    <td colspan=2>no FWD</td>
+    <td colspan=2>FWD</td>
+    <td>no FWD</td>
+    <td>FWD</td>
+</tr>
+<tr>
+    <td>email</td>
+    <td>no email</td>
+    <td>-</td>
+    <td>email</td>
+    <td>no email</td>
+    <td>email</td>
+    <td>no email</td>
+    <td colspan=2>-</td>
+</tr>
+<tr>
+    <td>Machine Recipient</td>    
+    <td colspan="3">copy</td>
+    <td colspan="6">copy</T></td>
+<tr>
+    <td>Cluster Recipient</td>    
+	<td colspan="2">forward</td>    
+	<td>-</td>
+
+    <td colSpan="4">forward</td>
+    <td colspan=2>-</td>
+</tr>
+<tr>
+    <td>Remote Recipient</td>    
+    <td>email</td>
+    <td>-</td>
+    <TD>forward to hub</td>
+    <td colspan=2>pass</td>
+    <td>email</td>
+    <td>-</td>
+    <td>pass</td>
+    <td>(defect script)<br>
+        forward to hub</td>
+</tr>
+<tr>
+    <td>Confirmed Remote Recipient</td>    
+    <td>email</td>
+    <td colspan=2>-</td>
+    <td>pass</td>
+    <td>-</td>
+    <td>email</td>
+    <td>-</td>
+    <td colspan=2>-</td>
+</tr>
+</table>
+<p>
+<table>
+<tr>
+<td width=80>&nbsp;</td>
+<td width=600>
+
+<p>There are four types of mailboxes:
+<ol>
+<li>Hub private outbox
+<li>Hub public inbox
+<li>Satellite private outbox
+<li>Satellite public inbox
+</ol>
+<p>For each one, first check if the recipient is on the <b>Local Recipient</b> list. If so, let the Recipient perform the appropriate action: copy or forward directly.
+<p>If the recipient <b>not found</b> on the Local Recipient list, he seems to be remote. However, before we assume that he is remote, hub mailboxes perform a few checks just in case.
+<br><font size = -1>(We assume <b>Confirmed Remote Recipient</b> list is empty in configuration without e-mail collaboration.)</font>
+<p>Set confirmedRemote flag = true;
+<br>If (we are in hub's mailbox)
+<ul>
+Search for recipient's <i>email</i> on <b>Local Recipient</b> list.  If we know his email, he is likely local.
+<li>If (email <b>found</b> on Local Recipient list)
+<ul>confirmedRemote = <i>ConfirmRemoteWithKnownEmail</i>.</ul>
+<li>Else
+<ul>confirmedRemote = <i>ConfirmRemoteWithUnknownEmail</i>.</ul>
+</ul>
+If (confirmedRemote flag is set)
+<ul><b>Dispatch</b> script to remote recipient. Call <i>DispatchToNonLocal</i>.</ul>
+Else
+<ul>If the recipient remains unknown <b>notify</b> user about undeliverable script.</ul>
+</p>
+
+<hr>
+<h3>Hub private outbox</h3>
+<i>DispatchToNonLocal</i>
+<ul><b>E-mail</b> script
+</ul>
+<i>ConfirmRemoteWithUnknownEmail</i>
+<ul>
+<li>If configuration allows use of email, return <b>true</b>
+<li>Else
+<ul>return <i>AskUser (confirmed remote forbidden)</i></ul>
+</ul>
+
+<hr>
+<h3>Hub public inbox</h3>
+<i>DispatchToNonLocal</i>
+<ul>
+<li>If FWD flag set (came from satellite), <b>email</b> script
+<li>Else (came from another hub), <b>pass over</b>.
+</ul>
+<i>ConfirmRemoteWithUnknownEmail</i>
+<ul>
+<li>If FWD flag set (came from satellite)
+<ul>
+<li>If configuration allows use of email, return <b>true</b>
+<li>Else
+<ul>return <i>AskUser (confirmed remote forbidden)</i></ul>
+</ul>
+<li>Else (came from another hub), return <b>true</b>.
+</ul>
+</ul> 
+</ul>
+
+<hr>
+<h4><i>ConfirmRemoteWithKnownEmail</i> for hub mailboxes</h4>
+Search for <i>recipient</i> on <b>Confirmed Remote Recipient</b> list.
+<br>If found, return <b>true</b>
+<br>Else (known email, but not confirmed remote)
+<ul>return <i>AskUser (confirmed remote allowed)</i></ul>
+
+<h4><i>AskUser (confirmed remote allowed or forbidden)</i></h4>
+Ask the user if this is a (1) <i>cluster recipient</i>. If <i>confirmed remote recipient</i> is allowed in this particular call, give the user option to mark him so (2) (only in configuration with e-mail collaboration). Also, give the user option to (3) <i>change e-mail usage</i> flag.
+<ul>
+<li>If recipient is from local cluster, add him to Local Recipient list, <b>forward</b> script and return <b>false</b>.
+<li>Otherwise, if recipient is confirmed remote, add her to Confirmed Remote Recipients and return <b>true</b>.
+<li>Else (the question canceled), return <b>false</b>.
+<p>If e-mail usage flag is changed, <b>force</b> another mailbox processing run on all mailboxes.</ul>
+
+<hr>
+<h3>Satellite private outbox</h3>
+<i>DispatchToNonLocal</i>
+<ul><b>Forward to hub</b></ul>
+
+<hr>
+<h3>Satellite public inbox</h3>
+<i>DispatchToNonLocal</i>
+<ul>If FWD, <b>forward to hub</b>, else <b>pass over</b>.</ul>
+</ol>
+</td>
+</tr>
+
+</table>
+
+</font>
+</body>
+</html>

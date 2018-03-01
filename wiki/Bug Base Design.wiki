@@ -1,0 +1,71 @@
+=Bug Base Design
+Bug base is supposed to be the ''killer app'' for Code Co-op's implementation of Wiki. In version 5.0 we'll try to implement the ''proof of concept''. We will make the implementation flexible enough to support any user-created database, as long as it is a collection of records with string fields. The database should be queriable for wiki forms (implemented using HTML forms and JavaScript).
+
+==Client View
+The bug base consists of a set of wiki files that provide access to the co-op wiki database. 
+
+''''Form files'''' are implemented as wiki files with some additional HTML code that defines forms. Below is an example of a simple form:
+ &lt;form method="get" action="<nowiki>[[[active]]]</nowiki>"&gt;
+ &lt;input type="submit" name="Submit" value="Click Me"&gt;
+ &lt;/form&gt;
+The important part it that the result of the form can be passed (in this case as the URL query string) to another wiki file (in this case, ''active.wiki''). Triple brackets are used to introduce an '''in-place wiki link''' (double bracketed link would expand into a full HTML markup with the &lt;a ... &gt; &lt;/a ... &gt; tags).
+
+The query string is available in the target file in an already parsed form. For instance, if the query string contains the clause ''user=Joe'', it can be accessed using the syntax:
+ <nowiki>[?user]</nowiki>
+and it will be expanded to ''Joe'' during conversion to HTML.
+
+''''Active files'''', which can be called from ''form files'', contain query strings that, during conversion, expand to tables listing query results
+
+==Database Format
+A co-op wiki database is a subdirectory of a wiki folder that contains record files. The name of the subdirectory corresponds to the name of the '''database table'''. Record files have unique names that are derived from their global ids (for instance, ''b-12.wiki''). The contents or a record file is a list of fields of the form:
+ | field | value |
+where the value is a (potentially multi-line) string. The string may contain wiki markup. For instance, a ''description'' field may contain the text:
+ | description | <nowiki>See the ''discussion'' in:
+ [http://www.relisoft.com/science/CrcMath.html]</nowiki> |
+
+==Query Language
+We will support a subset of SQL queries of the form
+ SELECT ''fields'' FROM ''table'' WHERE ''predicate'' ORDER BY ''keys''
+The predicate can be a Boolean combination (using AND and OR and parentheses) of ''field predicates'', of the form
+ field = ''value''
+An example of a query:
+ SELECT reportedBy, status, description, date FROM bug 
+        WHERE status <> "closed" AND assignedTo = "Joe" ORDER BY date, status
+In general, the values in the query expression are passed to the active file in a query string. For instance:
+ SELECT reportedBy, status, description, date FROM bug 
+        WHERE status <> "closed" AND assignedTo = [?assignedTo] ORDER BY date, status
+ 
+To simply list the whole table, use:
+ FROM bug
+This will expand to a list of (clickable) record IDs.
+
+==Displaying Query Results
+Wiki line that starts with a question mark represents a query. During the conversion, this line is replaced with a table displaying the results of the query. The first column contains record IDs as links. Since a record ID is the name of a wiki file, clicking on it will automatically open the record. The rest of the columns display the fields in the SELECT clause. If the SELECT clause contains a wildcard, SELECT *, all fields are displayed. For instance:
+ <nowiki>? SELECT name FROM bug WHERE reportedBy = "Bartosz"</nowiki>
+may display:
+|! ID |! name |
+| [[bug:40-a]] | GP-fault in foo.cpp |
+| [[bug:40-a|bug:40-b]] | Bad button |
+
+In general, a link of the form:
+ <nowiki>[[bug:bugID]]</nowiki>
+can be used to access a particular record, for instance [[bug:40-a]].
+
+==Adding Records
+The following wiki syntax is used to add a new record:
+ ? INSERT INTO MyTable ( field1 = value1, field2 = value2, ... )
+The values may be quoted string or query fields (<nowiki>[?field]</nowiki>).
+
+The implementation of this command proceeds as follows:
+* A new file is created in the subdirectory ''MyTable'' and added to project
+** The file name is a temporary name with the extension .wiki
+** If there is a file ''template.wiki'' in the subdirectory, its content is used to initialize the temporary file
+* The file is parsed, and the values of existing fields are initialized or overwritten by the new values
+* New fields are appended if they were not present in the template
+* The file is renamed to its global ID followed by the extension ''.wiki''
+
+==Original SQL commands
+ INSERT INTO my_table (field1, field2, field3) VALUES ('test', 'N', NULL);
+ UPDATE my_table SET field1 = 'updated value' WHERE field2 = 'N';
+ DELETE FROM my_table WHERE field2 = 'N';
+

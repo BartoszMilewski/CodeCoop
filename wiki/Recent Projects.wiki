@@ -1,0 +1,33 @@
+=Recent Projects
+==The queue of recently visited projects
+* Store a short list (say, N entries) of project IDs and their priorities in the registry
+**Priorities are numbers from 0 to N-1. Each entry has a different priority
+* When any project is exited, the list is updated with that project ID.
+**If the ID is absent from the list, it replaces the lowest priority entry. 
+**If the ID is present, that entry's priority is bumped up. The entry that occupied the same slot is moved down the priority list.
+==Example
+Let's chose N = 3. Initially the list is empty.
+* Visit project ID = 10. Upon exit from this project, an entry (10, 0) is added to the list.
+* Visit project ID = 11. Upon exit, entry (11, 0) replaces the previous entry.
+* Visit ID = 11 again. Bump its entry to (11, 1).
+* Visit ID = 10 again. New entry (10, 0) is added. The list now looks like this:
+|! ID |! Priority |
+| 11 | 1 |
+| 10 | 0 |
+* Now visit project 10 again. Since the entry for 10 already exists, it will be bumped to priority 1. That forces entry 11 to shift down to priority 0.
+
+At some point the list will grow to the maximum of 3 entries, for instance
+|! ID |! Priority |
+| 12 | 2 |
+| 11 | 1 |
+| 10 | 0 |
+* If you visit project 13, the entry (10, 0) will be replaced by (13, 0).
+* If instead you visit project 10, the entry for 10 will be bumped up, forcing 11 down.
+* If you visit project 12, nothing happens, since 12 already has the highest priority.
+* If you visit project 11, the entry (11, 1) will be bumped up to (11, 2), forcing 12 down, resulting in:
+|! ID |! Priority |
+| 11 | 2 |
+| 12 | 1 |
+| 10 | 0 |
+==Display
+The recent projects pane will display all the "interesting" projects (pending sync, checked out files) merged with all N-1 recently visited projects.

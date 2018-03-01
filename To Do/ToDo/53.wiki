@@ -1,0 +1,20 @@
+| Summary |Dispatcher should show when there is no connection|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Monday, August 25, 2008|
+==Description
+When checking in code, you have the message "Have Your Checked Your Mailbox for Incoming Scripts?" and I understand the issue.
+
+What we have experienced a number of time is that a developer is not aware that their mailbox or internet connection is down.  When this happens, it can result in a lot of rejected scripts.
+
+What I am proposing would be a 'new feature' that could be part of the setup of the e-mail / network connection for sharing.  When selected one of several scenarios could occur:
+
+1)	When entering the dialog for check-in comments, first attempt to connect to the incoming script source.  If 'monitoring' an e-mail folder, this is not as meaningful, but if using a separate e-mail account or a network share, you could test connectivity at this point and know that it does not exist.  (attempted login to e-mail server and get any un-received scripts., attempt to read network dir.)
+
+2)	at the point of knowing that connectivity is down, I would like to think that you could put the script into 'pending mode' until connectivity has resumed, but also recognize that there are many permutations that would make this difficult.  Personally, I would settle for a simple - your 'e-mail/network' connection is down, you (cannot/should not) check in scripts until it is restored to avoid collisions.
+
+==Proposal
+Make the Dispatcher display connection status. Right now we don't raise alerts when automatically checking for email. But we could change the Dispatcher icon.

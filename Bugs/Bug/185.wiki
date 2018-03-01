@@ -1,0 +1,22 @@
+| Summary |Assertion when selecting admin|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Unknown|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Wednesday, July 18, 2007|
+==Description
+In a project when I am admin and there are other members (one of them observer):
+# Try defecting. This fails, because I should first nominate an admin. 
+# Open Project>Members
+#* Select the observer
+#* Make the observer an admin (radio button available!)
+Assertion in membershipchange.cpp, line 72
+ Assert (_projectDb.IsProjectAdmin ()); 
+I had to kill co-op and restart it. The member dialog now showed the new administrator.
+==Resolution
+Removed incorrect assertion. During a sequence of membership changes I can loose membership priviledge, but still generate scripts changing other members (under the same transaction during which I've lost admin status).

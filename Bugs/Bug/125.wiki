@@ -1,0 +1,18 @@
+| Summary |When viewing a diff, refreshing current file throws|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Differ|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 3 |
+| DateReported |Thursday, October 19, 2006|
+==Description 
+Differ is viewing a diff. Current file changes (e.g., a script was unpacked). Differ asks if you want to refresh. During refresh, it tries to load the "before" file, which no longer exists and throws an exception.
+==Comment
+Don't refresh read-only temporary files.
+==Resolution
+A stop-gap solution: changed the error display to "file doesn't exist any more".
+

@@ -1,0 +1,41 @@
+| Summary |Strange behavior of Save Files dlg|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Monday, October 23, 2006|
+==Description 
+What is the meaning of this code in SaveFilesDlg.cpp?
+    else if (IsTargetInsideProject ())
+    {
+        TheOutput.Display ("To restore selected files in this projects, first select them "
+            "in the file view and execute Selection>Show History.\n"
+            "Next, in the history view select the required version and execute Selection>Restore.",
+            Out::Information, hwndOwner);
+    }
+    else
+    {
+        TheOutput.Display ("To copy selected files to another Code Co-op project, "
+            "first copy them to some temporary folder.\n"
+            "Next, visit the target project, drag files from the temporary folder "
+            "and drop them onto the target project folder.",
+            Out::Information, hwndOwner);
+    }
+I changed the implementation of IsTargetInsideProject to do something compatible with its name (before it was calling <span class="code">_catalog.IsSourcePathUsed (_targetFolder, projId)</span>, which also checked if the path was above any co-op project), and now I'm not sure what should be checked. 
+
+From the message it looks like the predicate should be ''IsInsideCurrentProject''. Does the ''else'' corresponds to the target path being inside a different project? 
+
+Is it okay to copy files to a directory above a co-op project? Probably not, if ''Preserve relative paths'' is set, since there is a danger that the file will end up inside a project.
+==Proposed solution
+In SaveFilesData::IsValid and DisplayErrors, loop through all target paths (see code in Model::SaveHistoricalFiles). For each path, check if the target exists. If it does and:
+* user selected "don't overwrite": remove the path from the list quietly
+* user selected "overwrite"--check if the target is read only. If it's read only, refuse the action. Display a message: "Sorry, cannot overwrite! Target file <target path> is read only."
+==Additional changes
+* Unchecking "preserve relative paths" doesn't work--folders are created anyway.
+* Don't make "preserve relative paths" the default.
+==Post Fix
+Since we are checking for overwrites, the restriction that the target cannot be in the current project is unnecessary. Somebody might want to export files to a different directory in the same project. I would check for something else: Is the target path the same as the source path. This check can be made during Model::SaveHistoricalFiles.

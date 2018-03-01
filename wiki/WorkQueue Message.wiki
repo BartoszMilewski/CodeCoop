@@ -1,0 +1,7 @@
+= WorkQueue messages
+* ConfigChangeReq, 
+* UserEmailRetrievalReq,
+* AutoEmailRetrievalReq,
+* ScatteringReq, // always on user command
+* ClearBlacklistReq,
+* NumReq 

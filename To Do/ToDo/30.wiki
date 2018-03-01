@@ -1,0 +1,20 @@
+| Summary |Add search capability|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Done|
+| DateReported |Thursday, April 12, 2007|
+==Description
+* Project>Search
+* Folder>Search or Selection>Search?
+* Open modal dialog
+* Option: controlled/not controlled
+* Start separate thread with the list of relative paths
+* Display in a separate tab "Search Results"
+==Another option
+Do it in wiki. 
+* Open a search form
+* List results as links
+==Resolution
+Implemented using Windows Shell Search utility. The user can select project folder (including the root folder) and execute Selection>Search With Shell.

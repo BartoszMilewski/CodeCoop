@@ -1,0 +1,23 @@
+| Summary |Switch to SCC 1.3|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |1|
+| Status |Done|
+| DateReported |Sunday, May 20, 2007|
+==Description
+This is the answer from the MS forum
+
+The "Checked out items cannot be deleted by your source control provider, do you want to continue?." warning message is displayed by source control integration package, not by C#.
+
+You're implementing a MSSCCI provider supporting only MSSCCI 1.2 or older specification. VS assumes that older providers cannot delete checked out files. If your provider can delete checked out items, you should consider implementing MSSCCI 1.3 specification (in particular implementing the '''SccGetExtendedCapabilities()''' function and return the extra capability flags that your provider supports. You're probably interested in exposing 
+* '''SCC_EXCAP_DELETE_CHECKEDOUT''' and 
+* '''SCC_EXCAP_RENAME_CHECKEDOUT''' flags, 
+to get rid of a similar warning message during rename).
+
+Nevertheless, those messages are just warnings, and don't prevent the delete operation from continuing.
+
+| C# first physically deletes the file (which is read-only!) from disk, and only then calls SccRemove. Code Co-op treats the forced removal of a checked-in file as an error (and I would argue that this is indeed unacceptable behavior)|
+Scci does not prevent C#, VB or any other project from deleting or renaming the files from the local disk. We had this discussion before and I'm not going to go there again. If your provider needs to perform additional operations before any VS component attempts to delete/rename local files you should consider implementing a VisualStudio package that subscribe to IVsTrackProjectDocumentsEvents2 events. There you can intercept functions like OnQueryRenameFiles and OnQueryRemoveFiles and possible warn the user and checkout the files before C# attempts to delete them.
+
+

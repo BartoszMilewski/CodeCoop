@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{421FD818-A579-41D8-BF7F-2F40C4206057}</ProjectGuid>
+    <SccProjectName>Rebecca</SccProjectName>
+    <SccLocalPath>..\..</SccLocalPath>
+    <SccProvider>MSSCCI:Reliable Software Code Co-op</SccProvider>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>ui;resource;..\..\serial;..\..\common;..\..\co-op\common;..\..\co-op\ui;..\..\co-op;..\..\Packer;..\..\WinLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;PACKER_TEST;_WINDOWS;WIN32;STRICT;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>WinLibD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)PackerTest.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PackerTest.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)PackerTest.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\co-op\Ui\AddFilesDlg.cpp" />
+    <ClCompile Include="..\..\co-op\FolderContents.cpp" />
+    <ClCompile Include="..\..\Common\GlobalId.cpp" />
+    <ClCompile Include="..\..\co-op\Ui\HelpEngine.cpp" />
+    <ClCompile Include="..\..\co-op\Ui\InputSource.cpp" />
+    <ClCompile Include="..\..\Common\OutputSink.cpp" />
+    <ClCompile Include="..\..\Common\ProgressMeter.cpp" />
+    <ClCompile Include="..\..\Common\Prompter.cpp" />
+    <ClCompile Include="..\..\Serial\Serialize.cpp" />
+    <ClCompile Include="..\..\Packer\BitStream.cpp" />
+    <ClCompile Include="..\..\Packer\BlockCoder.cpp" />
+    <ClCompile Include="..\..\Packer\Bucketizer.cpp" />
+    <ClCompile Include="..\..\Packer\CodingTables.cpp" />
+    <ClCompile Include="..\..\Packer\Compressor.cpp" />
+    <ClCompile Include="..\..\Packer\Decompressor.cpp" />
+    <ClCompile Include="..\..\Packer\ForgetfulHashTable.cpp" />
+    <ClCompile Include="..\..\Packer\HuffmanTree.cpp" />
+    <ClCompile Include="..\..\Packer\NamedBlock.cpp" />
+    <ClCompile Include="..\..\Packer\RepetitionFinder.cpp" />
+    <ClCompile Include="..\..\Packer\Repetitions.cpp" />
+    <ClCompile Include="..\..\Packer\Statistics.cpp" />
+    <ClCompile Include="Ui\MenuTable.cpp" />
+    <ClCompile Include="Ui\ViewMan.cpp" />
+    <ClCompile Include="CmdVector.cpp" />
+    <ClCompile Include="Commander.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="precompiled.cpp" />
+    <ClCompile Include="TestCtrl.cpp" />
+    <ClCompile Include="TestMain.cpp" />
+    <ClCompile Include="Visitor.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\co-op\Ui\AddFilesDlg.h" />
+    <ClInclude Include="..\..\co-op\Common\FolderContents.h" />
+    <ClInclude Include="..\..\Common\Global.h" />
+    <ClInclude Include="..\..\Common\GlobalId.h" />
+    <ClInclude Include="..\..\co-op\Ui\HelpEngine.h" />
+    <ClInclude Include="..\..\co-op\Ui\InputSource.h" />
+    <ClInclude Include="..\..\Common\OutputSink.h" />
+    <ClInclude Include="..\..\co-op\Common\PathSequencer.h" />
+    <ClInclude Include="..\..\Common\ProgressMeter.h" />
+    <ClInclude Include="..\..\Common\Prompter.h" />
+    <ClInclude Include="..\..\co-op\Common\SelectionMan.h" />
+    <ClInclude Include="..\..\Serial\Serialize.h" />
+    <ClInclude Include="..\..\Packer\BitCode.h" />
+    <ClInclude Include="..\..\Packer\BitStream.h" />
+    <ClInclude Include="..\..\Packer\BlockCoder.h" />
+    <ClInclude Include="..\..\Packer\Bucketizer.h" />
+    <ClInclude Include="..\..\Packer\CodingTables.h" />
+    <ClInclude Include="..\..\Packer\Compressor.h" />
+    <ClInclude Include="..\..\Packer\Decompressor.h" />
+    <ClInclude Include="..\..\Packer\ForgetfulHashTable.h" />
+    <ClInclude Include="..\..\Packer\HuffmanTree.h" />
+    <ClInclude Include="..\..\Packer\NamedBlock.h" />
+    <ClInclude Include="..\..\Packer\PackerGlobal.h" />
+    <ClInclude Include="..\..\Packer\RepetitionFinder.h" />
+    <ClInclude Include="..\..\Packer\Repetitions.h" />
+    <ClInclude Include="..\..\Packer\Statistics.h" />
+    <ClInclude Include="Ui\MenuTable.h" />
+    <ClInclude Include="Ui\ViewMan.h" />
+    <ClInclude Include="Resource\resource.h" />
+    <ClInclude Include="Commander.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="precompiled.h" />
+    <ClInclude Include="TestCtrl.h" />
+    <ClInclude Include="TestMain.h" />
+    <ClInclude Include="Visitor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\PackerTest.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\PackerTest.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

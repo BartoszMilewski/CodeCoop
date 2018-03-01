@@ -1,0 +1,14 @@
+| Summary |Add refresh button to the browser view|
+| ReportedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Resolution | Fixed |
+| Priority | 4 |
+| DateReported |27 wrzeœnia 2006|
+==Description 
+
+

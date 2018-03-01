@@ -1,0 +1,20 @@
+| Summary |Merge status not refreshed|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Resolution | Fixed |
+| Priority | 1 |
+| DateReported |Tuesday, October 24, 2006|
+==Description 
+I selected a script to merge in the history, clicked the Open Merge button. Since it was the first merge, there were no hints in the project list. I selected the branch project "One". The script is still selected and the file in the lower pane is shown, but its merge status is still "Unknown". The status should be refreshed after I select a target project. 
+
+The status changed correctly when I pressed the "Refresh" button.
+
+[[Image:133]]
+
+==Resolution
+When there was only one script after the fork point and it was selected before selecting the merge target then we detected identicat range loaded into merge files and didn't prepare merge.

@@ -1,0 +1,14 @@
+| Summary |Weird state after defect|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Unknown|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Saturday, October 28, 2006|
+==Description 
+I was in the branch merge view, merging with another project (this might be important). I selected Defect from the Project menu. I defected and was brought into Project view, but the view was empty. Even hitting the Refresh button didn't do anything. I had to close co-op.
+==Resolution
+When destroying current layout first deactivate it, so all its visual element disappear from the screen.

@@ -1,0 +1,36 @@
+| Summary |Use two different checked out file markers|
+| ReportedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Resolution | Already implemented |
+| Priority | 2 |
+| DateReported |18 paŸdziernika 2006|
+==Description 
+
+Bug #976 from the Web database.
+Originaly requested by Rene Verschoor rene.verschoor@tomtom.com
+
+> We have reserved the red dot for incoming scripts. When there are no 
+> incoming scripts but there are checked out files in some projects then 
+> project tab gets green dot. Do you think the project tab should 
+> get red dot when there are checked out files? 
+
+I think there should be _some_ indication so the user knows he should check-in again. I've seen it happen too often that a developer has rejected changes, which remain for a long time in the check-in area without knowing it. 
+==Comment
+It would make sense to display red dot when there is a pending merge in a project (Sync Merge area is active).
+==Resolution
+We have already implemented this apporach:
+
+ void Model::SetIncomingScriptsMarker (bool newMissing)
+ {
+	bool incomingScriptsPresent =
+	    _history.HasIncomingOrMissingScripts () ||
+	    _mailBox.HasJoinRequest () ||
+	    _mailBox.HasScriptsFromFuture () ||
+	    _sidetrack.HasChunks () ||
+	   ''''!IsSynchAreaEmpty ()'''';
+

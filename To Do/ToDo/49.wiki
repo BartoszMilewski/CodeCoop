@@ -1,0 +1,14 @@
+| Summary |Better search in History/documentation|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |3|
+| Status |Open|
+| DateReported |Friday, November 30, 2007|
+==Description
+
+# I'd like to be able to 'search within results' following my first search of the history pane. Perhaps with a new syntax such as ">:hello" to search within results for string "hello" as opposed to replacing the current result set with a new search for the string "hello".
+# There appears to be an undocumented feature that allows a search of multiple files at once. Eg "file1.c file2.c" will show scripts which modify at least one of file1 or file2. It would be nice to see this documented, and perhaps extended to allow full boolean searching with operators AND, OR, NOT, and XOR.
+# The documentation does not indicate that quotation marks are required to search for changes to a file containing a space.
+# It would be nice to be able to filter according to script author, date ranges, etc. I made a similar request elsewhere for a reporting feature which would allow such information to be exported into a spreadsheet, for example. This would facilitate user activity reports, etc. A nice way to integrate these two features would be to implement the filtering features in the history view, and then simply add an 'export' button which gives you the same data in xml. 
+

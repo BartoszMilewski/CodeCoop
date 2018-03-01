@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Documentation Overview">
+		<param name="Local" value="Help\Overview.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Release Notes">
+		<param name="Local" value="ReleaseNotes.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Functionality Overview">
+		<param name="Local" value="Help\FunctionalityOverview.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Licensing">
+		<param name="Local" value="Help\license.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Tutorial">
+		<param name="Local" value="Tutorial\tutorial.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Configuring the System">
+			<param name="Local" value="Tutorial\WizardStart.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Setting up Email Peer">
+				<param name="Local" value="Tutorial\EmailPeer.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Setting up LAN Configuration">
+				<param name="Local" value="Tutorial\LanStart.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Setting up LAN with E-mail">
+				<param name="Local" value="Tutorial\LanAndEmailStart.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Setting up Satellite">
+				<param name="Local" value="Tutorial\SatelliteConfig.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Starting Collaboration">
+			<param name="Local" value="Tutorial\StartingCollaboration.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Getting Invited to Project">
+				<param name="Local" value="Tutorial\ReceivingInvitation.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Inviting to Project">
+				<param name="Local" value="Tutorial\GeneratingInvitation.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Joining a Project">
+				<param name="Local" value="Tutorial\JoiningProject.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Accepting Join Request">
+				<param name="Local" value="Tutorial\AcceptingJoinRequest.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Receiving Full Sync">
+				<param name="Local" value="Tutorial\FullSync.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Defecting from Project">
+				<param name="Local" value="Tutorial\defect.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Summary">
+				<param name="Local" value="Tutorial\StartingCollaborationOverview.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="New Projects">
+			<param name="Local" value="Tutorial\NewProj.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Creating a New Project">
+				<param name="Local" value="tutorial\NewProj.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Entering project information">
+				<param name="Local" value="Tutorial\NewProj1.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Adding files">
+				<param name="Local" value="Tutorial\newproj2.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="File extensions">
+				<param name="Local" value="Tutorial\newproj3.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Viewing the Project">
+				<param name="Local" value="Tutorial\NewProj4.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Navigating Projects">
+				<param name="Local" value="Tutorial\ProjectNavigate.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Working with Projects">
+			<param name="Local" value="tutorial\CheckOut1.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Checking Files Out">
+				<param name="Local" value="tutorial\CheckOut1.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Editing Files">
+				<param name="Local" value="Tutorial\checkout2.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Adding Files">
+				<param name="Local" value="Tutorial\AddFile.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Reviewing Changes">
+				<param name="Local" value="Tutorial\checkin1.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Reviewing File Changes">
+				<param name="Local" value="Tutorial\checkin2.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Undoing Check-out">
+				<param name="Local" value="Tutorial\UnCheckout.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Checking In Changes">
+				<param name="Local" value="Tutorial\checkin3.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Synchronizing the Project">
+				<param name="Local" value="Tutorial\sync.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Viewing Project History">
+				<param name="Local" value="Tutorial\history.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Restoring Historical Versions">
+				<param name="Local" value="Tutorial\Restore.html">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Quick Reference">
+		<param name="Local" value="Help\QuickReference.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Files tab">
+			<param name="Local" value="Help\filestab.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Check-in tab">
+			<param name="Local" value="Help\checkintab.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Inbox tab">
+			<param name="Local" value="Help\inboxTab.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="History tab">
+			<param name="Local" value="Help\historytab.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Projects tab">
+			<param name="Local" value="Help\ProjectsTab.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Sync Merge tab">
+			<param name="Local" value="Help\SyncMergeTab.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Branch Merge tab">
+			<param name="Local" value="Help\BranchMergeTab.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Browser tab">
+			<param name="Local" value="Help\WikiBrowser.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Menu Commands">
+		<param name="Local" value="Help\command.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FAQ">
+		<param name="Local" value="FAQs\faq.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Set-up">
+			<param name="Local" value="FAQs\faq.html#Setup">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Configuration">
+			<param name="Local" value="FAQs\faq.html#Config">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Email">
+			<param name="Local" value="FAQs\faq.html#Email">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Mapi Email Issues">
+			<param name="Local" value="FAQs\faq.html#mapiEmail">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Database">
+			<param name="Local" value="FAQs\faq.html#Database">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Dispatcher">
+			<param name="Local" value="FAQs\faq.html#Dispatcher">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Scripts">
+			<param name="Local" value="FAQs\faq.html#Scripts">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Visual Studio.NET">
+			<param name="Local" value="FAQs\MSIntegration.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Integration">
+			<param name="Local" value="FAQs\faq.html#Integration">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Miscellaneous">
+			<param name="Local" value="FAQs\faq.html#Miscellaneous">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Dispatcher">
+		<param name="Local" value="Help\Dispatcher.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Differ">
+		<param name="Local" value="Help\differ.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Support">
+		<param name="Local" value="Help\support.html">
+		</OBJECT>
+</UL>
+</BODY></HTML>

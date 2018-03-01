@@ -1,0 +1,46 @@
+In using Code Coop, we frequently run into issues with large scripts and with slow network connections to some machines.
+
+We've been brainstorming how these might be addressed and were wondering if you would consider making some enhancements to address these.
+
+Note that we would be willing to discuss funding these changes.
+
+Here are some of the notes from our brainstorming.
+
+Issues:
+
+1. When a large script (many chunks) is present, it can stall smaller scripts from being processed.  When this happens we currently manually move the large script files into a sub-directory, wait for the small scripts to flush, and then move it back.
+
+* Prioritize scripts according to the number of chunks: single-chunk first.
+
+2. The machines local to HQ are all very fast in terms of network. 
+However, we have a number of remote machines.  Sometimes (due to ISP or other issues) a machine will have a very slow connection.  This seems to stall dispatching of items to other machines due to waiting on that machine.
+
+* Send scripts in parallel, one channel per destination (transport)
+
+3. If an individual is preparing to go on a trip and they want to ensure they have all the current scripts, they still have to wait in line while all the other machines are being delivered to.  What they'd like is to be able to request prioritization to get all their scripts ASAP and then return to the round robin process.
+
+* Control script sent to the hub. The hub throttles down all destinations except the high-priority one.
+
+4. The network at HQ is local and extremely fast.  Unfortunately, dispatcher still seems to do only 1 file copy at a time as opposed to simultaneously doing all the local copies first (same subnet).  Those copies would be almost instant.
+
+* Parallel sending as in 2.
+
+Possible Solutions:
+
+A. Provide an option where dispatcher would prioritize smaller scripts (fewer chunks) over larger ones.  If a large script is being processed and a small script shows up, it should stop what its doing and process the small scripts then go back to the big one (under the obvious constraint of sequencing multiple scripts within the same project of course; usually its project A with a massive script and projects B, C, D with a few tiny scripts which get stuck due to the massive script).
+
+B. Have coop detect slower machines and prevent them from holding up everyone else.  Don't wait on the slower machines to copy to the faster machines.
+
+C. For scripts destined to local machines (same subnet as hub), don't copy things in serial.  Do a simultaneous file copy for all destinations for the file.  Then do the normal serial copy, one at a time, for the remote machines (different subnet from hub).
+
+D. Add the ability for a satellite machine to request immediate "top dog"
+priority.  When this is requested, dispatcher would switch over and deliver scripts only to that machine until there are no more to deliver, then it would resume its prior logic.  This way if you need to leave and need all the current scripts, you could request "top dog" status and then its only the file copy delay holding you up, not the round robin.
+
+We'd be interested in your thoughts on the above and the feasibility of making such enhancements.
+
+
+Thanks,
+Dave Calkins
+New River Kinematics
+dave@kinematics.com
+

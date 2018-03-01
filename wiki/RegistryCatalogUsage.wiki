@@ -1,0 +1,28 @@
+=Registry and Catalog Usage
+New scheme would split the data between multiple catalogs. 
+* Catalog: shared between co-ops and the dispatcher
+* Dispatcher DB--primarily by dispatcher, but shared with co-ops (e.g., hub ID, auto-update)
+* Co-op DB--shared between instances of co-op
+|! Information |! Code Co-op |! Dispatcher |! New DB |
+| Project::Data | Added, removed and retrieved from the catalog | Retrieved from the catalog | Catalog |
+| Distributor license | Retrieved from the catalog | Stored in/retrieved from the catalog  |Catalog |
+| Global license | Stored in the catalog | NOT USED | Co-op |
+| Trial start | Stored in the catalog | NOT USED | Co-op<br/>(per maj. version) |
+| File types | Added, removed retrieved from the catalog | NOT USED | Co-op |
+| Alternative editor | Added, changed and retrieved from the registry | NOT USED | Co-op |
+| Alternative differ | Added, changed and retrieved from the registry | NOT USED | Co-op |
+| Alternative merger | Added, changed and retrieved from the registry | NOT USED | Co-op |
+| Script Chunking | Added, changed and retrieved from the registry | NOT USED | Co-op |
+| Missing Scripts | Added, changed and retrieved from the registry | NOT USED | Co-op |
+| Hub id | Retrieved from the catalog | Added, changed and retrieved from the catalog | Dispatcher |
+| Topology | Dump only | Added, changed and retrieved from the catalog | Dispatcher |
+| Transport | NOT USED | Added, changed and retrieved from the catalog | Dispatcher |
+| Recipients | NOT USED | Added, changed and retrieved from the catalog | Dispatcher |
+| Use POP3/SMTP | NOT USED | Added, changed and retrieved from the registry | Dispatcher |
+| POP3/SMTP settings | NOT USED | Added, changed and retrieved from the registry | Dispatcher |
+| Script post-processing | NOT USED | Added, changed and retrieved from the registry | Dispatcher |
+| Auto-update options | Added, changed and retrieved from the registry  | Added, changed and retrieved from the registry | Dispatcher |
+| Project branches | Added, changed and retrieved from the registry  | NOT USED | Registry |
+| Window position & size | Added, changed and retrieved from the registry | Added, changed and retrieved from the registry | Registry |
+| Invitation path | used, modified | NOT USED | registry |
+

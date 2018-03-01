@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Working with the Dispatcher</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Dispatcher</h1>
+<br />
+<h2>Configuring the Dispatcher</h2>
+<p>You need to configure the dispatcher in order to collaborate with others. Here are you options:
+<ul>
+	<li>No collaboration: <b>Standalone</b>. 
+	<br/>This is the simplest configuration. You can work with your local projects, but you can't collaborate with any other machine. It's useful when learning Code Co-op (you can always reconfigure it later to allow collaboration). Even standalone Code Co-op offers considerable advantage in maintaining the history of your development.</li>
+	<li>Only using e-mail for collaboration--<b>E-mail peer</b>.
+	<br/>Synchronization data (called scripts) are e-mailed between computers. You have the following options:
+	<ul>
+		<li>If you use Outlook or Outlook Express as your e-mail program, the dispatcher can use it to send and receive scripts. This is done quietly through the MAPI interface. You'll see Code Co-op messages in Outlook's Sent Items folder and in the Inbox folder (before they are picked up by the dispatcher).</li>
+		<li>If you can get a dedicated account on your e-mail server, you can configure the Dispatcher to connect to it directly over the Internet. You'll have to configure the SMTP and POP3 settings just like you do it in your e-mail program.</li>
+		<li>If you can get a free Gmail account, you can configure it to work with Code Co-op. Find out more by visiting <a href="http://gmail.com">http://gmail.com</a> and our tutorial, <a  href="../Tutorial/EmailPeer.html">Collaborating as an Email Peer</a>, describing the Dispatcher's Collaboration Wizard</li>
+		<li>The tutorial also describes the settings for <a href="../Tutorial/emailLive.html">Hotmail (Windows Live)</a>.
+	</ul>
+	</li>
+	<li>Only using LAN for collaboration: <b>Hub</b> or <b>Satellite</b> (version Pro only).
+	<br/>On a LAN, dispatchers can exchange scripts by copying them to shared folders of other machines. The dispatcher by default shares its Public Inbox directory for that purpose. In this configuration, one computer must be configured as a Hub (the computer that is on-line most of the time) and all the others as Satellites.</li>
+	<li>Using both, LAN and e-mail: <b>Hub</b> (version Pro only).
+	<br/>As above, plus hubs at different locations communicate by e-mail.</li>
+</ul>
+For more information, please select from the following sections from our <a href="../tutorial/WizardStart.html">step-by-step tutorial</a> describing the Dispatcher's Collaboration Wizard:</p>
+<ul>
+	<li><a  href="../Tutorial/EmailPeer.html">Collaborating as an Email Peer </a></li>
+	<li><a  href="../tutorial/Lan.html">Collaborating  over a local network (and Email) </a>
+		<em><span style="color: dodgerblue">(This feature is not available in Code Co-op Lite)</span></em></li> 
+</ul>
+<br />
+<h2>Working with the Dispatcher</h2>
+</br>
+<p>
+<img src="../Images/icobusy.gif" alt ="Dispatcher icon" width=121 height=29 hspace="5" border=0 align=left />	
+Other than during the initial setup, the Dispatcher tries to be as unobtrusive as possible. You will only see its <b>icon on your taskbar</b>. When this icon 
+turns red and sprouts arrows, it means that there are some scripts waiting to be 
+dealt with. </p>
+<p>To open the dispatcher, click on the Dispatcher icon and select &quot;<em>View Diagnostics</em>&quot;. A window will pop up with five tabs as shown below. </p>
+<h3>Quarantine tab</h3>
+<p class="image">
+<img src="../Images/quarantine.gif" alt="Quarantine Tab" width="474" height="239" />
+</p>
+<p>
+The quarantine tab will alert you to any problems with script delivery. For example, if you receive an <a href="Invitation.html">invitation</a> to join a project, the scripts associated with this invitation will remain in quarantine until you provide a root path for the project files. To release a script from quarantine, double-click on it or click on one of the <i>Release</i> buttons.
+</p>
+<h3>Alert Log</h3>
+<p class="image">
+<img src="../Images/alert.gif" alt="Alert Log tab" width="464" height="129" />
+</p>
+<p>
+The alert log records any problem dispatching scripts whether over LAN or Email. You can view the full log or delete the log (you can't delete individual records).
+</p>
+
+<h3>Public Inbox  tab</h3>
+<p class="image">
+<img src="../images/dispatch.gif" alt ="Dispatcher's list of mailboxes" width="394" height="197" hspace="5" vspace="10" border="1" />
+</p>
+
+<p>
+The Public Inbox list any scripts waiting to be routed. Double-clicking on a script will show you the details for that script (such as project, sender, recipients, etc.). Typically, this tab will be empty unless your are offline or you are sending some large scripts.
+</p>
+ 
+<h3>Members Tab</h3>
+<p class="image">
+<img src ="../Images/member.gif" alt="Dispatcher's list of project members" width=351 height=169 hspace="5" vspace="10" border=0 />
+</p>
+
+<p>
+The Member's tab lists all local project members. On a Hub, it also lists  satellite members. The display is organized by the project. You can double-click on each entry to see the list of (local and satellite) members for that project. This is the place where you can edit satellite members' <b>local transport</b>. This is usually a network path of the form \\SATELLITE\CODECOOP. If your machine is a satellite, this list should <em>not</em> contain any satellite members--the location column may only contain the <b>here</b> location.
+</p>
+ 
+<h3>Remote Hubs <span style="color: dodgerblue"><em>(This feature is not available in Co-op
+		Lite)</em></span></h3>
+<p class="image">
+<img src   ="../Images/remote.gif" alt="List of remote hubs" width=345 height=135 hspace="5" vspace="10" border=0 />
+</p>
+<p>
+The <i>Remote Hubs</i> tab contains a list of known remote Hubs and their email addresses.</p>
+
+<h3>Dispatcher's Context Menu</h3>
+<p class="image">
+<img  src="../Images/DispatcherContextMenu.gif" width="182" height="267" hspace="5" vspace="10" border="0" />
+</p>
+
+<p>
+Outgoing scripts are  automatically dispatched by the dispatcher (unless you're on a Hub with emailing set to <em>manual</em>).The dispatcher's context menu contains the <em>Get email</em> command that lets you retrieve scripts directly from your email program (rather than waiting for automatic periodic retrieval). Scripts tend to accumulate in the Public Inbox when some network connections are down.
+</p>
+</body>
+</html>

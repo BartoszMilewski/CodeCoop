@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Merging changes</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Local Merging of Changes</h1>
+<p>
+A merge has to be done when you execute an incoming script that modifies a file that you have checked out. When you execute this script, Code Co-op  detects the possibility of a conflict and will <b>automatically merge</b> the changes. If, as in most cases, the changes don't overlap, it's a clean merge and you don't have to do anything special. For more complicated merges, you can review the file change-by-change and make edits on the spot. Your edits (including insertions and deletions) as well as the other user's edits will be incorporated in the resulting merged file.
+</p>
+<p>A merge is managed in the Synch Merge tab. Below is an example of what you might see.</p>
+<p class="image">
+ <img src="../Images/merge.gif" alt="Differ showing merge" width =433 height=258 hspace="5" vspace="10" border=1 />
+</p>
+
+<h2>Reviewing a Merge </h2>
+<p>
+Double-clicking on a &quot;Merged&quot; file will launch your <a href="programoptions.html">preferred merger</a>. Your merger will show you the incoming script changes, your local changes, and the proposed merge. You can review each change and manually modify the merge. Once you are satisfied, save your changes. Later check-in the files in order to propogate your changes.
+</p>
+<p>If you choose to <b>discard your changes</b> (in particular, if you haven't made any changes), do the following: Go to the <strong>Check-in area</strong>, select the file in question and click on the <em>Un-CheckOut</em> button. You will discard your changes in preparation for the unconditional acceptance of the sync changes.
+</p>
+
+<h2>Merge Conflicts</h2>
+<p>
+If the merger discovers actual conflicts between your changes and sync changes (the same line edited in both), it will mark the file with the state "Conflict". You <em>have to</em> perform a manual merge in such case. Double click on the file and make the choices in the visual merger, and then seve them. This will change the status of the file form "Conflict" to "Merged". Note: If you don't review all merge conflicts, you <i>won't be able</i> to close the Sync Merge Tab!
+</p>
+
+<p>See also:</p>
+		<ul>
+			<li><a href="ProgramOptions.html">Selecting  the Merger</a></li>
+		</ul>
+</body>
+</html>

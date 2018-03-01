@@ -1,0 +1,14 @@
+| Summary |Automerge fails if conflict detected|
+| ReportedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |17 grudnia 2006|
+==Description 
+When BCMerge detects conflicts then auto-merge fails and script changed don't appear in the project. We have to check for BCMerge errors (like during external merge) and mark file with conflict bit. Don't allow to accept synch if there are files with conflict bit set. Clear this bit when the user opens file in the sync merge view.
+

@@ -1,0 +1,11 @@
+= Differ Info
+Contains information about moves, renames, etc
+    SerString    _localPrevName;
+    SerString    _synchName;
+    SerString    _localPrevLocation;
+    SerString    _synchLocation;
+    SerString    _localPrevType;
+    SerString    _synchType;
+    SerString    _currName;
+    SerString    _currType;
+    FileChanges  _changes;

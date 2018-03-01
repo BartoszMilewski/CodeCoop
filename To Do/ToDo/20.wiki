@@ -1,0 +1,9 @@
+| Summary |Label merged scripts|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |1|
+| Status |Open|
+| DateReported |Thursday, November 02, 2006|
+==Description
+At least for local branches, display "merged" status after a merge has been performed (we don't care if the user actually merged, as long as he fired the merger).

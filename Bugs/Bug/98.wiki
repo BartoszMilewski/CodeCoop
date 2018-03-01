@@ -1,0 +1,18 @@
+| Summary |Implement folder renaming.|
+| ReportedBy |Wieslaw|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 4 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+Bug #1234 from WEB database.
+Originaly requested by Lin Sebastian Kayser (lin@iridas.com)
+
+|Date|Who|Comment|
+|5/23/2006|Wiesiek|If we can time then maybe it will go into 5.0|
+

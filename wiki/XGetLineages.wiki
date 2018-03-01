@@ -1,0 +1,14 @@
+= History::Db::XGetLineages
+Arguments: ScriptHeader (mutable reference), addSideLienage (bool)
+* if header IsData (not a control script): add main lineage
+** if unit type == Set, [[XGetMainSetLineage]]
+** else [[XGetUnitLineage]]
+* if addSideLineages
+** if IsAck or IsMembershipChange
+*** [[XGetUnitLineage]] (Unit::Set). If lineage size > 1 hdr.AddSideLineage
+** [[XGetRecordedUnitIds]], iterate over them (user IDs)
+*** if member not verified (from 4.2), continue
+*** create [[SideLineageGatherer]] for user ID
+*** create [[XFwdUnitSequencer]] for user ID
+*** [[XTraverseTree]]
+

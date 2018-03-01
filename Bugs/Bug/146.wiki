@@ -1,0 +1,14 @@
+| Summary |Shortcut key for Synch Scripts is duplicated|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority | 1 |
+| Resolution | Fixed |
+| DateReported |Thursday, November 02, 2006|
+==Description 
+In the Inbox view, both All>Sync Scripts and Selection>Sync Next Script have the same shortcut Ctrl-S. Maybe Sync Next Script should be Ctrl-N (if it's not already taken).
+

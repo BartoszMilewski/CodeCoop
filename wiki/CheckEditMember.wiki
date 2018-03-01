@@ -1,0 +1,4 @@
+MembershipUpdateVerifier::CheckEditMember
+* if changedUserId is project member, return (don't know him yet)
+* if I am administrator [[AdminChecks]]
+* else if I am changed [[ThisUserChecks]]

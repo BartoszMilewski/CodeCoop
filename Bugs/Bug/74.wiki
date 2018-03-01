@@ -1,0 +1,21 @@
+| Summary |Invitation displays scary message|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Resolved|
+| Resolution | Fixed |
+| DateReported |Sunday, October 01, 2006|
+==Description 
+I received an invitation but didn't click on the balloon. After a while, the following scary message appeared (together with the quarantine window). Other than that, the invitation was successfull.
+
+[[Image:74]]
+
+==Comments
+09 Oct 2006, Piotr: 1. replaced this dialog with an alert, 2. invitations are processed as first
+
+20 Oct 2006, Bartosz: I still see the scary dialog. Processing order was OK, but after I filled out the path, the second item in the quarantine still popped up the "unknown recipient" dialog.
+
+24 Oct 2006, Piotr: postpone execution of scripts following invitation until invitation script is fully processed and invitee enlistment created

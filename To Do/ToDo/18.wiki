@@ -1,0 +1,14 @@
+| Summary |Access registry from wiki page|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |2|
+| Status |Done|
+| DateReported |Tuesday, October 31, 2006|
+==Description
+Introduce syntax for accessing properties stored in the registy (or overload <nowiki>[!prop]</nowiki>).
+==Design Notes
+* Introduce new type of link, <nowiki>[@prop]</nowiki>. The converter's sink will look the property up in co-op user registry, under key "wiki".
+* If the value is not set, the sink will output a string that should trigger a syntax error in sqwiki. At the same time, this string should be informative to the user. "prop-name NOT set"?
+* Setting of registry values can be done by extending the INSERT INTO command with a special table name that designates local registry. Maybe "REGISTRY" ?
+

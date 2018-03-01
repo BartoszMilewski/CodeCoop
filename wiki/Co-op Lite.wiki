@@ -1,0 +1,18 @@
+= Co-op Lite
+==UI Changes: Dispatcher
+* Join dialog
+* Collaboration Settings--only Simple tab remains
+* Collaboration Wizard--only Standalone and Email Peer options
+* Remove Distribution License menu item
+* No changes to Diagnostics View, except Remote Hubs -> Email Peers
+* Run diagnostics--hide radio buttons
+== UI Changes Co-op
+* Project Invite
+* Project New/Branch (remove distribution from options)
+* Project Options
+* Help and Tutorial (what's available in Pro only)
+== Other Changes
+* Licensing
+** One more tab in the Licenser
+** Web ordering pages
+* On Dispatcher startup, if currentProject != pro and configuration != standalone or email peer, display message and start the collaboration wizard

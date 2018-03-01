@@ -1,0 +1,4 @@
+=Model::UnpackScripts
+* Mailbox::[[XUnpackScritps]] with Mailbox::Agent, which contains CtrlScriptProcessor
+* Mailbox::Agent::[[XFinalize]]
+* Forwarding join requests

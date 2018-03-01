@@ -1,0 +1,50 @@
+=FTP Upload
+==Top level abstractions
+===ActiveCopy
+Takes progress sink (class CopyProgressSink). 
+* StartCopy called with two ActiveCopyFiles, creates a Worker, which does the copying. 
+
+===ActiveCopy::Worker
+Inherits from ActiveObject. Takes two '''ActiveCopyFile'''s and a progress sink.
+* Run
+** Open source from read
+** Open target for write
+** Loop reading buffer from src and writing into dst
+** dst.Commit
+==Ftp Uploader
+===FtpUploader
+Contains auto_ptr to LocalFile and auto_ptr to Ftp::File. Also: server, user, passwd.
+
+Inhertits from '''ActiveCopy'''. Takes CopyProgressSink and passes it to ActiveCopy.
+* StartPutFile takes folders and file names of src and tgt
+** Create source as LocalFile
+** Create target as Ftp::File
+** StartCopy (method of ActiveCopy)
+===Ftp::File
+Inherits from '''ActiveCopyFile'''. Contains: 
+* folder, file name, 
+* Ftp::Session, 
+* Internet::AutoHandle, 
+* Ftp::AutoHandle (session handle)
+* Ftp::RemoteFile.
+
+* Constructor: Takes login info and folder/file name. Stores session information
+* OpenWrite
+** create Internet::Access
+** open access -> internet handle
+** session.Connect -> session handle, Ftp::AutoHandle
+** session handle->set current directory
+** create Ftp::FileWritable with ftp session handle and file name
+
+===Ftp::RemoteFile
+Contains Ftp::AutoHandle
+* Constructor takes Ftp::Handle (session), path, access, callback=0
+** FtpOpenFile -> Ftp::Handle (file)
+* Read and Write not implemented
+
+===Ftp::FileWritable
+Inhertits from Ftp::RemoteFile
+* Constructor initializes RemoteFile
+* Write: ::InternetWriteFile
+
+

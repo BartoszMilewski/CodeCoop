@@ -1,0 +1,909 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="generator" content="Microsoft&reg; HTML Help Workshop 4.1" />
+<!-- Sitemap 1.0 -->
+</head>
+<body>
+<ul>
+	<li><object type="text/sitemap">
+			<param name="Name" value="accepting a synch" />
+			<param name="Name" value="Accepting a Synchronization script" />
+			<param name="Local" value="Help\acceptSynch.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="adding existing files or folders" />
+			<param name="Name" value="Adding an existing file or folder to your project" />
+			<param name="Local" value="Help\addFile.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="adding files or folders in bulk" />
+			<param name="Name" value="Adding lots of files to your project" />
+			<param name="Local" value="Help\AddMore.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="administrator" />
+			<param name="Name" value="Changing membership within a project" />
+			<param name="Local" value="Help\memberChange.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="archiving history" />
+			<param name="Name" value="Archiving history" />
+			<param name="Local" value="Help\archive.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="auto-synch" />
+			<param name="Name" value="Working in Auto-Synch mode" />
+			<param name="Local" value="Help\autoMode.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="beyond compare" />
+			<param name="Name" value="Beyond Compare" />
+			<param name="Local" value="Help\beyondcompare.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="branches" />
+			<param name="Name" value="Branching your project" />
+			<param name="Local" value="Help\branch.html" />
+		</object>
+		<ul>
+			<li><object type="text/sitemap">
+					<param name="Name" value="branched scripts" />
+					<param name="Name" value="Working with a branched script" />
+					<param name="Local" value="Help\localbranch.html" />
+				</object>
+				
+			<li><object type="text/sitemap">
+				<param name="Name" value="creating a branch project" />
+				<param name="Name" value="Branching your project" />
+				<param name="Local" value="Help\branch.html" />
+				</object>
+		
+			<li><object type="text/sitemap">
+					<param name="Name" value="inter-project merge" />
+					<param name="Name" value="Merging a branched project" />
+					<param name="Local" value="Help\ProjectMerge.html" />
+				</object>
+		</ul>
+	<li><object type="text/sitemap">
+			<param name="Name" value="checking in files" />
+			<param name="Name" value="Checking in files" />
+			<param name="Local" value="Help\checkin.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="checking out files" />
+			<param name="Name" value="Checking out a file" />
+			<param name="Local" value="Help\checkout.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="command-line interface" />
+			<param name="Name" value="Using the command-line interface" />
+			<param name="Local" value="Help\CommandLine.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="comparing versions" />
+			<param name="Name" value="Comparing versions of a project" />
+			<param name="Local" value="Help\CompareVersions.html" />
+		</object>	
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="conflict resolution" />
+			<param name="Name" value="Working with a branched script" />
+			<param name="Local" value="Help\localbranch.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="creating a brand new project" />
+			<param name="Name" value="Creating a brand new project" />
+			<param name="Local" value="Help\createProject.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="creating new files or folders" />
+			<param name="Name" value="Creating a new file or folder" />
+			<param name="Local" value="Help\newFile.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="defecting from a project" />
+			<param name="Name" value="Defecting from a project" />
+			<param name="Local" value="Help\defect.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="deleting files" />
+			<param name="Name" value="Deleting a file from your project" />
+			<param name="Local" value="Help\deleteFile.html" />
+		</object>
+		
+	<li><object type="text/sitemap">
+			<param name="Name" value="dispatcher" />
+			<param name="Name" value="Configuring the dispatcher" />
+			<param name="Local" value="Help\UsingDispatcher.html" />
+		</object>
+		
+	<li><object type="text/sitemap">
+			<param name="Name" value="distribution project" />
+			<param name="Name" value="Distribution Projects" />
+			<param name="Local" value="Help\distribution.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="editing files" />
+			<param name="Name" value="Editing within the Visual Differ" />
+			<param name="Local" value="Help\editDiffer.html" />
+		</object>
+		
+	<li><object type="text/sitemap">
+		<param name="Name" value="email" />
+		<param name="Name" value="Distributing scripts through Email" />
+		<param name="Local" value="Help\emailScript.html" />
+		</object>
+		<ul>
+		<li><object type="text/sitemap">
+				<param name="Name" value="email script distribution" />
+				<param name="Name" value="Distributing scripts through Email" />
+				<param name="Local" value="Help\emailScript.html" />
+			</object>
+			
+		<li><object type="text/sitemap">
+				<param name="Name" value="encryption" />
+				<param name="Name" value="Encrypting email" />
+				<param name="Local" value="FAQs/encrypt.html" />
+			</object>
+
+		<li><object type="text/sitemap">
+			<param name="Name" value="mapi compliant email" />
+			<param name="Name" value="List of Mapi compliant email programs" />
+			<param name="Local" value="Help\mapi.html" />
+		</object>
+			
+		<li><object type="text/sitemap">
+				<param name="Name" value="Set-up" />
+				<param name="Name" value="Configuring email" />
+				<param name="Local" value="Tutorial\email.html" />
+			</object>
+		</ul>
+	<li><object type="text/sitemap">
+			<param name="Name" value="exporting old versions" />
+			<param name="Name" value="Exporting a previous version of your project" />
+			<param name="Local" value="Help\exportVersion.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="exporting project history" />
+			<param name="Name" value="Exporting project history" />
+			<param name="Local" value="Help\ExportHistory.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="file type, changing" />
+			<param name="Name" value="Changing a file type" />
+			<param name="Local" value="Help\ChangeFileType.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="files" />
+			<param name="Name" value="Working with Files" />
+			<param name="Local" value="Help\workingfiles.html" />
+		</object>
+		<ul>
+			<li><object type="text/sitemap">
+					<param name="Name" value="adding existing" />
+					<param name="Name" value="Adding an existing file or folder to your project" />
+					<param name="Local" value="Help\addFile.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="adding files or folders in bulk" />
+					<param name="Name" value="Adding lots of files to your project" />
+					<param name="Local" value="Help\AddMore.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="checking in" />
+					<param name="Name" value="Checking in files" />
+					<param name="Local" value="Help\checkin.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="checking out" />
+					<param name="Name" value="Checking out a file" />
+					<param name="Local" value="Help\checkout.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="creating new" />
+					<param name="Name" value="Creating a new file or folder" />
+					<param name="Local" value="Help\newFile.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="deleting" />
+					<param name="Name" value="Deleting a file from your project" />
+					<param name="Local" value="Help\deleteFile.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="editing" />
+					<param name="Name" value="Viewing and editing files" />
+					<param name="Local" value="Help\editing.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="file type, changing" />
+					<param name="Name" value="Changing a file type" />
+					<param name="Local" value="Help\ChangeFileType.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="filtering" />
+					<param name="Name" value="Filtering file view" />
+					<param name="Local" value="Help\FileFilter.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="moving" />
+					<param name="Name" value="Moving Files from within Files Tab" />
+					<param name="Local" value="Help\moveFile.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="removing" />
+					<param name="Name" value="Deleting a file from your project" />
+					<param name="Local" value="Help\deleteFile.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="renaming" />
+					<param name="Name" value="Renaming a file" />
+					<param name="Local" value="Help\renameFile.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="uncheckout" />
+					<param name="Name" value="Un-checkout a file" />
+					<param name="Local" value="Help\Uncheckout.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="viewing" />
+					<param name="Name" value="Viewing and editing files" />
+					<param name="Local" value="Help\editing.html" />
+				</object>
+			
+		</ul>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="filtering" />
+			<param name="Name" value="Filtering file view" />
+			<param name="Local" value="Help\FileFilter.html" />
+		</object>
+		
+	<li><object type="text/sitemap">
+			<param name="Name" value="folder" />
+			<param name="Name" value="Creating a new folder" />
+			<param name="Local" value="Help\newfile.html" />
+		</object>
+		<ul>
+			<li><object type="text/sitemap">
+			<param name="Name" value="create new" />
+			<param name="Name" value="Creating a new folder" />
+			<param name="Local" value="Help\newfile.html" />
+		</object>
+		
+			<li><object type="text/sitemap">
+			<param name="Name" value="move" />
+			<param name="Name" value="Moving or renaming a folder" />
+			<param name="Local" value="Help\movefolder.html" />
+		</object>
+		 
+		</ul>
+	<li><object type="text/sitemap">
+			<param name="Name" value="history" />
+			<param name="Name" value="Project History: Looking at project versions" />
+			<param name="Local" value="Help\historytab.html" />
+		</object>
+		<ul>
+			<li><object type="text/sitemap">
+					<param name="Name" value="archiving" />
+					<param name="Name" value="Archiving history" />
+					<param name="Local" value="Help\archive.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="branching" />
+					<param name="Name" value="Branching your project" />
+					<param name="Local" value="Help\branch.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="comparing versions" />
+					<param name="Name" value="Comparing versions of a project" />
+					<param name="Local" value="Help\CompareVersions.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="exporting old versions" />
+					<param name="Name" value="Exporting a previous version of your project" />
+					<param name="Local" value="Help\exportVersion.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="exporting project history" />
+					<param name="Name" value="Exporting project history" />
+					<param name="Local" value="Help\ExportHistory.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="importing project history" />
+					<param name="Name" value="Importing project history" />
+					<param name="Local" value="Help\importHistory.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="labels" />
+					<param name="Name" value="Creating labels" />
+					<param name="Local" value="Help\labels.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="restoring file versions" />
+					<param name="Name" value="Restoring old versions of a file" />
+					<param name="Local" value="Help\restoreVersion.html" />
+				</object>
+			<li><object type="text/sitemap">
+					<param name="Name" value="file history" />
+					<param name="Name" value="Reviewing file history" />
+					<param name="Local" value="Help\filehistory.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="reports" />
+					<param name="Name" value="Creating reports" />
+					<param name="Local" value="Help\report.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="restoring old project versions" />
+					<param name="Name" value="Restoring old versions of a project" />
+					<param name="Local" value="Help\RestoreProject.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="state column" />
+					<param name="Name" value="Script state in history" />
+					<param name="Local" value="Help\historyTab.html" />
+				</object>
+				
+			<li><object type="text/sitemap">
+					<param name="Name" value="project versions" />
+					<param name="Name" value="Reviewing project versions in history" />
+					<param name="Local" value="Help\ProjectHistory.html" />
+				</object>
+				
+			<li><object type="text/sitemap">
+					<param name="Name" value="filtering history" />
+					<param name="Name" value="Filtering and searching history" />
+					<param name="Local" value="Help\filehistory.html" />
+				</object>
+		</ul>
+	<li><object type="text/sitemap">
+			<param name="Name" value="hub" />
+			<param name="Name" value="Setting up your hub" />
+			<param name="Local" value="Tutorial\lan.html" />
+		</object>
+		<ul>
+			<li><object type="text/sitemap">
+				<param name="Name" value="hub set-up" />
+				<param name="Name" value="Configuring your hub and satellites" />
+				<param name="Local" value="Tutorial\startcollab.html" />
+			</object>
+			
+			<li><object type="text/sitemap">
+				<param name="Name" value="moving hubs" />
+				<param name="Name" value="Moving hub to a new machine" />
+				<param name="Local" value="faqs/newhub.html" />
+			</object>
+			
+			<li><object type="text/sitemap">
+				<param name="Name" value="change email address" />
+				<param name="Name" value="Changing email address" />
+				<param name="Local" value="faqs/changeemail.html" />
+			</object>
+			
+			<li><object type="text/sitemap">
+				<param name="Name" value="back-up" />
+				<param name="Name" value="Seting up hub as back-up" />
+				<param name="Local" value="faqs/unattend.html" />
+			</object>
+			
+			<li><object type="text/sitemap">
+				<param name="Name" value="hub to hub over network" />
+				<param name="Name" value="Seting up hubs to communicate over network" />
+				<param name="Local" value="faqs/reconfig.html" />
+			</object>
+			
+		</ul>
+		
+	<li><object type="text/sitemap">
+			<param name="Name" value="importing project history" />
+			<param name="Name" value="Importing project history" />
+			<param name="Local" value="Help\importHistory.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="Invitation" />
+			<param name="Name" value="Inviting to an existing project" />
+			<param name="Local" value="Help\invitation.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="joining an existing project" />
+			<param name="Name" value="Joining an existing project" />
+			<param name="Local" value="Help\joinProject.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="labels" />
+			<param name="Name" value="Creating labels" />
+			<param name="Local" value="Help\labels.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="licensing" />
+			<param name="Name" value="Licensing Code Co-op" />
+			<param name="Local" value="Help\license.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="lost scripts, resending" />
+			<param name="Name" value="Resending lost scripts" />
+			<param name="Local" value="Help\resendScript.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="members" />
+			<param name="Name" value="Changing membership within a project" />
+			<param name="Local" value="Help\memberChange.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="menu index" />
+			<param name="Name" value="Menu Index" />
+			<param name="Local" value="Help\command.html" />
+		</object>
+	<li><object type="text/sitemap">
+			<param name="Name" value="merge" />
+			<param name="Name" value="merging script changes" />
+			<param name="Local" value="Help\merge.html" />
+		</object>
+		<ul>
+				
+			<li><object type="text/sitemap">
+			  <param name="Name" value="local merge" />
+			  <param name="Name" value="Merging incoming changes with local changes" />
+			  <param name="Local" value="Help\merge.html" />
+				</object>
+			<li><object type="text/sitemap">
+			  <param name="Name" value="sync merge tab" />
+			  <param name="Name" value="Merging incoming changes with local changes" />
+			  <param name="Local" value="Help\SyncMergeTab.html" />
+				</object>
+			<li><object type="text/sitemap">
+			  <param name="Name" value="using the merger" />
+			  <param name="Name" value="Using BCMerger to merge file changes" />
+			  <param name="Local" value="Help\Merger.html" />
+				</object>
+			<li><object type="text/sitemap">
+			  <param name="Name" value="script conflict and local branch" />
+			  <param name="Name" value="Script conflict creating a local brach" />
+			  <param name="Local" value="Help\LocalBranch.html" />
+				</object>
+				
+			
+			<li><object type="text/sitemap">
+			  <param name="Name" value="merging conflicting scripts" />
+			  <param name="Name" value="Merging branched (rejected) scripts" />
+			  <param name="Local" value="Help\LocalMerge.html" />
+				</object>
+				
+			<li><object type="text/sitemap">
+			  <param name="Name" value="branch merge tab" />
+			  <param name="Name" value="Using the Branch Merge tab" />
+			  <param name="Local" value="Help\branchmergeTab.html" />
+				</object>
+			<li><object type="text/sitemap">
+				<param name="Name" value="auto-sync mode" />
+				<param name="Name" value="Merges in auto-synch mode" />
+				<param name="Local" value="Help\autoMode.html" />
+				</object>
+			<li><object type="text/sitemap">
+			  <param name="Name" value="between projects" />
+			  <param name="Name" value="Merging projects created as branches" />
+			  <param name="Local" value="Help\ProjectMerge.html" />
+				</object>
+		</ul>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="moving the database" />
+			<param name="Name" value="Moving the database" />
+			<param name="Local" value="FAQs\new.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="moving a project tree" />
+			<param name="Name" value="Moving a project tree" />
+			<param name="Local" value="Help\MoveProject.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="moving co-op database to new computer" />
+			<param name="Name" value="Moving co-op database to new computer" />
+			<param name="Local" value="Help\MoveProjects.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="moving files" />
+			<param name="Name" value="Moving Files from within Files Tab" />
+			<param name="Local" value="Help\moveFile.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="navigating directories" />
+			<param name="Name" value="Working with Files" />
+			<param name="Local" value="Help\workingfiles.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="projects" />
+			<param name="Name" value="Working from the Projects tab" />
+			<param name="Local" value="Help\ProjectsTab.html" />
+		</object>
+		<ul>
+			<li><object type="text/sitemap">
+					<param name="Name" value="creating brand new" />
+					<param name="Name" value="Creating a brand new project" />
+					<param name="Local" value="Help\createProject.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="defecting from" />
+					<param name="Name" value="Defecting from a project" />
+					<param name="Local" value="Help\defect.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="inviting to" />
+					<param name="Name" value="Inviting to an existing project" />
+					<param name="Local" value="Help\invitation.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="joining an existing" />
+					<param name="Name" value="Joining an existing project" />
+					<param name="Local" value="Help\joinProject.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="members" />
+					<param name="Name" value="Changing membership within a project" />
+					<param name="Local" value="Help\memberChange.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="moving project tree" />
+					<param name="Name" value="Moving a project tree" />
+					<param name="Local" value="Help\MoveProject.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="repair" />
+					<param name="Name" value="Repairing a project" />
+					<param name="Local" value="Help\repairProject.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="versions" />
+					<param name="Name" value="Comparing versions of a project" />
+					<param name="Local" value="Help\CompareVersions.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="visiting others" />
+					<param name="Name" value="Visiting projects" />
+					<param name="Local" value="Help\visitProject.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="moving to new computer" />
+					<param name="Name" value="Migrating projects to a new computer" />
+					<param name="Local" value="faqs/new.html" />
+				</object>
+		</ul>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="recreating file versions" />
+			<param name="Name" value="Restoring old versions of a project" />
+			<param name="Local" value="Help\RestoreProject.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="removing files" />
+			<param name="Name" value="Deleting a file from your project" />
+			<param name="Local" value="Help\deleteFile.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="renaming files" />
+			<param name="Name" value="Renaming a file" />
+			<param name="Local" value="Help\renameFile.html" />
+		</object>
+	<li><object type="text/sitemap">
+			<param name="Name" value="renaming a project" />
+			<param name="Name" value="Renaming a project" />
+			<param name="Local" value="FAQs\renameproj.html" />
+		</object>
+	<li><object type="text/sitemap">
+			<param name="Name" value="renaming Visual Studio.NET solutions" />
+			<param name="Name" value="renaming Visual Studio.NET solutions" />
+			<param name="Local" value="FAQs\VSNet.html#Renaming" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="repair" />
+			<param name="Name" value="Repairing a project" />
+			<param name="Local" value="Help\repairProject.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="resending lost scripts" />
+			<param name="Name" value="Resending lost scripts" />
+			<param name="Local" value="Help\resendScript.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="restore" />
+			<param name="Name" value="Restoring old versions of a project" />
+			<param name="Local" value="Help\RestoreProject.html" />
+		</object>
+		<ul>
+			<li><object type="text/sitemap">
+				<param name="Name" value="project" />
+				<param name="Name" value="Restoring old versions of a project" />
+				<param name="Local" value="Help\RestoreProject.html" />
+			</object>
+			<li><object type="text/sitemap">
+				<param name="Name" value="file" />
+				<param name="Name" value="Restoring previous file version" />
+				<param name="Local" value="Help\RestoreVersion.html" />
+			</object>
+			<li><object type="text/sitemap">
+				<param name="Name" value="deleted file" />
+				<param name="Name" value="Retrieving a deleted file" />
+				<param name="Local" value="Help\deleteFile.html" />
+			</object>
+		</ul>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="reviewing script changes" />
+			<param name="Name" value="Reviewing changes from an incoming synch script" />
+			<param name="Local" value="Help\reviewScript.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="satellite configuration" />
+			<param name="Name" value="Setting up your satellites" />
+			<param name="Local" value="Tutorial\startcollab.html" />
+		</object>
+		
+	<li><object type="text/sitemap">
+			<param name="Name" value="SCC integration" />
+			<param name="Name" value="Integrating using the MS SCC API" />
+			<param name="Local" value="Help\integrate.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="scripts" />
+			<param name="Name" value="Synchronizing or executing a script" />
+			<param name="Local" value="Help\SyncScripts.html" />
+		</object>
+		<ul>
+			<li><object type="text/sitemap">
+					<param name="Name" value="accepting" />
+					<param name="Name" value="Accepting a Synchronization script" />
+					<param name="Local" value="Help\acceptSynch.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="automatic dispatching" />
+					<param name="Name" value="Working with the Dispatcher" />
+					<param name="Local" value="Help\UsingDispatcher.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="auto-synch" />
+					<param name="Name" value="Working in Auto-Synch mode" />
+					<param name="Local" value="Help\autoMode.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="branched scripts" />
+					<param name="Name" value="Working with a branched script" />
+					<param name="Local" value="Help\localbranch.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="conflict resolution" />
+					<param name="Name" value="Working with a rejected script" />
+					<param name="Local" value="Help\localbranch.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="email distribution" />
+					<param name="Name" value="Distributing scripts through Email" />
+					<param name="Local" value="Help\emailScript.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="lost" />
+					<param name="Name" value="Resending lost scripts" />
+					<param name="Local" value="Help\resendScript.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="merging changes" />
+					<param name="Name" value="Merging changes" />
+					<param name="Local" value="Help\merge.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="resending" />
+					<param name="Name" value="Resending lost scripts" />
+					<param name="Local" value="Help\resendScript.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="reviewing changes" />
+					<param name="Name" value="Reviewing changes from an incoming synch script" />
+					<param name="Local" value="Help\reviewScript.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="state in history" />
+					<param name="Name" value="Script state in history" />
+					<param name="Local" value="Help\historyTab.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="synchronizing" />
+					<param name="Name" value="Synchronizing or executing a script" />
+					<param name="Local" value="Help\SyncScripts.html" />
+				</object>
+			
+			<li><object type="text/sitemap">
+					<param name="Name" value="executing" />
+					<param name="Name" value="Synchronizing or executing a script" />
+					<param name="Local" value="Help\SyncScripts.html" />
+				</object>
+				
+			<li><object type="text/sitemap">
+					<param name="Name" value="rejecting" />
+					<param name="Name" value="Manually rejecting script changes" />
+					<param name="Local" value="Help\manualreject.html" />
+				</object>
+				
+			<li><object type="text/sitemap">
+					<param name="Name" value="restore" />
+					<param name="Name" value="Restoring previous version/script" />
+					<param name="Local" value="Help\manualreject.html" />
+				</object>
+		</ul>
+	<li><object type="text/sitemap">
+			<param name="Name" value="set-up" /> 
+			<param name="Name" value="Setting up your team" />
+			<param name="Local" value="tutorial\startcollab.html" />
+		</object>
+		<ul>
+			<li><object type="text/sitemap">
+				<param name="Name" value="project" />
+				<param name="Name" value="Creating a new project" />
+				<param name="Local" value="tutorial\createintro.html" />
+			</object>
+			
+			<li><object type="text/sitemap">
+				<param name="Name" value="email collaboration" />
+				<param name="Name" value="Setting up email collaboration" />
+				<param name="Local" value="tutorial\email.html" />
+			</object>
+			
+			<li><object type="text/sitemap">
+				<param name="Name" value="team" />
+				<param name="Name" value="Setting up your team" />
+				<param name="Local" value="tutorial\startcollab.html" />
+			</object>
+			
+		</ul>
+		
+	<li><object type="text/sitemap">
+			<param name="Name" value="synchronizing scripts" />
+			<param name="Name" value="Synchronizing or executing a script" />
+			<param name="Local" value="Help\SyncScripts.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="uncheckout" />
+			<param name="Name" value="Un-checkout a file" />
+			<param name="Local" value="Help\Uncheckout.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="executing scripts" />
+			<param name="Name" value="Synchronizing or executing a script" />
+			<param name="Local" value="Help\SyncScripts.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="versions" />
+			<param name="Name" value="Comparing versions of a project" />
+			<param name="Local" value="Help\CompareVersions.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="viewing files" />
+			<param name="Name" value="Viewing and editing files" />
+			<param name="Local" value="Help\editing.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="visiting other projects" />
+			<param name="Name" value="Visiting projects" />
+			<param name="Local" value="Help\visitProject.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="Visual C++ 6.0" />
+			<param name="Name" value="Visual C++ 6.0" />
+			<param name="Local" value="FAQs\VC6.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="Visual Studio.NET" />
+			<param name="Name" value="Visual Studio.NET" />
+			<param name="Local" value="FAQs\VSNet.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="integration" />
+			<param name="Name" value="integration" />
+			<param name="Local" value="FAQs\faq.html#Integration" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="checksum mismatch" />
+			<param name="Name" value="checksum mismatch" />
+			<param name="Local" value="FAQs\checksum.html" />
+		</object>
+	
+	<li><object type="text/sitemap">
+			<param name="Name" value="Intermittent File Operation Problem" />
+			<param name="Name" value="Intermittent File Operation Problem" />
+			<param name="Local" value="FAQs\intermittent.html" />
+		</object>
+	
+</ul>
+</body>
+</html>
+
+

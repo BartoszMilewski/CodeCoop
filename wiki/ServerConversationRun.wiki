@@ -1,0 +1,14 @@
+==CommandIpc::ServerConversation::Run
+* Acknowledge client
+* inifinite loop
+** wait for event
+** Lock Model
+** if command, ExecuteCmd
+** else return appropriate data to client
+** if _convData != 0
+*** wakeup client
+*** if convData->IsLast, break
+* if abnormal exit, wakeup client
+* Lock
+* [[ConvStarter]]->OnFinishConv
+

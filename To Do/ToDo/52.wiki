@@ -1,0 +1,10 @@
+| Summary |Update help screen shots|
+| CreatedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |1|
+| Status |Done|
+| DateReported |8 kwietnia 2008|
+The following scree shots have to be updated for version 5.1:
+
+

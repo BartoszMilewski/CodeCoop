@@ -1,0 +1,41 @@
+=History::XProcessUnitLineage
+Arguments: sender ID, lineage, Mailbox::Agent
+<br/>Returns: Status
+* If lineage empty, return '''Connected''' (full sync, emergency defect,'' anything else?'')
+* Extract unitType and unitId from lineage
+* if unitType: Member check the Receiver status
+** if I am a Receiver
+*** If I know the sender
+**** and it's not me and it's a receiver, Assert and return '''Prehistoric'''
+*** If I don't know the sender, return '''Prehistoric'''
+* Extract referenceId
+** if not gidInvalid and Project::Db::[[XIsFromFuture]] == Tri::Yes
+*** XRememberDisconnectedScript referenceId
+*** If KnownMissingId is set, remember it too. ''Note: it's never set for side lineages.''
+*** return '''Disconnected'''
+* Find rootId--may be the same as referenceId; or, 
+** if referenceId == gidInvalid, advance and remember isWholeTreeLineage
+** if lineage has only one gid, and it's ''gidInvalid'', return '''Connected''' 
+ bool isPartialPrehistoric = false;
+ bool isNotPrehistoric = false;
+* unitType == Unit::Set
+** ...
+* unitType == Member: isNotPrehistoric = true
+
+* Find KnownMissingId in the tree. If found, return Connected
+* tree.[[XProcessLineage]] if false, return '''Prehistoric'''
+* if rootIdFound, status = '''Connected'''
+* else if isPartialPrehistoric status = '''Prehistoric'''
+* else if !isNotPrehistoric (only possible for set scripts!)
+  // We couldn't determine the lineage status.
+  // Find the oldest script from the root id's sender recorded in our history.
+  // If root id is numerically smaller then the oldest script found in our history or
+  // we don't find any scripts from that sender
+  // then the processed lineage is considered '''Prehistoric'''. Otherwise
+  // we assume that processed lineage is '''Disconnected'''.
+* else status = '''Disconnected'''
+---
+* if status == Disconnected, 
+*** if isWholeTreeLineage, remember disconnected the whole lineage
+*** else remember disconnected only root ID
+** if known missing id, XRememberDisconnectedScript (known missing id)

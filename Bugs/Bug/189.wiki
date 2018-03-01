@@ -1,0 +1,15 @@
+| Summary |Dispatcher settings: bad dialog logic|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Friday, August 03, 2007|
+==Description 
+I was setting up a satellite configuration. I typed in hub's email address, then clicked on the Advanced button below "Hub's Public Inbox share. After the advanced dialog closed, the previously filled hub's email address was "refreshed" and showed "Unknown".
+
+

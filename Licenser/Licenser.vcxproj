@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Beta Lite|Win32">
+      <Configuration>Beta Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Beta|Win32">
+      <Configuration>Beta</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Lite|Win32">
+      <Configuration>Debug Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Lite|Win32">
+      <Configuration>Release Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{262431DA-E734-42B1-B9D4-A854830D25DE}</ProjectGuid>
+    <RootNamespace>Licenser</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"Licenser\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Licensing;..\WinLib;resource;..\Common;..\Serial;..\Packer;..\Email;..\Email\Mapi;..\Email\SimpleMapi;..\Email\Pop3Smtp;..\Licensing;C:\Office 2010 Developer Resources\Outlook 2010 MAPI Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WinLibD.lib;mapi32.lib;Ws2_32.lib;Secur32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Licenser.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Licensing;..\WinLib;resource;..\Common;..\Serial;..\Packer;..\Email;..\Email\Mapi;..\Email\SimpleMapi;..\Email\Pop3Smtp;C:\Office 2010 Developer Resources\Outlook 2010 MAPI Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WinLibR.lib;mapi32.lib;Ws2_32.lib;Secur32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"Licenser\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Licensing;..\WinLib;resource;..\Common;..\Serial;..\Packer;..\Email;..\Email\Mapi;..\Email\SimpleMapi;..\Email\Pop3Smtp;C:\Office 2010 Developer Resources\Outlook 2010 MAPI Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;BETA;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WinLibB.lib;mapi32.lib;Ws2_32.lib;Secur32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Licenser.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"Licenser\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Licensing;..\WinLib;resource;..\Common;..\Serial;..\Packer;..\Email;..\Email\Mapi;..\Email\SimpleMapi;..\Email\Pop3Smtp;..\License;C:\Office 2010 Developer Resources\Outlook 2010 MAPI Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WinLibD.lib;mapi32.lib;Ws2_32.lib;Secur32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Licenser.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"Licenser\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Licensing;..\WinLib;resource;..\Common;..\Serial;..\Packer;..\Email;..\Email\Mapi;..\Email\SimpleMapi;..\Email\Pop3Smtp;..\License;C:\Office 2010 Developer Resources\Outlook 2010 MAPI Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;BETA;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WinLibB.lib;mapi32.lib;Ws2_32.lib;Secur32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Licenser.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Licensing;..\WinLib;resource;..\Common;..\Serial;..\Packer;..\Email;..\Email\Mapi;..\Email\SimpleMapi;..\Email\Pop3Smtp;..\License;C:\Office 2010 Developer Resources\Outlook 2010 MAPI Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WinLibR.lib;mapi32.lib;Ws2_32.lib;Secur32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="Resource\Licenser.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\Licenser.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Licensing\Crypt.h" />
+    <ClInclude Include="Resource\resource.h" />
+    <ClInclude Include="..\Common\Address.h" />
+    <ClInclude Include="..\Common\Addressee.h" />
+    <ClInclude Include="..\Common\DispatcherCmd.h" />
+    <ClInclude Include="..\Common\DispatcherScript.h" />
+    <ClInclude Include="..\Common\DistributorScriptSend.h" />
+    <ClInclude Include="..\Common\EmailConfigData.h" />
+    <ClInclude Include="..\Common\GlobalId.h" />
+    <ClInclude Include="..\Common\Invitee.h" />
+    <ClInclude Include="..\Common\precompiled.h" />
+    <ClInclude Include="..\Common\RegFunc.h" />
+    <ClInclude Include="..\Email\ScriptProcessorConfig.h" />
+    <ClInclude Include="..\Serial\ScriptSerialize.h" />
+    <ClInclude Include="..\Serial\SerDateTime.h" />
+    <ClInclude Include="..\Serial\Serialize.h" />
+    <ClInclude Include="..\Serial\SerString.h" />
+    <ClInclude Include="..\Common\TransportHeader.h" />
+    <ClInclude Include="..\Common\UserIdPack.h" />
+    <ClInclude Include="..\Common\Validators.h" />
+    <ClInclude Include="..\Packer\BitCode.h" />
+    <ClInclude Include="..\Packer\BitStream.h" />
+    <ClInclude Include="..\Packer\BlockCoder.h" />
+    <ClInclude Include="..\Packer\Bucketizer.h" />
+    <ClInclude Include="..\Packer\CodingTables.h" />
+    <ClInclude Include="..\Packer\Compressor.h" />
+    <ClInclude Include="..\Packer\Decompressor.h" />
+    <ClInclude Include="..\Packer\ForgetfulHashTable.h" />
+    <ClInclude Include="..\Packer\HuffmanTree.h" />
+    <ClInclude Include="..\Packer\NamedBlock.h" />
+    <ClInclude Include="..\Packer\PackerGlobal.h" />
+    <ClInclude Include="..\Packer\RepetitionFinder.h" />
+    <ClInclude Include="..\Packer\Repetitions.h" />
+    <ClInclude Include="..\Packer\Statistics.h" />
+    <ClInclude Include="..\Email\Email.h" />
+    <ClInclude Include="..\Email\EmailAccount.h" />
+    <ClInclude Include="..\Email\EmailConfig.h" />
+    <ClInclude Include="..\Email\EmailMan.h" />
+    <ClInclude Include="..\Email\EmailMessage.h" />
+    <ClInclude Include="..\Email\EmailRegistry.h" />
+    <ClInclude Include="..\Email\EmailSession.h" />
+    <ClInclude Include="..\Email\EmailTransport.h" />
+    <ClInclude Include="..\Email\Mapi\MapiAddrBook.h" />
+    <ClInclude Include="..\Email\Mapi\MapiAddrList.h" />
+    <ClInclude Include="..\Email\Mapi\MapiBuffer.h" />
+    <ClInclude Include="..\Email\Mapi\MapiContentsTable.h" />
+    <ClInclude Include="..\Email\Mapi\MapiDefDir.h" />
+    <ClInclude Include="..\Email\Mapi\MapiEx.h" />
+    <ClInclude Include="..\Email\Mapi\MapiGPF.h" />
+    <ClInclude Include="..\Email\Mapi\MapiHelpers.h" />
+    <ClInclude Include="..\Email\Mapi\MapiIface.h" />
+    <ClInclude Include="..\Email\Mapi\MapiMailer.h" />
+    <ClInclude Include="..\Email\Mapi\MapiMailReader.h" />
+    <ClInclude Include="..\Email\Mapi\MapiMessage.h" />
+    <ClInclude Include="..\Email\Mapi\MapiProperty.h" />
+    <ClInclude Include="..\Email\Mapi\MapiRecipientList.h" />
+    <ClInclude Include="..\Email\Mapi\MapiRestriction.h" />
+    <ClInclude Include="..\Email\Mapi\MapiSession.h" />
+    <ClInclude Include="..\Email\Mapi\MapiStatusTable.h" />
+    <ClInclude Include="..\Email\Mapi\MapiStore.h" />
+    <ClInclude Include="..\Email\Mapi\MapiUser.h" />
+    <ClInclude Include="..\Email\SimpleMapi\AddrBook.h" />
+    <ClInclude Include="..\Email\SimpleMapi\MailReader.h" />
+    <ClInclude Include="..\Email\SimpleMapi\SimpleMapi.h" />
+    <ClInclude Include="..\Email\SimpleMapi\SimpleMapiEx.h" />
+    <ClInclude Include="..\Email\SimpleMapi\SimpleMapiMailer.h" />
+    <ClInclude Include="..\Email\SimpleMapi\SimpleMapiMessage.h" />
+    <ClInclude Include="..\Email\SimpleMapi\SimpleRecipient.h" />
+    <ClInclude Include="..\Email\SimpleMapi\SimpleRecipientList.h" />
+    <ClInclude Include="..\Email\SimpleMapi\SimpleSession.h" />
+    <ClInclude Include="..\Email\SimpleMapi\SimpleStore.h" />
+    <ClInclude Include="..\Email\Pop3Smtp\Pop3InboxIterator.h" />
+    <ClInclude Include="..\Email\Pop3Smtp\Pop3Session.h" />
+    <ClInclude Include="..\Email\Pop3Smtp\SmtpMailer.h" />
+    <ClInclude Include="..\Email\Pop3Smtp\SmtpSession.h" />
+    <ClInclude Include="DlgCtrl.h" />
+    <ClInclude Include="LicenseRequest.h" />
+    <ClInclude Include="LocalMailer.h" />
+    <ClInclude Include="MainCtrl.h" />
+    <ClInclude Include="Maker.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="OutSink.h" />
+    <ClInclude Include="..\Common\Transport.h" />
+    <ClInclude Include="..\Common\PathRegistry.h">
+      <DependentUpon>UserIdPack.h</DependentUpon>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Address.cpp" />
+    <ClCompile Include="..\Common\Addressee.cpp" />
+    <ClCompile Include="..\Common\DispatcherCmd.cpp" />
+    <ClCompile Include="..\Common\DispatcherRegistry.cpp" />
+    <ClCompile Include="..\Common\DispatcherScript.cpp" />
+    <ClCompile Include="..\Common\DistributorScriptSend.cpp" />
+    <ClCompile Include="..\Common\GlobalId.cpp" />
+    <ClCompile Include="..\Common\Invitee.cpp" />
+    <ClCompile Include="..\Common\precompiled.cpp" />
+    <ClCompile Include="..\Common\RegFunc.cpp" />
+    <ClCompile Include="..\Licensing\Crypt.cpp" />
+    <ClCompile Include="..\Serial\ScriptSerialize.cpp" />
+    <ClCompile Include="..\Serial\Serialize.cpp" />
+    <ClCompile Include="..\Serial\SerString.cpp" />
+    <ClCompile Include="..\Common\TransportHeader.cpp" />
+    <ClCompile Include="..\Common\UserIdPack.cpp" />
+    <ClCompile Include="..\Common\Validators.cpp" />
+    <ClCompile Include="..\Packer\BitStream.cpp" />
+    <ClCompile Include="..\Packer\BlockCoder.cpp" />
+    <ClCompile Include="..\Packer\Bucketizer.cpp" />
+    <ClCompile Include="..\Packer\CodingTables.cpp" />
+    <ClCompile Include="..\Packer\Compressor.cpp" />
+    <ClCompile Include="..\Packer\Decompressor.cpp" />
+    <ClCompile Include="..\Packer\ForgetfulHashTable.cpp" />
+    <ClCompile Include="..\Packer\HuffmanTree.cpp" />
+    <ClCompile Include="..\Packer\NamedBlock.cpp" />
+    <ClCompile Include="..\Packer\RepetitionFinder.cpp" />
+    <ClCompile Include="..\Packer\Repetitions.cpp" />
+    <ClCompile Include="..\Packer\Statistics.cpp" />
+    <ClCompile Include="..\Email\Email.cpp" />
+    <ClCompile Include="..\Email\EmailAccount.cpp" />
+    <ClCompile Include="..\Email\EmailConfig.cpp" />
+    <ClCompile Include="..\Email\EmailMan.cpp" />
+    <ClCompile Include="..\Email\EmailMessage.cpp" />
+    <ClCompile Include="..\Email\EmailRegistry.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiAddrBook.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiAddrList.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiBuffer.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiContentsTable.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiDefDir.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiEx.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiGPF.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiMailer.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiMailReader.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiMessage.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiProperty.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiRecipientList.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiSession.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiStatusTable.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiStore.cpp" />
+    <ClCompile Include="..\Email\Mapi\MapiUser.cpp" />
+    <ClCompile Include="..\Email\SimpleMapi\AddrBook.cpp" />
+    <ClCompile Include="..\Email\SimpleMapi\MailReader.cpp" />
+    <ClCompile Include="..\Email\SimpleMapi\SimpleMapiEx.cpp" />
+    <ClCompile Include="..\Email\SimpleMapi\SimpleMapiMailer.cpp" />
+    <ClCompile Include="..\Email\SimpleMapi\SimpleMapiMessage.cpp" />
+    <ClCompile Include="..\Email\SimpleMapi\SimpleRecipientList.cpp" />
+    <ClCompile Include="..\Email\SimpleMapi\SimpleSession.cpp" />
+    <ClCompile Include="..\Email\SimpleMapi\SimpleStore.cpp" />
+    <ClCompile Include="..\Email\Pop3Smtp\Pop3InboxIterator.cpp" />
+    <ClCompile Include="..\Email\Pop3Smtp\SmtpMailer.cpp" />
+    <ClCompile Include="DlgCtrl.cpp" />
+    <ClCompile Include="LocalMailer.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainCtrl.cpp" />
+    <ClCompile Include="Maker.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="..\Common\Transport.cpp" />
+    <ClCompile Include="..\Common\PathRegistry.cpp">
+      <DependentUpon>UserIdPack.h</DependentUpon>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinLib\WinLib.vcxproj">
+      <Project>{94a1ce47-9646-4643-a8d3-bf52c9615611}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,22 @@
+| Summary |Incorrect Display of Script contents|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Resolution | Cannot reproduce |
+| Priority | 1 |
+| DateReported |Monday, October 23, 2006|
+==Description 
+
+History pane - details of a script that has deleted *folders*:
+
+"Type" column of the "details" pane, the folders that have been
+deleted are reported as being of Type "Header".
+(Created folders are correctly reported as being of type "Folder").
+
+[[Image::Bug131NoRepro]]
+
+

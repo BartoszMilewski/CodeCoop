@@ -1,0 +1,24 @@
+| Summary |Blame|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Monday, September 24, 2007|
+==Description
+
+==Forum [http://www.relisoft.com/forums/index.php?showtopic=1002&view=getnewpost|post]
+
+I would like to support the request for this feature, as nicely illustrated by Giles.
+
+This functionality is not only useful for "blaming" purposes, but also for review and audit purposes.
+For instance, if I want to make a formal review of all the source modifications between versions 2.3 and 2.4 of the product, I will select this range of versions in the co-op history, and code co-op nicely allows me to view the full change. But I cannot see the author or time at which a change was applied.
+
+In the right pane of the differ, I would find it valuable to be able to show the script ID and author of the change on the right of the text.  For a collective review, the author can be asked to justify a change.
+
+This "author header" feature would also be useful for novices not familiar yet with the yellow/pink color coding when reviewing an incoming script (i.e. label changed lines as "local" vs "incoming").
+
+
+I believe this feature would have a real practical value...
+
+

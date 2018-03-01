@@ -1,0 +1,9 @@
+| Summary |Update licensing for 5.0|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |1|
+| Status |Done|
+| DateReported |Sunday, October 29, 2006|
+==Description
+

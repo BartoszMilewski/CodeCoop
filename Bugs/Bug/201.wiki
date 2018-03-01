@@ -1,0 +1,13 @@
+| Summary |Can't create new folder while browsing for folder|
+| ReportedBy |Bartosz Milewski|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Open|
+| Priority |2|
+| Resolution | Pending |
+| DateReported |Friday, December 28, 2007|
+==Description 
+Command Project>Move displays a dialog with a Browse button. The browse dialog has the "Make New Folder" button. Clicking on this button does nothing.

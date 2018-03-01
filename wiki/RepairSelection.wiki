@@ -1,0 +1,3 @@
+foreach corrupted file do {
+*scan history and remember each editing command until the new file command is found
+}

@@ -1,0 +1,9 @@
+| Summary |Manual asking for re-send|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |1|
+| Status |Done|
+| DateReported |Wednesday, June 03, 2009|
+==Description
+In the Inbox area, select a missing script and ask for a resend. A list of members appears (just like in the resend script dialog), from which to chose the recipient of the request. The request would go out immediately.

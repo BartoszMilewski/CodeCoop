@@ -1,0 +1,14 @@
+| Summary |Dialog font|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |3|
+| Status |Closed|
+| DateReported |Wednesday, November 21, 2007|
+==Description
+There was a discussion in the forum about what font to use in a dialog and one interesting solution was this:
+ LOGFONT lf; 
+ ::GetObject(::GetStockObject(DEFAULT_GUI_FONT),sizeof(lf),&lf); 
+We should look into it when creating dialogs from templates.
+==Comments
+Implemented in dialog template maker.

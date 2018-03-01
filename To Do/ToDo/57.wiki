@@ -1,0 +1,10 @@
+| Summary |Mothball projects|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Tuesday, November 18, 2008|
+==Description
+Add an option to "mothball" a project. Such a project would be grayed out and moved to the end of the projects list. It's a local setting, not propagated to other project memebers.
+

@@ -1,0 +1,1156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Beta Lite|Win32">
+      <Configuration>Beta Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Beta|Win32">
+      <Configuration>Beta</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Lite|Win32">
+      <Configuration>Debug Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Lite|Win32">
+      <Configuration>Release Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BE736DFA-E630-4398-99A1-C60B3AB7A083}</ProjectGuid>
+    <RootNamespace>co-op</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/Co-Op.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"Code Co-op\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>common;wiki;ui;ui\WikiBrowser;resource;..\Licensing;..\diff;..\serial;..\common;..\SccDll;..\WinLib;..\Email;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>COOP_PRO;_DEBUG;TESTING;DIAGNOSTIC;_WINDOWS;WIN32;STRICT;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;COOP_PRO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)WinLib;$(SolutionDir)Common</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>WinLibD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug/co-op.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Manifest>
+      <AdditionalManifestFiles>
+      </AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/Co-Op.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"Code Co-op\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>common;wiki;ui;ui\WikiBrowser;resource;..\Licensing;..\diff;..\serial;..\common;..\SccDll;..\WinLib;..\Email;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>COOP_PRO;BETA;_DEBUG;TESTING;DIAGNOSTIC;_WINDOWS;WIN32;STRICT;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;COOP_PRO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)WinLib;$(SolutionDir)Common</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>WinLibB.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>del  $(SolutionDir)\Setup\binr\pro\$(TargetFileName)</Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/Co-Op.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>common;wiki;ui;ui\WikiBrowser;resource;..\Licensing;..\diff;..\serial;..\common;..\SccDll;..\WinLib;..\Email;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>COOP_PRO;NDEBUG;_WINDOWS;WIN32;STRICT;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;COOP_PRO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)WinLib;$(SolutionDir)Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/OPT:ICF=4 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>WinLibR.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Release/Co-op.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <SetChecksum>true</SetChecksum>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) $(SolutionDir)Setup\binr\pro</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/Co-Op.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"Code Co-op\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>common;wiki;ui;ui\WikiBrowser;resource;..\Licensing;..\diff;..\serial;..\common;..\SccDll;..\WinLib;..\Email;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>COOP_LITE;_DEBUG;TESTING;DIAGNOSTIC;_WINDOWS;WIN32;STRICT;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;COOP_LITE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)WinLib;$(SolutionDir)Common</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>WinLibD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(IntDir)co-op.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Manifest>
+      <AdditionalManifestFiles>
+      </AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/Co-Op.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"Code Co-op\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>common;wiki;ui;ui\WikiBrowser;resource;..\Licensing;..\diff;..\serial;..\common;..\SccDll;..\WinLib;..\Email;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>COOP_LITE;BETA;_DEBUG;TESTING;DIAGNOSTIC;_WINDOWS;WIN32;STRICT;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;COOP_LITE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)WinLib;$(SolutionDir)Common</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>WinLibB.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">
+    <PreBuildEvent>
+      <Command>del  $(SolutionDir)\Setup\binr\lite\$(TargetFileName)</Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/Co-Op.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>common;wiki;ui;ui\WikiBrowser;resource;..\Licensing;..\diff;..\serial;..\common;..\SccDll;..\WinLib;..\Email;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>COOP_LITE;NDEBUG;_WINDOWS;WIN32;STRICT;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;COOP_LITE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)WinLib;$(SolutionDir)Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/OPT:ICF=4 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>WinLibR.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Co-op.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\WinLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SetChecksum>true</SetChecksum>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "$(SolutionDir)Setup\binr\lite"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\CopyRequest.cpp" />
+    <ClCompile Include="..\Common\OpenSaveFileData.cpp" />
+    <ClCompile Include="..\Diff\BinDiffer.cpp" />
+    <ClCompile Include="..\Diff\BlockFinder.cpp" />
+    <ClCompile Include="..\Diff\CluLines.cpp" />
+    <ClCompile Include="..\Diff\Cluster.cpp" />
+    <ClCompile Include="..\Diff\Clustering.cpp" />
+    <ClCompile Include="..\Diff\CluSum.cpp" />
+    <ClCompile Include="..\Diff\Diff.cpp" />
+    <ClCompile Include="..\Diff\LineBuf.cpp" />
+    <ClCompile Include="..\Diff\LineCounter.cpp" />
+    <ClCompile Include="..\Diff\Lines.cpp" />
+    <ClCompile Include="..\Diff\Merge.cpp" />
+    <ClCompile Include="..\Licensing\Crypt.cpp" />
+    <ClCompile Include="..\Serial\ScriptSerialize.cpp" />
+    <ClCompile Include="..\Serial\Serialize.cpp" />
+    <ClCompile Include="..\Serial\SerString.cpp" />
+    <ClCompile Include="..\Serial\SysPath.cpp" />
+    <ClCompile Include="..\Serial\Transact.cpp" />
+    <ClCompile Include="..\Serial\Transactable.cpp" />
+    <ClCompile Include="..\Serial\XBitSet.cpp" />
+    <ClCompile Include="UI\AboutDlg.cpp" />
+    <ClCompile Include="UI\AccelTab.cpp" />
+    <ClCompile Include="UI\AddFilesDlg.cpp" />
+    <ClCompile Include="UI\BackupDlg.cpp" />
+    <ClCompile Include="UI\BackupSummaryDlg.cpp" />
+    <ClCompile Include="UI\BeginnerMode.cpp" />
+    <ClCompile Include="Ui\BranchBrowser.cpp" />
+    <ClCompile Include="Ui\BranchView.cpp" />
+    <ClCompile Include="Ui\ButtonTable.cpp" />
+    <ClCompile Include="UI\CheckInDlg.cpp" />
+    <ClCompile Include="UI\ChecksumDlg.cpp" />
+    <ClCompile Include="UI\ConflictDlg.cpp" />
+    <ClCompile Include="Ui\Controllers.cpp" />
+    <ClCompile Include="Ui\Diagnostics.cpp" />
+    <ClCompile Include="Ui\DisplayPane.cpp" />
+    <ClCompile Include="UI\DisplayWin.cpp" />
+    <ClCompile Include="UI\ExportImportHistoryDlg.cpp" />
+    <ClCompile Include="UI\ExportProject.cpp" />
+    <ClCompile Include="Ui\FeedbackBar.cpp" />
+    <ClCompile Include="UI\FileAttribMergeDlg.cpp" />
+    <ClCompile Include="UI\FileDiffDisplay.cpp" />
+    <ClCompile Include="UI\FileDropDlg.cpp" />
+    <ClCompile Include="UI\FilePropertiesDlg.cpp" />
+    <ClCompile Include="UI\FtpOpenFileDlg.cpp" />
+    <ClCompile Include="UI\HelpEngine.cpp" />
+    <ClCompile Include="UI\HideExtensionDlg.cpp" />
+    <ClCompile Include="UI\Hierarchy.cpp" />
+    <ClCompile Include="UI\HierarchyView.cpp" />
+    <ClCompile Include="UI\InputSource.cpp" />
+    <ClCompile Include="Ui\InstrumentBar.cpp" />
+    <ClCompile Include="UI\JoinProj.cpp" />
+    <ClCompile Include="Ui\Layout.cpp" />
+    <ClCompile Include="Ui\LicenseDlg.cpp" />
+    <ClCompile Include="Ui\LicensePrompter.cpp" />
+    <ClCompile Include="UI\MenuTable.cpp" />
+    <ClCompile Include="UI\MergeInstrumentBar.cpp" />
+    <ClCompile Include="UI\MoveFilesDlg.cpp" />
+    <ClCompile Include="Ui\MoveProj.cpp" />
+    <ClCompile Include="UI\NewFile.cpp" />
+    <ClCompile Include="UI\NewProj.cpp" />
+    <ClCompile Include="UI\OpenSaveFileDlg.cpp" />
+    <ClCompile Include="Ui\OverdueScriptDlg.cpp" />
+    <ClCompile Include="Ui\ProgramOptionsDlg.cpp" />
+    <ClCompile Include="UI\ProjDefect.cpp" />
+    <ClCompile Include="UI\ProjectAdminDlg.cpp" />
+    <ClCompile Include="Ui\ProjectBranchDlg.cpp" />
+    <ClCompile Include="UI\ProjectInviteDlg.cpp" />
+    <ClCompile Include="UI\ProjectMembers.cpp" />
+    <ClCompile Include="UI\ProjectPropsDlg.cpp" />
+    <ClCompile Include="UI\ProjectRecoveryDlg.cpp" />
+    <ClCompile Include="Ui\PromptMode.cpp" />
+    <ClCompile Include="Ui\ReceiverJoinDlg.cpp" />
+    <ClCompile Include="Ui\ReportDlg.cpp" />
+    <ClCompile Include="UI\RevertDlg.cpp" />
+    <ClCompile Include="Ui\SaveFilesDlg.cpp" />
+    <ClCompile Include="UI\SaveHtml.cpp" />
+    <ClCompile Include="Ui\ScriptInstrumentBar.cpp" />
+    <ClCompile Include="UI\ScriptPropertySheet.cpp" />
+    <ClCompile Include="UI\ScriptRecipients.cpp" />
+    <ClCompile Include="Ui\SelectFileDlg.cpp" />
+    <ClCompile Include="UI\SelectIter.cpp" />
+    <ClCompile Include="UI\SelectProjectDlg.cpp" />
+    <ClCompile Include="UI\SelectRootPathDlg.cpp" />
+    <ClCompile Include="UI\Tab.cpp" />
+    <ClCompile Include="Ui\TableBrowser.cpp" />
+    <ClCompile Include="UI\TableViewer.cpp" />
+    <ClCompile Include="UI\ToolOptionsDlg.cpp" />
+    <ClCompile Include="Ui\TreeBrowser.cpp" />
+    <ClCompile Include="Ui\UiManager.cpp" />
+    <ClCompile Include="UI\UpdateHubIdDlg.cpp" />
+    <ClCompile Include="UI\VerifyReportDlg.cpp" />
+    <ClCompile Include="Ui\WidgetBrowser.cpp" />
+    <ClCompile Include="Ui\WikiBrowser.cpp" />
+    <ClCompile Include="UI\WikiController.cpp" />
+    <ClCompile Include="Ui\WikiBrowser\InPlaceBrowser.cpp" />
+    <ClCompile Include="Ui\WikiBrowser\WebBrowserSite.cpp" />
+    <ClCompile Include="Common\ColumnInfo.cpp" />
+    <ClCompile Include="Common\CoopBlocker.cpp" />
+    <ClCompile Include="Common\DispatcherProxy.cpp" />
+    <ClCompile Include="Common\DistributorLicense.cpp" />
+    <ClCompile Include="Common\FileDisplayTable.cpp" />
+    <ClCompile Include="Common\HistoryRange.cpp" />
+    <ClCompile Include="Common\MergeStatus.cpp" />
+    <ClCompile Include="Common\ProgramOptions.cpp" />
+    <ClCompile Include="Common\ProjectInviteData.cpp" />
+    <ClCompile Include="Common\ProjectOptionsEx.cpp" />
+    <ClCompile Include="Common\ProjectPathVerifier.cpp" />
+    <ClCompile Include="Common\RecordSet.cpp" />
+    <ClCompile Include="Common\TablePreferences.cpp" />
+    <ClCompile Include="Common\ToolOptions.cpp" />
+    <ClCompile Include="..\Common\Address.cpp" />
+    <ClCompile Include="..\Common\Addressee.cpp" />
+    <ClCompile Include="..\Common\AltDiffer.cpp" />
+    <ClCompile Include="..\Common\AppHelp.cpp" />
+    <ClCompile Include="..\Common\AppInfo.cpp" />
+    <ClCompile Include="..\Common\BackupFileName.cpp" />
+    <ClCompile Include="..\Common\BrowseForFolder.cpp" />
+    <ClCompile Include="..\Common\Catalog.cpp" />
+    <ClCompile Include="..\Common\CheckSum.cpp" />
+    <ClCompile Include="..\Common\DispatcherCmd.cpp" />
+    <ClCompile Include="..\Common\DispatcherRegistry.cpp" />
+    <ClCompile Include="..\Common\DispatcherScript.cpp" />
+    <ClCompile Include="..\Common\DisplayFrameCtrl.cpp" />
+    <ClCompile Include="..\Common\DynamicRebar.cpp" />
+    <ClCompile Include="..\Common\EditStyle.cpp" />
+    <ClCompile Include="..\Common\Encryption.cpp" />
+    <ClCompile Include="..\Common\FileState.cpp" />
+    <ClCompile Include="..\Common\FileStateList.cpp" />
+    <ClCompile Include="..\Common\FtpSite.cpp" />
+    <ClCompile Include="..\Common\GlobalDb.cpp" />
+    <ClCompile Include="..\Common\GlobalId.cpp" />
+    <ClCompile Include="..\Common\Invitee.cpp" />
+    <ClCompile Include="..\Common\IPCExchange.cpp" />
+    <ClCompile Include="..\Common\JoinProjectData.cpp" />
+    <ClCompile Include="..\Common\License.cpp" />
+    <ClCompile Include="..\Common\MemberDescription.cpp" />
+    <ClCompile Include="..\Common\MemberInfo.cpp" />
+    <ClCompile Include="..\Common\Observer.cpp" />
+    <ClCompile Include="..\Common\OutputSink.cpp" />
+    <ClCompile Include="..\Common\PathRegistry.cpp" />
+    <ClCompile Include="..\Common\PopupDisplay.cpp" />
+    <ClCompile Include="..\Common\precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Common\PreferencesStorage.cpp" />
+    <ClCompile Include="..\Common\ProjectBlueprint.cpp" />
+    <ClCompile Include="..\Common\ProjectMarker.cpp" />
+    <ClCompile Include="..\Common\ProjectSeats.cpp" />
+    <ClCompile Include="..\Common\Prompter.cpp" />
+    <ClCompile Include="..\Common\RandomUniqueName.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\Common\RegFunc.cpp" />
+    <ClCompile Include="..\Common\Registry.cpp" />
+    <ClCompile Include="..\Common\ReliSoftReg.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\Common\RichDumpWin.cpp" />
+    <ClCompile Include="..\Common\ScriptName.cpp" />
+    <ClCompile Include="..\Common\Table.cpp" />
+    <ClCompile Include="..\Common\Transport.cpp" />
+    <ClCompile Include="..\Common\TransportHeader.cpp" />
+    <ClCompile Include="..\Common\Trial.cpp" />
+    <ClCompile Include="..\Common\UserIdPack.cpp" />
+    <ClCompile Include="..\Common\Validators.cpp" />
+    <ClCompile Include="..\SccDll\SccProxy.cpp" />
+    <ClCompile Include="..\SccDll\SccProxyEx.cpp" />
+    <ClCompile Include="Wiki\ExternHtmlSink.cpp" />
+    <ClCompile Include="Wiki\HtmlSink.cpp" />
+    <ClCompile Include="Wiki\LinkParser.cpp" />
+    <ClCompile Include="Wiki\Sql.cpp" />
+    <ClCompile Include="Wiki\SqlHtmlSink.cpp" />
+    <ClCompile Include="Wiki\SqlNode.cpp" />
+    <ClCompile Include="Wiki\SqlParser.cpp" />
+    <ClCompile Include="Wiki\WikiConverter.cpp" />
+    <ClCompile Include="Wiki\WikiDef.cpp" />
+    <ClCompile Include="Wiki\WikiLexer.cpp" />
+    <ClCompile Include="..\Email\EmailAccount.cpp" />
+    <ClCompile Include="..\Email\EmailConfig.cpp" />
+    <ClCompile Include="AckBox.cpp" />
+    <ClCompile Include="ActiveMerger.cpp" />
+    <ClCompile Include="ActivityLog.cpp" />
+    <ClCompile Include="AdminElection.cpp" />
+    <ClCompile Include="Agents.cpp" />
+    <ClCompile Include="Area.cpp" />
+    <ClCompile Include="AttributeMerge.cpp" />
+    <ClCompile Include="BackupArchive.cpp" />
+    <ClCompile Include="BackupRestorer.cpp" />
+    <ClCompile Include="BuiltInMerger.cpp" />
+    <ClCompile Include="CheckIn.cpp" />
+    <ClCompile Include="CheckInArea.cpp" />
+    <ClCompile Include="CheckoutNotifications.cpp" />
+    <ClCompile Include="Chunker.cpp" />
+    <ClCompile Include="CmdExec.cpp" />
+    <ClCompile Include="CmdLineMaker.cpp" />
+    <ClCompile Include="CmdLineSelection.cpp" />
+    <ClCompile Include="CmdMain.cpp" />
+    <ClCompile Include="CmdVector.cpp" />
+    <ClCompile Include="Commander.cpp" />
+    <ClCompile Include="Conflict.cpp" />
+    <ClCompile Include="CoopCtrl.cpp" />
+    <ClCompile Include="CoopMain.cpp" />
+    <ClCompile Include="CoopMemento.cpp" />
+    <ClCompile Include="CtrlScriptProcessor.cpp" />
+    <ClCompile Include="Database.cpp" />
+    <ClCompile Include="Directory.cpp" />
+    <ClCompile Include="DirTraversal.cpp" />
+    <ClCompile Include="ExportedHistoryTrailer.cpp" />
+    <ClCompile Include="ExtensionScanner.cpp" />
+    <ClCompile Include="FileCopyist.cpp" />
+    <ClCompile Include="FileData.cpp" />
+    <ClCompile Include="FileDb.cpp" />
+    <ClCompile Include="FileDropInfo.cpp" />
+    <ClCompile Include="FileDropInfoCollector.cpp" />
+    <ClCompile Include="FileFilter.cpp" />
+    <ClCompile Include="FileList.cpp" />
+    <ClCompile Include="FileMerge.cpp" />
+    <ClCompile Include="FileProps.cpp" />
+    <ClCompile Include="FileTransform.cpp" />
+    <ClCompile Include="FileType.cpp" />
+    <ClCompile Include="FileTyper.cpp" />
+    <ClCompile Include="FolderContents.cpp" />
+    <ClCompile Include="FtpProxy.cpp" />
+    <ClCompile Include="HistoricalFiles.cpp" />
+    <ClCompile Include="History.cpp" />
+    <ClCompile Include="HistoryChecker.cpp" />
+    <ClCompile Include="HistoryFilter.cpp" />
+    <ClCompile Include="HistoryNode.cpp" />
+    <ClCompile Include="HistoryPath.cpp" />
+    <ClCompile Include="HistoryPolicy.cpp" />
+    <ClCompile Include="HistorySortedTree.cpp" />
+    <ClCompile Include="HistoryTraversal.cpp" />
+    <ClCompile Include="Inbox.cpp" />
+    <ClCompile Include="IpcConversation.cpp" />
+    <ClCompile Include="IpcQueue.cpp" />
+    <ClCompile Include="JoinContext.cpp" />
+    <ClCompile Include="Lineage.cpp" />
+    <ClCompile Include="Mailbox.cpp" />
+    <ClCompile Include="MailboxHelper.cpp" />
+    <ClCompile Include="MailboxScriptInfo.cpp" />
+    <ClCompile Include="Mailer.cpp" />
+    <ClCompile Include="MembershipChange.cpp" />
+    <ClCompile Include="MembershipUpdateVerifier.cpp" />
+    <ClCompile Include="MemoryLog.cpp" />
+    <ClCompile Include="MergeExec.cpp" />
+    <ClCompile Include="MergerProxy.cpp" />
+    <ClCompile Include="Messengers.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="MultiLine.cpp" />
+    <ClCompile Include="PathFind.cpp" />
+    <ClCompile Include="PathSequencer.cpp" />
+    <ClCompile Include="Permissions.cpp" />
+    <ClCompile Include="PhysicalFile.cpp" />
+    <ClCompile Include="Predicate.cpp" />
+    <ClCompile Include="Project.cpp" />
+    <ClCompile Include="ProjectChecker.cpp" />
+    <ClCompile Include="ProjectDb.cpp" />
+    <ClCompile Include="ProjectPath.cpp" />
+    <ClCompile Include="ProjectProxy.cpp" />
+    <ClCompile Include="ProjectTable.cpp" />
+    <ClCompile Include="RecordSets.cpp" />
+    <ClCompile Include="RefFile.cpp" />
+    <ClCompile Include="Restorer.cpp" />
+    <ClCompile Include="ScriptBasket.cpp" />
+    <ClCompile Include="ScriptCmd.cpp" />
+    <ClCompile Include="ScriptCommandList.cpp" />
+    <ClCompile Include="ScriptCommands.cpp" />
+    <ClCompile Include="ScriptHeader.cpp" />
+    <ClCompile Include="ScriptIo.cpp" />
+    <ClCompile Include="ScriptKind.cpp" />
+    <ClCompile Include="ScriptList.cpp" />
+    <ClCompile Include="ScriptProps.cpp" />
+    <ClCompile Include="SelExec.cpp" />
+    <ClCompile Include="ServerCtrl.cpp" />
+    <ClCompile Include="Sidetrack.cpp" />
+    <ClCompile Include="Synch.cpp" />
+    <ClCompile Include="SynchArea.cpp" />
+    <ClCompile Include="SynchTrans.cpp" />
+    <ClCompile Include="TmpProjectArea.cpp" />
+    <ClCompile Include="Transformer.cpp" />
+    <ClCompile Include="UniqueName.cpp" />
+    <ClCompile Include="UnitTest.cpp" />
+    <ClCompile Include="Visitor.cpp" />
+    <ClCompile Include="WikiDirectory.cpp" />
+    <ClCompile Include="Workspace.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\CopyRequest.h" />
+    <ClInclude Include="..\Common\OpenSaveFileData.h" />
+    <ClInclude Include="..\Diff\BinDiffer.h" />
+    <ClInclude Include="..\Diff\BlockFinder.h" />
+    <ClInclude Include="..\Diff\CluLines.h" />
+    <ClInclude Include="..\Diff\Cluster.h" />
+    <ClInclude Include="..\Diff\Clustering.h" />
+    <ClInclude Include="..\Diff\CluSum.h" />
+    <ClInclude Include="..\Diff\Diff.h" />
+    <ClInclude Include="..\Diff\DiffRecord.h" />
+    <ClInclude Include="..\Diff\LineBuf.h" />
+    <ClInclude Include="..\Diff\LineCounter.h" />
+    <ClInclude Include="..\Diff\Lines.h" />
+    <ClInclude Include="..\Diff\Merge.h" />
+    <ClInclude Include="..\Licensing\Crypt.h" />
+    <ClInclude Include="..\Licensing\TimeLock.h" />
+    <ClInclude Include="Resource\DistributorInfo.h" />
+    <ClInclude Include="Resource\resource.h" />
+    <ClInclude Include="..\Serial\ScriptSerialize.h" />
+    <ClInclude Include="..\Serial\SerDateTime.h" />
+    <ClInclude Include="..\Serial\Serialize.h" />
+    <ClInclude Include="..\Serial\SerList.h" />
+    <ClInclude Include="..\Serial\SerString.h" />
+    <ClInclude Include="..\Serial\SerVector.h" />
+    <ClInclude Include="..\Serial\SysPath.h" />
+    <ClInclude Include="..\Serial\Transact.h" />
+    <ClInclude Include="..\Serial\Transactable.h" />
+    <ClInclude Include="..\Serial\XArray.h" />
+    <ClInclude Include="..\Serial\XBitSet.h" />
+    <ClInclude Include="..\Serial\XFileOffset.h" />
+    <ClInclude Include="..\Serial\XLong.h" />
+    <ClInclude Include="..\Serial\XString.h" />
+    <ClInclude Include="UI\AboutDlg.h" />
+    <ClInclude Include="UI\AccelTab.h" />
+    <ClInclude Include="UI\AddFilesDlg.h" />
+    <ClInclude Include="UI\BackupDlg.h" />
+    <ClInclude Include="UI\BackupSummaryDlg.h" />
+    <ClInclude Include="UI\BeginnerMode.h" />
+    <ClInclude Include="Ui\BranchBrowser.h" />
+    <ClInclude Include="Ui\BranchView.h" />
+    <ClInclude Include="Ui\ButtonTable.h" />
+    <ClInclude Include="UI\CheckInDlg.h" />
+    <ClInclude Include="UI\ChecksumDlg.h" />
+    <ClInclude Include="UI\ConflictDlg.h" />
+    <ClInclude Include="Ui\Controllers.h" />
+    <ClInclude Include="UI\CoopMsg.h" />
+    <ClInclude Include="Ui\Diagnostics.h" />
+    <ClInclude Include="UI\DisplayMan.h" />
+    <ClInclude Include="Ui\DisplayPane.h" />
+    <ClInclude Include="UI\DisplayWin.h" />
+    <ClInclude Include="UI\ExportImportHistoryDlg.h" />
+    <ClInclude Include="UI\ExportProject.h" />
+    <ClInclude Include="Ui\FeedbackBar.h" />
+    <ClInclude Include="UI\FileAttribMergeDlg.h" />
+    <ClInclude Include="UI\FileDiffDisplay.h" />
+    <ClInclude Include="UI\FileDropDlg.h" />
+    <ClInclude Include="UI\FilePropertiesDlg.h" />
+    <ClInclude Include="UI\FtpOpenFileDlg.h" />
+    <ClInclude Include="UI\HelpEngine.h" />
+    <ClInclude Include="UI\HideExtensionDlg.h" />
+    <ClInclude Include="UI\Hierarchy.h" />
+    <ClInclude Include="UI\HierarchyView.h" />
+    <ClInclude Include="UI\Image.h" />
+    <ClInclude Include="UI\InputSource.h" />
+    <ClInclude Include="Ui\InstrumentBar.h" />
+    <ClInclude Include="UI\JoinProj.h" />
+    <ClInclude Include="Ui\Layout.h" />
+    <ClInclude Include="Ui\LicenseDlg.h" />
+    <ClInclude Include="Ui\LicensePrompter.h" />
+    <ClInclude Include="Ui\ListObserver.h" />
+    <ClInclude Include="Ui\MenuTable.h" />
+    <ClInclude Include="UI\MergeInstrumentBar.h" />
+    <ClInclude Include="UI\MoveFilesDlg.h" />
+    <ClInclude Include="Ui\MoveProj.h" />
+    <ClInclude Include="UI\NewFile.h" />
+    <ClInclude Include="UI\NewProj.h" />
+    <ClInclude Include="UI\OpenSaveFileDlg.h" />
+    <ClInclude Include="Ui\OverdueScriptDlg.h" />
+    <ClInclude Include="Ui\ProgramOptionsDlg.h" />
+    <ClInclude Include="UI\ProjDefect.h" />
+    <ClInclude Include="UI\ProjectAdminDlg.h" />
+    <ClInclude Include="Ui\ProjectBranchDlg.h" />
+    <ClInclude Include="UI\ProjectInviteDlg.h" />
+    <ClInclude Include="UI\ProjectMembers.h" />
+    <ClInclude Include="UI\ProjectPropsDlg.h" />
+    <ClInclude Include="UI\ProjectRecoveryDlg.h" />
+    <ClInclude Include="Ui\PromptMode.h" />
+    <ClInclude Include="Ui\ReceiverJoinDlg.h" />
+    <ClInclude Include="Ui\ReportDlg.h" />
+    <ClInclude Include="UI\RevertDlg.h" />
+    <ClInclude Include="Ui\SaveFilesDlg.h" />
+    <ClInclude Include="UI\SaveHtml.h" />
+    <ClInclude Include="Ui\ScriptInstrumentBar.h" />
+    <ClInclude Include="UI\ScriptPropertySheet.h" />
+    <ClInclude Include="UI\ScriptRecipients.h" />
+    <ClInclude Include="Ui\SelectFileDlg.h" />
+    <ClInclude Include="UI\SelectProjectDlg.h" />
+    <ClInclude Include="UI\SelectRootPathDlg.h" />
+    <ClInclude Include="UI\Tab.h" />
+    <ClInclude Include="Ui\TableBrowser.h" />
+    <ClInclude Include="UI\TableViewer.h" />
+    <ClInclude Include="UI\ToolOptionsDlg.h" />
+    <ClInclude Include="Ui\TreeBrowser.h" />
+    <ClInclude Include="Ui\UiManager.h" />
+    <ClInclude Include="Ui\UiManagerIds.h" />
+    <ClInclude Include="UI\UpdateHubIdDlg.h" />
+    <ClInclude Include="UI\VerifyReportDlg.h" />
+    <ClInclude Include="Ui\WidgetBrowser.h" />
+    <ClInclude Include="Ui\WikiBrowser.h" />
+    <ClInclude Include="UI\WikiBrowser\InPlaceFrame.h" />
+    <ClInclude Include="UI\WikiController.h" />
+    <ClInclude Include="Ui\WikiBrowser\ClientSite.h" />
+    <ClInclude Include="Ui\WikiBrowser\InPlaceBrowser.h" />
+    <ClInclude Include="Ui\WikiBrowser\InPlaceSite.h" />
+    <ClInclude Include="Ui\WikiBrowser\WebBrowserEvents.h" />
+    <ClInclude Include="Ui\WikiBrowser\WebBrowserSite.h" />
+    <ClInclude Include="Common\ActivityLog.h" />
+    <ClInclude Include="Common\AdminElection.h" />
+    <ClInclude Include="Common\AttributeMerge.h" />
+    <ClInclude Include="Common\CheckoutNotifications.h" />
+    <ClInclude Include="Common\CmdVector.h" />
+    <ClInclude Include="Common\ColumnInfo.h" />
+    <ClInclude Include="Common\Conflict.h" />
+    <ClInclude Include="Common\CoopBlocker.h" />
+    <ClInclude Include="Common\DispatcherProxy.h" />
+    <ClInclude Include="Common\DistributorLicense.h" />
+    <ClInclude Include="Common\ExtensionScanner.h" />
+    <ClInclude Include="Common\FeedbackMan.h" />
+    <ClInclude Include="Common\FeedbackUser.h" />
+    <ClInclude Include="Common\FileCtrlState.h" />
+    <ClInclude Include="Common\FileDisplayTable.h" />
+    <ClInclude Include="Common\FileProps.h" />
+    <ClInclude Include="Common\FolderContents.h" />
+    <ClInclude Include="Common\GidPredicate.h" />
+    <ClInclude Include="Common\GuiCritSect.h" />
+    <ClInclude Include="Common\HistoryChecker.h" />
+    <ClInclude Include="Common\HistoryRange.h" />
+    <ClInclude Include="Common\HistoryScriptState.h" />
+    <ClInclude Include="Common\MailboxScriptState.h" />
+    <ClInclude Include="Common\MergeStatus.h" />
+    <ClInclude Include="Common\Messengers.h" />
+    <ClInclude Include="Common\MultiLine.h" />
+    <ClInclude Include="Common\PathFind.h" />
+    <ClInclude Include="Common\PathSequencer.h" />
+    <ClInclude Include="Common\Permissions.h" />
+    <ClInclude Include="Common\Predicate.h" />
+    <ClInclude Include="Common\ProgramOptions.h" />
+    <ClInclude Include="Common\ProjectInviteData.h" />
+    <ClInclude Include="Common\ProjectOptionsEx.h" />
+    <ClInclude Include="Common\ProjectPath.h" />
+    <ClInclude Include="Common\ProjectPathClassifier.h" />
+    <ClInclude Include="Common\ProjectPathVerifier.h" />
+    <ClInclude Include="Common\ProjectState.h" />
+    <ClInclude Include="Common\RecordSet.h" />
+    <ClInclude Include="Common\ScriptProps.h" />
+    <ClInclude Include="Common\SelectionMan.h" />
+    <ClInclude Include="Common\SelectIter.h" />
+    <ClInclude Include="Common\TablePreferences.h" />
+    <ClInclude Include="Common\TmpProjectArea.h" />
+    <ClInclude Include="Common\ToolOptions.h" />
+    <ClInclude Include="Common\UiStrings.h" />
+    <ClInclude Include="Common\UserDropPreferences.h" />
+    <ClInclude Include="Common\VerificationReport.h" />
+    <ClInclude Include="Common\VersionInfo.h" />
+    <ClInclude Include="Common\Visitor.h" />
+    <ClInclude Include="..\Common\Address.h" />
+    <ClInclude Include="..\Common\Addressee.h" />
+    <ClInclude Include="..\Common\AltDiffer.h" />
+    <ClInclude Include="..\Common\AppHelp.h" />
+    <ClInclude Include="..\Common\AppInfo.h" />
+    <ClInclude Include="..\Common\Area.h" />
+    <ClInclude Include="..\Common\BackupFileName.h" />
+    <ClInclude Include="..\Common\Bookmark.h" />
+    <ClInclude Include="..\Common\BrowseForFolder.h" />
+    <ClInclude Include="..\Common\BuildOptions.h" />
+    <ClInclude Include="..\Common\Catalog.h" />
+    <ClInclude Include="..\Common\CheckSum.h" />
+    <ClInclude Include="..\Common\CommonUserMsg.h" />
+    <ClInclude Include="..\Common\CoopExceptions.h" />
+    <ClInclude Include="..\Common\DispatcherCmd.h" />
+    <ClInclude Include="..\Common\DispatcherIpc.h" />
+    <ClInclude Include="..\Common\DispatcherMsg.h" />
+    <ClInclude Include="..\Common\DispatcherScript.h" />
+    <ClInclude Include="..\Common\DisplayFrameCtrl.h" />
+    <ClInclude Include="..\Common\DynamicRebar.h" />
+    <ClInclude Include="..\Common\EditStyle.h" />
+    <ClInclude Include="..\Common\Encryption.h" />
+    <ClInclude Include="..\Common\FileFilter.h" />
+    <ClInclude Include="..\Common\FileState.h" />
+    <ClInclude Include="..\Common\FileStateList.h" />
+    <ClInclude Include="..\Common\FileTypes.h" />
+    <ClInclude Include="..\Common\FtpSite.h" />
+    <ClInclude Include="..\Common\Global.h" />
+    <ClInclude Include="..\Common\GlobalDb.h" />
+    <ClInclude Include="..\Common\GlobalFileNames.h" />
+    <ClInclude Include="..\Common\GlobalId.h" />
+    <ClInclude Include="..\Common\Invitee.h" />
+    <ClInclude Include="..\Common\IPCExchange.h" />
+    <ClInclude Include="..\Common\JoinProjectData.h" />
+    <ClInclude Include="..\Common\License.h" />
+    <ClInclude Include="..\Common\Lineage.h" />
+    <ClInclude Include="..\Common\MemberDescription.h" />
+    <ClInclude Include="..\Common\MemberInfo.h" />
+    <ClInclude Include="..\Common\Observer.h" />
+    <ClInclude Include="..\Common\OutputSink.h" />
+    <ClInclude Include="..\Common\Params.h" />
+    <ClInclude Include="..\Common\PathRegistry.h" />
+    <ClInclude Include="..\Common\PopupDisplay.h" />
+    <ClInclude Include="..\Common\precompiled.h" />
+    <ClInclude Include="..\Common\PreferencesStorage.h" />
+    <ClInclude Include="..\Common\ProjectBlueprint.h" />
+    <ClInclude Include="..\Common\ProjectData.h" />
+    <ClInclude Include="..\Common\ProjectDb.h" />
+    <ClInclude Include="..\Common\ProjectMarker.h" />
+    <ClInclude Include="..\Common\ProjectOptions.h" />
+    <ClInclude Include="..\Common\ProjectSeats.h" />
+    <ClInclude Include="..\Common\Prompter.h" />
+    <ClInclude Include="..\Common\RandomUniqueName.h" />
+    <ClInclude Include="..\Common\RegFunc.h" />
+    <ClInclude Include="..\Common\Registry.h" />
+    <ClInclude Include="..\Common\RegKeys.h" />
+    <ClInclude Include="..\Common\ReliSoftReg.h" />
+    <ClInclude Include="..\Common\RichDumpWin.h" />
+    <ClInclude Include="..\Common\ScriptName.h" />
+    <ClInclude Include="..\Common\Table.h" />
+    <ClInclude Include="..\Common\TableChange.h" />
+    <ClInclude Include="..\Common\TestFile.h" />
+    <ClInclude Include="..\Common\Transport.h" />
+    <ClInclude Include="..\Common\TransportHeader.h" />
+    <ClInclude Include="..\Common\Trial.h" />
+    <ClInclude Include="..\Common\UniqueName.h" />
+    <ClInclude Include="..\Common\UserId.h" />
+    <ClInclude Include="..\Common\UserIdPack.h" />
+    <ClInclude Include="..\Common\Validators.h" />
+    <ClInclude Include="..\SccDll\SccProxy.h" />
+    <ClInclude Include="..\SccDll\SccProxyEx.h" />
+    <ClInclude Include="Wiki\ExternHtmlSink.h" />
+    <ClInclude Include="Wiki\HtmlSink.h" />
+    <ClInclude Include="Wiki\LinkParser.h" />
+    <ClInclude Include="Wiki\Sql.h" />
+    <ClInclude Include="Wiki\SqlHtmlSink.h" />
+    <ClInclude Include="Wiki\SqlNode.h" />
+    <ClInclude Include="Wiki\SqlParser.h" />
+    <ClInclude Include="Wiki\WikiConverter.h" />
+    <ClInclude Include="Wiki\WikiDef.h" />
+    <ClInclude Include="Wiki\WikiLexer.h" />
+    <ClInclude Include="..\Email\EmailAccount.h" />
+    <ClInclude Include="..\Email\EmailConfig.h" />
+    <ClInclude Include="AckBox.h" />
+    <ClInclude Include="ActiveMerger.h" />
+    <ClInclude Include="Agents.h" />
+    <ClInclude Include="BackupArchive.h" />
+    <ClInclude Include="BackupRestorer.h" />
+    <ClInclude Include="BuiltInMerger.h" />
+    <ClInclude Include="CheckInArea.h" />
+    <ClInclude Include="Chunker.h" />
+    <ClInclude Include="CmdExec.h" />
+    <ClInclude Include="CmdLineMaker.h" />
+    <ClInclude Include="CmdLineSelection.h" />
+    <ClInclude Include="Commander.h" />
+    <ClInclude Include="CoopCtrl.h" />
+    <ClInclude Include="CoopMemento.h" />
+    <ClInclude Include="CtrlScriptProcessor.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="Directory.h" />
+    <ClInclude Include="DirTraversal.h" />
+    <ClInclude Include="DummyTable.h" />
+    <ClInclude Include="ExportedHistoryTrailer.h" />
+    <ClInclude Include="FileCopyist.h" />
+    <ClInclude Include="FileData.h" />
+    <ClInclude Include="FileDataSequencer.h" />
+    <ClInclude Include="FileDb.h" />
+    <ClInclude Include="FileDropInfo.h" />
+    <ClInclude Include="FileDropInfoCollector.h" />
+    <ClInclude Include="FileList.h" />
+    <ClInclude Include="FileTag.h" />
+    <ClInclude Include="FileTrans.h" />
+    <ClInclude Include="FileTyper.h" />
+    <ClInclude Include="FolderEvent.h" />
+    <ClInclude Include="FtpProxy.h" />
+    <ClInclude Include="HistoricalFiles.h" />
+    <ClInclude Include="History.h" />
+    <ClInclude Include="HistoryFilter.h" />
+    <ClInclude Include="HistoryNode.h" />
+    <ClInclude Include="HistoryPath.h" />
+    <ClInclude Include="HistoryPolicy.h" />
+    <ClInclude Include="HistorySortedTree.h" />
+    <ClInclude Include="HistoryTraversal.h" />
+    <ClInclude Include="IpcConversation.h" />
+    <ClInclude Include="IpcQueue.h" />
+    <ClInclude Include="JoinContext.h" />
+    <ClInclude Include="Mailbox.h" />
+    <ClInclude Include="MailboxHelper.h" />
+    <ClInclude Include="MailboxScriptInfo.h" />
+    <ClInclude Include="Mailer.h" />
+    <ClInclude Include="MembershipChange.h" />
+    <ClInclude Include="MembershipUpdateVerifier.h" />
+    <ClInclude Include="Memento.h" />
+    <ClInclude Include="MemoryLog.h" />
+    <ClInclude Include="MergeExec.h" />
+    <ClInclude Include="MergerProxy.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="PhysicalFile.h" />
+    <ClInclude Include="ProjectChecker.h" />
+    <ClInclude Include="ProjectProxy.h" />
+    <ClInclude Include="ProjectTable.h" />
+    <ClInclude Include="RecordSets.h" />
+    <ClInclude Include="RefFile.h" />
+    <ClInclude Include="Restorer.h" />
+    <ClInclude Include="ScriptBasket.h" />
+    <ClInclude Include="ScriptCmd.h" />
+    <ClInclude Include="ScriptCommandList.h" />
+    <ClInclude Include="ScriptCommands.h" />
+    <ClInclude Include="ScriptHeader.h" />
+    <ClInclude Include="ScriptIo.h" />
+    <ClInclude Include="ScriptKind.h" />
+    <ClInclude Include="ScriptList.h" />
+    <ClInclude Include="ScriptTrailer.h" />
+    <ClInclude Include="ServerCtrl.h" />
+    <ClInclude Include="Sidetrack.h" />
+    <ClInclude Include="SynchArea.h" />
+    <ClInclude Include="SynchKind.h" />
+    <ClInclude Include="SynchTrans.h" />
+    <ClInclude Include="Transformer.h" />
+    <ClInclude Include="WikiDirectory.h" />
+    <ClInclude Include="Workspace.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\awaiting.ico" />
+    <None Include="Resource\buttons.bmp" />
+    <None Include="Resource\co-op.ico" />
+    <None Include="Resource\cur_out_proj.ico" />
+    <None Include="Resource\cur_proj.ico" />
+    <None Include="Resource\cut.ico" />
+    <None Include="Resource\del.ico" />
+    <None Include="Resource\folder.ico" />
+    <None Include="Resource\FolderClosed.ico" />
+    <None Include="Resource\FolderClosedGrey.ico" />
+    <None Include="Resource\folderin.ico" />
+    <None Include="Resource\FolderOpen.ico" />
+    <None Include="Resource\FolderOpenGrey.ico" />
+    <None Include="Resource\FullSyncPrj.ico" />
+    <None Include="Resource\in.ico" />
+    <None Include="Resource\in_script.ico" />
+    <None Include="Resource\label.ico" />
+    <None Include="Resource\locked.ico" />
+    <None Include="Resource\merge.ico" />
+    <None Include="Resource\merge_conflict.ico" />
+    <None Include="Resource\missing_script.ico" />
+    <None Include="Resource\new.ico" />
+    <None Include="Resource\next_script.ico" />
+    <None Include="Resource\none.ico" />
+    <None Include="Resource\out.ico" />
+    <None Include="Resource\out_proj.ico" />
+    <None Include="Resource\out_script.ico" />
+    <None Include="Resource\ProjClosed.ico" />
+    <None Include="Resource\project.ico" />
+    <None Include="Resource\ProjectAdmin.ico" />
+    <None Include="Resource\ProjectMember.ico" />
+    <None Include="Resource\ProjOpen.ico" />
+    <None Include="Resource\RecoveryPrj.ico" />
+    <None Include="Resource\rejected_script.ico" />
+    <None Include="Resource\RS.bmp" />
+    <None Include="Resource\script.ico" />
+    <None Include="Resource\SortDown.ico" />
+    <None Include="Resource\SortUp.ico" />
+    <None Include="Resource\syn.ico" />
+    <None Include="Resource\syn_del.ico" />
+    <None Include="Resource\syn_new.ico" />
+    <None Include="Resource\syn_prj.ico" />
+    <None Include="Resource\tab_red.ico" />
+    <None Include="Resource\tab_yellow.ico" />
+    <None Include="Resource\ThisMember.ico" />
+    <None Include="Resource\ThisVerifiedMember.ico" />
+    <None Include="Resource\ver_cur.ico" />
+    <None Include="Resource\ver_cur_r.ico" />
+    <None Include="Resource\VerifiedMember.ico" />
+    <None Include="Resource\version.ico" />
+    <None Include="Resource\version2.ico" />
+    <None Include="Resource\version2_r.ico" />
+    <None Include="Resource\version_r.ico" />
+    <None Include="Resource\viewer.ico" />
+    <None Include="Resource\vrange1.ico" />
+    <None Include="Resource\vrange1_r.ico" />
+    <None Include="Resource\vrange2.ico" />
+    <None Include="Resource\vrange2_r.ico" />
+    <None Include="Resource\Wait.ico" />
+    <None Include="..\Common\CoopLicense.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Resource\Co-op.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\Co-op.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinLib\WinLib.vcxproj">
+      <Project>{94a1ce47-9646-4643-a8d3-bf52c9615611}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

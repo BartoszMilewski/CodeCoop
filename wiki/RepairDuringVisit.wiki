@@ -1,0 +1,24 @@
+Under transaction {
+*foreach missing new file do {
+**set file state to not in project
+*}
+}
+
+foraech missing folder do {
+*create folder on disk
+}
+
+if missing checked out files detected then uncheckout missing files
+
+foreach preserved local edit file do {
+*copy file from Area::LocalEdits to Area::Project
+*delete file from Area::LocalEdits
+}
+
+if no corrupted files then all remaining *.out files from the project database folder
+
+else {
+*build repair selection
+*[[RecoverFiles|repair corrupted files]]
+}
+

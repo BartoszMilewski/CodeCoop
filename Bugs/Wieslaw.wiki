@@ -1,0 +1,6 @@
+=Wieslaw
+==Open
+? SELECT Summary, Severity, Priority, Resolution, DELETE FROM bug WHERE AssignedTo = Wieslaw AND Status = Open ORDER BY Priority
+==Not Open
+? SELECT Summary, Resolution, Status, DELETE FROM bug WHERE AssignedTo = Wieslaw AND Status <> Open
+

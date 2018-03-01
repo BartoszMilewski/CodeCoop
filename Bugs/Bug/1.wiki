@@ -1,0 +1,24 @@
+| Summary     | checkout applet does not work with incorrect path |
+| ReportedBy  | Piotr |
+| AssignedTo  | Bartosz |
+| Component   | Code Co-op |
+| Version     | 4.6e and 5.0 |
+| Reproducible| yes, always |
+| Severity    | minor |
+| Status      | Closed |
+| Priority | 2 |
+| Resolution  | Fixed |
+==Description
+Invoke the following command line checkout "project\root\folder". 
+(I know that the syntax is incorrect). 
+
+In response in the release version I get: Error: Internal error: database 
+corrupted -- invalid global file id fff-fffff. The message is not true 
+and also it is scary.
+
+The question is also whether we can change checkout behaviour a bit.
+If a user specifies a project root folder than the default action is All_DeepCheckOut.
+
+==Resolution
+*Fixed the FileSeq class Open method to take into account error ERROR_PATH_NOT_FOUND, so when the user specifies malformed path the file sequncer is at end. This prevents passing malformed paths to Code Co-op.
+*Suggestion not impelemented.

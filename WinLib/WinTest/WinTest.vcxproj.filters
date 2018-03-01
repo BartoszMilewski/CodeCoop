@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="About.h" />
+    <ClInclude Include="AccelTable.h" />
+    <ClInclude Include="CmdVector.h" />
+    <ClInclude Include="Commander.h" />
+    <ClInclude Include="ListviewDlg.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Modeless.h" />
+    <ClInclude Include="OutSink.h" />
+    <ClInclude Include="precompiled.h" />
+    <ClInclude Include="ReliSoftReg.h" />
+    <ClInclude Include="TopCtrl.h" />
+    <ClInclude Include="View.h" />
+    <ClInclude Include="WinTestRegistry.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Rs.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\WinTest.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="About.cpp" />
+    <ClCompile Include="AccelTable.cpp" />
+    <ClCompile Include="CmdVector.cpp" />
+    <ClCompile Include="Commander.cpp" />
+    <ClCompile Include="ListviewDlg.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Modeless.cpp" />
+    <ClCompile Include="precompiled.cpp" />
+    <ClCompile Include="TopCtrl.cpp" />
+    <ClCompile Include="View.cpp" />
+  </ItemGroup>
+</Project>

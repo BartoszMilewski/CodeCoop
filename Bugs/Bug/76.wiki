@@ -1,0 +1,17 @@
+| Summary |Missed posted commands|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Sunday, October 01, 2006|
+==Description 
+When using CommandExec to post commands during another command execution, occasionally the command is eaten. This happens when the first command displays a dialog (or a beginner's tip). The message is picked up, but it's not executed because the re-entrance lock is still closed.
+
+This is the reason why the browser doesn't appear when creating a new project that already has index.wiki (reported by dempson).
+
+==Proposal
+Check if the lock is taken. If so, don't take the command off the command stack. Instead add code after a command is executed (end of MenuCommand?) to look at the command stack and execute pending commands. 

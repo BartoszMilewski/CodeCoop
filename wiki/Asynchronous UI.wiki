@@ -1,0 +1,10 @@
+=Asynchronous UI
+==Import History
+===Problem
+Commander::History_ImportHistory performs a long operation--the download of a large file, possibly from FTP--while blocking the message loop. That disables SCC actions. 
+===Proposed Solution
+* If FTP or LAN download, create a separate thread with the progress meter and FTP site, and throw SwitchToCmdLine exception.
+* Catch this exception in the controller, switch to command line to block input, set focus forwarding to the progress meter dialog.
+* When download finished, the thread posts message ExecuteCommand Import History with the temporary path.
+* When processing this message, move temporary path to InputSource, Switch to GUI, and call Commander::History_ImportHistory.
+* This time the path is retrieved from the InputSource and, since it's local, Model::ImportHistory is performed.

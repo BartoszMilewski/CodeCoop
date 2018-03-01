@@ -1,0 +1,14 @@
+| Summary |In program > Options, no merger is selected|
+| ReportedBy |Deb|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Priority | 1 |
+| Resolution | Fixed |
+| DateReported |Thursday, November 02, 2006|
+==Description 
+
+In both my beta 3 installations, no merger is selected by default. (selecting Program > Options and clicking the Merge tab shows available mergers but no radio button is selected) I would think that we would have one selected since the BC merger is now included.

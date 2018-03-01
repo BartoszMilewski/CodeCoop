@@ -1,0 +1,9 @@
+= WorkQueue::SendEmail
+* Under lock, go over _toDoList and organize email requests into scriptList:
+** Script2Addressees: ScriptSlip -> (emailAddress -> vector of indexes)
+* Iterate over scriptList, for each script slip:
+** create list of addresses addrVector
+** email the script, stamp recipients in script slip as done
+* process errors
+* for all unsent scripts set status
+

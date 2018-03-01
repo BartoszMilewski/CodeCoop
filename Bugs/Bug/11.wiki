@@ -1,0 +1,11 @@
+| Summary |Status: Preparing project files|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Unknown|
+| Severity |Annoying|
+| Status |Closed|
+| Resolution | Cannot reproduce |
+| Description | '''edit me!''' |
+| Comments | After processing join request, the status "Processing project files" in the status bar doesn't disappear, evan after switching to another project |

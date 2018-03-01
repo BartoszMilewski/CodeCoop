@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Using the Visual Differ</title> 
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>The Visual Differ </h1>  
+<p>
+Code Co-op comes with a built-in viewer/editor/differ plus an alternative differ, the <a href="beyondcompare.html">Beyond Compare Differ</a>. The built-in editor is launched by double-clicking a file in the Files Area.
+</p>
+<p>
+The Differ (either the built in or or the BC one, depending on the Program &gt; Options settings) is launched in the following areas: 
+<ul>
+	<li><a href="CheckInTab.html">Check-in Area</a> tab</li>
+	<li><a href="InboxTab.html">Inbox</a> tab</li>
+	<li><a href="HistoryTab.html">History</a> tab, when a file in the lower pane is double-clicked</li>
+</ul>
+</p>
+
+<h2>Files Tab </h2>
+<p>
+You can view and edit the contents of any file using the built-in editor. When you try to edit a checked-in file, you'll be prompted to check it out (this prompt can be suppressed).
+</p>
+
+<h2>Check-in Area Tab</h2>
+<p>
+If you are using the built-in differ, you will see two panes. The left pane is the editor and the right pane is the differential display. You'll notice that the left pane has multiple tabs:
+</p>
+<ul>
+	<li>Before: This shows the state of the file prior to your edits.</li>
+	<li>Current: This shows the current state of the file with your edits. You can make additional edits in this pane. </li>
+</ul>
+<p>Whe you are using the BC differ, you'll see the before and after versions side by side. The after version can be edited.
+</p>
+
+<h2>Inbox tab </h2>
+<p>
+You can reviewing incoming changes by selecting an incoming script. In the details pane at the bottom you will see all the files affected by that script. Double-click on a file to view it in the differ. The BC differ will show you the before and after views. The built-in differ has a <i>Current</i> tab which will show the current version of the file. This version can be edited.
+</p>
+<p>
+Note: editing a file in the Inbox area, that is before the script has been executed, will require a subsequent merge. It is recommended to first execute the script and then review it in the History tab, where the <i>Current</i> version can also be edited, without requiring a merge.
+</p>
+
+<h2>History Tab</h2>
+<p>
+You can select any script in the History tab. The bottom pane will show the files changed by that script. When you double-click on a file, the differ will show the changes made by the selected script. If you are using the built-in differ, you will be able to edit the current version of the file while reviewing the script changes. This is a recommended procedure for reviewing scripts. The BC differ will show the changes, but it won't give you access to the current version for editing.
+</p>
+
+<h2>Built-in Differential Display  </h2>
+
+<p class="image">
+<img src="../Images/differNew.gif" alt="Differ showing merge" width="508" height="485" vspace="10" border="0" /> 
+</p>
+<p>The above screen image is the result of double-clicking an edited file in the Check-in Area. The changes you see were made locally. <strong>Buttons on the toolbar are</strong>: Open, Create New, Save, Refresh, Line-wrap; Check out, Un-check-out; Undo, Redo, Cut, Copy, Paste, Delete; Next Change, Previous Change.
+</p>
+
+<h2>Reviewing Changes Using the Built-in Differ</h2>
+<p>The differential display highlights the lines that were involved in a change. </p>
+<p>Your edits are highlighted in shades of yellow and green. An added line is bright yellow, a deleted line is dark green. Lines that have been moved are shown in more subdued colors. When a chunk of text has been modified, it appears as a combination of deleted and added lines.</p>
+<p>Incoming changes are similarly highlighted but in shades of purple.</p>
+<p>To jump from one change to the next, click on the downward blue arrow button, or press F4. To jump to previous change, press the upward blue arrow, or Shift-F4. These functions are also available through the <em>Search</em> menu.</p>
+</body>
+</html>

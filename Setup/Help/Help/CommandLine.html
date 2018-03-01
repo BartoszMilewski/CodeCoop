@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<heatd>
+<title>Using the command-line interface</title>
+<link href="../images/help.css" type="text/css" rel="stylesheet" />
+</heatd>
+<body>
+<h1>Command-line Interface</h1>
+<p class="first">Command-line programs have to be downloaded separately from <a href="http://www.relisoft.com/co_op/download.html" target="_blank">
+Reliable Software</a> web site. Here's the list of applets:</p>
+
+<br/>
+<table border="1" cellpadding="4" cellspacing="0">
+  <tr>
+	<td><strong>allCoopCmd</strong> </td><td> <a href="CoopCmd.html">See usage details </a></td>
+  </tr><tr>
+	<td><strong>CoopCmd</strong>  </td><td> <a href="CoopCmd.html">See usage details</a></td>
+  </tr><tr>
+	<td><strong>addfile</strong> </td><td> equivalent to Folder &gt; Add More Files</td>
+  </tr><tr>
+	<td><strong>checkin</strong>  </td><td> equivalent to Selection &gt; Check-In</td>
+  </tr><tr>
+	<td><strong>checkout</strong> </td><td> equivalent to Selection &gt; Check-Out</td>
+  </tr><tr>
+	<td><strong>deliver</strong>  </td><td> copies specified script(s) to Public Inbox</td>
+  </tr><tr>
+	<td><strong>diagnostics</strong>  </td><td> generates diagnostics information for all projects on a given computer</td>
+  </tr><tr>
+	<td><strong>export</strong>  </td><td> equivalent to Selection &gt; Export Version</td>
+  </tr><tr>
+	<td><strong>projectstatus</strong>  </td><td> summarizes status of projects with checked out files and/or incoming scripts</td>
+  </tr><tr>
+	<td><strong>removefile</strong>  </td><td> equivalent to Selection &gt; Make Uncontrolled</td>
+  </tr><tr>
+	<td><strong>removefile</strong> <strong>-d</strong> </td><td>  deletes file from disk -- equivalent to Selection &gt; Delete</td>
+  </tr><tr>
+	<td><strong>report</strong>  </td><td> displays a version description taken from history</td>
+  </tr><tr>
+	<td><strong>restore</strong>  </td><td> equivalent to Selection &gt; Restore</td>
+  </tr><tr>
+	<td><strong>startCoopBackup</strong>  </td><td> equivalent to Tools &gt; Create Backup</td>
+  </tr><tr>
+	<td><strong>status</strong>  </td><td> display file status: in, out, not controlled</td>
+  </tr><tr>
+	<td><strong>sync</strong>  </td><td> equivalent to All &gt; Sync and Accept</td>
+  </tr><tr>
+	<td><strong>uncheckout</strong>  </td><td> equivalent to Selection &gt; Un-CheckOut</td>
+  </tr><tr>
+	<td><strong>unznc</strong>  </td><td> decompresses a .znc file and copies it to the Public Inbox</td>
+  </tr><tr>
+	<td><strong>versionid</strong>  </td><td> prints next or current version id</td>
+  </tr><tr>
+	<td><strong>versionlabel</strong>  </td><td> equivalent to History &gt; Add Label</td>
+  </tr><tr>
+	<td><strong>visitproject</strong>  </td><td> starts Code Co-op in a given project</td>
+  </tr>
+</table>
+<br/>
+
+<h3>Installing and Configuring Command-line</h3>
+<p class="first">If you have never set-up command-line applets, it's pretty simple to do. </p>
+<p>First, install the command-line applets into your designated directory. Next, you will need to add this path to your environment. To do this, go to Control Panel and select System. Click the <em>Advanced</em> tab and then click the <em>Environment Variables</em> button. You will see a field &quot;<em>Path</em>&quot; under System Variables. Select it and click <em>Edit</em>. You will need to add the location to where the command-line applets are installed at the end of the line. Note: Each location is separated by a semicolon. You will add something like this:
+<pre>;c:\Program Files\Reliable Software\Code Co-op\cmdline</pre>
+</p>
+<p>To add some automation to your development, you can create batch files to call these applets. </p>
+ 
+<h3>Calling the Command-line Functions</h3>
+<p class="first"> Each command-line applet will print a short help message when you execute it from the command-line without any arguments (or with the switch -? or -h).</p>
+<p>For example, when calling &quot;<em>checkout</em>&quot; without an argument, you get the following:
+<pre>  Prepare project files for edits.
+	checkout &lt;options&gt; &lt;files&gt;
+	options:
+  -a -- checkout all project files
+  -r -- recursive checkout
+  -? -- display help  </pre>
+</p>
+  <p>If you want to check-out all the files in a project, you would type something like this: <pre>checkout -a &quot;c:\projects\my project name&quot; </pre></p>
+  <p>Keep in mind that when you specify files, you can use absolute paths or paths relative to current directory (in particular you can use file names in the current 
+    directory). File paths determine the Code Co-op project in which the given operation is to be carried out.</p>
+</body>
+</html>

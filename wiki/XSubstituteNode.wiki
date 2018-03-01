@@ -1,0 +1,6 @@
+= SortedTree::XSubstituteNode
+Arguments: newNode (auto_ptr)
+* find index based on newNode script ID
+* _nodes.XSubstitute
+* if node is mergeable: XForceExecution
+* return XHasMissingPredecessors

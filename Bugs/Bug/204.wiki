@@ -1,0 +1,19 @@
+| Summary |Corrupt file list empty when exporting|
+| ReportedBy |Bartosz Milewski|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Unknown|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |Monday, August 04, 2008|
+==Description 
+Harry van der Kooij:
+
+When exporting starts, there is a check on corrupted files. When those are found, there is a popup window and a list with corrupted files. This list is ''always empty''.
+
+==Resolution
+Files whose read-only attribute was externally changed were not displayed.
+

@@ -1,0 +1,12 @@
+if corrupted file list is not empty then {
+* [[RepairSelection|Retrieve repair selection]]
+* [[RecoverFiles|Recover files using repair selection]]
+}
+
+if not read-only project files list is not empty then {
+*restore file red-only attribute
+}
+
+if absent folder list is not empty then {
+*restore project folder
+}

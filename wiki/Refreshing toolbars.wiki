@@ -1,0 +1,9 @@
+=Toolbar Non-button Control Updates
+
+==Reacting to item change notification from the listview control
+A non-button control text has to be refreshed on item change. ListView notification handler (implemented by the TableController class) receives notification from the list view control. This notification is passed to the **List Observer**. The list observer (implemented by the Layout class) refreshes the main (visible in every layout) instrument bar and the secondary instrument bar that may be present on the details pane (the second pane on the layout's pane list). Refreshing instrument bar is performed in two steps:
+* Refresh instrument bar buttons
+* Refresh instrument bar text field. NOTE: current implementation allows only one refreshable text field per instrument bar.
+Then main imstrument bar text field is always updated with the text retrieved from the main layout browser (the browser of the first pane on the pane list).
+Every instrument bar inherits from the Tool::DynamicRebar and overwrites method RefreshTextField.
+

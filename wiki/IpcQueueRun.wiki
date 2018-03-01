@@ -1,0 +1,9 @@
+=CmdIpc::Queue::Run
+* _event.Wait
+* if timeout, kill active conversation
+** reset active conversation
+** if still alive, post ipcAbort, return and exit Code Co-op
+* if no active converstion
+** [[NextConversation]]
+** if returns false, post ipcTerminate
+* start over

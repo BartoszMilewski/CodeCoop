@@ -1,0 +1,16 @@
+| Summary |VS deleting files|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Wednesday, October 25, 2006|
+==Description 
+If you delete a file in Visual Studio, it asks you if you want to remove or delete. If you select "Delete", VS tells co-op to delete the file, but what happens is that co-op remove the file from project instead. This is bad because VS goes ahead and deletes the actual file, so the file appears "uncontrolled" in the check in area, but it had disappeared from disk. 
+
+Solution: SCC should interpred "delete" as "delete", not "remove".
+
+

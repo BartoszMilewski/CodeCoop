@@ -1,0 +1,17 @@
+| Summary |Deleting a folder doesn't delete|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Resolution | Fixed |
+| Priority | 4 |
+| DateReported |Sunday, October 29, 2006|
+==Description 
+I selected a folder in Files view and pressed the Delete button. The folder changed state to Uncontrolled rather than Deleted. Is there any reason left to leave folders around? This is annoying, expecially for the script recipients.
+==Comment
+We can only delete a folder when it has no non-project files. Otherwise, we should ask the user. This must be done both, when the user deletes, and when the user executes synch. In AutoSynch, if in doubt, don't delete.
+==Fix
+When after deleting controlled folder contents the folder is empty we will reove it from disk automaticaly. If folder still conatins uncontrolled contents we will ask the user to verify folder removal. We ask user only in GUI mode. In server mode we don't as and don't remove from disk non-empty folders.

@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Beta Lite|Win32">
+      <Configuration>Beta Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Beta|Win32">
+      <Configuration>Beta</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Lite|Win32">
+      <Configuration>Debug Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Lite|Win32">
+      <Configuration>Release Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1737C5BE-AF51-42DB-A908-EA17258D755F}</ProjectGuid>
+    <RootNamespace>Help</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nmake /nologo</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nmake /nologo</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nmake /nologo clean</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CodeCoop.chm</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(Configuration)\</IntDir>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">nmake /nologo</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">nmake /nologo</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">nmake /nologo clean</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">CodeCoop.chm</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(Configuration)\</IntDir>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">nmake /nologo</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">nmake /nologo</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">nmake /nologo clean</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">CodeCoop.chm</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(Configuration)\</IntDir>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">nmake /nologo</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">nmake /nologo</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">nmake /nologo clean</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">CodeCoop.chm</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(Configuration)\</IntDir>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">nmake /nologo</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">nmake /nologo</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">nmake /nologo clean</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">CodeCoop.chm</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="FAQs\admin.html" />
+    <None Include="FAQs\archive.html" />
+    <None Include="FAQs\backup.html" />
+    <None Include="FAQs\backupdbase.html" />
+    <None Include="FAQs\borland.html" />
+    <None Include="FAQs\branchScripts.html" />
+    <None Include="FAQs\central.html" />
+    <None Include="FAQs\changeEmail.html" />
+    <None Include="FAQs\checksum.html" />
+    <None Include="FAQs\default.html" />
+    <None Include="FAQs\delivery.html" />
+    <None Include="FAQs\dual.html" />
+    <None Include="FAQs\encrypt.html" />
+    <None Include="FAQs\faq.html" />
+    <None Include="FAQs\freeemail.html" />
+    <None Include="FAQs\hang.html" />
+    <None Include="FAQs\homesite.html" />
+    <None Include="FAQs\hubsat2peer.html" />
+    <None Include="FAQs\imap.html" />
+    <None Include="FAQs\intermittent.html" />
+    <None Include="FAQs\lostAck.html" />
+    <None Include="FAQs\lotus.html" />
+    <None Include="FAQs\manual.html" />
+    <None Include="FAQs\ManyTentative.html" />
+    <None Include="FAQs\mapidll.html" />
+    <None Include="FAQs\missing.html" />
+    <None Include="FAQs\mozilla.html" />
+    <None Include="FAQs\MSIntegration.html" />
+    <None Include="FAQs\new.html" />
+    <None Include="FAQs\newhub.html" />
+    <None Include="FAQs\notify.html" />
+    <None Include="FAQs\notSentOut.html" />
+    <None Include="FAQs\OEsecurity.html" />
+    <None Include="FAQs\reconfig.html" />
+    <None Include="FAQs\recover.html" />
+    <None Include="FAQs\renameproj.html" />
+    <None Include="FAQs\share.html" />
+    <None Include="FAQs\subproj.html" />
+    <None Include="FAQs\unattend.html" />
+    <None Include="FAQs\unread.html" />
+    <None Include="FAQs\vb.html" />
+    <None Include="FAQs\VC6.html" />
+    <None Include="FAQs\vs60.html" />
+    <None Include="FAQs\VSNet.html" />
+    <None Include="FAQs\winMessaging.html" />
+    <None Include="FAQs\xp.html" />
+    <None Include="Images\acceptchange.gif" />
+    <None Include="Images\acceptselect.gif" />
+    <None Include="Images\addfiles.gif" />
+    <None Include="Images\assoc.gif" />
+    <None Include="Images\deskico.gif" />
+    <None Include="Images\dispatch.gif" />
+    <None Include="Images\files.gif" />
+    <None Include="Images\fullsyncNew.gif" />
+    <None Include="Images\help.css" />
+    <None Include="Images\hide.gif" />
+    <None Include="Images\HomeSite.gif" />
+    <None Include="Images\icobusy.gif" />
+    <None Include="Images\invite.gif" />
+    <None Include="Images\joinreq.gif" />
+    <None Include="Images\member.gif" />
+    <None Include="Images\NetworkAlert.gif" />
+    <None Include="Images\newmenu.gif" />
+    <None Include="Images\OE.gif" />
+    <None Include="Images\OutlookAlert.gif" />
+    <None Include="Images\project.gif" />
+    <None Include="Images\remote.gif" />
+    <None Include="Images\rs_ani.gif" />
+    <None Include="Images\select.gif" />
+    <None Include="Images\synch.gif" />
+    <None Include="Images\taskico.gif" />
+    <None Include="Images\tecpartner.gif" />
+    <None Include="Help\acceptSynch.html" />
+    <None Include="Help\ActiveProjects.html" />
+    <None Include="Help\addFile.html" />
+    <None Include="Help\AddMore.html" />
+    <None Include="Help\archive.html" />
+    <None Include="Help\autoMode.html" />
+    <None Include="Help\BeginnerMode.html" />
+    <None Include="Help\beyondcompare.html" />
+    <None Include="Help\branch.html" />
+    <None Include="Help\branchmergeTab.html" />
+    <None Include="Help\ChangeFileType.html" />
+    <None Include="Help\checkin.html" />
+    <None Include="Help\checkinTab.html" />
+    <None Include="Help\checkout.html" />
+    <None Include="Help\command.html" />
+    <None Include="Help\CommandLine.html" />
+    <None Include="Help\CompareVersions.html" />
+    <None Include="Help\ComputerName.html" />
+    <None Include="Help\coopcmd.html" />
+    <None Include="Help\CoopUpdate.html" />
+    <None Include="Help\createProject.html" />
+    <None Include="Help\defect.html" />
+    <None Include="Help\deleteFile.html" />
+    <None Include="Help\differ.html" />
+    <None Include="Help\DifferTool.html" />
+    <None Include="Help\DirectoryTree.html" />
+    <None Include="Help\distribution.html" />
+    <None Include="Help\editDiffer.html" />
+    <None Include="Help\editing.html" />
+    <None Include="Help\EditorTool.html" />
+    <None Include="Help\editsync.html" />
+    <None Include="Help\emailScript.html" />
+    <None Include="Help\ExportHistory.html" />
+    <None Include="Help\exportVersion.html" />
+    <None Include="Help\exportWiki.html" />
+    <None Include="Help\FileFilter.html" />
+    <None Include="Help\fileHistory.html" />
+    <None Include="Help\filesTab.html" />
+    <None Include="Help\guiffy.html" />
+    <None Include="Help\historyTab.html" />
+    <None Include="Help\importHistory.html" />
+    <None Include="Help\inboxsave.html" />
+    <None Include="Help\inboxTab.html" />
+    <None Include="Index.hhk" />
+    <None Include="Help\integrate.html" />
+    <None Include="Help\invitation.html" />
+    <None Include="Help\joinProject.html" />
+    <None Include="Help\labels.html" />
+    <None Include="Help\license.html" />
+    <None Include="Help\localbranch.html" />
+    <None Include="Help\LocalMerge.html" />
+    <None Include="Help\manualreject.html" />
+    <None Include="Help\mapi.html" />
+    <None Include="Help\memberChange.html" />
+    <None Include="Help\merge.html" />
+    <None Include="Help\MergerTool.html" />
+    <None Include="Help\MergeVersion.html" />
+    <None Include="Help\moveFile.html" />
+    <None Include="Help\MoveFolder.html" />
+    <None Include="Help\MoveProject.html" />
+    <None Include="Help\MoveProjects.html" />
+    <None Include="Help\newFile.html" />
+    <None Include="Help\observer.html" />
+    <None Include="Help\Overview.html" />
+    <None Include="Help\ProgramOptions.html" />
+    <None Include="Help\ProjectHistory.html" />
+    <None Include="Help\ProjectMerge.html" />
+    <None Include="Help\ProjectOptions.html" />
+    <None Include="Help\ProjectsTab.html" />
+    <None Include="Help\QuickReference.html" />
+    <None Include="Help\renameFile.html" />
+    <None Include="Help\repairProject.html" />
+    <None Include="Help\report.html" />
+    <None Include="Help\RequestVerification.html" />
+    <None Include="Help\resendScript.html" />
+    <None Include="Help\RestoreProject.html" />
+    <None Include="Help\restoreVersion.html" />
+    <None Include="Help\reviewScript.html" />
+    <None Include="Help\script.html" />
+    <None Include="Help\ScriptDetails.html" />
+    <None Include="Help\support.html" />
+    <None Include="Help\SyncMergeTab.html" />
+    <None Include="Help\SyncScripts.html" />
+    <None Include="Help\Uncheckout.html" />
+    <None Include="Help\visitProject.html" />
+    <None Include="Help\WikiBrowser.html" />
+    <None Include="Help\wikify.html" />
+    <None Include="Help\wikiproject.html" />
+    <None Include="Help\workingfiles.html" />
+    <None Include="Help\yahoo.html" />
+    <None Include="Tutorial\AcceptingJoinRequest.html" />
+    <None Include="Tutorial\addfile.html" />
+    <None Include="Tutorial\checkin1.html" />
+    <None Include="Tutorial\checkin2.html" />
+    <None Include="Tutorial\checkin3.html" />
+    <None Include="Tutorial\checkout1.html" />
+    <None Include="Tutorial\checkout2.html" />
+    <None Include="Tutorial\defect.html" />
+    <None Include="Tutorial\emailGmail.html" />
+    <None Include="Tutorial\emailLive.html" />
+    <None Include="Tutorial\emailOptions.html" />
+    <None Include="Tutorial\EmailPeer.html" />
+    <None Include="Tutorial\emailSettings.html" />
+    <None Include="Tutorial\emailSMTP.html" />
+    <None Include="Tutorial\fullsync.html" />
+    <None Include="Tutorial\GeneratingInvitation.html" />
+    <None Include="Tutorial\history.html" />
+    <None Include="Tutorial\HubConfig.html" />
+    <None Include="Tutorial\inviteLite.html" />
+    <None Include="Tutorial\invitePro.html" />
+    <None Include="Tutorial\JoinExistingLite.html" />
+    <None Include="Tutorial\JoinExistingPro.html" />
+    <None Include="Tutorial\JoiningProject.html" />
+    <None Include="Tutorial\lan.html" />
+    <None Include="Tutorial\LANandEmailStart.html" />
+    <None Include="Tutorial\lanmix.html" />
+    <None Include="Tutorial\LanStart.html" />
+    <None Include="Tutorial\mapiDiagnostics.html" />
+    <None Include="Tutorial\newproj.html" />
+    <None Include="Tutorial\newproj1.html" />
+    <None Include="Tutorial\newproj2.html" />
+    <None Include="Tutorial\newproj3.html" />
+    <None Include="Tutorial\newproj4.html" />
+    <None Include="Tutorial\ProjectNavigate.html" />
+    <None Include="Tutorial\ReceivingInvitation.html" />
+    <None Include="Tutorial\Restore.html" />
+    <None Include="Tutorial\SatelliteConfig.html" />
+    <None Include="Tutorial\SmtpPop3Diagnostics.html" />
+    <None Include="Tutorial\StartingCollaboration.html" />
+    <None Include="Tutorial\StartingCollaborationOverview.html" />
+    <None Include="Tutorial\sync.html" />
+    <None Include="Tutorial\TroubleshootingLan.html" />
+    <None Include="Tutorial\tutorial.html" />
+    <None Include="Tutorial\uncheckout.html" />
+    <None Include="Tutorial\WizardStart.html" />
+    <None Include="Images\addTool.gif" />
+    <None Include="CodeCoop.hhp" />
+    <None Include="Help\ConfigureDispatching.html" />
+    <None Include="Help\CreateBackup.html" />
+    <None Include="Help\Dispatcher.html" />
+    <None Include="Help\FunctionalityOverview.html" />
+    <None Include="Help\HelpTemplate.html" />
+    <None Include="makefile" />
+    <None Include="Help\Merger.html" />
+    <None Include="Help\NewFromHistory.html" />
+    <None Include="Help\OpenInvitation.html" />
+    <None Include="ReleaseNotes.html" />
+    <None Include="FAQs\rename.html" />
+    <None Include="Help\RestoreFromBackup.html" />
+    <None Include="Help\SearchWithShell.html" />
+    <None Include="TableOfContents.hhc" />
+    <None Include="Help\VerifyRootPaths.html" />
+    <None Include="FAQs\VSNet_setup.html" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

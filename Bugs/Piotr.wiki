@@ -1,0 +1,7 @@
+=Piotr
+==Open bugs
+? SELECT Summary, Resolution FROM bug WHERE AssignedTo = Piotr AND Status = Open
+
+==Not Open
+? SELECT Summary, Resolution, Status FROM bug WHERE AssignedTo = Piotr AND Status <> Open
+

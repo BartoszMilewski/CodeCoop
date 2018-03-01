@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+	<title>FAQ: Repairing the MAPI32.dll</title>
+	
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Why won't the dispatcher work with Outlook Express even though it is the default email handler? </h1>
+<br />
+<p class="first">The MAPI32.dll has probably been overwritten by another application. In the event that an application overwrites Mapi32.dll, you can restore it using Fixmapi.exe. Fixmapi.exe can be found in the same location as the stub library itself, usually C:\Winnt\System32 for Microsoft Windows NT version 4.0 systems. This utility copies the current Mapi32.dll (the new DLL that overwrote the stub library) to Mapi32x.DLL, and then copies the stub image, contained in the Mapistub.dll file, to Mapi32.dll. There are no arguments for Fixmapi.exe.
+</p>
+
+<p>For more information, go to <a href="http://windowssdk.msdn.microsoft.com/en-us/library/ms531278.aspx">Installing and Restoring MAPI32.dll Stub</a> on the MSDN site.
+</p>
+
+<p>Alternatively, you can uninstall the E-mail client that you aren't using. This may restore the Simple MAPI settings and allow communication with the Dispatcher.</p>
+
+
+
+</body>
+</html>

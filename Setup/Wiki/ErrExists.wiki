@@ -1,0 +1,2 @@
+=Error
+|The record, "[?filename]", already exists in the database. Please specify a different name.|

@@ -1,0 +1,30 @@
+| Summary |Cannot change hub ID or transport|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |Saturday, November 11, 2006|
+==Description 
+Scenario: Hub ID different from transport. User is trying to make them the same.
+
+From: Robert Fraczkiewicz [mailto:robert@simulations-plus.com] 
+
+I've installed Code co-op 5.0 beta 4 over existing 4.6. Then I've 
+selected "Collaboration Settings" in the Dispatcher. Attached screen 
+captures 1 through 4 tell the rest of the story.
+==Resolution
+Rewrote the handling of Email Options in Collaboration Settings.
+
+[[Image:157-a]]
+
+[[Image:157-b]]
+
+[[Image:157-c]]
+
+[[Image:157-d]]
+

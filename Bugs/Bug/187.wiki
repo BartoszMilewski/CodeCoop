@@ -1,0 +1,16 @@
+| Summary |Wrong title bar|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Open|
+| Priority |2|
+| Resolution | Pending |
+| DateReported |Sunday, July 22, 2007|
+==Description 
+I have observed a related minor bug. I have two shortcuts which launch Code Co-op and open my main projects (using e.g. -Project_Visit 1 -GUI). On some occasions (possibly the first time Code Co-op is launched after startup), one of them ends up with the task bar just saying "Code Co-op" instead of the project name. If I switch projects then switch back again, it shows the project name as expected. 
+
+Note: This might be serious if we are looking for co-op servers by window title.
+

@@ -1,0 +1,14 @@
+| Summary |Browser window slides|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority | 1 |
+| Resolution | Fixed |
+| DateReported |Saturday, November 04, 2006|
+==Description 
+When I keep opening and closing the differ, its position shifts towards the lower right corner. Unfortunately it keeps sliding even after part of the differ window ends up outside the screen. My guess is that whatever mechanisms agains the disappearance of the differ there are, they probably don't take into account the two possible sizes of the window: for single file display and double file comparison.
+

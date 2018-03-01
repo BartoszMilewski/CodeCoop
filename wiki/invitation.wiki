@@ -1,0 +1,63 @@
+<h1>Destination computer</h1>
+<h2>Possible situations</h2>
+*Invitation Full Synch is received as a single script
+*Invitation Full synch is received in chunks
+*More than one invitation Full Synch received at the same time, possibly concerning a single project
+<h2>Sequence of events</h2>
+when Dispatcher receives an invitation script/chunk and processes a target computer addendum for the first time:
+* addressee is found on a local recipient list
+** copy a script to the enlistment inbox
+* addressee not found on a local recipient list
+** display a join dialog (only project root available for editing)
+** <i>Revisit: what if the dialog is cancelled?</i>
+** ask co-op to create a project
+** copy the invitation script to the enlistment inbox
+
+<h2>Life's not that easy!</h2>
+If addressee is not found on a local recipient list:
+* don't display a Join dialog again
+**ignore all successive invitation chunks adressed to this user in this project
+* don't display Undeliverable script dialog
+** ignore the original invitation script/chunk
+** ignore all successive invitation chunks addressed to this user in this project
+*after calling co-op, Dispatcher has to wait until Co-op actually creates the project infrastructure before it can copy the script.
+
+<h2>Solution</h2>
+* display a join dialog (only project root available for editing)
+* add a fake entry describing a new user to GlobalDb::_userList and to LocalRecipientList
+**Address triplet (hub id, project name, user id are known)
+**project id : set to -1
+**Dispatching to such user, LocalRecipient::AcceptScript method:
+***must not stamp delivery to this recipient
+***must set a special status to the script indicating that it is waiting for project creation
+* ask co-op to create a project
+* when Co-op notifies Dispatcher about a change on a project list
+**refresh local recipient list (co-op removed the fake entry from globalDb._userList if the enlistment was created successfully)
+**start dispatching run --> the invitation script is copied to the enlistment inbox
+*when Dispatcher receives OnTimer message for maintenance timer
+**are there any fake entries on local recipient list?
+***<i>Revisit: display UI</i>
+
+
+<h2>Changes in Co-op</h2>
+*remove fake entry from globalDb._userList after adding the actual user
+
+<h2>Changes in Dispatcher</h2>
+*on Dispatcher startup: <i>Revisit: display UI</i>
+
+
+<h2>Successive chunks of the invitation script</h2>
+When processing successive chunks of the same invitation script Dispatcher finds a correspoding user entry on the local recipient list
+*if the user entry is a fake
+**special processing in LocalRecipient::AcceptScript (same as in case of first chunk, see above)
+*else
+**copy a script to a local enlistment inbox
+
+<h2>To Be done</h2>
+*handling more than 1 invitations "at the same time"
+**OnTimer message for maintenance timer caused by processing of first invitation script may happen right after filling Join dialog for a successive invitation script when co-op had no time to process the successive request. This is why we need to associate with every invitation script a time when Dispatcher asks co-op to create enlistment. On maintenence timer only invitation scripts for which half a minute passed are processed.
+
+<h2>Questions</h2>
+*What happens if a script to an invited user arrives before invitation?? A local hub does not even know whether it is going to be a local project or a satellite project.
+** at least add "I am expecting invitation to this project" option to Unknown recipient wizard.
+

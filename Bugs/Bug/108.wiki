@@ -1,0 +1,18 @@
+| Summary |SccPopulateList doesn't list deleted files|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 4 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+
+Bug #1123 from the Web database.
+
+Add hidden command to co-op to return list of files "deleted" and "removed".
+==Comment
+This is related to bug 113.

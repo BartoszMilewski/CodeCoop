@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Using the command-line interface</title>
+<link href="../images/help.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<h1>Command-line interface - CoopCmd and AllCoopCmd </h1>
+<p><strong>CoopCmd</strong> is a command-line backdoor to Code Co-op. Some Code Co-op commands that are accessible from the menu can be also called from the command line using special syntax. The argument to CoopCmd is derived from the name of the menu item. For instance, menu &quot;All&quot; contains item &quot;Sync Scripts&quot; and (for historical reasons) it corresponds to the command &quot;All_Synch&quot;. There is also a command &quot;Selection_Synch&quot; that corresponds to the menu item &quot;Selection&gt;Sync Next Script&quot;.</p>
+<p>When you are using CoopCmd, you have to specify the project, either by path or by project ID. </p>
+<br/>
+<p>Use <strong>AllCoopCmd</strong> to perform the same command in all projects. (You don't need to  specify the project.)</p>
+<p>Some commands require additional arguments. Here are the examples:</p>
+
+<pre>
+<strong>coopCmd</strong>:
+&lt;root&gt; | -p:&lt;project ID&gt; -c:"All_Synch"
+   
+&lt;root&gt; | -p:&lt;project ID&gt; -c:"Project_Members userid:\"id\" [name:\"name\" | state:\"[voting/observer/removed/admin]]\""
+</pre>
+   Note: to change the status of a local member enter: userid:\"-1\"
+<pre>
+&lt;root&gt; | -p:&lt;project ID&gt; -c:"Project_Invite user:\"invitee name\" email:\"invitee email\" [observer:\"yes\"] [satellite:\"yes\" computer:\"name\"]
+
+&lt;root&gt; | -p:&lt;project ID&gt; -c:"Selection_ChangeFileType type:\"text file\" \"c:\project\file.txt\""
+</pre>
+Notice: make sure to precede every internal quotation mark with a backslash. Project ID doesn't have to be quoted.
+
+Example: To invite Chad, who is an email peer, to the project Frequency Analyzer use:
+<pre>
+coopCmd "c:\work\Frequency Analyzer" -c:"Project_Invite user:\"Chad\" email:\"chad.codewell@gmail.com\" observer:\"yes\""</pre>
+
+<pre>
+<strong>allCoopCmd</strong>:
+   "All_Synch"
+   "Project_Members userid:\"-1\" [name:\"name\" | state:\"[voting/observer/removed/admin]]\""
+   ...
+</pre>
+Notice: to operate on member states, set userid to -1
+      
+Example1: to synchronize all projects on a computer use:
+<pre>allcoopcmd.exe All_Synch</pre>
+
+Example2: to change status of a local member to observer use:
+<pre>allcoopcmd.exe "Project_Members userid:\"-1\" state:\"observer\""</pre>
+      
+Example3: to invite Chad, who is an e-mail peer, as an Observer to all projects with Admin on this machine use:
+<pre>allCoopCmd.exe "Project_Invite user:\"Chad\" email:\"chad.codewell@gmail.com\" observer:\"yes\""
+</pre>
+</body>
+</html>

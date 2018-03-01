@@ -1,0 +1,25 @@
+| Summary |Assertion in checkout notification code|
+| ReportedBy |Bartosz Milewski|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Fixed|
+| Priority |1|
+| Resolution | Pending |
+| DateReported |Saturday, December 15, 2007|
+==Description 
+I have a file checked out on my laptop, but it doesn't show as checked out on my desktop. Out of curiosity, I tried to look at its properties on the desktop. I got the assertion:
+| CheckoutNotifications.cpp: line 158 |
+Stack trace:
+ CheckOut::Db::RefreshIndex
+ CheckOut::Db::Sequencer::Sequencer
+ FileProps::AddCheckoutNotifications
+ Model::GetFileProps (gid = 1f-4b) that's in Rebeca
+ Commander::Selection_Properties
+The array _notes is empty. It turns out this happens on every file.
+==Resolution
+Removed over-eager assertion.
+
+

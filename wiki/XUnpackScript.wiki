@@ -1,0 +1,11 @@
+=Mailbox::XUnpackScript
+Returns true when script unpacked successfully
+* XExecuteScriptTrailer
+* if is chunk, [[XUnpackChunk]]
+* if is full sync, ...
+* else History::[[XProcessLineages]], returns History::Status
+** Connected -> [[XInsertScript]] -- if true, ''unpacked successfully'' set to true
+** Disconnected
+*** Script is defect or remove -> agent.[[RememberExecuteOnlyScript]] (this leads to user state: defected, but ''no defect script'' in the history.
+*** script.MarkFromFuture and agent.SetPendingWork
+** Prehistoric -> agent.DeletePrehistoricScript

@@ -1,0 +1,10 @@
+= WorkQueue::Run
+* Retrieve transport manager and script file list. Pass list to transport manager 
+* Create a multi-channel for communicatins with other threads (main and copier threads)
+* Wait on the channel with timeout
+* Process messages from channels
+* If work is to be done (either because of timeout or because of a work-forcing message)
+** Acquire to do list from work queue
+** TransportManager::MergeToDoList, convert new tickets to ScriptHandles
+** If transMan has work to do, call [[TransportManagerDistribute|TransportManager::Distribute]]
+** Set new timeout

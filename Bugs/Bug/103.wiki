@@ -1,0 +1,19 @@
+| Summary |Full Sync feedback|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Resolution | Fixed |
+| Priority | 2 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+
+Bug #1210 from the WEB database.
+
+Feedback during full-sync execution is bad. There are long pauses without any feedback, the messages displayed in progress boxes are not intuitive (for instance: merging), the title says "unpacking" instead of "executing", the beginner tip is inappropriate.
+
+==Resolution
+Added more feedback. Cleaned up progress meter dialog creation.

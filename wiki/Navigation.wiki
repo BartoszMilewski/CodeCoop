@@ -1,0 +1,58 @@
+=Navigation
+==Entering Wiki Directory
+* '''BrowserPane''' is activated
+* Calls WikiBrowserController::'''StartNavigation'''
+* Posts the "Navigate" command to the executor with URL: current path + "index.wiki"
+* Commander executes '''Navigate ()'''
+* Calls UiManager::Navigate with URL and offset 0
+* Calls down through Layout, Pane, to '''WikiBrowserController::Navigate'''
+**  Sets _scrollPos (which is zero)
+**  Calls web browser to Navigate to URL
+* Notification: ''''BeforeNavigate''''
+**  PostCommand '''OnBrowse''' with path and scroll offset of the ''previous'' page (zero)
+* Commander processes '''OnBrowse''' with ''path'' and zero scroll offset
+* Calls BrowserTable::PushPath
+** Since _history is empty, pushes path with offset 0
+** Sends external notification to update path in the toolbar
+* Notification: ''''DocumentComplete''''
+**  Scrolls to _scrollPos
+**  Sets _scrollPos to 0
+
+==Clicking a Wiki Link
+* Notification: ''''BeforeNavigate''''
+**  PostCommand '''OnBrowse''' with new path and scroll offset of the ''previous'' page
+* Commander processes '''OnBrowse''' with path and previous scroll offset
+* Calls BrowserTable::'''PushPath'''
+** Old scroll offset is stored with last path
+** Pushes new path on _history with scroll offset 0
+** Sends external notification to update path in the toolbar
+* Notification: ''''DocumentComplete''''
+**  Scrolls to _scrollPos
+**  Sets _scrollPos to 0
+
+==Back
+* Commander::'''Selection_Previous'''
+** Pops path (together with its scroll offset) off BrowserTable
+** Calls UiManager::Navigate
+* Calls down through Layout, Pane, to '''WikiBrowserController::Navigate'''
+**  Sets _scrollPos
+**  Calls web browser to Navigate to URL
+* Notification: ''''BeforeNavigate''''
+**  PostCommand '''OnBrowse''' with path and scroll offset of the ''previous'' page
+* Commander processes '''OnBrowse''' with path and scroll offset
+* Calls BrowserTable::PushPath
+** Since this is the same path as the top, does nothing
+* Notification: ''''DocumentComplete''''
+**  Scrolls to _scrollPos
+**  Sets _scrollPos to 0
+
+==Wiki File Modified Externally
+* External notification 
+** Directory notifies BrowserTable
+** Notifies RecordSet
+** Notifies WikiBrowser::UpdateIfNecessary (no topic)
+** Notifies WikiBrowserController with topic: "browser"
+* WikiBrowserController::Update
+**  Retrieves current page's scroll position and stores it in _scrollPos
+**  Calls web browser to Navigate to URL given by current _srcPath
+* The rest is the same as in the previous case (''Back'')

@@ -1,0 +1,22 @@
+| Summary |Focus problem in dragging files|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Sunday, July 22, 2007|
+==Description 
+Dempson:
+
+In Files view, you can drag and drop a file directly from the panel on the upper right side to your editor of choice (assuming the editor is already running). Most editors react by opening that document in a new window.
+
+There is a minor bug in this mechanism. If the folder hierarchy panel (on the left) is active (e.g. you just clicked on one of the folder icons), then you drag a file directly from the file panel (upper right), it actually drags the selected folder in the panel on the left, not the file you dragged from the panel on the right.
+
+This can be avoided by first clicking on the file in the panel on the right, then releasing the mouse button, then dragging and dropping the file.
+
+It appears to be a simple bug in identifying the source item for the drag-and-drop, going from the selected item in the wrong panel, rather than updating the selection as a side effect of the click-and-drag. 
+

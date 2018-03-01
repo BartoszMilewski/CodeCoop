@@ -1,0 +1,11 @@
+| Summary |Change install to BCMerge.exe|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Priority |1|
+| Status |Done|
+| DateReported |Thursday, November 02, 2006|
+==Description
+The name is BCMerge.exe, not BCMerger.exe. 
+
+Also, get the chm file from Scooter and remove the .hlp file.

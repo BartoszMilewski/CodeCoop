@@ -1,0 +1,15 @@
+| Summary |Select target dropdown too narrow|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Monday, July 09, 2007|
+==Description 
+Also, as a side issue-the drop-down menu for the Target Project in the merge view doesn't accommodate long project names-all of my projects begin with a common string that is 15 characters long, and when I see them in the drop-down I can't differentiate them, and have to use the &lt;Select Branch> choice to see the full names. Just a minor thing…
+==Resolution
+Increased the width of select target drop down from 120 to 150 pixels.

@@ -1,0 +1,2 @@
+Please save the attachment, license.znc, and move it to the admin's machine if necessary. 
+Once on the admin's machine, double click on the file license.znc to activate the license block.

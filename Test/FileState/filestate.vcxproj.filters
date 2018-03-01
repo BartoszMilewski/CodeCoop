@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{2c045111-b9e7-4f9a-ac0b-482878cb96d5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\BuildOptions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CmdLine\Common\CmdLineVersionLabel.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\precompiled.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SccDll\SccDllFunctions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SccDll\SccErrorOut.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SccDll\SccProxy.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SccDll\SccProxyEx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\Serialize.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="fileStates.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\precompiled.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SccDll\SccErrorOut.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SccDll\SccProxy.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SccDll\SccProxyEx.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\Serialize.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="filestatemain.cpp" />
+    <ClCompile Include="filestates.cpp" />
+  </ItemGroup>
+</Project>

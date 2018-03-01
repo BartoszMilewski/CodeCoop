@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+	<title>FAQ: Increasing security of sending scripts</title>
+	
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<h1>Can I increase the security of sending scripts through email?</h1>
+<br />
+<p class="first">When exchanging co-op scripts by E-mail, the dispatcher offers the option to encrypt the change scripts using an external utility program. There are many encryption utilities out there, just make sure you use a command line version. </p>
+<br /> 
+<p class="first">Here are a couple recommendations:</p>
+<ul>
+<li>Coopfish: This encryption utility was made specifically for use with Code Co-op. Go to the <a href="http://ivan.vecerina.com/code/coopfish/" target="_blank">Coopfish web page</a> to download the utility and it's source code. Installation and set-up instructions are included at this site. </li>
+  
+
+<li>GnuPG Freeware: This encryption utility is free and can be downloaded from the <a href="http://www.pgpi.org/products/pgp/versions/freeware/" target="_blank">PGP website</a>.  </li>
+
+</ul>
+
+<p>    These programs will require you to create a key pair, extract your public key so you can distribute it to teammates, add their key to your keyfile and then  sign your collaborator's key. Follow the instructions provided with the utility.  </p>
+<br />
+Once you have completed the steps above you will need to configure the Dispatcher. Here's what you need to do:
+<ul>
+<li> Create a batch file to encrypt the script.  The batch file will look something like this:
+<br /> 
+<b>
+&quot;c:\bin\pgp&quot; -e %2 &quot;First Person &lt;firstperson@someplace.com&gt;&quot; &quot;Second Person &lt;secondperson@someplace.com&gt;&quot;</b></li>
+<li>Create a batch file to decrypt and unzip the script.  The batch file will look something like this: <br />
+ <b>set PGPPASS=Your pass phrase<br />
+&quot;c:\bin\pgp\pgp&quot; -p %1 -o scripts.znc</b></li>
+<li>Edit the Dispatcher.  Right click on the dispatcher icon and select Preferences and then Script Processing.  In the section <em>Before sending scripts</em> and within it <em>Call program</em>, type in the path to the encrypt batch file.  Based on the example above you would type <b>c:\bin\encrypt.bat.</b>  Now, define your output file as <b>scripts.znc.pgp</b>. In the <em>After Receiving scripts</em> section, input the extension of <b>pgp</b> and then the path to the decrypt batch file. </li>
+        
+
+<li><b>WINDOWS 98 USERS:</b>  You may have a problem with the shell not closing the DOS windows after running a batch file.  To fix this simply click on the Properties Button.  Select the Program tab and make sure the box at the bottom that says &quot;Close on exit&quot; is checked.</li>
+
+</ul>
+
+
+
+
+</body>
+</html>

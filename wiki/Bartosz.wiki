@@ -1,0 +1,14 @@
+=Bartosz: To Do
+===Wiki
+* Find out if it's possilbe to change the processor so that file renaming is not necessary. In some project the preprocessor shouldn't be called at all.
+* Add "delete" button to browser view. It deletes the currently viewed wiki file. The browser then navigates to the previously browsed file. If the file index.wiki is deleted, there is a confirmation popup and the browser pane is closed.
+* Command: Folder>Make Wiki. Create index.wiki in the current folder.
+* Record parser: allow spaces in field names
+* Record parser: ignore everything after table end
+* Specify Arial as default font in wiki css
+===Differ
+* Tabs for ''before'' and ''after'' versions of the file
+===UI
+* '''Icons''' in script details (and other toolbars?)
+* '''Script conflict dialog''' - review dialog messages and help message.
+

@@ -1,0 +1,17 @@
+| Summary |Inconsistent history search results|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Wednesday, November 28, 2007|
+==Description 
+From [http://www.relisoft.com/forums/index.php?showtopic=1128&st=0&gopid=4007&#entry4007|Forum post].
+
+User enters a search string in the "History of" edit control and matching scripts are displayed. We should also display ''all'' labels in the results, so that the user sees them  in their historical context--just like we do with other history filters.
+
+

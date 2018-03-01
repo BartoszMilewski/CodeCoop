@@ -1,0 +1,5 @@
+*[[Sockets in Dispatcher]]
+* POP3 spec [http://www.faqs.org/rfcs/rfc1939.html| RFC 1939]
+* SMTP spec [http://www.faqs.org/rfcs/rfc2821.html| RFC 2821
+* Internet message spec [http://www.faqs.org/rfcs/rfc2822.html|RFC 2822]
+

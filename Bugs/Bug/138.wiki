@@ -1,0 +1,21 @@
+| Summary |Merge current version asserts|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Saturday, October 28, 2006|
+==Description
+* You have to have a branch project that has never been merged before
+* Select current version
+* Click the Open Merge button
+* In the merge view, open the "select project" dropdown and select "select project"
+* Find the project that was the source for the branch and select it
+* Assertion in: Project_SelectMergeTarget, 1069
+==Resolution
+Don't check the script state if only the curent version is selected.
+
+

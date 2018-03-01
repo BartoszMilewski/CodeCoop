@@ -1,0 +1,11 @@
+| Summary |Tooltip in Listview|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |4|
+| Status |Closed|
+| DateReported |Sunday, October 01, 2006|
+==Description 
+It would be nice to have a tooltip in History/Merge view when the cursor lingers over a script. The tooltip would display the script comment in full.
+==Resolution
+Implemented so called label tip - unfolds obscured portion of the narrow column. Didn't implement list view item tooltip, because we don't have the access to the full script comment during notification.

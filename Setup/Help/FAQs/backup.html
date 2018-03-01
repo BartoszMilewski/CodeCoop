@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+	<title>FAQ: Undoing an automatic merge</title>
+	
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Can I undo an automatic merge?</h1>
+
+<br />
+
+<p class="first">On some occasions you might not like the results of automatic merge. You can always correct the results by editing the file inside the differ. But if you <em>really</em> want to see the original pre-merge file with your own edits, there is a back-door approach. First, find out the file's global id (last column in File Area). Then, go to the Code Co-op's data directory for this particular project, usually \co-op\database\projId, where <em>projId</em> is the id of the project (find it in the Projects area of Code Co-op). The file whose name is formed from the global id of the file in question followed by the extension .bak is your pre-merge copy. <b>Don't edit this file!</b> It's part of Code Co-op's database. Just copy it to a safe place and work with it. Remember, making any changes in Code Co-op's data directory will result in database corruption and possible loss of the project.</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+=Merging Local Branches
+==Problems:
+*'''Local branch can be not executed''' - all or some branch scripts were never executed. This can happen when the wining script arrives at the same time as the branch scripts. If not executed script adds file/folder to the project then the file database doesn't have a file data for added files/folders (addition was never executed). Lack of file data causes the following problems:
+**Restoring file can fail if the restored file was moved to the folder whose creation was not executed. The following code in the ''''DiffFileExec::Do'''' throws execption:
+ // Rename if necessary
+ FileData const & scriptFileData = _command.GetFileData ();
+ if (scriptFileData.IsRenamedIn (Area::Original))
+ {
+	UniqueName const & newUname = scriptFileData.GetUniqueName ();
+	GlobalId parentGid = newUname.GetParentId ();
+	''''FileData const * newParent = dataBase.XGetFileDataByGid (parentGid); <-- execption''''
+	FileState parentState = newParent->GetState ();
+	if (parentState.IsToBeDeleted () &&	!parentState.WillBeRestored ())
+	{
+		// We cannot accept the move, because locally new parent is being
+		// removed from the project
+		std::string info ("This script cannot be unpacked now, "
+			"because it moves a file to the following folder:\n\n");
+		Project::Path projPath (dataBase);
+		info += projPath.XMakePath (parentGid);
+		GlobalIdPack pack (parentGid);
+		info += " ";
+		info += pack.ToBracketedString ();
+		info += "\n\nwhich has been locally removed from the project.\n";
+		info += "Uncheck-out the folder and then unpack the script.";
+		TheOutput.Display (info.c_str ());
+		throw Win::Exception ();
+	}
+	trans.RenameIn (targetArea, newUname);
+ }
+***The method ''''DiffFileExec::Do'''' is called with the following arguments:
+ void DiffFileExec::Do (DataBase & dataBase,
+                        PathFinder & pathFinder,
+                        TransactionFileList & fileList,
+                        bool inPlace)
+***The flag ''''inPlace'''' is equal '''false''' when we execute command from the incoming script and equal '''true''' when we redo the command from the history. Inplace command execution means that we don't place the commnad result in the Sync Area but overwrite with it the Reference Area.
+***'''Solution:''' Check target folder only when the flag inPlace is equal '''false'''.
+
+**UI cannot display project paths including not created folders - currently we display global id instead of folder name.
+***'''Solution:''' before perfroming merge on the selected itmes Code Co-op should scan historical files for new folders not present in the file database and add missing file data records (file data state should be set to none).
+
+**Merging file attributes can create a new folder that is not present in the project. In the merge attributes dialog the user has an option to create a new folder in the project tree. The created folder has to be added to the project when the merge is finalized.
+
+**Finalizing file merge should check is file's parent is present in the project. Parent folder can be not present in the project because:
+**#It was created during file attributes merge - there will be no file data record in the project database. Code Co-op should add the new folder to the project.
+**#It was created by the not execute branch script - there will be file data record in the project database (before merging the selected files Code Co-op scanned historical files and added file data record for each created folder). Code Co-op should change folder state to new. 
+

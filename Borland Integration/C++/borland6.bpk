@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="borland6.bpl"/>
+    <OBJFILES value="borland6.obj Integrator.obj ..\..\..\co-op31\Common\PathRegistry.obj 
+      ..\..\..\co-op31\Common\SccDllFile.obj 
+      ..\..\..\co-op31\cmdline\Common\SccProxy.obj CheckInDlg.obj"/>
+    <RESFILES value=""/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) CheckInDlg.dfm"/>
+    <LIBFILES value="WinLib.lib"/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi designide.bpi"/>
+    <PATHCPP value=".;..\..\..\co-op31\Common;..\..\..\co-op31\Common;..\..\..\co-op31\cmdline\Common"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="BORLAND_COMPILER=1"/>
+    <SYSDEFINES value="NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="borland6.cpp"/>
+    <INCLUDEPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;..\..\..\winlib31;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;COM;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;$(BCB)\lib;$(BCB)\lib\release;$(BCB)\lib\obj;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; -I..\..\..\winlib31 
+      -I..\..\..\co-op31\cmdline\Common -I..\..\..\co-op31\Common -ICOM 
+      -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -DBORLAND_COMPILER=1 
+      -boa"/>
+    <CFLAG1 value="-O2 -H=c:\PROGRA~1\borland\CBUILD~2\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b- 
+      -k- -vi -c -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-D&quot;Reliable Software Code Co-op Wizard&quot; -aa -Tpp -x -Gn"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="borland6.cpp" FORMNAME="" UNITNAME="borland6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="C:\Common\rtl.bpi" FORMNAME="" UNITNAME="rtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="C:\Common\vcl.bpi" FORMNAME="" UNITNAME="vcl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="C:\Program Files\Borland\CBuilder6\Lib\designide.bpi" FORMNAME="" UNITNAME="designide" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Integrator.cpp" FORMNAME="" UNITNAME="Integrator" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="WinLib.lib" FORMNAME="" UNITNAME="WinLib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\co-op31\Common\PathRegistry.cpp" FORMNAME="" UNITNAME="PathRegistry" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\co-op31\Common\SccDllFile.cpp" FORMNAME="" UNITNAME="SccDllFile" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\co-op31\cmdline\Common\SccProxy.cpp" FORMNAME="" UNITNAME="SccProxy" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CheckInDlg.cpp" FORMNAME="CheckInDlg" UNITNAME="CheckInDlg" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=12
+Item0=C:\Program Files\Borland\CBuilder6\Projects;..\..\..\winlib31;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;COM;$(BCB)\include;$(BCB)\include\vcl
+Item1=..\..\..\winlib31;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;COM;$(BCB)\include;$(BCB)\include\vcl
+Item2=..\..\winlib31;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;COM;$(BCB)\include;$(BCB)\include\vcl
+Item3=..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;COM;$(BCB)\include;$(BCB)\include\vcl
+Item4=..\..\..\co-op31\Common;COM;$(BCB)\include;$(BCB)\include\vcl
+Item5=..\..\Common;..\..\CmdLine\Common;..\..\..\co-op31\Common;COM;$(BCB)\include;$(BCB)\include\vcl
+Item6=..\..\..\co-op31\Common;..\..\co-op40\Serial;..\..\co-op40\Common;..\..\co-op40\CmdLine\Common;..\..\Serial;..\..\CmdLine\Common;..\..\Common;..\..\WinLib;COM;$(BCB)\include;$(BCB)\include\vcl
+Item7=..\..\co-op40\Serial;..\..\co-op40\Common;..\..\co-op40\CmdLine\Common;..\..\Serial;..\..\CmdLine\Common;..\..\Common;..\..\WinLib;COM;$(BCB)\include;$(BCB)\include\vcl
+Item8=..\..\CmdLine\Common;..\..\Common;..\..\WinLib;COM;$(BCB)\include;$(BCB)\include\vcl
+Item9=..\..\CmdLine\Common;..\..\Common;COM;$(BCB)\include;$(BCB)\include\vcl
+Item10=..\..\CmdLine\Common;COM;$(BCB)\include;$(BCB)\include\vcl
+Item11=COM;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=24
+Item0=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib;$(BCB)\lib\release;$(BCB)\lib\obj;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common
+Item1=$(BCB)\lib;$(BCB)\lib\release;$(BCB)\lib\obj;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;
+Item2=..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;$(BCB)\lib;$(BCB)\lib\release;$(BCB)\lib\obj
+Item3=$(BCB)\lib;$(BCB)\lib\release;$(BCB)\lib\obj
+Item4=..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;$(BCB)\lib\release;$(BCB)\lib;$(BCB)\lib\obj
+Item5=$(BCB)\lib\release;$(BCB)\lib;$(BCB)\lib\obj;
+Item6=$(BCB)\lib\release;$(BCB)\lib;..\..\..\winlib31;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;$(BCB)\lib\obj;..\..\Common;..\..\CmdLine\Common
+Item7=$(BCB)\lib;..\..\..\winlib31;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;$(BCB)\lib\obj;$(BCB)\lib\release;..\..\Common;..\..\CmdLine\Common
+Item8=$(BCB)\lib;..\..\..\winlib31;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;$(BCB)\lib\obj;$(BCB)\lib\debug;..\..\Common;..\..\CmdLine\Common
+Item9=..\..\..\winlib31;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\debug;..\..\Common;..\..\CmdLine\Common
+Item10=..\..\winlib31;..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\debug;..\..\Common;..\..\CmdLine\Common
+Item11=..\..\..\co-op31\cmdline\Common;..\..\..\co-op31\Common;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\debug;..\..\Common;..\..\CmdLine\Common
+Item12=..\..\..\co-op31\Common;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\debug;..\..\Common;..\..\CmdLine\Common
+Item13=..\..\..\co-op31\Common;..\..\Serial;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\debug;..\..\Common;..\..\CmdLine\Common
+Item14=..\..\Serial;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\debug;..\..\Common;..\..\CmdLine\Common
+Item15=$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\debug;..\..\Common;..\..\CmdLine\Common
+Item16=..\..\co-op40\Serial;..\..\co-op40\Common;..\..\co-op40\CmdLine\Common;..\..\Serial;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\debug;..\..\Common;..\..\CmdLine\Common
+Item17=$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\debug;..\..\Common;..\..\CmdLine\Common;
+Item18=$(BCB)\lib;$(BCB)\lib\debug;..\..\Common;..\..\CmdLine\Common;COM;$(BCB)\lib\obj
+Item19=$(BCB)\lib;..\..\Common;..\..\CmdLine\Common;COM;$(BCB)\lib\obj
+Item20=$(BCB)\lib;..\..\Common;..\..\CmdLine\Common;COM;$(BCB)\lib\obj;
+Item21=..\..\Common;..\..\CmdLine\Common;COM;$(BCB)\lib\obj;$(BCB)\lib
+Item22=..\..\CmdLine\Common;COM;$(BCB)\lib\obj;$(BCB)\lib
+Item23=COM;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=3
+Item0=BORLAND_COMPILER=1
+Item1=BORLAND_COMPILER=1;_DEBUG
+Item2=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=C:\Program Files\Borland\CBuilder6\Bin\bcb.exe
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

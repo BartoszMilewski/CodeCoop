@@ -1,0 +1,18 @@
+| Summary |Assertion in History|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Tuesday, October 03, 2006|
+==Description 
+Peter von Kaenel: I wasn't receiving checkin scripts when I was disconnected from the network, and one of my changes ended up being rejected. For me it showed up as a branch in the history. The rejected files show up in the bottom half of the history window. I tried right-clicking on a file and selecting "Restore file version". This generated the assertion:
+
+HistoricalFiles.cpp Line 724
+Expression: RangeIncludesMostRecentVersion() || !fileFilter.empty()
+==Resolution
+Changed can ... method, so Restore File Version shows up only for scripts from the trunk.
+

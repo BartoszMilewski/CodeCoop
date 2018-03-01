@@ -1,0 +1,52 @@
+= SideLineageGatherer
+Inertits: Gatherer (pure interface)
+
+Members:
+* unitType
+* unitId
+* lineageType: UnitLineage::Type &mdash; ''minimal or maximal''
+* stem: up to and including first branch point
+* lastReferenceId (last confirmed script) &mdash; ''for maximal lineage, always gidInvalid''
+* stack: vector of Segments
+* scriptHeader (mutable reference)
+| Note: A single non-confirmed node (member announcement) will be sent as (gidInvalid, gidAnnouncement). The recipient must be able to process such lineage and add missing gidAnnouncement to his tree. |
+==Constructor
+Arguments: unitType, unitId, ScriptHeader (by mutable reference), lineageType
+* set unitType, unitId, hdr, lineageType
+* lastReferenceId = gidInvalid
+== ProcessNode
+Arguments: [[XFwdSequencer]] seq
+* node = seq.GetNode, scriptId = node->GetScriptId
+* if node->IsAckListEmpty and not missing and ''lineageType'' Minimal
+** _lastReferenceId = scriptId
+| Note: it's possible to have confirmed missing |
+* else
+** if stack not empty, add scriptId to last segment
+** else add scriptId to stem
+* return true
+== Push
+Arguments: branchPtId
+
+Returns: false to terminate traversal
+* push new [[Segment]] (branchPtId, is branch point equal to lastReferenceId) onto stack. 
+==BackTo
+Arguments: branchId
+* Create empty lineage
+* push _lastReferenceId
+| Last reference always a direct predecessor of current lineage |
+* append the contents of _stem
+* Accumulate current stack into the lineage
+* if lineage.Count > 1 (not just reference)
+** Create side lineage using lineage unitType and unitId
+** Sanity check: scripts must be consecutive (predecessor points to previous)
+** Add side lineaget to header
+* Pop segments from stack whose branchpoint != branchId
+* if stack empty, return false
+* clear last segment (prepare for gathering next branch)
+* if last segment has branchpoint confirmed, set _lastReferenceId to that branchpoint
+| if branchpoint not confirmed then _lastReferenceId points ''before'' the branchpoint and is common for both branches |
+* return true
+==Accumulate
+Arguments: lineage (mutable reference)
+* Iterate over stack of segments
+** append to lineage the contents of each segment

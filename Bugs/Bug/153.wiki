@@ -1,0 +1,19 @@
+| Summary |Save files dialog clears the path field|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority | 2 |
+| Resolution | Fixed |
+| DateReported |Wednesday, November 08, 2006|
+==Description 
+
+If you export a file from the history via "Save Selected Files", the dialog remembers where you last saved a file to (which is good).
+
+But, if you change the selected from "before selected script" to "after selected script", the "save to folder" path gets cleared and you need to reselect this. I do not think this should be cleared.
+
+There may be other similar places this happens, I haven't tested exhaustively.
+

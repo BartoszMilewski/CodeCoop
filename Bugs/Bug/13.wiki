@@ -1,0 +1,20 @@
+| Summary |Checkout command line applet asserts in GUI Code Co-op.|
+| ReportedBy |Wieslaw|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |4.6|
+| Reproducible |Sometimes|
+| Severity |Minor|
+| Status |Closed|
+| Resolution | Cannot reproduce |
+| Priority | 2 |
+| Description | The following report received from the user: SoftwareRelease [enigma@esteemsoft.com.my]:
+
+
+Your latest debug version sometimes produces weird error when the check out command line applet is used. Sometimes an assertion failure (as shown in the attached image) will just appear out of no way when the check out command line applet is invoked, but more often than not, it works as usual and such an erratic is particularly hard to nail down. Today I managed to capture this problem and I am sending the problem to you.
+
+The GUI Code Co-op was running.
+
+
+[[Image:Bug13.bmp]] |
+| Comments | I've run checkout applet with GUI Co-op running and showing every page - no assertion |

@@ -1,0 +1,32 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ID_MAIN                 ICON         "main.ico"
+ID_FILE                 ICON         "file.ico"
+ID_FOLDER               ICON         "folder.ico"
+ID_NEW                  ICON         "new.ico"
+ID_DEL                  ICON         "del.ico"
+ID_DIF                  ICON         "dif.ico"
+ID_DRIVE                ICON         "drive.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_MAIN                 "CompareDirectories"
+    ID_CAPTION              "Directory Differ"
+END
+
+IDB_BUTTONS		BITMAP	"buttons.bmp"
+

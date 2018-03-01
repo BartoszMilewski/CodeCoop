@@ -1,0 +1,57 @@
+ --> Commander::Selection_OpenFile
+     --> Layout::GoDown
+     <-- Layout::GoDown
+     --> TableBrowser::Invalidate - File View
+         Visible already showing some record set
+         --> TableBrowser::RefreshRecordSetIfNecessary - File View
+             --> TableBrowser::SaveState - File View
+                 TableBrowser::DeSelect - File View; item: 5; selected count: 0
+                 --> Layout::RefreshToolBars
+                     Main table: File View
+                     Main browser caption: 
+                 <-- Layout::RefreshToolBars
+             <-- TableBrowser::SaveState - File View
+             WidgetBrowser::SetCaption: Common
+             New record set row count: 143
+             --> TableBrowser::Sort - File View
+             <-- TableBrowser::Sort -- sorted - File View
+        <-- TableBrowser::RefreshRecordSetIfNecessary - new record set - File View
+        --> TableBrowser::RepopulateView - File View
+        <-- TableBrowser::RepopulateView - File View
+        --> TableBrowser::RestoreState - File View
+        <-- TableBrowser::RestoreState - File View
+     <-- TableBrowser::Invalidate - File View
+     --> TableBrowser::Invalidate - Project View
+         Visible already showing some record set
+         --> TableBrowser::RefreshRecordSetIfNecessary - Project View
+             --> TableBrowser::SaveState - Project View
+             <-- TableBrowser::SaveState - Project View
+             WidgetBrowser::SetCaption: 
+             New record set row count: 6
+             --> TableBrowser::Sort - Project View
+             <-- TableBrowser::Sort -- sorted - Project View
+         <-- TableBrowser::RefreshRecordSetIfNecessary - new record set - Project View
+         --> TableBrowser::RepopulateView - Project View
+         <-- TableBrowser::RepopulateView - Project View
+         --> TableBrowser::RestoreState - Project View
+         <-- TableBrowser::RestoreState - Project View
+     <-- TableBrowser::Invalidate - Project View
+     --> Layout::RefreshToolBars
+         Main table: File View
+         Main browser caption: Common
+     <-- Layout::RefreshToolBars
+     --> Commander::AfterDirChange
+     <-- Commander::AfterDirChange
+ <-- Commander::Selection_OpenFile
+ --> Layout::RefreshToolBars
+     Main table: File View
+     Main browser caption: Common
+ <-- Layout::RefreshToolBars
+ --> TableBrowser::Invalidate - Project View
+     Not visible
+     No record set
+ <-- TableBrowser::Invalidate - Project View
+ --> TableBrowser::Invalidate - Project View
+     Not visible
+     No record set
+ <-- TableBrowser::Invalidate - Project View

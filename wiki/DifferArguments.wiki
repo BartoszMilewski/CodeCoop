@@ -1,0 +1,12 @@
+=Differ Arguments
+Defined in DifferCmd.h
+== DifferArguments
+Also used for calling an editor.
+=== Contains
+* [[DifferInfo]]
+* [[DifferCmd]]
+* _title1 and _title2
+==MergerArguments
+=== Contains
+* [[DifferInfo]]
+* [[DifferCmd]]

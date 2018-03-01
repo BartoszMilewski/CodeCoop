@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Branching your project</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Branching your project </h1>
+
+<p>
+You can create a new project by branching from any version of an existing project in your <a href="historyTab.html">History</a> tab.
+</p>
+
+<h2>Branch Starting with the Current Version</h2>
+<ul>
+	<li>Select <em>Branch</em> from the <em>Project</em> menu</li>
+	<li>The Branch dialog is almost identical to the <em><a href="createProject.html">New Project</a></em> dialog</li>
+	<li>Name the branch project and provide the location for it </li>
+	<li><a href="invitation.html">Invite</a> the members of the old project to the new project, or ask the to <a href="JoinProject.html">join</a>.</li>
+</ul>
+<h2>To Branch Starting with a Historical Version:</h2>
+<ul>
+	<li>In the History view, select the version from which you wish to branch (the branch project will start in the state <em>after</em> the script you've selected)</li>
+	<li>Select <em>Branch</em> from the <em>Selection</em> menu</li>
+	<li>Continue as above</li>
+</ul>
+<h2>Branch Project Options</h2>
+<p>
+When branching a project, you  have the same options as when you create a new project. The <em>Options</em> tab of the <em>Create Project Branch</em> dialog gives you the following  choices:
+</p>
+<ul>
+	<li>Automatically execute  <em>all incoming  synchronization</em> scripts</li>
+	<li>Automatically accept all Join requests </li>
+	<li>Keep files checked out after each check-in </li>
+	<li>Create a Distribution Project </li>
+</ul>
+
+<p>
+The first three options will automate regular processes. The last option, Create a Distribution Project, is for projects being used to distribute source code to clients that require privacy and certain limitations. For more information, go to <a href="Distribution.html">About Distribution Projects</a>.
+</p>
+ 
+<h2>Branch Merging</h2>
+<p>
+A branch project shares some history with the original project. Because of that, it's possible to merge changes between such projects. The merging can be performed in either direction: from the original project to the branch or vice versa. Merges are also possible across several branchings (the branch of my branch is also my branch).
+</p>
+
+<p>
+Notice that new members of the branch project don't share history with the original project and can't immediately perform merges. For new members to perform merges, they first have to <a href="importHistory.html">import the history</a> from the branch project.
+</p>
+</body>
+</html>

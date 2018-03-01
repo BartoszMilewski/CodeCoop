@@ -1,0 +1,22 @@
+=SortedTree::XProcessLineage
+Arguments: lineage sequencer, rootIdFound (return value), Mailbox::Agent
+<br/>Returns false if lineage illegal
+
+Lineage sequencer is positioned:
+* For set scripts: at first non-prehistoric script ID
+* For membership scripts: at reference ID
+
+* unsigned int historyForkIdx = npos
+* if rootId != agent.GetKnownMissingId () (should always be true?)
+** Create [[XFwdUnitSequencer]] (skips scripts in the lineage before the first matching script)
+*** if tree not empty, but no match found, rootIdFound = false, return true
+*** else if tree not empty and match found
+ // Walk the lineage's historic part and compare it with the recorded
+ // history, until one of the sequencers hits end
+**** rootIdFound = true
+**** advance both sequencers
+**** loop through both, skip branches, send acknowledgments if necessary, set historyForkIdx on the last common script
+** else (tree is empty), rootIdFound = false, return true
+** If lineage not at end, insert missing script placeholder
+* If agent.HasKnownMissingId () (it's a chunk and we are processing its main lineage)
+** if chunk ID not in our history, insert missing script for it

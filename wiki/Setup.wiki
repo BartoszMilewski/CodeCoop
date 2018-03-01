@@ -1,0 +1,52 @@
+= Setup
+== Differ/Merger Settings
+Installer::PerformInstallation (Installer.cpp)
+=== Installer::SetupRegistry
+
+Set up alternative differ using Registry::UserDifferPrefs
+* If alt differ set in registry
+**get alternative differ path
+** contains BCDiffer or Beyond Compare (Old versions)
+*** if !'''UseXml''': prefs.SetAlternativeDiffer (isOn, altPath, BCDIFFER_CMDLINE, BCDIFFER_CMDLINE2);
+** contains BCMerger, BcMerger, Cirrus, or BCMerge (New versions)
+*** set up '''built-in BcMergeExe'''
+* else (no alt differ): '''UseXml'''
+
+* If alt merger set in registry
+** get alternative merger path
+** contains BCDiffer or Beyond Compare (Old versions)
+*** if !'''UseXml''': prefs.SetAlternative[Auto]Merger (true, altPath, BC[AUTO]MERGER_CMDLINE)
+** contains BCMerger, BcMerger, Cirrus, or BCMerge (New versions)
+*** set up '''built-in BcMergeExe'''
+** prefs.ToggleAlternativeMerger (true)
+* else (no alt merger) set up '''built-in BcMergeExe'''
+
+=== Installer::ConfigDefaultDifferMerger
+
+* if empty _config.GetFullBeyondCompareDifferPath ()
+** which obtains path from regitstry in ::RetrieveFullBeyondComparePath ()
+** SetUpOurAltDiffer
+*** if there is no alt differ in registry
+**** ask user if he wants to use our BCMerge or Differ to diff
+**** set up '''built-in BcMerge.exe''' or '''UseXml'''
+
+== Differ/Merger Settings in Code Co-op
+* UsesAtlDiffer (AltDiffer.cpp)
+** '''rewrite'''
+* UsesAltMerger (AltDiffer.cpp)
+** '''rewrite'''
+* ToolOptions.cpp
+* Model::DifferOptions
+** Set up '''built-in''' BcMerge.exe, '''full BeyondCompare''', or '''UseXml'''
+* Model::MergerOptions
+** Set up '''built-in''' BcMerge.exe, '''full BeyondCompare''', or '''UseXml'''
+
+==To Do
+* Installer::SetupRegistry
+** change SetAlternativeDiffer for BcMergerExe to SetBcDiffer -- set the UseXml flag in registry
+** SetAlternativeMerger -> SetBcMerger
+** SetAlternativeAutoMerger remove for BcMergerExe
+* Installer::PerformInstallation
+** ConfigDefaultDifferMerger
+** SetUpOurAltDifferMerger
+

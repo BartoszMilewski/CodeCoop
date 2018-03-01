@@ -1,0 +1,16 @@
+| Summary |Dispatcher email wizard bad default choice|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Wednesday, June 13, 2007|
+==Description 
+I used the config wizard to change configuration from the default (use Outlook Express) to SMTP/POP3. Everything went smoothly, but when I next looked at the configuration through E-mail Options menu, I noticed that, under POP3 settings, the default was "This account is shared between co-op and my email program". I think the default should be "used only by Co-op", since we tell people to use a dedicated account for SMTP/POP3.
+==Resolution
+Pop3Account constructor defaults to the Code Co-op dedicated e-mail account.
+

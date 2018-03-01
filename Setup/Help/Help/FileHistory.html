@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Looking at file versions</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>Looking at File Versions.</h1>
+<p class="first">If you are only interested in the history of a specific file (or files), you can narrow the scope of History (in other words, you can set up a <b>file filter</b> in History). There are a few ways to filter history: </p>
+<br/>
+<h3>From the History tab, type the following in the toolbar's combo box: </h3>
+<ul>
+	<li>A file name. Code Co-op will match all files with that name in the project. (Incidentally, in this way you can select files that have been <b>deleted</b> from the project.)</li>
+	<li>You can use <b>wildcards</b>. An example of what you can type in is &quot;common\*.cpp&quot;. This will match all files with the extension <em>cpp</em> in any of the folders named <em>common</em>.</li>
+	<li>Type in the name of a <strong>folder</strong>, the whole (recursive) content of this folder will be selected.</li>
+	<li>If you're looking for a script with a particular <b>string in its comment</b>, type in this string preceded by a <em>colon</em>. For instance, to display the scripts with the comment containing &quot;bug fix&quot;, type <b>:bug fix</b>.</li>
+	<li>A global ID of a file in angle brackets, for instance, &lt;2-c81&gt;</li>
+	<li>A right angle bracket followed by script ID, for instance &gt;12-f5. The script will be selected in history.</li>
+</ul>
+
+<p> Note: For any of the above scenarios, you can use the down arrow attached to the dropdown to see the list of files included in the results. You can  then narrow your filter by selecting a particular file from the drop down box. (if there are several files of the same name, look at the global id displayed in parentheses).</p>
+<p>To turn off the filter, select "*.*" from the dropdown.
+<br/>
+<h3>From The Files tab </h3>
+<ul>
+	<li>Select the file(s)  of interest and choose <em>Show History</em> from the context menu or the <em>Show History</em><img src="../Images/showhistory.gif" alt="show history button" width="13" height="15" hspace="5" />button. You'll be transferred to History area, primed with the appropriate filter.</li>
+</ul>
+<br />
+
+<h2>The Results </h2>
+<p class="first">Once your filter is applied,  the History window will  show only the scripts that modified the selected files (or contain the specified key words). You can select a script and see the file(s) affected by it <i>and</i> present in the filter in the Details pane. Double-click a file to see the differences. Or, you can <em>Save</em> the file&mdash;select the file and click the Save button in the Details pane&mdash;. Code Co-op will  reconstruct only the selected file and save it to a specified location.</p>
+<br />
+
+<p>See Also :</p>
+<ul>
+	<li><a href="CompareVersions.html">Comparing versions of your project</a> </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+	<title>FAQ: Code Co-op hangs after check-in</title>
+	
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<h1>Why is Code Co-op hanging just after I performed a check-in?</h1>
+<br />
+<p class="first">A very large, computer-generated file might cause virtual memory thrashing
+	when it's being diffed. This is a known limitation of Code Co-op. There are
+	a couple options to use as a work around to this problem. </p>
+<ul>
+<li>If the file can be regenerated, maybe you don't need it under version control, in which case the regeneration of this file could be done as part of the build process on every machine. </li>
+        
+
+<li> Or, you might want to add this file as type &quot;binary&quot;. Even if the file has one of the recognized extensions, like foo.c, you can change its type(Selection&gt;Change Type). From that point on the file foo.c will be considered binary and the check-in will be much faster.</li>
+</ul>
+
+
+
+</body>
+</html>

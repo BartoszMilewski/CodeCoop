@@ -1,0 +1,3 @@
+=To Do
+Assigned to "[?AssignedTo]", Status "[?Status]", Priority "[?Priority]":
+?SELECT Summary, Priority, Status, DELETE FROM ToDo WHERE AssignedTo = [?AssignedTo] AND Priority = [?Priority] AND Status = [?Status] ORDER BY Priority

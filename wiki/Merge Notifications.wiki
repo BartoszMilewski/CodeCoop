@@ -1,0 +1,23 @@
+=Merge Notifications
+When the user merges files from a branch to the trunk, at some point the scripts should be marked as "merged" rather than "branch".
+
+* "Merge branch files" from history or branch-merge area
+** Manual merge: check out if necessary, attach info to check-in table with script ID
+** Auto merge: check out if necessary, attach info. If the result of the merge is "conflict" attach conflict info to the check-in table entry for this file. Note: this should be done in either synchronous or asynchronous auto merge.
+* Two panes in the check-in area. Files and Check-in Groups.
+** File has "properties" in which the user can select to which group the file belongs or create a new group (new comment).
+** Double-clicking on a group selects all files belonging to this group
+** Lower pane has the selective check-in button.
+* When checking in, the comments from groups that are involved are accumulated and shown as the comment in the check-in dialog.
+** The branch scripts that were merged in this particular check-in are marked as "merged"
+** The check-in script contains a new section with a list of merged scripts
+* The receiver of the script marks the merged scripts in his history.
+
+===Check In Area
+* Create a real table for the check-in area (requires version change!)
+* Store file ids and merge info for each (bitflag)
+* A vector of "check-out groups", each with a list of files in it
+===History
+* New bit "merged"
+===Script
+* New section with a list of merged scripts

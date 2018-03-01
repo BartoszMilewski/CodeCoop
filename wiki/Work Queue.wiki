@@ -1,0 +1,41 @@
+=WorkQueue
+For each script, create a Transport->Index multimap
+* For each transport
+** Look up IgnoredDestinations: if network or disk unavailable, change script status, set stausChange. Else:
+** [[ForwardToDest]]: returns copyStatus, statusChange, progressMade
+** If OK, transportFailed=false, progressMade=true, UnIgnore transport, else
+** If status Remove: remove from toDo list, continue with next transport
+** Else failure: Add to IgnorePaths, set script status (if changed, set statusChange)
+** Mark as done all recipients in the script slip corresponding to this transport
+* When all transports processed and progressMade, call ScriptDone (move from toDo to done, post UM_REQUESTS_DONE, which calls [[CompleteRequests]]
+If statusChange, post UM_SCRIPT_STATUS_CHANGE (refresh display)
+==Inherits from
+* [[ActiveObject]]
+* [[ScriptManager]] (interface)
+==Data members
+===Shared
+* ScriptOwner. Stores script slips currently being processed by the queue
+* To do list: stores pointers to scripts in ScriptOwner
+* Done list: same thing
+==External API
+* [[CountNewAndMarkOldScripts]]
+* [[TransferRequests]]. MailTruck calls it with a list (ScriptOwner) of [[ScriptSlip]]s.
+* GetDoneScripts (copies script slip pointers from doneList
+* [[RecycleScripts]]
+==External API that posts messages to the worker thread
+* RetrieveEmail. Called on a timer or by explicit astion of the user (flag isOnUserCmd).
+* ForceScattering. Posts the ScaterringReq [[WorkQueue Message]].
+* ChangeConfig
+* ClearEmailBlacklist
+* UnIgnore
+* Clear
+== ScriptManager methods
+* RemoveToDoItem
+* MapEmailsInScripts: Finds email requests in toDo list and organizes them into a map
+* ScriptDone
+* HasScriptWithForwards
+* PickScriptWithForwards
+* RefreshRequests
+==ActiveObject overrides
+* [[WorkQueueRun|Run]]
+==Private methods

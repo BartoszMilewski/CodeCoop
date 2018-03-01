@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common with Co-op">
+      <UniqueIdentifier>{89a7537e-2f2b-489b-a13e-a0e60fca7478}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packer">
+      <UniqueIdentifier>{bf0a1718-556b-40b9-8d35-2ac76a113660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{0ba09e71-ebf1-4cad-ba76-90748ff1c90c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{d50023a4-e591-48c2-a952-222f4b1164fb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\co-op\Ui\AddFilesDlg.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\co-op\FolderContents.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\GlobalId.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\co-op\Ui\HelpEngine.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\co-op\Ui\InputSource.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\OutputSink.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\ProgressMeter.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Prompter.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Serial\Serialize.cpp">
+      <Filter>Common with Co-op</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\BitStream.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\BlockCoder.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\Bucketizer.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\CodingTables.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\Compressor.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\Decompressor.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\ForgetfulHashTable.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\HuffmanTree.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\NamedBlock.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\RepetitionFinder.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\Repetitions.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Packer\Statistics.cpp">
+      <Filter>Packer</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\MenuTable.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\ViewMan.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdVector.cpp" />
+    <ClCompile Include="Commander.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="precompiled.cpp" />
+    <ClCompile Include="TestCtrl.cpp" />
+    <ClCompile Include="TestMain.cpp" />
+    <ClCompile Include="Visitor.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\co-op\Ui\AddFilesDlg.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\co-op\Common\FolderContents.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Global.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\GlobalId.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\co-op\Ui\HelpEngine.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\co-op\Ui\InputSource.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\OutputSink.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\co-op\Common\PathSequencer.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\ProgressMeter.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Prompter.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\co-op\Common\SelectionMan.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Serial\Serialize.h">
+      <Filter>Common with Co-op</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\BitCode.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\BitStream.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\BlockCoder.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\Bucketizer.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\CodingTables.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\Compressor.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\Decompressor.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\ForgetfulHashTable.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\HuffmanTree.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\NamedBlock.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\PackerGlobal.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\RepetitionFinder.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\Repetitions.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Packer\Statistics.h">
+      <Filter>Packer</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\MenuTable.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\ViewMan.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\resource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Commander.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="precompiled.h" />
+    <ClInclude Include="TestCtrl.h" />
+    <ClInclude Include="TestMain.h" />
+    <ClInclude Include="Visitor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\PackerTest.ico">
+      <Filter>Resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\PackerTest.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

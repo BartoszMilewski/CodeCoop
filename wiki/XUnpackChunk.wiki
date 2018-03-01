@@ -1,0 +1,9 @@
+==Maibox::XUnpackChunk
+* Sidetrack::XAddChunk
+* if first chunk,
+** if full sync ...
+** else
+*** if not package (for now, always) agent.SetKnownMissingScript
+** History::[[XProcessLineages]]
+** if status == Prehistoric, _sidetrack.XRemoveMissingScript
+* else if last chunk, agent.SetPendingWork (to process reconstructed script)

@@ -1,0 +1,19 @@
+= Ftp::RemoteFile
+==Data
+Ftp::AutoHandle: handle to file
+==Methods
+* Constructor. Agruments:
+** Ftp::Handle
+** path
+** Access
+** Internet::Callback (defaults to 0)
+* Constructor. Implementation:
+** Initialize AutoHandle by calling FtpOpenFile API, passing it the callback object
+* virtual Read and Write (implementation: return false)
+== Ftp::FileReadable, Ftp::FileWritable
+Inhertit from Ftp::RemoteFile
+* Constructors call parent constructors with appropriate Access arguments
+* Read (buf, size)--only in FileReadable
+** Call InternetReadFile API
+* Write (buf, size)--only in FileWritable
+** Call InternetWriteFile API

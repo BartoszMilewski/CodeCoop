@@ -1,0 +1,2 @@
+Bug number [?BugNumber]. (If the list is empty, there is no such bug.)
+?SELECT Summary FROM Bug WHERE FILENAME CONTAINS [?BugNumber]

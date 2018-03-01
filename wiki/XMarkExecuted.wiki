@@ -1,0 +1,9 @@
+= History::Db::XMarkExecuted
+Arguments: ScriptHeader
+* tree = XGetTree (unit type)
+* if scriptId == gidInvalid (from v. 4.2), find the script and mark it deleted in history
+* SortedTree::XUnitSequencer for modified user ID
+* seq.Seek (scriptId), assert it was found
+* GetNodeEdit and SetForceExec (false), SetForceAccept (false), SetExecuted (true)
+* if unitType == set
+...

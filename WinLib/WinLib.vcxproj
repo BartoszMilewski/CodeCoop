@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Beta Lite|Win32">
+      <Configuration>Beta Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Beta|Win32">
+      <Configuration>Beta</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Lite|Win32">
+      <Configuration>Debug Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Lite|Win32">
+      <Configuration>Release Lite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{94A1CE47-9646-4643-A8D3-BF52C9615611}</ProjectGuid>
+    <RootNamespace>WinLib</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"WinLib\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;STRICT;NOMINMAX;DIAGNOSTIC;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>WinLibBase.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>delayimp.lib;comctl32.lib;shlwapi.lib;Version.lib;htmlhelp.lib;wininet.lib;bits.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>WinLibD.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;STRICT;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>WinLibBase.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>delayimp.lib;comctl32.lib;shlwapi.lib;Version.lib;htmlhelp.lib;wininet.lib;bits.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>WinLibR.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"WinLib\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;STRICT;NOMINMAX;DIAGNOSTIC;BETA;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>WinLibBase.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>delayimp.lib;comctl32.lib;shlwapi.lib;Version.lib;htmlhelp.lib;wininet.lib;bits.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>WinLibB.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"WinLib\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;STRICT;NOMINMAX;DIAGNOSTIC;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>WinLibBase.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>delayimp.lib;comctl32.lib;shlwapi.lib;Version.lib;htmlhelp.lib;wininet.lib;bits.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>WinLibD.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D COMPONENT_NAME="\"WinLib\"" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;STRICT;NOMINMAX;DIAGNOSTIC;BETA;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>WinLibBase.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>delayimp.lib;comctl32.lib;shlwapi.lib;Version.lib;htmlhelp.lib;wininet.lib;bits.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>WinLibB.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;STRICT;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>WinLibBase.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4786;4290;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>delayimp.lib;comctl32.lib;shlwapi.lib;Version.lib;htmlhelp.lib;wininet.lib;bits.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>WinLibR.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Graph\BitInfo.cpp" />
+    <ClCompile Include="Graph\Bitmap.cpp" />
+    <ClCompile Include="Graph\Canvas.cpp" />
+    <ClCompile Include="Graph\Cursor.cpp" />
+    <ClCompile Include="Graph\Font.cpp" />
+    <ClCompile Include="Graph\Icon.cpp" />
+    <ClCompile Include="Graph\ImageList.cpp" />
+    <ClCompile Include="Ctrl\Accelerator.cpp" />
+    <ClCompile Include="Ctrl\ComboBox.cpp" />
+    <ClCompile Include="Ctrl\Command.cpp" />
+    <ClCompile Include="Ctrl\Controls.cpp" />
+    <ClCompile Include="Ctrl\DatePicker.cpp" />
+    <ClCompile Include="Ctrl\DropDown.cpp" />
+    <ClCompile Include="Ctrl\Edit.cpp" />
+    <ClCompile Include="Ctrl\FileGet.cpp" />
+    <ClCompile Include="Ctrl\Focus.cpp" />
+    <ClCompile Include="Ctrl\FocusBarWin.cpp" />
+    <ClCompile Include="Ctrl\FontSelector.cpp" />
+    <ClCompile Include="Ctrl\Header.cpp" />
+    <ClCompile Include="Ctrl\ListView.cpp" />
+    <ClCompile Include="Ctrl\MarginCtrl.cpp" />
+    <ClCompile Include="Ctrl\Menu.cpp" />
+    <ClCompile Include="Ctrl\MultiProgressDialog.cpp" />
+    <ClCompile Include="Ctrl\Output.cpp" />
+    <ClCompile Include="Ctrl\ProgressBar.cpp" />
+    <ClCompile Include="Ctrl\ProgressChannel.cpp" />
+    <ClCompile Include="Ctrl\ProgressControlHandler.cpp" />
+    <ClCompile Include="Ctrl\ProgressDialog.cpp" />
+    <ClCompile Include="Ctrl\ProgressDialogController.cpp" />
+    <ClCompile Include="Ctrl\PropertySheet.cpp" />
+    <ClCompile Include="Ctrl\Rebar.cpp" />
+    <ClCompile Include="Ctrl\RichEditCtrl.cpp" />
+    <ClCompile Include="Ctrl\Scroll.cpp" />
+    <ClCompile Include="Ctrl\Splitter.cpp" />
+    <ClCompile Include="Ctrl\StatusBar.cpp" />
+    <ClCompile Include="Ctrl\Tabs.cpp" />
+    <ClCompile Include="Ctrl\ToolBar.cpp" />
+    <ClCompile Include="Ctrl\Tree.cpp" />
+    <ClCompile Include="File\ActiveCopy.cpp" />
+    <ClCompile Include="File\Dir.cpp" />
+    <ClCompile Include="File\Drives.cpp" />
+    <ClCompile Include="File\ErrorLog.cpp" />
+    <ClCompile Include="File\File.cpp" />
+    <ClCompile Include="File\FileIo.cpp" />
+    <ClCompile Include="File\FileSizer.cpp" />
+    <ClCompile Include="File\FolderWatcher.cpp" />
+    <ClCompile Include="File\LongSequence.cpp" />
+    <ClCompile Include="File\MemFile.cpp" />
+    <ClCompile Include="File\Path.cpp" />
+    <ClCompile Include="File\SafePaths.cpp" />
+    <ClCompile Include="File\Vpath.cpp" />
+    <ClCompile Include="File\WildCard.cpp" />
+    <ClCompile Include="Sys\Active.cpp" />
+    <ClCompile Include="Sys\Clipboard.cpp" />
+    <ClCompile Include="Sys\Crypto.cpp" />
+    <ClCompile Include="Sys\Date.cpp" />
+    <ClCompile Include="Sys\Dll.cpp" />
+    <ClCompile Include="Sys\GlobalUniqueName.cpp" />
+    <ClCompile Include="Sys\PackedTime.cpp" />
+    <ClCompile Include="Sys\Process.cpp" />
+    <ClCompile Include="Sys\RegKey.cpp" />
+    <ClCompile Include="Sys\Security.cpp" />
+    <ClCompile Include="Sys\SharedMem.cpp" />
+    <ClCompile Include="Sys\Synchro.cpp" />
+    <ClCompile Include="Sys\WheelMouse.cpp" />
+    <ClCompile Include="Sys\WinString.cpp" />
+    <ClCompile Include="Win\Atom.cpp" />
+    <ClCompile Include="Win\Controller.cpp" />
+    <ClCompile Include="Win\Dde.cpp" />
+    <ClCompile Include="Win\Dialog.cpp" />
+    <ClCompile Include="Win\DialogTemplate.cpp" />
+    <ClCompile Include="Win\EnumProcess.cpp" />
+    <ClCompile Include="Win\Geom.cpp" />
+    <ClCompile Include="Win\Help.cpp" />
+    <ClCompile Include="Win\Instance.cpp" />
+    <ClCompile Include="Win\Keyboard.cpp" />
+    <ClCompile Include="Win\MsgLoop.cpp" />
+    <ClCompile Include="Win\OwnerDraw.cpp" />
+    <ClCompile Include="Win\Procedure.cpp" />
+    <ClCompile Include="Win\Region.cpp" />
+    <ClCompile Include="Win\Win.cpp" />
+    <ClCompile Include="Win\WinClass.cpp" />
+    <ClCompile Include="Win\WinMain.cpp" />
+    <ClCompile Include="Win\WinMaker.cpp" />
+    <ClCompile Include="Win\WinResource.cpp" />
+    <ClCompile Include="Com\Automation.cpp" />
+    <ClCompile Include="Com\DragDrop.cpp" />
+    <ClCompile Include="Com\Shell.cpp" />
+    <ClCompile Include="Com\ShellRequest.cpp" />
+    <ClCompile Include="Com\TaskBarIcon.cpp" />
+    <ClCompile Include="Net\BitsDownloader.cpp" />
+    <ClCompile Include="Net\BITService.cpp" />
+    <ClCompile Include="Net\Connection.cpp" />
+    <ClCompile Include="Net\Ftp.cpp" />
+    <ClCompile Include="Net\FtpDownloader.cpp" />
+    <ClCompile Include="Net\FtpUploader.cpp" />
+    <ClCompile Include="Net\Internet.cpp" />
+    <ClCompile Include="Net\NetShare.cpp" />
+    <ClCompile Include="Net\NetShareNT.cpp" />
+    <ClCompile Include="Net\SecureSocket.cpp" />
+    <ClCompile Include="Net\ShareEx.cpp" />
+    <ClCompile Include="Net\SimpleSocket.cpp" />
+    <ClCompile Include="Net\Socket.cpp" />
+    <ClCompile Include="Dbg\Assert.cpp" />
+    <ClCompile Include="Dbg\Log.cpp" />
+    <ClCompile Include="Dbg\Memory.cpp" />
+    <ClCompile Include="Dbg\Monitor.cpp" />
+    <ClCompile Include="Dbg\Out.cpp" />
+    <ClCompile Include="XML\Scanner.cpp" />
+    <ClCompile Include="XML\Sink.cpp" />
+    <ClCompile Include="XML\XmlParser.cpp" />
+    <ClCompile Include="Xml\XmlTree.cpp" />
+    <ClCompile Include="Parse\BufferedStream.cpp" />
+    <ClCompile Include="Mail\Base64.cpp" />
+    <ClCompile Include="Mail\EmailAddress.cpp" />
+    <ClCompile Include="Mail\HeaderSeq.cpp" />
+    <ClCompile Include="Mail\Mime.cpp" />
+    <ClCompile Include="Mail\MsgParser.cpp" />
+    <ClCompile Include="Mail\MsgTree.cpp" />
+    <ClCompile Include="Mail\Pop3.cpp" />
+    <ClCompile Include="Mail\Pop3Message.cpp" />
+    <ClCompile Include="Mail\Smtp.cpp" />
+    <ClCompile Include="Mail\SmtpMessage.cpp" />
+    <ClCompile Include="Mail\SmtpUtils.cpp" />
+    <ClCompile Include="Ex\Error.cpp" />
+    <ClCompile Include="Ex\WinEx.cpp" />
+    <ClCompile Include="CmdLineScanner.cpp" />
+    <ClCompile Include="CrcTable.cpp" />
+    <ClCompile Include="Handlers.cpp" />
+    <ClCompile Include="HashTable.cpp" />
+    <ClCompile Include="precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Beta Lite|Win32'">WinLibBase.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">WinLibBase.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug Lite|Win32'">WinLibBase.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WinLibBase.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release Lite|Win32'">WinLibBase.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">WinLibBase.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="StringOp.cpp" />
+    <ClCompile Include="TimeStamp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Graph\BitInfo.h" />
+    <ClInclude Include="Graph\Bitmap.h" />
+    <ClInclude Include="Graph\Brush.h" />
+    <ClInclude Include="Graph\Canvas.h" />
+    <ClInclude Include="Graph\CanvTools.h" />
+    <ClInclude Include="Graph\Color.h" />
+    <ClInclude Include="Graph\Cursor.h" />
+    <ClInclude Include="Graph\Font.h" />
+    <ClInclude Include="Graph\Holder.h" />
+    <ClInclude Include="Graph\Icon.h" />
+    <ClInclude Include="Graph\ImageList.h" />
+    <ClInclude Include="Graph\Pen.h" />
+    <ClInclude Include="Graph\StockObj.h" />
+    <ClInclude Include="Ctrl\Accelerator.h" />
+    <ClInclude Include="Ctrl\Button.h" />
+    <ClInclude Include="Ctrl\ComboBox.h" />
+    <ClInclude Include="Ctrl\Command.h" />
+    <ClInclude Include="Ctrl\Controls.h" />
+    <ClInclude Include="Ctrl\DatePicker.h" />
+    <ClInclude Include="Ctrl\DropDown.h" />
+    <ClInclude Include="Ctrl\Edit.h" />
+    <ClInclude Include="Ctrl\FileGet.h" />
+    <ClInclude Include="Ctrl\Focus.h" />
+    <ClInclude Include="Ctrl\FocusBarWin.h" />
+    <ClInclude Include="Ctrl\FontSelector.h" />
+    <ClInclude Include="Ctrl\Header.h" />
+    <ClInclude Include="Ctrl\InfoDisp.h" />
+    <ClInclude Include="Ctrl\ListBox.h" />
+    <ClInclude Include="Ctrl\ListView.h" />
+    <ClInclude Include="Ctrl\MarginCtrl.h" />
+    <ClInclude Include="Ctrl\Menu.h" />
+    <ClInclude Include="Ctrl\Messages.h" />
+    <ClInclude Include="Ctrl\MultiProgressDialog.h" />
+    <ClInclude Include="Ctrl\Output.h" />
+    <ClInclude Include="Ctrl\ProgressBar.h" />
+    <ClInclude Include="Ctrl\ProgressChannel.h" />
+    <ClInclude Include="Ctrl\ProgressControlHandler.h" />
+    <ClInclude Include="Ctrl\ProgressDialog.h" />
+    <ClInclude Include="Ctrl\ProgressDialogController.h" />
+    <ClInclude Include="Ctrl\ProgressDialogData.h" />
+    <ClInclude Include="Ctrl\ProgressMeter.h" />
+    <ClInclude Include="Ctrl\PropertySheet.h" />
+    <ClInclude Include="Ctrl\Rebar.h" />
+    <ClInclude Include="Ctrl\RichEditCtrl.h" />
+    <ClInclude Include="Ctrl\Scroll.h" />
+    <ClInclude Include="Ctrl\Spin.h" />
+    <ClInclude Include="Ctrl\Splitter.h" />
+    <ClInclude Include="Ctrl\Static.h" />
+    <ClInclude Include="Ctrl\StatusBar.h" />
+    <ClInclude Include="Ctrl\Tabs.h" />
+    <ClInclude Include="Ctrl\ToolBar.h" />
+    <ClInclude Include="Ctrl\Tooltip.h" />
+    <ClInclude Include="Ctrl\Tree.h" />
+    <ClInclude Include="File\ActiveCopy.h" />
+    <ClInclude Include="File\ActiveCopyFile.h" />
+    <ClInclude Include="File\Dir.h" />
+    <ClInclude Include="File\Drives.h" />
+    <ClInclude Include="File\ErrorLog.h" />
+    <ClInclude Include="File\File.h" />
+    <ClInclude Include="File\FileIo.h" />
+    <ClInclude Include="File\FolderWatcher.h" />
+    <ClInclude Include="File\LongSequence.h" />
+    <ClInclude Include="File\MemFile.h" />
+    <ClInclude Include="File\Path.h" />
+    <ClInclude Include="File\Pipe.h" />
+    <ClInclude Include="File\SafePaths.h" />
+    <ClInclude Include="File\SerialUnVector.h" />
+    <ClInclude Include="File\Vpath.h" />
+    <ClInclude Include="File\WildCard.h" />
+    <ClInclude Include="Sys\Active.h" />
+    <ClInclude Include="Sys\BoundedQueue.h" />
+    <ClInclude Include="Sys\Channel.h" />
+    <ClInclude Include="Sys\Clipboard.h" />
+    <ClInclude Include="Sys\Crypto.h" />
+    <ClInclude Include="Sys\Date.h" />
+    <ClInclude Include="Sys\Dll.h" />
+    <ClInclude Include="Sys\GlobalUniqueName.h" />
+    <ClInclude Include="Sys\PackedTime.h" />
+    <ClInclude Include="Sys\Process.h" />
+    <ClInclude Include="Sys\RegKey.h" />
+    <ClInclude Include="Sys\Security.h" />
+    <ClInclude Include="Sys\SharedMem.h" />
+    <ClInclude Include="Sys\Synchro.h" />
+    <ClInclude Include="Sys\SysTime.h" />
+    <ClInclude Include="Sys\SysVer.h" />
+    <ClInclude Include="Sys\Thread.h" />
+    <ClInclude Include="Sys\Timer.h" />
+    <ClInclude Include="Sys\WheelMouse.h" />
+    <ClInclude Include="Sys\WinGlobalMem.h" />
+    <ClInclude Include="Sys\WinString.h" />
+    <ClInclude Include="Win\AppCmdHandler.h" />
+    <ClInclude Include="Win\Atom.h" />
+    <ClInclude Include="Win\Caret.h" />
+    <ClInclude Include="Win\ControlHandler.h" />
+    <ClInclude Include="Win\Controller.h" />
+    <ClInclude Include="Win\Dde.h" />
+    <ClInclude Include="Win\Dialog.h" />
+    <ClInclude Include="Win\DialogTemplate.h" />
+    <ClInclude Include="Win\EnumProcess.h" />
+    <ClInclude Include="Win\GdiHandles.h" />
+    <ClInclude Include="Win\Geom.h" />
+    <ClInclude Include="Win\Handles.h" />
+    <ClInclude Include="Win\Help.h" />
+    <ClInclude Include="Win\Instance.h" />
+    <ClInclude Include="Win\Keyboard.h" />
+    <ClInclude Include="Win\Message.h" />
+    <ClInclude Include="Win\Metrics.h" />
+    <ClInclude Include="Win\Mouse.h" />
+    <ClInclude Include="Win\MsgLoop.h" />
+    <ClInclude Include="Win\Notification.h" />
+    <ClInclude Include="Win\OwnerDraw.h" />
+    <ClInclude Include="Win\Procedure.h" />
+    <ClInclude Include="Win\Region.h" />
+    <ClInclude Include="Win\SysHandle.h" />
+    <ClInclude Include="Win\TickCounter.h" />
+    <ClInclude Include="Win\Utility.h" />
+    <ClInclude Include="Win\Win.h" />
+    <ClInclude Include="Win\WinClass.h" />
+    <ClInclude Include="Win\WinMain.h" />
+    <ClInclude Include="Win\WinMaker.h" />
+    <ClInclude Include="Win\WinResource.h" />
+    <ClInclude Include="Com\Automation.h" />
+    <ClInclude Include="Com\Com.h" />
+    <ClInclude Include="Com\DragDrop.h" />
+    <ClInclude Include="Com\Shell.h" />
+    <ClInclude Include="Com\ShellRequest.h" />
+    <ClInclude Include="Com\TaskBarIcon.h" />
+    <ClInclude Include="Net\BitsDownloader.h" />
+    <ClInclude Include="Net\BITService.h" />
+    <ClInclude Include="Net\Connection.h" />
+    <ClInclude Include="Net\Download.h" />
+    <ClInclude Include="Net\Ftp.h" />
+    <ClInclude Include="Net\FtpDownloader.h" />
+    <ClInclude Include="Net\FtpUploader.h" />
+    <ClInclude Include="Net\Internet.h" />
+    <ClInclude Include="Net\NetShare.h" />
+    <ClInclude Include="Net\NetShareImpl.h" />
+    <ClInclude Include="Net\NetShareNT.h" />
+    <ClInclude Include="Net\SecureSocket.h" />
+    <ClInclude Include="Net\SharedObject.h" />
+    <ClInclude Include="Net\ShareEx.h" />
+    <ClInclude Include="Net\ShareInfoNT.h" />
+    <ClInclude Include="Net\SimpleSocket.h" />
+    <ClInclude Include="Net\Socket.h" />
+    <ClInclude Include="Dbg\All.h" />
+    <ClInclude Include="Dbg\Assert.h" />
+    <ClInclude Include="Dbg\Log.h" />
+    <ClInclude Include="Dbg\Memory.h" />
+    <ClInclude Include="Dbg\Monitor.h" />
+    <ClInclude Include="Dbg\Out.h" />
+    <ClInclude Include="XML\Scanner.h" />
+    <ClInclude Include="XML\Sink.h" />
+    <ClInclude Include="XML\XmlParser.h" />
+    <ClInclude Include="Xml\XmlTree.h" />
+    <ClInclude Include="Parse\BufferedStream.h" />
+    <ClInclude Include="Parse\NamedPair.h" />
+    <ClInclude Include="Mail\Base64.h" />
+    <ClInclude Include="Mail\EmailAddress.h" />
+    <ClInclude Include="Mail\HeaderSeq.h" />
+    <ClInclude Include="Mail\Mime.h" />
+    <ClInclude Include="Mail\MsgParser.h" />
+    <ClInclude Include="Mail\MsgTree.h" />
+    <ClInclude Include="Mail\Pop3.h" />
+    <ClInclude Include="Mail\Pop3CharBlockSeq.h" />
+    <ClInclude Include="Mail\Pop3Message.h" />
+    <ClInclude Include="Mail\Sink.h" />
+    <ClInclude Include="Mail\Smtp.h" />
+    <ClInclude Include="Mail\SmtpMessage.h" />
+    <ClInclude Include="Mail\SmtpUtils.h" />
+    <ClInclude Include="Ex\Error.h" />
+    <ClInclude Include="Ex\WinEx.h" />
+    <ClInclude Include="array_vector.h" />
+    <ClInclude Include="auto_array.h" />
+    <ClInclude Include="auto_vector.h" />
+    <ClInclude Include="Bit.h" />
+    <ClInclude Include="CmdLineScanner.h" />
+    <ClInclude Include="Crc.h" />
+    <ClInclude Include="GenericIo.h" />
+    <ClInclude Include="Handlers.h" />
+    <ClInclude Include="HashTable.h" />
+    <ClInclude Include="HtmlTag.h" />
+    <ClInclude Include="LargeInt.h" />
+    <ClInclude Include="LightString.h" />
+    <ClInclude Include="Lock.h" />
+    <ClInclude Include="MultiMap.h" />
+    <ClInclude Include="NamedBool.h" />
+    <ClInclude Include="PtrUtil.h" />
+    <ClInclude Include="StringOp.h" />
+    <ClInclude Include="TimeStamp.h" />
+    <ClInclude Include="TriState.h" />
+    <ClInclude Include="unmovable_vector.h" />
+    <ClInclude Include="WinLibBase.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,6 @@
+= Model::ExecuteForcedScripts
+* while [[RetrieveForcedScript]]
+** if set change (from full sync): [[ExecuteChange]], [[AcceptSynch]]
+** if membership: 
+*** [[ExecuteMembershipChange]]
+*** if defect or remove: ...

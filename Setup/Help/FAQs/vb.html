@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+	<title>FAQ: Integrating with Visual Basic</title>
+	
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>How do I integrate Visual Basic 6.0 with Code Co-op?</h1>
+
+<br /> 
+<p class="first">First of 
+all, check to see if Code Co-op is recognized by VB. Go to Tools &gt; Code  Co-op &gt;  Check-out.
+</p><br />
+  
+<h3>If Code Co-op is not listed:</h3>
+<ul>
+<li>Close Visual Basic and edit your vbaddin.ini which is located in the Windows directory. Add the following entry under [Add-Ins32]: <em>vbscc=3</em>. Save the file. If you do not have this file, create and save it in your Windows directory.</li>
+</ul>	  
+	  
+<h3>If you see the Code Co-op menu item, yet cannot view the files do the following:</h3>
+<ul>
+<li>Locate your VB project. Let's say it is located 
+        in the folder 'c:\VBProject'. </li>
+        
+
+<li>Run Code Co-op and select Project&gt;New. </li>
+        
+<li>Give it any name you want and, in the '<em>Where to find or create the project tree</em>' edit 
+        box, place 'c:\VBProject'. Code Co-op will ask you which files you want 
+        to add to the project -- you may add *.vbp files as 'Other text', *.frm 
+        as 'Binary' and source code files as 'Source'. </li>
+        
+<li>Run VB and open the project located in the 'c:\VBProject' folder. VB will ask you if you want to add this project to Code Co-op -- answer yes. You will be presented with a list of files that VB wants to add to Code Co-op -- accept it. Now VB project is connected to Code Co-op project and inTools&gt;Code Co-op menu you will see Check out and Check in items.</li>
+</ul>
+
+
+
+</body>
+</html>

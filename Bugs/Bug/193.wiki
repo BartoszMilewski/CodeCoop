@@ -1,0 +1,14 @@
+| Summary |Request verification dialog|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |Tuesday, August 21, 2007|
+==Description 
+In the dialog "Request Verification", when the current user is the admin, the whole list of potential recipients is selected by default. 
+

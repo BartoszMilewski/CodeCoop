@@ -1,0 +1,19 @@
+| Summary |My co-op distributor project is set to auto-synch, yet it didn't auto-synch a script|
+| ReportedBy |Deb|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Unknown|
+| Severity |Minor|
+| Status |Open|
+| Resolution | Pending |
+| Priority | 3 |
+| DateReported |18 paüdziernika 2006|
+==Description 
+
+Bug #1225 from the WEB database.
+
+This is the first time i've noticed this. I just got a script in from Piotr that did not get automatically synched even though i have set my project option to Auto-synch. I had to go in and manually unpack the message from the mailbox tab and then process the synch script. i'll send diagnostics on this project.
+
+|Date|Who|Comment|
+|5/23/2006|Wiesiek|Keep it open for almost a year. I'm running couple of project in auto-sync mode and still cannot reproduce the problem.|

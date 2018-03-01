@@ -1,0 +1,24 @@
+| Summary |GUI Code Co-op sometimes freezes when executing un-checkout from Visusla Studio|
+| ReportedBy |Wieslaw|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Sometimes|
+| Severity |Annoying|
+| Status |Open|
+| Priority |2|
+| Resolution | Pending |
+| DateReported |15 sierpnia 2007|
+==Description (reported by bithika [bithika.mookherjee@gmail.com]) 
+I'm using the evaluation version of Code Co-op Lite 5.0f with Visual Studio 2005 version 8.0.5.
+
+I have bound a Visual Solution, containing a Visual C++ project to a Code Co-op project,
+according to the instructions given in help and also elsewhere on the relisoft forum. 
+
+When I edit a file it checks out successfully, but doing 'Undo' checkout from Visual Studio causes Code Co-op to freeze.
+I get a message box in Visual Studio saying that the 'Undo' operation failed. 
+
+I don't think the undo operation did fail however, as when I reopen  Code Co-op there is nothing in the check-in area.
+
+==Notes
+''''Wiesiek:'''' I was able reproduce this problem once. I was running debug version of 5.0f. However, after turning on debug logging and using Debug Monitor the problem didn't reproduce.

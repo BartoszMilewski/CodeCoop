@@ -1,0 +1,14 @@
+| Summary |Editing of new file doesn't work|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Differ|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Resolution | Fixed |
+| Priority | 2 |
+| DateReported |Sunday, October 01, 2006|
+==Description 
+Open differ without argument. You can't edit anything. File>New doesn't help. Save as, doesn't help.
+

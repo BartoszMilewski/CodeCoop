@@ -1,0 +1,24 @@
+| Summary |Invitation from satellite to hub fails|
+| ReportedBy |Deb|
+| AssignedTo |Debbie|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Resolution | Fixed |
+| Description | I tried sending an invitation from my satellite to my hub. 
+
+Here is the filled out dialog. 
+[[Image:Invitation dialog]] 
+
+The dispatcher pops up a balloon stating "Rejected invitation". When i double-click on the balloon i get the following dialog:
+
+[[Image:Rejected Invitation]]
+
+I did try entering my hub's computer name as the "New Member Name" even though this isn't asked for. I still get the same rejection. 
+
+|
+| Comments | |
+
+

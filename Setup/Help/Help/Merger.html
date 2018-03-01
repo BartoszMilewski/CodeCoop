@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Merge Display</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Merge Display</h1>
+<p>
+This is the merger displaying three different versions of the same file in the upper panes, and the resulting merged file in the lower pane.
+</p>
+<p class="image">
+<img src="../Images/Merger.gif" width="836" height="293" vspace="8"/>
+</p>
+<ul>
+	<li>The left pane shows the source version--here it's a file from the branched (rejected) script</li>
+	<li>The middle pane shows the common ancestor version--it's the version from <i>before</i> the branching occurred.
+	<li>The left pane shows the target version--the current (trunk) version of the file in the project</li>
+	<li>The bottom pane shows the result of the merge. This pane is under user control and can be edited</li>
+</ul>
+<p>
+In this particular case, the changes are conflicting in line 4. The common ancestor shows the copyright date as 2002. The branched script updates it to 2006, and the current project version (after accepting the winning script and maybe some more scripts) shows the date as 2007.
+</p>
+
+<p>
+When there is a conflict like this, the merger has no idea which change is <i>the right one</i>. This is reflected in the result showing the unmodified line taken from the ancestor version. The user has the option of modifying this choice: note the three arrows in the left margin. If you click on the left (blue) arrow, the line from the left pane will be copied to the result. If you click the right (purple) arrow, the right-pane line will be copied. You can also edit the line directly.
+</p>
+
+<p>
+Another thing visible in the left margin is the simplified view of the file showing the relative positions of changed lines. The conflicts are marked in red.
+</p>
+
+<p>
+Conflicting lines have to be reviewed by the user, since there is no way the merger can merge them correctly. Other changes are usually merged intelligently, but it still makes sense to review them. The <i>automatic merge</i> option does the intelligent merging without opening up the visual merger, but it will fail if there are real conflicts, like the one in the current example.
+</p>
+</body>
+</html>

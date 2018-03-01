@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+	<title>FAQ: How to recover from an Intermittent File Operation Problem?</title>
+	
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>How to recover from an Intermittent File Operation Problem?</h1>
+<br /> 
+<p class="first">You get this error when Co-op cannot finish a file transaction. 
+It means it cannot overwrite a project file with its new version. 
+Old versions of files are replaced with new versions as a result of various actions. 
+These are: script synchronization, project repair, version restoration, etc.
+</p>
+<br /> 
+<p class="first">Co-op exits immediately giving you an option to correct the problem.
+</p>
+<p class="first">	Together with the error you will always get a reason for which the overwriting failed.	Usually it just says that access was denied. 	This means that some external application is locking access to the file at the moment. Try closing the application and restart Co-op to fully recover. </p>
+<br />
+
+ 
+<p class="first">In some cases the external application that is locking the file may be Windows itself.
+</p>
+<p class="first">This may happen, for instance, when you accidently add <b>Thumbs.db</b> Read on to find out why. By the way, Code Co-op has a special built-in mechanism to protect you from shooting yourseft in your foot. It will not propose to add any hidden files to your project in any of the Add Files dialogs. However you still have an option to add any file, hidden or not, to your project directly from the Files Area.</p>
+ <br />
+
+<p class="first">Thumbs.db is a database file containing the small thumbnail images displayed when you view a folder in &quot;Thumbnail&quot; view. Thumbs.db is generated and managed by Windows. The file has a &quot;hidden&quot; file attribute set. It can be overwritten by the system any time it needs to update the preview. After  each such change Co-op will get confused and report Checksum Mismatch error. When you run Project.Repair it fails with the Intermittent File Operation Problem: Access Denied.</p>
+<br /> 
+<p class="first">To resolve the &quot;Intermittent File Operation Problem&quot; on Thumbs.db, and in similar cases, perform the following steps:</p>
+<ul>
+	<li>Close Code Co-op</li>
+	<li>Open Windows Explorer and navigate to the project folder containing the problematic file.</li>
+	<li>Delete the file.
+		<br />If you cannot see this file listed, you may first need to go to the Explorer's 
+		Folder Options and check the <em>Show hidden files</em> box.
+	</li>
+	<li>Run Co-op and visit the problematic project to give it a chance to finish the transaction.</li>
+	<li>Remove Thumbs.db from Co-op control (right click on the file in the Co-op's File View 
+	and select Make uncontrolled).</li>
+</ul>
+</body>
+</html>

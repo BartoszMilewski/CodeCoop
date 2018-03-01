@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Local Merge</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Local Merge</h1>
+<p>
+When two project members perform a check-in at the same time and their sripts miss each other, one of the check-ins becomes a side <i>branch</i> (Code Co-op arbitrarily favors the check-in done by a member with numerically lower ID&mdash;this one extends the <i>trunk</i>). You can see side branches in the history of the project&mdash;they are displayed in greyed-out italics with the State set to &quot;<em>Branch</em>&quot;.
+</p>
+<p>A side branch has to be merged back into the trunk&mdash;most often by the creator of the branched scripts, but not necessarily.</p>
+
+<h2>Merging a Branch from  within the History Tab </h2>
+<ul>
+	<li>Select a branch script in the History (here, the script "View Corrections"). If you have multiple scripts in the branch, start with the earliest one and repeat the procedure for each in turn. </li>
+	<li>The details pane at the bottom will list the files affected by the selected script and their <em>Merge Status</em>. Sometimes the files in the branch and in the trunk are <em>Identical</em>&mdash;usually when somebody has already performed the merge, and there haven't been any further modifications done in the trunk. In that case do nothing.</li>
+<p class="image">
+<img src="../Images/LocalMerge.gif" vspace="8" width="672" height="395"/>
+	</p>
+	<li>Double-click a file to review the differences (here, the file "View.cpp". </li>
+	<li>Select a file and click the <i><a href="MergeVersion.html">Merge branch file(s)</a> </i> button <img src="../Images/mergebranch.gif" alt="Merge branch button" width="15" height="16" hspace="2" /> (or the <a href="MergeVersion.html"><em>Automatically merge branch file(s) </em></a> button<img src="../Images/automergebranch.gif" alt="Merge branch button" width="20" height="17" hspace="2" />)</li>
+<li>Depending on the type of merge you may see:
+	<ul>
+		<li>Attribute merge dialog asking you about the choice of path, file name, or file type. This is done only when the two merged versions differ in one of these attributes.</li>
+		<li>An external merger displaying changes done in the branch, vs. the changes done in the trunk (if any), and the proposed <a href="Merger.html">merge result</a>. Accept and save the merge result.</li>
+		<li>A confirmation dialog asking whether to add or delete the file in question (if that was the action in the rejected script).<br />
+</li>
+		</ul>
+	</li>
+</ul>
+
+<h2>Branch Merge View</h2>
+<p>
+Alternately, you can select the script you wish to Merge and then click  the Open Branch Merge View  <img src="../Images/automergebranch.gif" alt="Merge branch button" width="20" height="17" hspace="2" /> button in the top toolbar. This will open the <a href="BranchMergeTab.html">Branch Merge Tab</a> and provide you with more detailed information prior to performing the merge. For example, in the details pane where the affected files are listed, you will see if a file has been moved or renamed.
+</p>
+<h3>Additional Options</h3>
+<p>While reviewing the files to be merged in the details pane, you can also do the following: </p>
+<ul>
+	<li><span class="first"><img src="../Images/checkinOpen.gif" alt="View Source changes button" width="22" height="19" hspace="2" />Click this button to view the source branch changes.</span></li>
+	<li><span class="first"><img src="../Images/historyFilter.gif" alt="History Filter Button" width="16" height="12" /> To filter the history to a particular file or files, use this <i>Filter History by selected files</i> button. The upper pane display will change--it will only show the scripts that modify this particular file or files.</span></li>
+	<li><span class="first">Click the <i>Save version of file(s)</i> button to save the version of the files as created by the branch.</span></li>
+</ul>
+</body>
+</html>

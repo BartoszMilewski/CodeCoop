@@ -1,0 +1,32 @@
+| Summary |Invisible check-in|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Unknown|
+| Severity |Serious|
+| Status |Closed|
+| Priority | 4 |
+| Resolution | Cannot reproduce |
+==Description 
+# Project Rebecca is in auto-sync. The file co-op.rc is checked out
+# Two scripts arrived, '''37-3a2''' and '''37-3a3''' 
+# The first script, 37-3a2, modifies '''co-op.rc''', so a local merge prevented the execution of the second script
+# In the Local Merge area, I accepted the sync
+# I proceeded to checking-in the local copy of co-op.rc and two other files
+# The check in seemed to succeed, but when I looked into the check-in area, the files were still there, in the check-out state
+# I started writing a bug report, but then looked into history, and my check-in wasn't there either. I decided I must have hallucinated
+# I checked the files again, producing script '''40-142'''
+# Next day, I restarted Code Co-op and looked at the history. It turned out that my first check-in was real after all, and the script it produced, '''40-13f''', was in the history as ''rejected'', before the script '''37-3a3''' (the second script from item 2)
+
+It looks like:
+# A check-in was allowed even though there was an un-executed script, '''without any warning'''!
+# The waiting script was then quietly executed, rejecting the previous check-in
+# The UI was totally confused
+
+Here's my history:
+[[Image:12]]  |
+==Comments
+|Date|Author|Comment|
+|4.06.2006|Wiesiek|After accepting sync in the local merge area the second incoming script is automaticaly unpacked. Subsequent check-in appears in the history and check-in area becomes empty.|
+|6/12/06| Bartosz | The current theory is that the notification about new scripts was lost and co-op didn't know about '''37-3a2''' and '''37-3a3'''. We still don't know how a notification could be lost|

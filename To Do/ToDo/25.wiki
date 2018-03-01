@@ -1,0 +1,9 @@
+| Summary |Ctrl-Bksp|
+| CreatedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Differ|
+| Priority |3|
+| Status |Open|
+| DateReported |Friday, December 15, 2006|
+==Description
+In most editors Ctrl+Backspace deletes a word backwards.

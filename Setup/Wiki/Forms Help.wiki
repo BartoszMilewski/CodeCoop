@@ -1,0 +1,63 @@
+=Wiki Forms
+==Creating a Form
+To create a form, embed appropriate HTML markup in a wiki file. If you want the action of the form to be implemented in a wiki file, specify an explicit wiki link to that file in the form's ''action''. Note that the only supported method is ''get''. For instance, this page contains the form:
+ <form method="get" action="<nowiki>[[[ToDoList]]]</nowiki>">
+   Priority:
+   <select name="'''PriorityField'''" size="1">
+     <option value="High">High</option>
+     <option value="Low">Low</option>
+   </select>
+   <input type="Submit" value="Accept">
+   <input type="Reset">
+ </form>
+Note the form of an explicit link: It's just like a wiki link, but with triple brackets. (If you tried to use a regular--double bracket--wiki link, it would be converted into HTML markup containing ''&lta href="...">...&lt/a>'', which is not what we want here.)
+
+Below you can see how the form is displayed. You can select the priority value from the dropdown and press ''Accept''. The first time you do it, a new page ''ToDoList.wiki'' is created and you can edit it. After that, the ''ToDoList.wiki'' file will be able to perform requested actions.
+<form method="get" action="[[[system:ToDoList]]]">
+Priority:
+<select name="PriorityField" size="1">
+<option value="High">High</option>
+<option value="Low">Low</option>
+</select>
+<input type="Submit" value="Accept">
+<input type="Reset">
+</form>
+==Creating a Wiki Action File
+The target of the form's ''action'' is a '''wiki action file'''. The action file can display the named values passed to it from the form or embed them in [[system:SQWiki Help|SQWiki]] commands.
+
+Here, the action file ''ToDoList.wiki'' contains the following text:
+ ===Items whose Priority is <nowiki>[</nowiki>?'''PriorityField''']
+ ?SELECT Summary FROM ToDo WHERE Priority = <nowiki>[</nowiki>?'''PriorityField''']
+Any value passed to the action file from the form can be accessed by enclosing the name of the field, in this case '''PriorityField''' (see  the select tag above), in square brackets with a question mark. Field values may be used anywhere in the contents of wiki files; but are especially useful inside SQWiki commands, where they can be substituted both for property names and property values.
+
+A useful trick is to pass the field value of the form '''NOT someValue''' in order to simulate the inequality test in the WHERE clause. For instance, in the example above, we might add one more option:
+    <option value="NOT important">Any</option>
+<form method="get" action="[[[system:ToDoList]]]">
+Priority:
+<select name="PriorityField" size="1">
+<option value="NOT important">Any</option>
+<option value="High">High</option>
+<option value="Low">Low</option>
+</select>
+<input type="Submit" value="Accept">
+<input type="Reset">
+</form>
+==Record-Creation Forms
+Forms are useful when creating new records, like the one below:
+<form method="get" action="[[[system:AddRecord]]]">
+| Priority | 
+<select name="Priority" size="1">
+<option value="High">High</option>
+<option value="Low">Low</option>
+</select> |
+| Summary | 
+<input type="text" size="30" name="Summary"></textarea> |
+| 
+<input type="Submit" name="Accept" value="Accept"> | 
+<input type="Reset" name="Reset"> |
+</form>
+The action file, ''AddRecord.wiki'' contains just one line:
+ ? INSERT INTO ToDo (Priority = <nowiki>[?Priority], Summary = [?Summary]</nowiki>)
+The '''INSERT''' command creates a new record--a wiki file. The name fo the file is formed from a numeral--one more than the highest numeral id currently present in the table. The file is initialized using template.wiki, if it exists. Fields specified in the INSERT command are then initialized appropriately. The new record is immediately open for editing.
+
+As always, any changes have to be afterwards checked in using the Code Co-op's Check-in Area.

@@ -1,0 +1,11 @@
+=CommandIpc::ServerConversation
+* Inherits from [[ActiveObject]]
+* Members
+** CriticalSection
+** ConversationData *
+** reference to [[IpcContext|CmdIpc::Context]]
+** [[ConvStarter]] * (interface to [[IpcQueue]]
+** Event
+* Private Methods
+** [[ServerConversationRun|Run]]
+** ExecuteCmd--called under model lock, uses Commander to execute command, makes ack for client

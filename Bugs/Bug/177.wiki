@@ -1,0 +1,15 @@
+| Summary |Dispatcher email wizard displays incorrect user/passwd|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Open|
+| Priority |3|
+| Resolution | Pending |
+| DateReported |Wednesday, June 13, 2007|
+==Description 
+I used the wizard to change my email account. I entered new data, but the display under "Use same settings as my POP3 server showed the previous user/passwd. and it wouldn't change even after I clicked the box back and forth. The data should at least be refreshed after clicking any of the checkboxes.
+
+

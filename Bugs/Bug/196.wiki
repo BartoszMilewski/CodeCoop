@@ -1,0 +1,19 @@
+| Summary |Automatic update dialog wrong logic|
+| ReportedBy |Wieslaw|
+| AssignedTo |Wieslaw|
+| Component |Dispatcher|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Open|
+| Priority |1|
+| Resolution | Pending |
+| DateReported |18 wrzeœnia 2007|
+==Description
+Dispatcher display balloon help - newer Code Co-op version awailable for download.
+User clicks on the balloon help and Diapatcher dialog appears. The checkbox - "Automatically download newer version" has to be unchecked.
+User clicks on the install button and the download progress meeter shows up. Once the download completes the progress meter disappears
+and user is presented with the same dialog and nothing happens. But the user clicked on the Install button! It looks like install means donwload and do nothing.
+Clicking second time on the Install button initiates installation process.
+
+

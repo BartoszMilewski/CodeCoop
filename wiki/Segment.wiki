@@ -1,0 +1,7 @@
+=Segment
+==Members
+* branchPoint ID
+* isBranchPointConfirmed (bool)
+* segmentIds, list of '''unconfirmed''' script IDs in a branch, excluding initial branch point, but including final branch point, if any.
+==Constructor
+Arguments: branchPoint ID, isConfirmed (is branch point confirmed)

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Create Backup</title>
+<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Create Backup</h1>
+	<em><span style="color: dodgerblue">(This feature is not available in Code Co-op Lite)<br />
+	</span></em>
+	<br />
+<p>In version Pro of Code Co-op you can back up and <a href="RestoreFromBackup.html">restore</a> the whole Code Co-op database. The backup archive may be stored on disk, on LAN, or on an FTP site. If the backup is not stored locally, and the copying to the remote location fails, the backup archive file is moved to the desktop. A backup may be started from command line using the <a href="CommandLine.html">StartCodeCoopBackup</a> applet.</p>
+
+<p>When backup is started, the whole Code Co-op database is comressed and archived in a .cab file. During this process, Code Co-op blocks any other activity (the Dispatcher is turned off, you can't start Code Co-op, and the SCC stops responding). Once the cab file is created, Code Co-op resumes normal activity and re-starts the Dispatcher. If the archive is to be stored on an FTP site, a separate FtpApplet is started, which is responsible for the transfer. If the transfer fails, the archive is moved to the desktop. 
+</p>
+
+<p class="note">Backup and Restore may be used to <a href="MoveProjects.html">move the Code Co-op database to a different machine</a>. It is very important not to perform any Code Co-op activity on the source machine, after the transfer has been initiated. In particular, <b>do not defect</b> from any projects on the source machine! The best thing to do after the transfer succeeds is to uninstall Code Co-op on the source machine, selecting the option <b><i>not to defect from projects</i></b>.</p>
+
+
+<p>See also: <a href="RestoreFromBackup.html">Restore from Backup</a>.</p>
+
+<h2>The Dialog</h2>
+<p>After selecting "Create Backup" from the "Tools" menu, the following dialog appears. You have a choice of storing the cab archive on your local computer, LAN, or an FTP site. 
+</p>
+<p class="image">
+<img src="../images/CreateBackup.gif"/>
+</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+= History::XTraverseTree
+Arguments: [[XFwdUnitSequencer]], [[Gatherer]]
+* if seq.AtEnd: return
+* currentNode = seq.GetNode ()
+* while gatherer.ProcessNode
+** curId = currentNode->GetScriptId
+** if currentNode IsBranchPoint
+*** gatherer.Push (curId) (descend into subtree)
+** seq.Advance
+** if seq.AtEnd
+*** gatherer.BackTo (gidInvalid) (pop the whole stack), break
+** curNode = seq.GetNode
+** if predecessorId != curId (this node belongs to a new branch)
+*** gatherer.BackTo (predecessorId), break
+| Note: We are assuming that confirmed scripts form continuous paths from the root--there cannot be a non-confirmed script between confirmed ones in any branch. The tricky case is with missing scripts. Can a missing script be followed by a confirmed script? This cannot happen because, when a script is confirmed, all its predecessors are autmatically confirmed. This includes missing predecessors (they will still generate resend requests). Additionally, when a defect or remove script is added to the tree, all missing scripts are confirmed ''and'' marked ''don't request resend''.

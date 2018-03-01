@@ -1,0 +1,21 @@
+| Summary |Dispatcher first run posts alert|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Fixed|
+| Priority |1|
+| Resolution | Pending |
+| DateReported |Friday, August 03, 2007|
+==Description 
+The first run of Dispatcher posts the alert "By default Code Co-op uses e-mail for synchronization." The balloon shows together with the little dialog asking for email address.
+* The dialog needs better explanation
+* The alert remains in the alert area and, when the user double-clicks on the dispatcher, the main window opens rather than "Collaboration Settings".
+==Proposed Solution
+Instead of showing this alert, the Dispatcher on first run should not try to configure email, but rather start the config wizard.
+==Notes
+Implemented as proposed.
+
+

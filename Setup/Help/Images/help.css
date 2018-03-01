@@ -1,0 +1,96 @@
+body {
+	font-size: small; /* IE5 Win */
+  	voice-family: "\"}\""; 
+  	voice-family: inherit;
+  	font-size: small;
+	font-family: Arial, Helvetica, sans-serif;
+}
+html>body { /* be nice to Opera */
+	font-size: small;
+}
+p {
+	margin: 0.7em 0 0 1em;
+	font-size: 95%;
+}
+p.image {
+	text-align: center;
+}
+p.small {
+	margin: 0.7em 3em 0 3em;
+	font-size: 85%;
+}
+h1, h2, h3, h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	color:#000;
+}
+h2, h3, h4 {
+	margin: 0.7em 0 0 0;
+}
+h1 {
+	font-size: 160%;
+}
+h2 {
+	font-size: 130%;
+}
+h3 {
+	margin-left: 1em;
+	font-size: 110%;
+}
+ul {
+	padding: 0.5em 0 0 3em;
+	list-style-type: circle;
+}
+p.next {
+	margin: 1em 0 0 0;
+	padding: 0 0 0 0.5em;
+	background-color:#eee;
+}
+ul.next {
+	margin: 0 0 0 0;
+	padding: 0 0 0 2em;
+	list-style-type: circle;
+	background-color:#eee;
+}
+pre {
+	margin-left: 10px;
+	font-size: 90%;
+	font-weight: bold;
+	color: #00a;
+}
+a {
+	text-decoration: none;
+}
+a:link, a:active {
+	color: #0000c0;
+}
+a:visited {
+	color: #0000c0;
+}
+a:hover {
+	color: #0000ff;
+	text-decoration: underline;
+}
+.highlight {
+	font-size: 120%;
+	font-weight: bold;
+}
+.flag {
+	color:#F00;
+}
+.right {
+	float:left;
+	padding-left:30px;
+	padding-top: 50px;
+	text-align:center;
+}
+.note {
+	margin: 10px;
+	padding: 5px;
+	background-color:#eee;
+	border: 1px gray solid;
+}
+/*FAQ formatting*/
+#faq h2 {
+	margin-top:10px;
+}

@@ -1,0 +1,3 @@
+=MembershipUpdateVerifier::CheckUpdate
+* if _isAddMember [[CheckAddMember]]
+* if _isEditMember [[CheckEditMember]]

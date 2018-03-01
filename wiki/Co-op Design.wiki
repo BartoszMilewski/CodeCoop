@@ -1,0 +1,11 @@
+=Code Co-op Design
+===Pending
+* [[Merge Notifications]]--combined with check-in groups
+* [[GUI-Server Unification]]--unify IpcQueue/Server with menu commands execution
+===Done
+* [[Checkout Notifications]]
+* [[Backup-Restore]]
+* [[Invitation]]
+* [[Recent Projects]]
+* [[Merge]]
+* [[MergeProjects|Merge Between Projects]]

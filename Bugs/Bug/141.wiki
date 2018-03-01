@@ -1,0 +1,27 @@
+| Summary |Cannot compare script with current version|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Minor|
+| Status |Closed|
+| Resolution | Closed |
+| Priority | 1 |
+| DateReported |Monday, October 30, 2006|
+==Description
+Select a script in history, then Ctrl-click on the Current version. In the Selection menu, the item "Compare script changes" is available and, when you select it, you get a message telling you that the lower pane shows all files changed between the two version. 
+
+However, no range is seleced. Therefore the lower pane shows only files changed by one script. This is bad.
+
+What I would like to see is the comparison between the state before the script and the current state--by current state I mean "including changes in checked out files". This is very useful when I'm hand-reverting an earlier script. 
+
+==Resolution
+*Changed the way current version selection is handled:
+**If only the current version is selected then lower pane is empty.
+**If the current version is selected with some other script then the current version is replaced by the most recent executed script id.
+*Didn't implement the wish item, because don't quite understand it.
+==Clarification
+We should remember the fact that a range was created using Current Version. When we restore the "after" version of the file, we should take this flag into account. If it's not set, do as we currently do, which is: If the file is checked out, take the original version. If the flag ''is'' set and the file is checked out, take the current version (the project version). This version includes recent private changes.
+==Post fix
+We need to explain in the help the difference between selecting the current version and the most recent executed script.

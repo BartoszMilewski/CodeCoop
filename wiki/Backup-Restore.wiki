@@ -1,0 +1,74 @@
+=Backup/Restore
+==Backup
+* Add menu item "Tools>Create Backup" -- dialog pops up to ask for (possibly network, ftp?) path. The path must be remembered in the registry for later use.
+* Make this command available through command line
+* Copy all checked-out files to the database. Name them using GID and extension .out
+* Implementation: Copy the whole database c:\co-op. Add a special "backup marker" file that will tell co-op that it's a backup.
+* TODO: some items from the registry: email accounts (but no passwords!). Differ/Merger preferences.
+==Restore by User
+* When starting co-op, check for special backup marker and perform Recovery
+==Restore by Co-op
+* Add menu item "Tools>Restore from Backup".
+* If there are no projects
+** Ask user for backup path
+** Copy database from the path provided by user. (Make sure the overwriting of current files is possible.)
+** Refresh co-op from database
+** Do the recovery
+* Else tell user that "Restore is used only after a disk crash or to move a database to a new computer. This computer already contains Code Co-op projects and the restore cannot proceed."
+==Recovery
+* First pass. For each project in the catalog
+** Test if root path exists; if not try to recreate it. If it fails, add it to list of unaccessible projects
+** Sort unaccessible paths by drive letter and UNC share. For each group display a dialog
+*** Drive letter groups: ask for a new drive letter
+*** UNC groups: ask new UNC, drive letter, or postpone
+*** Try to recreate the new paths, if not, don't close the dialog
+** Update the catalog with new project paths
+* Second pass. For each project in the catalog, if the project doesn't have the verification marker.
+** Ask the user, which member can help verify the project, suggest the admin
+** Give the user option "Don't ask me again. Send all verification requests to administrators". Store it in a local variable (don't persist).
+** Send verify request to that member (include most recent '''confirmed''' script ID from set history and the ids of all defected users)
+** Mark project "waiting for verification" (blocking marker)
+* Third pass. For each project in the backup marker
+** Run Project>Repair
+** Remove project name from backup marker file (delete the file if empty). Do that even if Repair failed.
+* At the end of Project>Repair, search for .out files. Check out the corresponding files and overwrite them with the contents of .out files.
+==Waiting for Verification
+* Display projects waiting for verification with a special icon.
+* Don't let the user make any changes to any project with a blocking "waiting for verification" marker (membership changes or checkins)
+* Don't deliver any scripts while the backup marker is present! It would lead to multiple verification requests for the same project.
+* When a recovery script arrives, execute it and remove the "waiting for verification" marker
+==Recovery Script
+* When a user receives a verify request, he or she creates a Verification Script and sends it
+* A Recovery Script is a package that contains 
+** Missing defect scripts--the ones whose user IDs were not presend in the verification request
+** Header with longer lineages (modify GetLineages method)
+*** Set lineage starting with the scipt id sent in the request
+*** Full membership lineages (including the defected ones)
+* Execution is automatic
+** Process all lineages (test the case when the recipient doesn't know about one of the users)
+** Execute defect scripts
+** Remove the "waiting for verification" marker
+==Admin changing user to voting
+The membership script in this case must have full membership lineages, as in the recovery script.
+==Request Verification
+A new menu item Project>Request Verification (must be available even when project is "waiting for verification").
+* Dialog with a list of active project members (default selection: admin, if current member is not the admin)
+* Send verification request and, if the project was not "waiting for verification", create the non-blocking "waiting for verification" marker.
+* Verification request script
+** Script type "Resend Script"
+** Script command VerificationRequestCmd of typeVerificationRequest
+** Contains one GlobalId--the last confirmed script in the sender's set history.
+** Contains list of defected user IDs (so that the recipient doesn't resend their defect scripts)
+==Additional test cases
+* Sender of verification request 
+** doesn't know about some defects
+** doesn't know about new members
+** doesn't know about new members who already defected
+* Receiver of verification request doesn't know about: 
+** the defects of some members from the "defected" list in the request
+** the existence of some members from the "defected" list in the request
+* Receiver doesn't have the set script mentioned in the request
+** script from the past: send full set lineage (without initial inventory)
+** script from the future: impossible (side lineage contained this script id)
+** script is missing: send regular set script lineage (st
+

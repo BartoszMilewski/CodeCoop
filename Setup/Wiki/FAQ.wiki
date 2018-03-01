@@ -1,0 +1,11 @@
+=Frequently Asked Questions
+===How do I create a link to the wiki help file?
+Wiki Help file is located in a predefined namespace, '''system'''. The link has the form <nowiki>[[system:Help]]</nowiki>. The ''system'' directory is located in the co-op database folder (usually c:\co-op\Wiki). You can add your wiki files there, but realize that they won't be propagated to other project members.
+===Are help files exported when I export a wiki site as HTML?
+Yes, if your wiki site includes a link to system help (see above). When you wikify a folder (Folder>Wikify), the index.wiki file automatically links to system wiki help.
+===Is Sqwiki case sensitive?
+All Sqwiki keywords and pseudo-properties have to be in all capitals. Pseudo properties are FILENAME, COUNT, and DELETE. Other property names, as well as values, are case insensitive. Predicates in the WHERE clause are always case-insensitive. For instance "prop CONTAINS bugfix" is equivalent to "ProP CONTAINS BUGFIX".
+===Can I specify multi-word values (phrases) in Sqwiki WHERE and INSERT statements?
+Yes, multi word values have to be enclosed in quotes. For instance ''WHERE prop CONTAINS "bug fix"''.
+===How are phrases broken into words in CONTAINS clauses?
+We use the same wordbreaker to break property values and phrases, so for most purposes it doesn't matter how it's done. The wordbreaker considers all non-alphanumeric characters (or sequences of such) as word breaks. For instance ''prop CONTAINS "version number"'' will match a property value "The version--number field is empty" (single space is treated the same as double hyphen). Upper ASCII characters are ''not'' considered word breaks, and must match exactly (except if considered case variations in a given locale).

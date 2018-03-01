@@ -1,0 +1,17 @@
+| Summary |Licence masking|
+| ReportedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Open|
+| Priority |1|
+| Resolution | Pending |
+| DateReported |Sunday, September 06, 2009|
+==Description 
+User has 4 licenses of v4.x and buys a new license v5.x. Code Co-op can't distinguish this situation from the user upgrading one of the v4.x licenses. The result is only 4 seats are available. 
+
+Possible solution: encode upgrade/new bit in the license.
+
+

@@ -1,0 +1,11 @@
+= WorkQueue::CountNewAndMarkOldScripts
+Synchronized
+==Arguments
+* scriptFiles: ScriptFileList
+==Implementation
+* For each script in the masterScriptList
+** if script is in the same mailbox as scriptFiles
+*** mark script in scriptFiles "in progress", decrement countNew
+*** if script not found in scriptFiles, remove it from toDoList, doneList and '''masterScriptList''' (danger!)
+* compact master list
+* return the number of new scripts

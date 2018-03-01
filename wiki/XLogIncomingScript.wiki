@@ -1,0 +1,11 @@
+= History::Db::XLogIncomingScript
+Arguments: ScriptHeader, CommandList (const ref), isConfirmed, ackBox
+* if membership
+** Check if commands and header data match
+* if defect or remove
+** ...
+*else
+** if not confirmed: create ack list with script sender ID
+** if I am a voting member or it's a membership script
+*** acknowledge it (through ackBox)
+** [[XLogScript]]

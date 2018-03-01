@@ -1,0 +1,73 @@
+=Report New Bug
+'''My name''' is: "[@MyName]"
+<br/>(you may change it at the bottom of this form).
+<form name="NewBugReport" method="get" action="[[[DoReport]]]">
+| Your Name | 
+<select name="ReportedBy" size="1">
+<option value="[@MyName]">[@MyName]</option>
+<option value="Piotr">Piotr</option>
+<option value="Wieslaw">Wieslaw</option>
+<option value="Deb">Deb</option>
+<option value="Bartosz">Bartosz</option>
+</select> |
+| Assign To | 
+<select name="AssignedTo" size="1">
+<option value="Wieslaw">Wieslaw</option>
+<option value="Piotr">Piotr</option>
+<option value="Bartosz">Bartosz</option>
+</select> |
+| Component | 
+<select name="Component" size="1">
+<option value="Co-op">Code Co-op</option>
+<option value="Dispatcher">Dispatcher</option>
+<option value="Differ">Differ</option>
+</select> Version: 
+<select name="Version" size="1">
+<option value="5.0">5.0</option>
+<option value="4.6">4.6</option>
+</select> |
+| Short Summary: | 
+<textarea name="Summary" rows="1" cols="60"></textarea> |
+| Reproducible? | 
+<select name="Reproducible" size="1">
+<option value="Always">Always</option>
+<option value="Sometimes">Sometimes</option>
+<option value="Unknown">Don't know</option>
+</select> |
+| Severity | 
+<select name="Severity" size="1">
+<option value="Serious">Serious</option>
+<option value="Stopper">Show Stopper</option>
+<option value="Annoying">Annoying</option>
+<option value="Minor">Minor</option>
+</select> |
+| Priority | 
+<select name="Priority" size="1">
+<option value="1">1-High</option>
+<option value="2">2-Medium</option>
+<option value="3">3-Low</option>
+<option value="4">4-Wish</option>
+</select> |
+| Date Submitted | 
+<input type="text" name="DateReported" size="30"></input> |
+
+|Submit and Enter Detailed Description: |  
+<input type="Submit" name="Accept" value="Accept"> | Or start over: <input type="Reset" name="Reset"> |
+</form>
+
+<script>
+var today=new Date();
+document.NewBugReport.DateReported.value=today.toLocaleDateString ();
+</script>
+
+==Change My Name
+<form method="get" action="[[[DoRegistryInsert]]]">
+| My name is: 
+<select name="Value" size="1">
+<option value="Wieslaw">Wieslaw</option>
+<option value="Piotr">Piotr</option>
+<option value="Bartosz">Bartosz</option>
+<option value="Deb">Deb</option>
+</select> | 
+<input type="hidden" name="Key" value="MyName">
+<input type="Submit" name="Accept" value="Accept"> |

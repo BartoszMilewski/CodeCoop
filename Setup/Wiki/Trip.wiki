@@ -1,0 +1,11 @@
+| Summary | Trip to '''Hawaii''': buy ticket |
+| Priority | High |
+== Description
+Go to the Big Island and enjoy spectacular sunsets, like this one
+
+[[system:Image:Sunset]]
+
+==Research
+* Check the [http://en.wikipedia.org/wiki/Hawaii_%28island%29|Wikipedia article]
+* Definitely visit the [http://www.ifa.hawaii.edu/mko/|Mauna Kea Observatory] and see the [http://www.keckobservatory.org/|Keck]
+* See the [http://www.nps.gov/havo/index.htm|active volcano]

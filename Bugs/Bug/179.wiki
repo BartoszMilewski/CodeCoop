@@ -1,0 +1,19 @@
+| Summary |Dispatcher email options discards changes|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |2|
+| Resolution | Won't fix |
+| DateReported |Wednesday, June 13, 2007|
+==Description 
+E-mail options dialog has a subdialog for SMTP. I made a change in that subdialog, clicked OK, and returned to the outer dialog. I would expect the changes to be committed at this point. But when I closed the outer dialog using the X button, the changes disappeared. The changes were only committed when I clicked OK in the upper dialog. This is not natural behavior.
+==Comments
+Wiesiek: Closing property sheet with the X button is equivalent to clicking on the Cancel button. Cancel means discard changes. Do you expect that discard changes will applay only to controls on the property sheet pages, but changes from sub-dialogs will not be discarded?
+
+Bartosz: The moment I clicked OK in the subdialog, I accepted those changes to SMTP. That's my expectation as a user. The changes should be committed at that point. 
+
+Wiesiek: Let me double check. On e-mail property sheet you check radio button "use SMTP", open SMTP sub-dialog, closed it with OK and then canceled e-mail property sheet. After this you expect that Dispatcher will remember SMTP params from sub-dialog, but not use them, since you have canceled property sheet?

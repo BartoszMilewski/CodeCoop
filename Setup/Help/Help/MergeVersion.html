@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Project History: Merging File Versions into a Branch</title>
+	<link href="../images/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Merge and Auto-Merge Branches</h1>
+<p class="first">There are two conditions under which you have the option to &quot;<em>Merge Branches&quot; </em>:</p>
+<ul>
+	<li>In the History tab you  have a <a href="LocalBranch.html">Branch</a> that was created as a result of a conflict</li>
+	<li>You have a <a href="Branch.html">branched project</a> and you need to merge changes from one to the other.</li>
+</ul>
+<p>In simple cases, you may choose  &quot;<em>Automatically merge branch file(s)</em>&quot;. For more complicated merges, select &quot;<em>Merge branch file(s)</em>&quot;. This will call the visual merger</a>. (The Beyond Compare Merger distributed with Code Co-op is the default). After either merge, you can review the results in the Check-in tab and, once you are satisfied, check them in. </p>
+ 
+<br/>
+<h2> <img src="../Images/mergebranch.gif" alt="Merge Branched Versions Button" /> Merge Branch File(s)</h2>
+<p class="first">When you choose &quot;<em>Merge branch file(s)</em>&quot;, Code Co-op will call the visual merger. When the contents of files differ, the merger will open showing you the differences. When files have been deleted, renamed, or moved, you will be asked what to do in each scenario. For example,  if a file was created/deleted in the rejected branch, merge will ask if you want to create/delete it in the target version. When a file was renamed or moved, you'll get a choice which name/path to keep in the target version.</p>
+<br />
+<h2><span class="first"><img src="../Images/automergebranch.gif" /></span> Automatically Merge Branch File(s)</h2>
+<p class="first">When you elect to automatically merge branch versions, Code Co-op will use the same merger to silently merge the files in the background. You can then review the results in the Check-in Area of the appropriate project before you check-in the changes.</p>
+<br/>
+<p>After you perform the merge, you can review the results in the Check-in Tab by double-clicking on a file. Check-in the changes to propogate them to all project members.</p>
+<p>&nbsp;</p>
+<p>See also:</p>
+<ul>
+	<li><a href="ProgramOptions.html">Selecting the Merger</a></li>
+	<li><a href="ProjectMerge.html">How to perform an Inter-project Merge</a> </li>
+	<li><a href="LocalMerge.html">How to perform a Local Merge</a> </li>
+</ul>
+</body>
+</html>

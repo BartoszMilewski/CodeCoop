@@ -1,0 +1,10 @@
+= WorkQueue::RecycleScripts
+== Arguments
+* removeList
+* continueList
+== Implementaion
+* synchronized method
+* For each removed, remove from masterList
+* For each continued, add to toDoList
+* If toDoList not empty, reset queue timeout
+* compact masterList

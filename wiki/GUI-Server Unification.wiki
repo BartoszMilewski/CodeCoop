@@ -1,0 +1,7 @@
+=GUI/Server Unification
+In GUI mode, command execution often involves user feedback in the form of progress meters. Server mode also requires some form of feedback. If a long command is executed through the IPC queue, it's important that the server is kept alive as long as progress is made. Progress could also be fed back to the client. If the command goes through SCC, we don't want SCC to close its side of conversation as long as progress is made. If the initiator is the command like, we might provide command-line progress indication (in the simplest case, printing dots to standard input). 
+
+Ultimately, we would like all commands in GUI mode to also go through the asynchronous queue. In that case, not only progress has to be fed back to the UI, but also data (e.g., when listing the History). 
+
+==Implementation
+In GUI mode, commands come to the controller from the menu. The controller calls the command vector to execute a command. In server mode, a conversation object is created in a separate thread. The conversation then calls the command vector. So Cmd::Vector is the common entry point for both.

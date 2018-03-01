@@ -1,0 +1,18 @@
+| Summary |Assertion during inbox report|
+| ReportedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority | 1 |
+| Resolution | Fixed |
+| DateReported |2 listopada 2006|
+==Description 
+Because of error in dispatcher, there is an incomplete incoming script. When I do a report on that (attached), get another Debug Assertion:
+
+[[Image::Bug144]]
+
+
+

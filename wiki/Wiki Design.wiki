@@ -1,0 +1,7 @@
+* [[Bug Base Design]]
+* [[Wiki Parser]]
+* [[Navigation]]
+* When parsing wiki page, look for stylesheet and template locally; fall back on default.
+* Help link on every page
+* Temporary html file name must by unique in case two co-ops are running in wiki mode
+* Namespaces as subdirectories

@@ -1,0 +1,18 @@
+=To Do in 5.0
+==Forms
+* '''[[Create]]''' a new request
+* '''[[View]]''' items selectively
+==Open Items
+? SELECT Summary, AssignedTo, Priority, DELETE FROM ToDo WHERE Status = open ORDER BY Priority
+==Not Open Items
+? SELECT Summary, AssignedTo, Priority, Status, DELETE FROM ToDo WHERE Status <> open ORDER BY Priority
+==Items By Owner
+*[[Wieslaw]]
+*[[Piotr]]
+*[[Bartosz]]
+*[[Deb]]
+==Pictures
+[[Pictures]]
+==Template
+[[ToDo:Template|Template]]
+

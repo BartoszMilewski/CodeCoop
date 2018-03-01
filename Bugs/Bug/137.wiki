@@ -1,0 +1,14 @@
+| Summary |Ctrl-A in History|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Closed|
+| Resolution | Fixed |
+| DateReported |Saturday, October 28, 2006|
+==Description 
+Go to the History tab, select any script and press Ctrl-A. After "scanning history" progress, the following progress dialog appears:
+ Preparing branch changes for merge operation
+What merge?

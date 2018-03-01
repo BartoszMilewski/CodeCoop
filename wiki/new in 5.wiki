@@ -1,0 +1,28 @@
+=What's New in Code Co-op 5.0
+==User Interface
+* Multi-pane windows
+** Preview panes in History and Inbox
+** Recent Projects
+* Secondary sort
+==Branching
+* Conflict resolution
+** Local Merge
+** Script conflict
+** Branch continuation
+* Branch merging
+* Plug-in merger
+* One-click sync
+==Dispatcher
+* SMTP and POP3
+* Non-blocking behavior
+** Quarantine
+** Alert log
+==Wiki
+* P2P Wiki
+* SQWiki
+* Bug Database
+==Project Management
+* Project Invitation
+* Multi-project commands
+
+[[co-op 5 preview]]

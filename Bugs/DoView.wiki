@@ -1,0 +1,3 @@
+=Bugs
+Assigned to "[?AssignedTo]", Status "[?Status]", Severity "[?Severity]", Priority [?Priority]:
+?SELECT Summary, Resolution, Priority, DELETE FROM Bug WHERE AssignedTo = [?AssignedTo] AND Severity = [?Severity] AND Status = [?Status] AND Priority = [?Priority] ORDER BY Resolution DESC

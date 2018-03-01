@@ -1,0 +1,16 @@
+==Ftp::Downloader
+Inherits from:
+* [[Download Upload|Downloader]]
+* [[ActiveCopy]]
+==Data
+* user, password (for logging into an FTP server)
+* srcFile: [[FtpFile|Ftp::File]]
+* destFile: [[LocalFile]]
+
+==Methods
+* StartGetFile (source path and name, destination path and name)
+** Create [[FtpFile|Ftp::File]]
+** Create [[LocalFile]]
+** StartCopy
+* StartCopy (implemented in [[ActiveCopy]] (creates a worker thread and run it)
+

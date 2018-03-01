@@ -1,0 +1,46 @@
+===========================================
+Code Co-op integration with the Borland IDE
+===========================================
+
+Code Co-op fully integrates with Borland IDEs that support SCC interface. All latest releases of Borland's IDEs, including
+- Delphi 8 or higher,
+- C++ BuilderX and 
+- CodeWright
+support SCC interface. As a benefit Borland IDEs users gain a full range of source control operations accessible straight from the IDEs. Just check it out!
+Open your Borland IDE. Go to Tools.Options dialog and select Source Control Options. Select Code Co-op as your default SCC provider.
+From now on you can make use of commands available in Tools.Team menu of your IDE.
+
+=============================
+Borland Developer Studio 2006
+=============================
+Special configuration required:
+
+Close down the IDE if it open
+Bring up Regedit
+Go to HKEY_CURRENT_USER\Software\Borland\Bds\4.0\Known IDE Packages
+Create a new String
+Call it $(BDS)\Bin\SrcManIDE100.bpl
+Double Click on the Key
+Enter the value: (Untitled)
+Click OK 
+Close regedit
+Restart the IDE
+Click on the Tools Menu
+You'll find Team menu now is showing up.
+
+=====================================
+Old IDEs: Delphi 5-7 and CBuilder 5-6
+=====================================
+There are three versions of the integrator file:
+borland5.bpl -- for integration with both Delphi 5 and BCB 5
+borland6.bpl -- for integration with both Delphi 6 and BCB 6
+borland7.bpl -- for integration with Delphi 7
+
+To integrate Code Co-op into Borland IDE:
+1. Select the "Components.Install Packages" command from the IDE menu
+2. Click on the "Add..." button in the "Add Design Package" dialog
+3. Use the Browse option to browse into the Code Co-op installation directory and select the appropriate integrator file
+
+The package will be loaded and it will add the "Code Co-op" submenu to the IDE's main menu.
+
+

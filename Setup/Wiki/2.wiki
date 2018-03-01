@@ -1,0 +1,10 @@
+| Summary | Review ListView |
+| Priority | Low |
+This assertion fails:
+ int GetTopIndex () const
+ {
+   int top = ListView_GetTopIndex (H ());
+   Assert (ListView_GetItemCount (H ()) == 0 
+        <nowiki>||</nowiki> top < ListView_GetItemCount (H ()));
+   return top;
+ }

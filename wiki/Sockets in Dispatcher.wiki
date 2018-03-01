@@ -1,0 +1,50 @@
+<h1>SMTP</h1>
+<h2>Test data</h2>
+*E-mail address for which address resolution fails: <b>TonyZhang@ingrasys.com.cn</b> 
+<h2>Documentation says</h2>
+<h3>MSDN: setsockopt</h3>
+SO_RCVTIMEO and SO_SNDTIMEO 
+When using the recv function, if no data arrives during the period specified in SO_RCVTIMEO, the recv function completes. In Windows versions prior to Windows 2000, any data received subsequently fails with WSAETIMEDOUT. In Windows 2000 and later, if no data arrives within the period specified in SO_RCVTIMEO the recv function returns WSAETIMEDOUT, and if data is received, recv returns SUCCESS. 
+<b>If a send or receive operation times out on a socket, the socket state is indeterminate, and should not be used;</b> TCP sockets in this state have a potential for data loss, since the operation could be canceled at the same moment the operation was to be completed.
+
+<h3>RFC # 2821 (dated: April 2001), 4.5.3.2 : Timeouts</h3>
+The minimum per-command timeout values SHOULD be as follows:
+*Initial 220 Message: 5 minutes
+*MAIL Command: 5 minutes
+*RCPT Command: 5 minutes
+*DATA Initiation: 2 minutes
+*Data Block: 3 minutes
+*DATA Termination: 10 minutes.
+
+<h2>Problems</h2>
+*Behaviour on timeout -- Dispatcher cannot issue further commands to a server
+*Recipients whose addresses cannot be resolved during RCPT TO command -- how to handle scripts with such recipients?
+
+<h2>Solution</h2>
+<h3>Behaviour on timeout</h3>
+*Timeouts
+**increase default timeouts
+**let user set timeouts
+**use per command timeouts
+*Scripts
+**Introduce policy for retrying
+***based on
+****trial count
+****date of last trial
+***with following rules
+****omit scripts that exceeded amount of trials and 
+****wait for a specified amount of time to repeat sending
+***the list of ignored scripts should also be incorporated
+<h3>Recipients whose addresses cannot be resolved during RCPT TO command</h3>
+*provide a feedback from Mailer.Send
+*if RCPT TO fails
+**check the error code
+**do not throw exception
+**mark the recipient with appropriate flag
+**proceed with next RCPT TO
+*display alert from the WorkQueue.EmailScript if there are unresolved addressees or 
+*log this problem in other way -- introduce event/error logging system
+
+<h1>POP3</h1>
+Check behaviour in case of timeouts. Does Dispatcher behave correctly? Should it do better?
+

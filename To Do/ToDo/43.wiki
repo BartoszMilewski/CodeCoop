@@ -1,0 +1,20 @@
+| Summary |Ctrl-L shortcut|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Monday, September 24, 2007|
+==Description
+
+== Forum [http://www.relisoft.com/forums/index.php?showtopic=1087&view=getnewpost|post]
+(About the request to add Ctrl-L shortcut to switch focus in history to the filter box.)
+
+I think that the point of the request is to be able to get into this text field without having to use the mouse, not about using a specific shortcut. I am a laptop warrior and a subsequently vimmer, so I like to use keyboard for most operations.
+
+I currently do not know of a way to get to this text field without using the mouse. Can we have a shortcut that will do it?
+
+Other things you may want to look into to make trackpad-haters happy: In most views, pressing the "menu" key on a laptop will show the (right-click equivalent) menu at an arbitrary on-screen location, instead of showing it next to the selected item. "View current folder in file explorer" remains on my wish list (although, since the tree view has arrived, I can do Shift-Tab and Ctrl-Enter to the same effect). It would be nice if the "visitproject.exe" command line utility was accepting any path within a project (rather than only its root path) and opening the file-view directly on that folder (I could then make this a custom command within Explorer). Wiki mode (although I still haven't found a good use for it) would be expected to common browser navigation shortcuts (e.g. alt-left/right for back/forward?) for the commands that are already available. (I'm sure there's more, that I just can't think of right now... )
+
+Yes these are all minor usability enhancements, but they should also be relatively easy to implement...
+

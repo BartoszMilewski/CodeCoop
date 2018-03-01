@@ -1,0 +1,10 @@
+| Summary |Alert Log improvements|
+| CreatedBy |Bartosz|
+| AssignedTo |Piotr|
+| Component |Co-op|
+| Priority |3|
+| Status |Open|
+| DateReported |Sunday, October 01, 2006|
+==Description
+Dempson: The Alert Log could do with a minor user interface improvement: double-clicking on an alert item doesn't do anything. It should open it, like clicking the magnifying glass. There is also no contextual menu for the alert items (View Alert Log and Delete would be suitable). Maybe have keyboard shortcuts as well, like Enter to view and the Backspace or Delete key to delete the log entry.
+

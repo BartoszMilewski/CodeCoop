@@ -1,0 +1,12 @@
+| Summary |Dispatcher doesn't react nicely on Windows shutdown|
+| ReportedBy |Wieslaw|
+| AssignedTo |Piotr|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Open|
+| Resolution | Deferred |
+==Description 
+When the user selects Windows shutdown and Dispatcher is in the middle of its Co-op kicking round then the user will see a series of message boxes saying that SccDll.dll cannot be loaded because of system shutdown. Windows will also display ticking message box "Waiting for the process to end".
+

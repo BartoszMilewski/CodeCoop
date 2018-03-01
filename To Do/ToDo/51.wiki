@@ -1,0 +1,17 @@
+| Summary |Revert this change|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Open|
+| DateReported |Tuesday, March 04, 2008|
+==Description
+When in History view, select a file in the lower pane. A "selection" menu item, Revert this change, should be available. It reverts the changes made by the selected script and merges this change withe the current version. The result is as if the selected script were not performed at all. Note that all the following scripts are not undone.
+
+==Implementation
+Call merger with the following files
+* Reference: version after the script
+* Left: version before the script
+* Right: current version
+* Target: current version
+

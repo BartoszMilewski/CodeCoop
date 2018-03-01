@@ -1,0 +1,15 @@
+| Summary |Exporting deleted files from history asks stupid questions|
+| ReportedBy |Bartosz Milewski|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Open|
+| Priority |1|
+| Resolution | Pending |
+| DateReported |Wednesday, July 30, 2008|
+==Description 
+Select a script in History, select all files in the lower pane. Some of the files have been deleted by the script. Now "Save Versions of Files". For every deleted file, a message box appears informing that there is no current version of a deleted file. 
+
+Solution: when more than one file is selected, don't display this message at all. Make sure that when the number of files to be copied is zero (they were all deleted), FtpApp is not called.

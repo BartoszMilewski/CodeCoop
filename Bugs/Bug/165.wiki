@@ -1,0 +1,35 @@
+| Summary |Script conflict should stop auto-sync.|
+| ReportedBy |Wieslaw|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |2|
+| Resolution | Fixed |
+| DateReported |10 grudnia 2006|
+==Description 
+When incoming script is in conflict with my script the auto-sync should stop and the incoming script should not be executed.
+==Resolution
+We already impelemented this, as show in the code below (from Model::ExecuteSetScript):
+
+	std::auto_ptr<ConflictDetector> detector (new ConflictDetector (_dataBase, _history, hdr));
+	if (detector->AreMyScriptsRejected () || detector->AreMyLocalEditsInMergeConflict ())
+	{
+		if (IsQuickVisit ())
+		{
+			// Don't unpack script
+			return false;
+		}
+		else
+		{
+			// In GUI show dialog
+			if (!dlg.Show (*detector))
+				return false;	// User canceled script conflict dialog -- abort script unpacking
+
+			// Recreate detector in case something changed during conflict dialog display
+			detector.reset (new ConflictDetector (_dataBase, _history, hdr));
+		}
+	}
+

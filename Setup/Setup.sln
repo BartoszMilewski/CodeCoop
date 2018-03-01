@@ -1,0 +1,85 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Install", "Install\Setup.vcproj", "{083B3B9D-145D-4828-B2AB-94F6EC16F550}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94A1CE47-9646-4643-A8D3-BF52C9615611} = {94A1CE47-9646-4643-A8D3-BF52C9615611}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Uninstall", "Uninstall\Uninstall.vcproj", "{66D54A0E-44C1-4A69-A563-7DF019DD9A05}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94A1CE47-9646-4643-A8D3-BF52C9615611} = {94A1CE47-9646-4643-A8D3-BF52C9615611}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LicenseGen", "LicenseGen\LicenseGen.vcproj", "{97477E6C-9002-4575-BD90-D9F7C88F2EF1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94A1CE47-9646-4643-A8D3-BF52C9615611} = {94A1CE47-9646-4643-A8D3-BF52C9615611}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinLib", "..\WinLib\WinLib.vcproj", "{94A1CE47-9646-4643-A8D3-BF52C9615611}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Help", "Help\Help.vcproj", "{1737C5BE-AF51-42DB-A908-EA17258D755F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccProjectName0 = co-op\u0020Distributor
+		SccLocalPath0 = ..
+		SccProvider0 = MSSCCI:Reliable\u0020Software\u0020Code\u0020Co-op
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection0 = Setup\\
+		SolutionUniqueID = {0FD29071-0084-4667-9648-B3BADE280F38}
+		SccProjectUniqueName1 = Install\\Setup.vcproj
+		SccLocalPath1 = ..
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection1 = Setup\\Install\\
+		SccProjectUniqueName2 = Uninstall\\Uninstall.vcproj
+		SccLocalPath2 = ..
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection2 = Setup\\Uninstall\\
+		SccProjectUniqueName3 = LicenseGen\\LicenseGen.vcproj
+		SccLocalPath3 = ..
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection3 = Setup\\LicenseGen\\
+		SccProjectUniqueName4 = ..\\WinLib\\WinLib.vcproj
+		SccLocalPath4 = ..
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection4 = WinLib\\
+		SccProjectUniqueName5 = Help\\Help.vcproj
+		SccLocalPath5 = ..
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection5 = Setup\\Help\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{083B3B9D-145D-4828-B2AB-94F6EC16F550}.Debug.ActiveCfg = Debug|Win32
+		{083B3B9D-145D-4828-B2AB-94F6EC16F550}.Debug.Build.0 = Debug|Win32
+		{083B3B9D-145D-4828-B2AB-94F6EC16F550}.Release.ActiveCfg = Release|Win32
+		{083B3B9D-145D-4828-B2AB-94F6EC16F550}.Release.Build.0 = Release|Win32
+		{66D54A0E-44C1-4A69-A563-7DF019DD9A05}.Debug.ActiveCfg = Debug|Win32
+		{66D54A0E-44C1-4A69-A563-7DF019DD9A05}.Debug.Build.0 = Debug|Win32
+		{66D54A0E-44C1-4A69-A563-7DF019DD9A05}.Release.ActiveCfg = Release|Win32
+		{66D54A0E-44C1-4A69-A563-7DF019DD9A05}.Release.Build.0 = Release|Win32
+		{97477E6C-9002-4575-BD90-D9F7C88F2EF1}.Debug.ActiveCfg = Debug|Win32
+		{97477E6C-9002-4575-BD90-D9F7C88F2EF1}.Debug.Build.0 = Debug|Win32
+		{97477E6C-9002-4575-BD90-D9F7C88F2EF1}.Release.ActiveCfg = Release|Win32
+		{97477E6C-9002-4575-BD90-D9F7C88F2EF1}.Release.Build.0 = Release|Win32
+		{94A1CE47-9646-4643-A8D3-BF52C9615611}.Debug.ActiveCfg = Debug|Win32
+		{94A1CE47-9646-4643-A8D3-BF52C9615611}.Debug.Build.0 = Debug|Win32
+		{94A1CE47-9646-4643-A8D3-BF52C9615611}.Release.ActiveCfg = Release|Win32
+		{94A1CE47-9646-4643-A8D3-BF52C9615611}.Release.Build.0 = Release|Win32
+		{1737C5BE-AF51-42DB-A908-EA17258D755F}.Debug.ActiveCfg = Release|Win32
+		{1737C5BE-AF51-42DB-A908-EA17258D755F}.Debug.Build.0 = Release|Win32
+		{1737C5BE-AF51-42DB-A908-EA17258D755F}.Release.ActiveCfg = Release|Win32
+		{1737C5BE-AF51-42DB-A908-EA17258D755F}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+| Summary |Drag and drop between panes|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Annoying|
+| Status |Open|
+| Priority |1|
+| Resolution | Pending |
+| DateReported |Wednesday, November 18, 2009|
+==Description 
+
+There is a new bug in 5.1c. From the Code Co-op window select a Folder in the "Project Folders" area. Now pick and up and drag one of the files from the right-hand side to explorer or to BeyondCompare. The directory is the target of the drag-and-drop not the file as it should be.  To work around it you must deliberately select the file you want to drag. 
+
+This bug was not present in the previous release.
+
+== Analysis
+
+We should probably change selection the moment we start drag and drop.

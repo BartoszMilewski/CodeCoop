@@ -1,0 +1,15 @@
+| Summary |Merged version displays vertical bar Selective|
+| ReportedBy |Bartosz|
+| AssignedTo |Bartosz|
+| Component |Co-op|
+| Version |5.0|
+| Reproducible |Always|
+| Severity |Serious|
+| Status |Closed|
+| Priority |1|
+| Resolution | Fixed |
+| DateReported |Tuesday, January 02, 2007|
+==Description 
+Go to Branch/Merge tab and select a script. The "Merged version" displays the comment followed by |Selective. 
+
+

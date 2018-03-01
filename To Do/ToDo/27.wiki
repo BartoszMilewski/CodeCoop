@@ -1,0 +1,9 @@
+| Summary |Make Project Options available when not in project|
+| CreatedBy |Bartosz|
+| AssignedTo |Wieslaw|
+| Component |Co-op|
+| Priority |2|
+| Status |Completed|
+| DateReported |Thursday, February 01, 2007|
+==Description
+The option "auto accept invitations" is in Project>Options dialog and is not available when there are no projects. We may either make it available and grey out all the other options, or add a new item to Program>Options (duplicating the functionality present in Program>Options). That would make even more sense if we move some settings from Program>Options to the new ''Tools'' menu.
